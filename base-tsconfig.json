@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "three/build/three.module": ["node_modules/@types/three"],
+            "react-router-dom/cjs/react-router-dom": ["node_modules/@types/react-router-dom"]
+        }
+    }
+}
