@@ -1,5 +1,6 @@
 /* VARIABLES */
 :root {
+  /* COLOURS */
     --colour-quaternary: #44beac;
     --colour-primary: #a6b1eb;
     --colour-tertiary: #99C3D4;
@@ -8,6 +9,13 @@
     --colour-gray-2: #6e7376;
     --colour-gray-3: #eee;
     --colour-white: #fff;
+    /* FONT SIZES */
+    --hugest-font-size: 6.5rem;
+    --huger-font-size: 5.5rem;
+    --huge-font-size: 4.5rem;
+    --bigest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --big-font-size: 2.5rem;
     --largest-font-size: 2.2rem;
     --larger-font-size: 2rem;
     --large-font-size: 1.8rem;
@@ -15,6 +23,36 @@
     --small-font-size: 1.4rem;
     --smaller-font-size: 1.2rem;
     --smallest-font-size: 1rem;
+
+    /* MARGINS */
+    --hugest-margin: 6.5rem;
+    --huger-margin: 5.5rem;
+    --huge-margin: 4.5rem;
+    --bigest-margin: 3.5rem;
+    --bigger-margin: 3rem;
+    --big-margin: 2.5rem;
+    --largest-margin: 2.2rem;
+    --larger-margin: 2rem;
+    --large-margin: 1.8rem;
+    --primary-margin: 1.6rem;
+    --small-margin: 1.4rem;
+    --smaller-margin: 1.2rem;
+    --smallest-margin: 1rem;
+
+    /* PADDINGS */
+    --hugest-padding: 6.5rem;
+    --huger-padding: 5.5rem;
+    --huge-padding: 4.5rem;
+    --bigest-padding: 3.5rem;
+    --bigger-padding: 3rem;
+    --big-padding: 2.5rem;
+    --largest-padding: 2.2rem;
+    --larger-padding: 2rem;
+    --large-padding: 1.8rem;
+    --primary-padding: 1.6rem;
+    --small-padding: 1.4rem;
+    --smaller-padding: 1.2rem;
+    --smallest-padding: 1rem;
   }
 *,
   *::after,

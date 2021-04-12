@@ -43,6 +43,7 @@ class Siders {
         const geometry = new THREE.TorusKnotGeometry(this.leftKnotProps.radius, this.leftKnotProps.tube, this.leftKnotProps.tubularSegments, this.leftKnotProps.radialSegments, this.leftKnotProps.p, this.leftKnotProps.q);
         this.leftKnot = new THREE.Mesh(geometry, this.material);
         this.leftKnot.position.x = -3;
+        this.leftKnot.position.y = 2;
         this.main.scene.add(this.leftKnot);
     }
 
@@ -50,6 +51,7 @@ class Siders {
         const geometry = new THREE.TorusKnotGeometry(this.rightKnotProps.radius, this.rightKnotProps.tube, this.rightKnotProps.tubularSegments, this.rightKnotProps.radialSegments, this.rightKnotProps.p, this.rightKnotProps.q);
         this.rightKnot = new THREE.Mesh(geometry, this.material);
         this.rightKnot.position.x = 3;
+        this.rightKnot.position.y = 2;
         this.main.scene.add(this.rightKnot);
     }
 

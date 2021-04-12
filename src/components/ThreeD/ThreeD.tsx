@@ -16,7 +16,7 @@ const ThreeD = () => {
     }, []);
   
     return (
-      <canvas ref={canvasRef}></canvas>
+      <canvas ref={canvasRef} className="canvas"></canvas>
     );
 };
 

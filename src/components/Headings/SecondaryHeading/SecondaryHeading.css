@@ -1,0 +1,7 @@
+.secondary-heading {
+    display: block;
+    color: aliceblue;
+    font-size: var(--huger-font-size);
+    font-weight: 600;
+    margin-bottom: var(--larger-margin);
+}

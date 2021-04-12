@@ -66,6 +66,7 @@ class Main {
         this.lightsInstance.updateHelpers();
         this.sidersInstance.updateKnots();
         this.lightsInstance.changeLightColours();
+        this.monkeyInstance.animateMonkey();
         this.renderer.render(this.scene, this.camera);
         this.stats.update();
     }

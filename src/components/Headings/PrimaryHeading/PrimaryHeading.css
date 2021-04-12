@@ -1,0 +1,7 @@
+.primary-heading {
+    color: aliceblue;
+    font-size: var(--hugest-font-size);
+    font-weight: 600;
+    display: block;
+    margin-bottom: var(--big-margin);
+}

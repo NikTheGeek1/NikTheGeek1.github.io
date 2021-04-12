@@ -2,14 +2,19 @@ import Main from './Main';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import * as THREE from 'three/build/three.module';
+import Animations from '../threeD/animations/AnimationFunctions';
+import MonkeyAnimation from './animations/MonkeyAnimation';
 
 class Monkey {
 
     private main: Main;
     private monkey!: THREE.Mesh;
+    private monkeyLoaded: boolean;
+    private monkeyAnimation!: MonkeyAnimation;
 
     constructor(main: Main) {
         this.main = main;
+        this.monkeyLoaded = false;
     }
 
     private loadMonkey(): void {
@@ -26,7 +31,7 @@ class Monkey {
                     (object) => {
                         object.traverse((child) => {
                             if ((child as THREE.Mesh).isMesh) {
-                                this.monkey = child as THREE.Mesh;
+                                this.setMonkey(child as THREE.Mesh);
                                 const mesh = child as THREE.Mesh;
                                 (mesh.material as THREE.MeshPhongMaterial).color.setHex(0xFFFFFF);
                             }
@@ -50,12 +55,34 @@ class Monkey {
         );
     }
 
+    private setMonkey(monkey: THREE.Mesh) {
+        this.monkey = monkey;
+        this.monkeyLoaded = true;
+        this.monkeyConfig();
+    }
+
     private onMouseMove(e: MouseEvent): void {
-        if (this.monkey) {
+        if (this.monkeyLoaded) {
             const x = (e.clientX / this.main.renderer.domElement.clientWidth) * 2 - 1;
             const y = -(e.clientY / this.main.renderer.domElement.clientHeight) * 2 + 1;
-            this.monkey.rotation.x = -y;
+            this.monkey.rotation.x = -y + .7;
             this.monkey.rotation.y = x;
+        }
+    }
+
+    private monkeyConfig(): void {
+        this.monkeyAnimation = Animations.instantiateMonkeyAnimation();
+        // this.monkey.position.x = 2;
+        this.monkey.position.y = this.monkeyAnimation.initialY;
+        this.monkey.position.z = this.monkeyAnimation.initialZ;
+        
+    }
+
+    public animateMonkey(): void {
+        if (this.monkeyLoaded) {
+            const currentCoords: {y: number, z: number} = this.monkeyAnimation.getNextFrame();
+            this.monkey.position.y = currentCoords.y;
+            this.monkey.position.z = currentCoords.z;
         }
     }
 
@@ -63,8 +90,6 @@ class Monkey {
         this.loadMonkey();
         document.addEventListener("mousemove", this.onMouseMove.bind(this))
     }
-
-
 
 }
 
