@@ -14,7 +14,7 @@ const LandingPage = () => {
                 <PrimaryHeading content="Welcome to my" />
             </div>
             <div className="landing-page-subtitle">
-                <SecondaryHeading content="To my personal space" />
+                <SecondaryHeading content="Personal space" />
             </div>
         </main>
     );
