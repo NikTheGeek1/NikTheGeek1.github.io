@@ -8,6 +8,7 @@ class MonkeyAnimation {
     public finalZ: number;
     public coords!: { y: number[], z: number[] };
     private currentFrame: number;
+    public animationFinished: boolean;
 
     constructor() {
         this.initialY = -2;
@@ -15,6 +16,7 @@ class MonkeyAnimation {
         this.finalY = 2;
         this.finalZ = 0;
         this.currentFrame = 0;
+        this.animationFinished = false;
     }
 
     public setCoords(coords: { y: number[], z: number[] }): void {
@@ -23,7 +25,10 @@ class MonkeyAnimation {
 
     public getNextFrame(): { y: number, z: number } {
         const results = { y: this.coords.y[this.currentFrame], z: this.coords.z[this.currentFrame] };
-        if (this.currentFrame < (this.coords.y.length - 1)) this.currentFrame++;
+        this.currentFrame++;
+        if (this.currentFrame > (this.coords.y.length - 1)) {
+            this.animationFinished = true;
+        }
         return results;
     }
 

@@ -11,11 +11,21 @@ class Monkey {
     private monkey!: THREE.Mesh;
     private monkeyLoaded: boolean;
     private monkeyAnimation!: MonkeyAnimation;
+    private raycaster!: THREE.Raycaster;
+    private intersects: THREE.Intersection[];
+    private pickableObjects!: THREE.Mesh[];
+
 
     constructor(main: Main) {
         this.main = main;
         this.monkeyLoaded = false;
+        this.intersects = new Array();
     }
+
+    private createRaycaster(): void {
+        this.raycaster = new THREE.Raycaster();        
+    }
+
 
     private loadMonkey(): void {
         const loader = new MTLLoader();
@@ -67,6 +77,20 @@ class Monkey {
             const y = -(e.clientY / this.main.renderer.domElement.clientHeight) * 2 + 1;
             this.monkey.rotation.x = -y + .7;
             this.monkey.rotation.y = x;
+
+            this.raycaster.setFromCamera({
+                x: x,
+                y: y
+            }, this.main.camera);
+            this.intersects = this.raycaster.intersectObjects(this.pickableObjects, false);
+        
+            if (this.intersects.length > 0) {
+                document.getElementsByTagName("body")[0].style.cursor = "pointer";
+            } else {
+                document.getElementsByTagName("body")[0].style.cursor = "initial";
+            }
+
+
         }
     }
 
@@ -75,11 +99,11 @@ class Monkey {
         // this.monkey.position.x = 2;
         this.monkey.position.y = this.monkeyAnimation.initialY;
         this.monkey.position.z = this.monkeyAnimation.initialZ;
-        
+        this.pickableObjects = [this.monkey];
     }
 
     public animateMonkey(): void {
-        if (this.monkeyLoaded) {
+        if (this.monkeyLoaded && !this.monkeyAnimation.animationFinished) {
             const currentCoords: {y: number, z: number} = this.monkeyAnimation.getNextFrame();
             this.monkey.position.y = currentCoords.y;
             this.monkey.position.z = currentCoords.z;
@@ -88,7 +112,8 @@ class Monkey {
 
     public init(): void {
         this.loadMonkey();
-        document.addEventListener("mousemove", this.onMouseMove.bind(this))
+        this.createRaycaster();
+        document.addEventListener("mousemove", this.onMouseMove.bind(this));
     }
 
 }
