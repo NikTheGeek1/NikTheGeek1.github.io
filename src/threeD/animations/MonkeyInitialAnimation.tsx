@@ -1,4 +1,4 @@
-
+import AnimationFunctions from "./AnimationFunctions";
 
 class MonkeyAnimation {
 
@@ -28,6 +28,9 @@ class MonkeyAnimation {
         this.currentFrame++;
         if (this.currentFrame > (this.coords.y.length - 1)) {
             this.animationFinished = true;
+            this.finalY = this.coords.y[this.currentFrame-1];
+            this.finalZ = this.coords.z[this.currentFrame-1];
+            AnimationFunctions.currentAnimation = undefined;
         }
         return results;
     }

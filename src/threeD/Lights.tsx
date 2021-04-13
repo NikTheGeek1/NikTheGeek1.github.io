@@ -27,8 +27,8 @@ class Lights {
     }
 
     private createMonkeyLight(): void {
-        this.monkeyLight = new THREE.SpotLight("white", 10, 10, Math.PI / 10, .4, 1);
-        this.monkeyLight.position.set(2.5, 2.5, 7)
+        this.monkeyLight = new THREE.SpotLight("white", 10, 12, Math.PI / 10 , .4, 1);
+        this.monkeyLight.position.set(2.5, 5.5, 7)
         this.main.scene.add(this.monkeyLight);
 
         this.monkeyHelper = new THREE.SpotLightHelper(this.monkeyLight);
