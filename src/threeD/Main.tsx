@@ -67,6 +67,7 @@ class Main {
         this.sidersInstance.updateKnots();
         this.lightsInstance.changeLightColours();
         this.monkeyInstance.animateMonkey();
+        this.sidersInstance.animateKnots();
         this.renderer.render(this.scene, this.camera);
         this.stats.update();
     }

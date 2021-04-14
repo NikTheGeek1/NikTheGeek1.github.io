@@ -1,6 +1,6 @@
 import * as THREE from 'three/build/three.module';
 import Main from './Main';
-
+import SidersAnimation from './animations/siders/MovingBackAnimation';
 class Siders {
 
     private main: Main;
@@ -11,6 +11,7 @@ class Siders {
     private rightKnotProps: { radius: number, tube: number, tubularSegments: number, radialSegments: number, p: number, q: number };
     private lastUpdateTime: number;
     private radiusCurrValue: number;
+    public sidersAnimation!: SidersAnimation;
 
     constructor(main: Main) {
         this.main = main;
@@ -20,6 +21,7 @@ class Siders {
         this.radiusCurrValue = 1;
     }
 
+    
     private createMaterial(): void {
         this.material = new THREE.MeshNormalMaterial();
     }
@@ -55,11 +57,6 @@ class Siders {
         this.main.scene.add(this.rightKnot);
     }
 
-    private rotateKnots(): void {
-        // this.leftKnot.rotation.x += 0.1;
-        this.leftKnot.rotation.y += 0.1;
-    }
-
     private waveFunction(start: number, range: number, step: number): number {
         const curr = this.radiusCurrValue;
         const p1 = curr % ((range - step) * 2);
@@ -84,10 +81,29 @@ class Siders {
         // this.rotateKnots();
     }
 
+    instantiateMovingBackAnimation(): void {
+        this.sidersAnimation = new SidersAnimation(this.leftKnot.position.x, this.leftKnot.position.y, this.leftKnot.position.z);
+    }
+
+    public animateKnots(): void {
+        if (this.sidersAnimation.shouldAnimate) {
+            const coords = this.sidersAnimation.getNextFrame();
+            this.leftKnot.position.x = coords.x;
+            this.leftKnot.position.y = coords.y;
+            this.leftKnot.position.z = -coords.z;
+
+            this.rightKnot.position.x = -coords.x;
+            this.rightKnot.position.y = coords.y;
+            this.rightKnot.position.z = -coords.z;
+        }
+    }
+
+
     public init(): void {
         this.createMaterial();
         this.createLeftKnot();
         this.createRightKnot();
+        this.instantiateMovingBackAnimation();
     }
 
 }

@@ -2,9 +2,9 @@ import Main from './Main';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import * as THREE from 'three/build/three.module';
-import Animations from '../threeD/animations/AnimationFunctions';
-import MonkeyAnimation from './animations/MonkeyInitialAnimation';
-import MonkeyTopRightAnimation from './animations/MonkeyTopRightAnimation';
+import Animations from './animations/monkey/AnimationFunctions';
+import MonkeyAnimation from './animations/monkey/MonkeyInitialAnimation';
+import MonkeyTopRightAnimation from './animations/monkey/MonkeyTopRightAnimation';
 
 class Monkey {
 
@@ -96,6 +96,7 @@ class Monkey {
     private onClick(e: MouseEvent) {
         if (this.intersects.length > 0 && !Animations.currentAnimation) {
             Animations.instantiateMonkeyTopRightAnimation(0, this.monkeyAnimation.finalY, this.monkeyAnimation.finalZ);
+            this.main.sidersInstance.sidersAnimation.shouldAnimate = true;
         }
     }
 

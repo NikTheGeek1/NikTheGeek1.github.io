@@ -63,12 +63,12 @@ class AnimationFunctions {
         const z = [initialZ];
         for (let i = 0; i < length; i++) {
             z[i + 1] = z[i] + zIncrement;
-            y[i + 1] = this.flattenFunc(z[i + 1], 1, -3, -1) + 4;
+            y[i + 1] = this.flattenFunc(z[i + 1], -3, -1) + 4;
         }
         return { y, z };
     }
 
-    private static flattenFunc(x: number, yStart: number, p1: number, p2: number): number {
+    private static flattenFunc(x: number, p1: number, p2: number): number {
         return (p1 * Math.exp(p2 * x));
     }
 }
