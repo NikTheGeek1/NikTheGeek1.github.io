@@ -6,9 +6,15 @@
 }
 
 .profile-inner-header-container {
+    list-style: none;
     grid-area: inner-header;
     height: 7rem;
     background-color: aqua;
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+    align-items: center;
+    font-size: var(--larger-font-size);
 }
 
 .profile-img {
@@ -18,4 +24,15 @@
     height: 15rem;
     margin-bottom: -2rem;
     position: relative;
+}
+
+.profile-header-item {
+    justify-self: center;
+}
+
+.profile-header-item-name {
+    font-size: var(--largest-font-size) !important;
+    font-weight: 900;
+    white-space: nowrap;
+    font-family: 'Josefin Slab';
 }

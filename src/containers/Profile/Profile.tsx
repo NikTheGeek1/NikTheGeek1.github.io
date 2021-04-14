@@ -5,7 +5,7 @@ import './Profile.css';
 const Profile = () => {
 
     return (
-        <section className="profile-section">
+        <>
             <div className="profile-transparent-background-container"></div>
             <div className="profile-header-container">
                 <ProfileHeader />
@@ -13,7 +13,7 @@ const Profile = () => {
             <div className="profile-body-container">
                 <ProfileBody />
             </div>
-        </section>
+        </>
     );
 };
 

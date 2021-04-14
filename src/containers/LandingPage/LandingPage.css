@@ -55,11 +55,28 @@
     }
 }
 
+@keyframes move-in-from-bottom {
+    0% {
+        transform: translateY(100rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .landing-page-main {
     height: 100vh;
     display: grid;
+}
+
+.landing-page-main-before-animation {
     grid-template-areas: "title" "subtitle";
     grid-template-rows: 65% 35%;
+}
+
+.landing-page-main-after-animation {
+    grid-template-areas: "gap1 profile gap2";
+    grid-template-columns: 1fr  minmax(min-content, 90rem)  1fr;
 }
 
 .canvas-container-landing-page {
@@ -86,4 +103,21 @@
     grid-area: subtitle;
     text-align: center;
     animation: move-in-from-right 2s ease-in;
+}
+
+.profile-section {
+    grid-area: profile;
+    display: grid;
+    min-height: 50rem;
+    grid-template-areas: "transparent-background" "header" "body";
+    animation: move-in-from-bottom 1s forwards;
+    grid-template-rows: 30rem 20rem 1fr;
+}
+
+.gap1 {
+    grid-area: gap1;
+}
+
+.gap2 {
+    grid-area: gap2;
 }

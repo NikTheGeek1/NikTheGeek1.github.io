@@ -10,11 +10,13 @@ const LandingPage = () => {
 
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
     const [exitingAnimationFinished, setExitingAnimationFinished] = useState<boolean>(false);
+    const [landingPageClass, setLandingPageClass] = useState<string>("landing-page-main-before-animation");
 
     useEffect(() => {
         if (monkeyClicked) {
             const animationTimer = setTimeout(() => {
                 setExitingAnimationFinished(true);
+                setLandingPageClass("landing-page-main-after-animation");
                 clearTimeout(animationTimer);
             }, 1800);
         }
@@ -27,7 +29,7 @@ const LandingPage = () => {
     }
 
     return (
-        <main className="landing-page-main">
+        <main className={"landing-page-main " + landingPageClass}>
             <div className="canvas-container-landing-page">
                 <ThreeD setMonkeyClicked={setMonkeyClicked} />
             </div>
@@ -39,9 +41,16 @@ const LandingPage = () => {
                     <div className={"landing-page-subtitle " + exitingClasses.secondaryHeading}>
                         <SecondaryHeading content="Personal space" />
                     </div>
-                </> 
+                </>
                 :
-                <Profile />
+                <>
+                    <div className="gap gap1"></div>
+                    <section className="profile-section">
+                        <Profile />
+                    </section>
+                    <div className="gap gap2"></div>
+                </>
+
             }
         </main >
     );
