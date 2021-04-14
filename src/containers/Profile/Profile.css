@@ -1,0 +1,33 @@
+@keyframes move-in-from-bottom {
+    0% {
+        transform: translateY(100rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.profile-section {
+    display: grid;
+    min-height: 50rem;
+    grid-template-areas: "transparent-background" "header" "body";
+    animation: move-in-from-bottom .2s forwards;
+    grid-template-rows: 4fr 1fr 1fr;
+}
+
+.profile-transparent-background-container {
+    grid-area: transparent-background;
+
+}
+
+.profile-header-container {
+    grid-area: header;
+
+    display: grid;
+    grid-template-areas: "img" "inner-header";
+}
+
+.profile-body-container {
+    grid-area: body;
+    background-color: blueviolet;
+}

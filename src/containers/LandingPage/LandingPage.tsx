@@ -3,6 +3,7 @@ import ThreeD from '../../components/ThreeD/ThreeD';
 import PrimaryHeading from '../../components/Headings/PrimaryHeading/PrimaryHeading';
 import SecondaryHeading from '../../components/Headings/SecondaryHeading/SecondaryHeading';
 import { useEffect, useState } from 'react';
+import Profile from '../../containers/Profile/Profile';
 
 interface ExitingClasses { primaryHeading: string, secondaryHeading: string };
 const LandingPage = () => {
@@ -30,7 +31,7 @@ const LandingPage = () => {
             <div className="canvas-container-landing-page">
                 <ThreeD setMonkeyClicked={setMonkeyClicked} />
             </div>
-            { !exitingAnimationFinished &&
+            { !exitingAnimationFinished ?
                 <>
                     <div className={"landing-page-title " + exitingClasses.primaryHeading}>
                         <PrimaryHeading content="Welcome to my" />
@@ -38,7 +39,9 @@ const LandingPage = () => {
                     <div className={"landing-page-subtitle " + exitingClasses.secondaryHeading}>
                         <SecondaryHeading content="Personal space" />
                     </div>
-                </>
+                </> 
+                :
+                <Profile />
             }
         </main >
     );

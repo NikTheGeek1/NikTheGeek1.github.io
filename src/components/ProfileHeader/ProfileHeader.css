@@ -1,0 +1,21 @@
+.profile-header-profile-img-container {
+    grid-area: img;
+    justify-self: center;
+    z-index: 2;
+    position: relative;
+}
+
+.profile-inner-header-container {
+    grid-area: inner-header;
+    height: 7rem;
+    background-color: aqua;
+}
+
+.profile-img {
+    border-radius: 50rem;
+    border: white 2px solid;
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: -2rem;
+    position: relative;
+}
