@@ -16,11 +16,13 @@ class Monkey {
     private intersects: THREE.Intersection[];
     private pickableObjects!: THREE.Mesh[];
     private onClickEventListenerRef!: (e: MouseEvent) => void;
+    private shouldRaycast: boolean;
 
     constructor(main: Main) {
         this.main = main;
         this.monkeyLoaded = false;
         this.intersects = new Array();
+        this.shouldRaycast = true;
     }
 
     private createRaycaster(): void {
@@ -79,16 +81,18 @@ class Monkey {
             this.monkey.rotation.x = -y + .7 < 1 ?  -y + .7 : 1;
             this.monkey.rotation.y = x;
 
-            this.raycaster.setFromCamera({
-                x: x,
-                y: y
-            }, this.main.camera);
-            this.intersects = this.raycaster.intersectObjects(this.pickableObjects, false);
-
-            if (this.intersects.length > 0) {
-                document.getElementsByTagName("body")[0].style.cursor = "pointer";
-            } else {
-                document.getElementsByTagName("body")[0].style.cursor = "initial";
+            if (this.shouldRaycast) {
+                this.raycaster.setFromCamera({
+                    x: x,
+                    y: y
+                }, this.main.camera);
+                this.intersects = this.raycaster.intersectObjects(this.pickableObjects, false);
+                
+                if (this.intersects.length > 0) {
+                    document.getElementsByTagName("body")[0].style.cursor = "pointer";
+                } else {
+                    document.getElementsByTagName("body")[0].style.cursor = "initial";
+                }
             }
         }
     }
@@ -97,6 +101,7 @@ class Monkey {
         if (this.intersects.length > 0 && !Animations.currentAnimation) {
             Animations.instantiateMonkeyTopRightAnimation(0, this.monkeyAnimation.finalY, this.monkeyAnimation.finalZ);
             this.main.sidersInstance.sidersAnimation.shouldAnimate = true;
+            this.main.monkeyClickedSetter(true);
         }
     }
 
@@ -111,6 +116,8 @@ class Monkey {
 
     private removeOnClickListener(): void {
         document.removeEventListener('click', this.onClickEventListenerRef);
+        this.shouldRaycast = false;
+        document.getElementsByTagName("body")[0].style.cursor = "initial";
     }
 
     public animateMonkey(): void {

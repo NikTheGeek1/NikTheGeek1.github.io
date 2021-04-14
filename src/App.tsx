@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/rea
 import LandingPage from './containers/LandingPage/LandingPage';
 
 function App() {
+
   return (
     <Router>
       <Switch>
         <Route path="/" exact>
-          {LandingPage}
+          <LandingPage />
         </Route>
       </Switch>
     </Router>

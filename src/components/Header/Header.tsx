@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
         <section className="header-section">
-            <ThreeD />
+            {/* <ThreeD /> */}
         </section>
     );
 };

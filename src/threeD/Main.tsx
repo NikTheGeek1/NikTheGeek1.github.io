@@ -14,9 +14,11 @@ class Main {
     public monkeyInstance!: Monkey;
     public lightsInstance!: Lights;
     public sidersInstance!: Siders;
+    public monkeyClickedSetter: (clicked:boolean) => void;
 
-    constructor(canvas: HTMLCanvasElement) {
+    constructor(canvas: HTMLCanvasElement, monkeyClickedSetter: (clicked:boolean) => void) {
         this.canvas = canvas;
+        this.monkeyClickedSetter = monkeyClickedSetter;
     }
 
     private createScene(): void {
