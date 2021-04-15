@@ -1,14 +1,18 @@
 /* VARIABLES */
 :root {
   /* COLOURS */
-  --colour-primary: #74f9ff;
-  --colour-secondary: #aa96da;
-  --colour-tertiary: #99C3D4;
-  --colour-quaternary: #a8d8ea;
+    --colour-primary: #edc79B;
+    --colour-secondary: #74f9ff;
+    --colour-tertiary: #d57a66;
+    --colour-quaternary: #ca6680;
+    --colour-black: #1A090D;
+    --colour-gray-blu: #99C3D4;
+    --colour-blue-gray: #a8d8ea;
     --colour-gray-1: #333;
     --colour-gray-2: #6e7376;
     --colour-gray-3: #eee;
     --colour-white: #fff;
+
     /* FONT SIZES */
     --hugest-font-size: 6.5rem;
     --huger-font-size: 5.5rem;

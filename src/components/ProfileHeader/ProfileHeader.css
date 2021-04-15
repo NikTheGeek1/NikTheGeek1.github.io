@@ -62,11 +62,11 @@
 
 
 .profile-header-item-inactive:hover {
-    background-color: var(--colour-quaternary);
-    color: red;
+    background-color: var(--colour-blue-gray);
+    color: var(--colour-quaternary);
 }
 
 .profile-header-item-active {
-    border-bottom: 1px solid red;
-    color: red;
+    border-bottom: 1px solid var(--colour-quaternary);
+    color: var(--colour-quaternary);
 }

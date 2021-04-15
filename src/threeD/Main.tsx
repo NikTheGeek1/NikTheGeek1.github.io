@@ -23,7 +23,7 @@ class Main {
 
     private createScene(): void {
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color("black");
+        this.scene.background = new THREE.Color(0x1A090D);
     }
 
     private createCamera(): void {
