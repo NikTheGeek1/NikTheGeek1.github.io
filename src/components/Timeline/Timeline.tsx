@@ -8,6 +8,9 @@ const Timeline = () => {
             <div className="timeline-profile-intro timeline-side-box">
                 <BoxTitle title="Intro"/>
             </div>
+            <div className="timeline-profile-latest-news timeline-main-box">
+                <BoxTitle title="Latest news"/>
+            </div>
         </>
     );
 };

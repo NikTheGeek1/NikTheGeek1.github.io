@@ -3,3 +3,10 @@
     background-color: var(--colour-secondary);
     min-height: 200rem;
 }
+
+
+.timeline-profile-latest-news {
+    color: white;
+    background-color: var(--colour-secondary);
+    min-height: 200rem;
+}
