@@ -3,6 +3,7 @@ import Stats from 'three/examples/jsm/libs/stats.module'
 import Lights from './Lights';
 import Monkey from './Monkey';
 import Siders from './Siders';
+import Wall from './Wall';
 
 class Main {
 
@@ -12,6 +13,7 @@ class Main {
     public scene!: THREE.Scene;
     public stats!: Stats;
     public monkeyInstance!: Monkey;
+    public wallInstance!: Wall;
     public lightsInstance!: Lights;
     public sidersInstance!: Siders;
     public monkeyClickedSetter: (clicked:boolean) => void;
@@ -56,6 +58,11 @@ class Main {
         this.sidersInstance.init();
     }
 
+    private createWallInstance(): void {
+        this.wallInstance = new Wall(this);
+        this.wallInstance.init()
+    }
+
     private onWindowResize(): void {
         const windowMaxHeight = window.innerHeight < 1000 ? window.innerHeight : 1000;
         this.camera.aspect = window.innerWidth / windowMaxHeight;
@@ -84,6 +91,7 @@ class Main {
         this.createMonkeyInstance();
         this.createLightsInstance();
         this.createSidersInstance();
+        this.createWallInstance();
 
         window.addEventListener('resize', this.onWindowResize.bind(this), false);
         this.animationLoop();
