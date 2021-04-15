@@ -112,7 +112,7 @@
     grid-template-areas: "transparent-background" "header" "body";
     animation: move-in-from-bottom 1s forwards;
     grid-template-rows: 30rem min-content 1fr;
-    row-gap: var(--larger-gap);
+    row-gap: var(--bigest-gap);
 }
 
 .gap1 {

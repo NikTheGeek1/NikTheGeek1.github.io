@@ -29,13 +29,13 @@ class Main {
     }
 
     private createCamera(): void {
-        this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000);
+        this.camera = new THREE.PerspectiveCamera(75, document.documentElement.clientWidth / window.innerHeight, .1, 1000);
         this.camera.position.z = 5;
     }
 
     private createRenderer(): void {
         this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setSize(document.documentElement.clientWidth, window.innerHeight);
     }
 
     private createStats(): void {
@@ -65,9 +65,9 @@ class Main {
 
     private onWindowResize(): void {
         const windowMaxHeight = window.innerHeight < 1000 ? window.innerHeight : 1000;
-        this.camera.aspect = window.innerWidth / windowMaxHeight;
+        this.camera.aspect = document.documentElement.clientWidth / windowMaxHeight;
         this.camera.updateProjectionMatrix();
-        this.renderer.setSize(window.innerWidth, windowMaxHeight);
+        this.renderer.setSize(document.documentElement.clientWidth, windowMaxHeight);
         this.render();
     }
 

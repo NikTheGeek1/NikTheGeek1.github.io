@@ -1,7 +1,7 @@
 .profile-timeline-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--large-gap);
+    column-gap: var(--bigest-gap);
 }
 
 .timeline-side-box {
