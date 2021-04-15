@@ -1,9 +1,14 @@
 import './Timeline.css';
+import BoxTitle from '../BoxTitle/BoxTitle';
 
 const Timeline = () => {
 
     return (
-        <div>I am the timeline</div>
+        <>
+            <div className="timeline-profile-intro timeline-side-box">
+                <BoxTitle title="Intro"/>
+            </div>
+        </>
     );
 };
 

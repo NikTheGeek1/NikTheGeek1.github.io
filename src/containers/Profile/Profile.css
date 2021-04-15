@@ -9,10 +9,12 @@
     grid-area: header;
 
     display: grid;
-    grid-template-areas: "img" "inner-header";
+    grid-template-areas: "img" "name" "inner-header";
+    grid-template-rows: min-content 7rem 7rem;
 }
 
 .profile-body-container {
     grid-area: body;
-    background-color: blueviolet;
+    border-radius: var(--bigger-radius);
+    display: grid;
 }

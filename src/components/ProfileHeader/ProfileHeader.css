@@ -5,34 +5,68 @@
     position: relative;
 }
 
-.profile-inner-header-container {
-    list-style: none;
-    grid-area: inner-header;
-    height: 7rem;
-    background-color: aqua;
-    display: grid;
-
-    grid-template-columns: repeat(5, minmax(min-content, 1fr));
-    align-items: center;
-    font-size: var(--larger-font-size);
+.profile-header-profile-img-inner-container {
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: -2rem;
+    border: white 2px solid;
 }
 
 .profile-img {
-    border-radius: 50rem;
-    border: white 2px solid;
-    width: 15rem;
+    width: auto;
     height: 15rem;
-    margin-bottom: -2rem;
-    position: relative;
 }
 
-.profile-header-item {
-    justify-self: center;
+.profile-header-my-name {
+    color: white;
+    background-color: var(--colour-quaternary);
+    grid-area: name;
+    border-bottom: .5px solid gray;
+    display: grid;
+    border-top-left-radius: var(--bigger-radius);
+    border-top-right-radius: var(--bigger-radius);
 }
 
-.profile-header-item-name {
+.profile-header-my-name-inner-container {
+    justify-self: center; 
+    align-self: center;
     font-size: var(--largest-font-size) !important;
     font-weight: 900;
     white-space: nowrap;
     font-family: 'Josefin Slab';
+}
+
+.profile-inner-header-container {
+    list-style: none;
+    grid-area: inner-header;
+    background-color: var(--colour-primary);
+    display: grid;
+    border-bottom-left-radius: var(--bigger-radius);
+    border-bottom-right-radius: var(--bigger-radius);    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+    align-items: center;
+    font-size: var(--larger-font-size);
+}
+
+
+
+.profile-header-item {
+    justify-self: center;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 2px;
+}
+
+
+
+.profile-header-item-inactive:hover {
+    background-color: var(--colour-quaternary);
+    color: red;
+}
+
+.profile-header-item-active {
+    border-bottom: 1px solid red;
+    color: red;
 }

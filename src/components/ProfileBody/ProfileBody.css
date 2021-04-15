@@ -1,0 +1,8 @@
+.profile-timeline-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.timeline-side-box {
+    border-radius: var(--bigger-radius);
+}

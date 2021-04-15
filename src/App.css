@@ -1,10 +1,10 @@
 /* VARIABLES */
 :root {
   /* COLOURS */
-    --colour-quaternary: #44beac;
-    --colour-primary: #a6b1eb;
-    --colour-tertiary: #99C3D4;
-    --colour-secondary: #e27f58;
+  --colour-primary: #74f9ff;
+  --colour-secondary: #aa96da;
+  --colour-tertiary: #99C3D4;
+  --colour-quaternary: #a8d8ea;
     --colour-gray-1: #333;
     --colour-gray-2: #6e7376;
     --colour-gray-3: #eee;
@@ -53,6 +53,39 @@
     --small-padding: 1.4rem;
     --smaller-padding: 1.2rem;
     --smallest-padding: 1rem;
+
+        /* GAPS */
+    --hugest-radius: 5rem;
+    --huger-radius: 4rem;
+    --huge-radius: 3rem;
+    --bigest-radius: 2rem;
+    --bigger-radius: 1rem;
+    --big-radius: 5px;
+    --largest-radius: 4.px;
+    --larger-radius: 3.5px;
+    --large-radius: 3px;
+    --primary-radius: 2.5px;
+    --small-radius: 2px;
+    --smaller-radius: 1.5px;
+    --smallest-radius: 1px;
+
+        /* GAPS */
+    --hugest-gap: 6.5rem;
+    --huger-gap: 5.5rem;
+    --huge-gap: 4.5rem;
+    --bigest-gap: 3.5rem;
+    --bigger-gap: 3rem;
+    --big-gap: 2.5rem;
+    --largest-gap: 2.2rem;
+    --larger-gap: 2rem;
+    --large-gap: 1.8rem;
+    --primary-gap: 1.6rem;
+    --small-gap: 1.4rem;
+    --smaller-gap: 1.2rem;
+    --smallest-gap: 1rem;
+    
+    /* SHADOWS */
+    --primary-shadow: 0px 1px 5px black;
   }
 *,
   *::after,

@@ -111,7 +111,8 @@
     min-height: 50rem;
     grid-template-areas: "transparent-background" "header" "body";
     animation: move-in-from-bottom 1s forwards;
-    grid-template-rows: 30rem 20rem 1fr;
+    grid-template-rows: 30rem min-content 1fr;
+    row-gap: var(--larger-gap);
 }
 
 .gap1 {

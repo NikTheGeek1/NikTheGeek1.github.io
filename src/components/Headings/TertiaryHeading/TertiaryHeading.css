@@ -1,0 +1,7 @@
+.tertiary-heading {
+    color: aliceblue;
+    font-size: var(--big-font-size);
+    font-family: 'Josefin Slab';
+    font-weight: 700;
+    display: block;
+}

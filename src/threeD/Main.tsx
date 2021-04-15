@@ -57,9 +57,10 @@ class Main {
     }
 
     private onWindowResize(): void {
-        this.camera.aspect = window.innerWidth / window.innerHeight;
+        const windowMaxHeight = window.innerHeight < 1000 ? window.innerHeight : 1000;
+        this.camera.aspect = window.innerWidth / windowMaxHeight;
         this.camera.updateProjectionMatrix();
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setSize(window.innerWidth, windowMaxHeight);
         this.render();
     }
 

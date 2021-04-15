@@ -1,16 +1,15 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom";
 import LandingPage from './containers/LandingPage/LandingPage';
+import playerChoiseStore from './hooks-store/stores/current-page';
+
+playerChoiseStore();
 
 function App() {
 
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact>
-          <LandingPage />
-        </Route>
-      </Switch>
+      <LandingPage />
     </Router>
   );
 }
