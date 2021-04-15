@@ -1,7 +1,7 @@
 import { initStore } from '../store';
 import { State } from '../store';
 
-export const PAGES_ENUM = {
+export const LOCATIONS_ENUM = {
     TIMELINE: "TIMELINE",
     ABOUT: "ABOUT",
     EXPERIENCE: "EXPERIENCE",
@@ -9,15 +9,16 @@ export const PAGES_ENUM = {
     CONTACTS: "CONTACTS"
 };
 
-export const STORE_CURRENT_PAGE = "STORE_CURRENT_PAGE";
+
+export const STORE_VISITOR_TOKEN = "STORE_VISITOR_TOKEN";
 
 const configureStore = () => {
     const actions = {
-        [STORE_CURRENT_PAGE]: (curState: State, currentPage: string) => {
-            return { currentPage };
+        [STORE_VISITOR_TOKEN]: (curState: State, visitorToken: string) => {
+            return { visitorToken };
         }
     }
-    initStore(actions, { currentPage: PAGES_ENUM.TIMELINE });
+    initStore(actions, { visitorToken: '' });
 }
 
 

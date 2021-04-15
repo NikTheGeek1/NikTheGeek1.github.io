@@ -21,7 +21,7 @@ const LandingPage = () => {
                 setExitingAnimationFinished(true);
                 setLandingPageClass("landing-page-main-after-animation");
                 clearTimeout(animationTimer);
-            }, 1800);
+            }, 1500);
         }
     }, [monkeyClicked]);
 

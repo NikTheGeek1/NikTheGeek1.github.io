@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-export interface State { currentPage?: string }
+export interface State { visitorToken: string }
 
-let globalState: State = {};
+let globalState: State = {visitorToken: ''};
 let listeners: React.Dispatch<React.SetStateAction<State>>[] = [];
 let actions: any = {};
 
