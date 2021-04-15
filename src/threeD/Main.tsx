@@ -65,8 +65,6 @@ class Main {
 
     private onWindowResize(): void {
         const windowMaxHeight = window.innerHeight < 1000 ? window.innerHeight : 1000;
-        console.log(document.documentElement.clientWidth, 'Main.tsx', 'line: ', '68');
-        console.log(window.innerWidth, 'Main.tsx', 'line: ', '69');
         this.camera.aspect = document.documentElement.clientWidth / windowMaxHeight;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(document.documentElement.clientWidth, windowMaxHeight);
