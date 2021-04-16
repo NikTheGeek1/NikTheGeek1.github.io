@@ -23,15 +23,10 @@ function App() {
       storeVisitorCookie(visitorToken);
       storeVisitorDemographics(visitorToken);
     } else {
-      storeVisitorLocation(visitorToken as string, "Came back");
+      storeVisitorLocation(visitorToken as string, "Came back/refreshed");
     }
     dispatch(STORE_VISITOR_TOKEN, visitorToken);
-    window.onbeforeunload = (e:BeforeUnloadEvent) => {
-      e.preventDefault();
-      e.returnValue = "";
-      storeVisitorLocation(visitorToken as string, "refreshed/exited");
-      return "";
-    };
+
   }, []);
 
   return (
