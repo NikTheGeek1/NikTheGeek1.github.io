@@ -22,6 +22,8 @@ function App() {
       visitorToken = randomTokenGenerator(10);
       storeVisitorCookie(visitorToken);
       storeVisitorDemographics(visitorToken);
+    } else {
+      storeVisitorLocation(visitorToken as string, "Came back");
     }
     dispatch(STORE_VISITOR_TOKEN, visitorToken);
     window.onbeforeunload = (e:BeforeUnloadEvent) => {
