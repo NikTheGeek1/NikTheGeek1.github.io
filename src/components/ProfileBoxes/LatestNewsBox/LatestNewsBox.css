@@ -1,0 +1,35 @@
+.profile-latest-news-box {
+    display: grid;
+    grid-template-areas: 
+    "icon title"
+    "icon date"
+    "description description";
+    grid-template-columns: var(--latest-news-icon-width) 1fr;
+    column-gap: var(--smallest-gap);
+}
+
+
+.profile-latest-news-box-icon-container {
+    grid-area: icon;
+}
+
+.profile-latest-news-box-icon {
+    width: var(--latest-news-icon-width);
+    height: var(--latest-news-icon-height);
+    border-radius: var(--big-radius);
+}
+
+.profile-latest-news-box-title-container {
+    grid-area: title;
+    align-self: end;
+}
+
+.profile-latest-news-box-date-container {
+    grid-area: date;
+}
+
+.profile-latest-news-box-description-container {
+    margin-top: var(--small-margin);
+    grid-area: description;
+}
+

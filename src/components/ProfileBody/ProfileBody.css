@@ -1,13 +1,12 @@
 .profile-timeline-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 15rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
 }
 
 .timeline-side-box {
     border-radius: var(--bigger-radius);
 }
-
 
 .timeline-main-box {
     border-radius: var(--bigger-radius);

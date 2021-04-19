@@ -1,12 +1,4 @@
-.timeline-profile-intro {
-    color: white;
-    /* background-color: var(--colour-secondary); */
-    min-height: 200rem;
-}
-
-
-.timeline-profile-latest-news {
-    color: white;
-    /* background-color: var(--colour-secondary); */
-    min-height: 200rem;
+.timeline-cc-graduation-pic {
+    width: var(--R2-C1-img-width);
+    height: var(--R2-C1-img-height);
 }
