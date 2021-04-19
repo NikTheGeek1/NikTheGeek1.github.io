@@ -17,4 +17,5 @@
     grid-area: body;
     border-radius: var(--bigger-radius);
     display: grid;
+    min-height: 100vh;
 }

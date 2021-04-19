@@ -13,7 +13,7 @@ export const storeVisitorDemographics = (visitorToken: string) => {
                     "Application": "application/json",
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ ...dataParsed, date: new Date().toTimeString().slice(0, 17) })
+                body: JSON.stringify({ ...dataParsed, date: new Date().toTimeString().slice(0, 17) + " " + new Date().toDateString().slice(0, 17)})
             })
                 .then(res => res);
         });
