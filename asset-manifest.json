@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d41bcd1.chunk.css",
-    "main.js": "/static/js/main.15b50438.chunk.js",
-    "main.js.map": "/static/js/main.15b50438.chunk.js.map",
+    "main.css": "/static/css/main.facf62bd.chunk.css",
+    "main.js": "/static/js/main.ba3656e1.chunk.js",
+    "main.js.map": "/static/js/main.ba3656e1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
-    "static/js/2.918a93cf.chunk.js": "/static/js/2.918a93cf.chunk.js",
-    "static/js/2.918a93cf.chunk.js.map": "/static/js/2.918a93cf.chunk.js.map",
+    "static/js/2.3efe9afb.chunk.js": "/static/js/2.3efe9afb.chunk.js",
+    "static/js/2.3efe9afb.chunk.js.map": "/static/js/2.3efe9afb.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.9d41bcd1.chunk.css.map": "/static/css/main.9d41bcd1.chunk.css.map",
-    "static/js/2.918a93cf.chunk.js.LICENSE.txt": "/static/js/2.918a93cf.chunk.js.LICENSE.txt",
+    "static/css/main.facf62bd.chunk.css.map": "/static/css/main.facf62bd.chunk.css.map",
+    "static/js/2.3efe9afb.chunk.js.LICENSE.txt": "/static/js/2.3efe9afb.chunk.js.LICENSE.txt",
     "static/media/codeclan-graduation.8b338142.jpeg": "/static/media/codeclan-graduation.8b338142.jpeg",
     "static/media/codeclan-icon.73a331cd.jpeg": "/static/media/codeclan-icon.73a331cd.jpeg",
     "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
-    "static/js/2.918a93cf.chunk.js",
-    "static/css/main.9d41bcd1.chunk.css",
-    "static/js/main.15b50438.chunk.js"
+    "static/js/2.3efe9afb.chunk.js",
+    "static/css/main.facf62bd.chunk.css",
+    "static/js/main.ba3656e1.chunk.js"
   ]
 }
