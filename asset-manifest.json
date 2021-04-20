@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.85fc42be.chunk.css",
-    "main.js": "/static/js/main.a7c12830.chunk.js",
-    "main.js.map": "/static/js/main.a7c12830.chunk.js.map",
+    "main.js": "/static/js/main.ba3656e1.chunk.js",
+    "main.js.map": "/static/js/main.ba3656e1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/js/2.3efe9afb.chunk.js": "/static/js/2.3efe9afb.chunk.js",
@@ -10,6 +10,7 @@
     "index.html": "/index.html",
     "static/css/main.85fc42be.chunk.css.map": "/static/css/main.85fc42be.chunk.css.map",
     "static/js/2.3efe9afb.chunk.js.LICENSE.txt": "/static/js/2.3efe9afb.chunk.js.LICENSE.txt",
+    "static/media/codeclan-graduation.8b338142.jpeg": "/static/media/codeclan-graduation.8b338142.jpeg",
     "static/media/codeclan-icon.73a331cd.jpeg": "/static/media/codeclan-icon.73a331cd.jpeg",
     "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg"
   },
@@ -17,6 +18,6 @@
     "static/js/runtime-main.82ce76f2.js",
     "static/js/2.3efe9afb.chunk.js",
     "static/css/main.85fc42be.chunk.css",
-    "static/js/main.a7c12830.chunk.js"
+    "static/js/main.ba3656e1.chunk.js"
   ]
 }
