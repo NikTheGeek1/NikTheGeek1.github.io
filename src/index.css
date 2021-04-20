@@ -1,12 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Dancing Script', 'Quicksand', 'Josefin Slab', serif, cursive, 'PT Serif', 
+  font-family: 'Dancing Script', 'Hack', 'Quicksand', 'Josefin Slab', serif, cursive, 'PT Serif', 
   -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

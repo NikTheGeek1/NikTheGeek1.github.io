@@ -1,5 +1,5 @@
 .box-plain-text {
-    font-family: 'Josefin Slab';
-    letter-spacing: 1px;
-    font-size: var(--large-font-size);
+    font-family: Hack;
+    font-size: var(--small-font-size);
+    line-height: 1.6;
 }

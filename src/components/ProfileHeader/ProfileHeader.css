@@ -46,10 +46,9 @@
     border-bottom-left-radius: var(--bigger-radius);
     border-bottom-right-radius: var(--bigger-radius);    grid-template-columns: repeat(5, minmax(min-content, 1fr));
     align-items: center;
-    font-size: var(--larger-font-size);
+    font-size: var(--large-font-size);
+    font-family: 'Hack';
 }
-
-
 
 .profile-header-item {
     justify-self: center;
@@ -58,8 +57,6 @@
     transition: all .2s;
     border-radius: 2px;
 }
-
-
 
 .profile-header-item-inactive:hover {
     background-color: var(--colour-blue-gray);
