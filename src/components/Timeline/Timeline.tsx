@@ -36,7 +36,7 @@ const Timeline = () => {
                 </LatestNewsBox>
             </GenericBox>
             <GenericBox title="." rowSpan={1} columnSpan={2}>
-                {/* <img src={codeclanGraduation} alt="graduation-pic" className="timeline-cc-graduation-pic"/> */}
+                <img src={codeclanGraduation} alt="graduation-pic" className="timeline-cc-graduation-pic"/>
             </GenericBox>
         </>
     );
