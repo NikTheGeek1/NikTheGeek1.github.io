@@ -98,6 +98,9 @@
     /* PROFILE IMAGES SIZES */
     --R2-C1-img-width: 25rem;
     --R2-C1-img-height: 15rem;
+    --R2-C2-img-width: 45rem;
+    --R2-C2-img-height: 30rem;
+
   }
 *,
   *::after,

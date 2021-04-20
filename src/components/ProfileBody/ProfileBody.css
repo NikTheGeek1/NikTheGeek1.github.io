@@ -1,7 +1,18 @@
+@keyframes display {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .profile-timeline-container {
+    opacity: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 1rem;
+    column-gap: var(--bigest-gap);
+    row-gap: var(--bigest-gap);
+    animation: display 1s;
 }
 
 .timeline-side-box {

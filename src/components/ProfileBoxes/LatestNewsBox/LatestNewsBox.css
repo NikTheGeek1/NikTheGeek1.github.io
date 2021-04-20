@@ -6,6 +6,7 @@
     "description description";
     grid-template-columns: var(--latest-news-icon-width) 1fr;
     column-gap: var(--smallest-gap);
+    margin-bottom: var(--big-margin);
 }
 
 

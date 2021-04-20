@@ -9,6 +9,8 @@ import BoxPlainText from '../Texts/BoxText';
 import LatestNewsBox from '../ProfileBoxes/LatestNewsBox/LatestNewsBox';
 import codeclanIcon from '../../assets/images/codeclan-icon.jpeg';
 import codeclanGraduation from '../../assets/images/codeclan-graduation.jpeg';
+import SocialNetworks from '../SocialNetworks/SocialNetworks';
+import showcase from '../../assets/images/showcase-white.png';
 
 const Timeline = () => {
     const visitorToken = useStore(false)[0].visitorToken;
@@ -19,15 +21,21 @@ const Timeline = () => {
 
     return (
         <>
-            <GenericBox title="Intro" rowSpan={1} columnSpan={4}>
+            <GenericBox title="Intro" rowSpan={1} columnSpan={3}>
                 <BoxPlainText>{TimelineTexts.intro}</BoxPlainText>
             </GenericBox>
-            <GenericBox title="Latest news" rowSpan={2} columnSpan={3}>
-                <LatestNewsBox title="CodeClan graduation" date={new Date()} icon={codeclanIcon} >
+            <GenericBox title="Other networks" rowSpan={1} columnSpan={1}>
+                <SocialNetworks />
+            </GenericBox>
+            <GenericBox title="Latest news" rowSpan={2} columnSpan={2}>
+                <LatestNewsBox title="CodeClan graduation" date={new Date("3/6/2021")} icon={codeclanIcon} >
                     {TimelineTexts.codeClanGraduation}
                 </LatestNewsBox>
+                <LatestNewsBox title="Showcase presentation" date={new Date("3/25/2021")} icon={showcase} >
+                    {TimelineTexts.showcasePresentation}
+                </LatestNewsBox>
             </GenericBox>
-            <GenericBox title="Graduation" rowSpan={1} columnSpan={1}>
+            <GenericBox title="." rowSpan={1} columnSpan={2}>
                 <img src={codeclanGraduation} alt="graduation-pic" className="timeline-cc-graduation-pic"/>
             </GenericBox>
         </>
