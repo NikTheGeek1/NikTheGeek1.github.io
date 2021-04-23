@@ -15,7 +15,7 @@ const ProfileHeader = () => {
         setRefreshTab(item);
     };
 
-    const headerItemsJSX = ["Timeline", "About", "Experience", "Projects", "Contact"]
+    const headerItemsJSX = ["Timeline", "Publications", "Experience", "Projects", "Contact"]
         .map(item => {
             const activeItem = history.location.pathname.slice(1);
             const activeItemClass = activeItem === item.toLowerCase() ? "profile-header-item-active" : "profile-header-item-inactive";

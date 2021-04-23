@@ -1,0 +1,19 @@
+.tag-bubble-container {
+    border: 1px solid var(--colour-quaternary);
+    color: var(--colour-blue-gray);
+    border-radius: 1rem;
+    padding: 2px 5px;
+    margin-right: 1rem;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.tag-bubble-container:hover {
+    background-color: var(--colour-quaternary);
+    border: 1px solid var(--colour-primary);
+    color: var(--colour-gray-blue);
+}
+
+.tag-bubble {
+    color: inherit;
+}

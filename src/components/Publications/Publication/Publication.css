@@ -1,0 +1,36 @@
+.publication-container {
+    display: grid;
+    grid-template-areas: "year title" ". authors" ". journal" ". tags";
+    grid-template-columns: 10rem 1fr;
+    row-gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.publications-year {
+    grid-area: year;
+}
+
+.publications-title {
+    grid-area: title;
+
+}
+
+.publications-authors {
+
+    grid-area: authors;
+}
+
+.publications-journal {
+    grid-area: journal;
+
+}
+
+.publications-tags {
+    grid-area: tags;
+    display: flex;
+    flex-direction: row;
+}
+
+.big-font-size {
+    font-size: var(--larger-font-size);
+}

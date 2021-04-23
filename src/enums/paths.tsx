@@ -1,7 +1,7 @@
 interface Paths { [key: string]: string };
 export const pathsEnum: Paths = {
     TIMELINE: "/timeline",
-    ABOUT: "/about",
+    PUBLICATIONS: "/publications",
     EXPERIENCE: "/experience",
     CONTACT: "/contact",
     PROJECTS: "/projects"

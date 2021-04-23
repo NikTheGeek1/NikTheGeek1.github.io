@@ -3,7 +3,7 @@ import { State } from '../store';
 
 export const LOCATIONS_ENUM = {
     TIMELINE: "TIMELINE",
-    ABOUT: "ABOUT",
+    PUBLICATIONS: "PUBLICATIONS",
     EXPERIENCE: "EXPERIENCE",
     PROJECTS: "PROJECTS",
     CONTACTS: "CONTACTS"

@@ -1,7 +1,7 @@
 import Timeline from '../Timeline/Timeline';
 import { BrowserRouter as _, Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom';
 import { pathsEnum } from '../../enums/paths';
-import About from '../About/About';
+import Publications from '../Publications/Publications';
 
 import './ProfileBody.css';
 
@@ -13,13 +13,13 @@ const ProfileBody = () => {
                 <Redirect to={pathsEnum.TIMELINE} />
             </Route>
             <Route path={pathsEnum.TIMELINE}>
-                <section className="profile-timeline-container">
+                <section className="profile-timeline-container" key={new Date().getTime()}>
                     <Timeline />
                 </section>
             </Route>
-            <Route path={pathsEnum.ABOUT}>
-                <section className="profile-about-container">
-                    <About />
+            <Route path={pathsEnum.PUBLICATIONS}>
+                <section className="profile-publications-container">
+                    <Publications />
                 </section>
             </Route>
             <Route path={pathsEnum.EXPERIENCE}>

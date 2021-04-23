@@ -2,3 +2,11 @@
     width: 100%;
     height: var(--R2-C2-img-height);
 }
+
+.timeline-side-box {
+    border-radius: var(--bigger-radius);
+}
+
+.timeline-main-box {
+    border-radius: var(--bigger-radius);
+}

@@ -1,9 +1,9 @@
 import './FourHeading.css';
 
-const FourHeading = ({ content }: { content: string}) => {
+const FourHeading = ({ content, extraClasses }: { content: string, extraClasses?:string}) => {
 
     return (
-        <span className="four-heading">
+        <span className={"four-heading " + extraClasses}>
             {content}
         </span>
     );
