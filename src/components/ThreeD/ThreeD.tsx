@@ -12,7 +12,6 @@ const ThreeD = ({ setMonkeyClicked }: {setMonkeyClicked:(clicked: boolean) => vo
       setWebGLMainInstance(webGLMainInstance);
       webGLMainInstance.init();
     }
-
   }, []);
 
   return (

@@ -4,6 +4,7 @@ import Lights from './Lights';
 import Monkey from './Monkey';
 import Siders from './Siders';
 import Wall from './Wall';
+import ScreenDimensionUtils from './ScreenDimensionUtils';
 
 class Main {
 
@@ -17,10 +18,16 @@ class Main {
     public lightsInstance!: Lights;
     public sidersInstance!: Siders;
     public monkeyClickedSetter: (clicked:boolean) => void;
+    private fps: number;
+    private fpsInterval!: number;
+    private now!: number;
+    private then!: number;
+    private elapsed!: number;
 
     constructor(canvas: HTMLCanvasElement, monkeyClickedSetter: (clicked:boolean) => void) {
         this.canvas = canvas;
         this.monkeyClickedSetter = monkeyClickedSetter;
+        this.fps = 60;
     }
     
     private createScene(): void {
@@ -30,7 +37,8 @@ class Main {
 
     private createCamera(): void {
         this.camera = new THREE.PerspectiveCamera(75, document.documentElement.clientWidth / window.innerHeight, .1, 1000);
-        this.camera.position.z = 5;
+        const cameraZ = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
+        this.camera.position.z = cameraZ;
     }
 
     private createRenderer(): void {
@@ -64,22 +72,40 @@ class Main {
     }
 
     private onWindowResize(): void {
-        const windowMaxHeight = window.innerHeight < 1000 ? window.innerHeight : 1000;
+        const windowMaxHeight = window.innerHeight;
         this.camera.aspect = document.documentElement.clientWidth / windowMaxHeight;
+        const cameraZ = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
+        this.camera.position.z = cameraZ;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(document.documentElement.clientWidth, windowMaxHeight);
         this.render();
     }
 
+    private initTimeDelta(): void {
+        this.fpsInterval = 1000 / this.fps;
+        this.then = Date.now();
+    }
+
     private animationLoop() {
         requestAnimationFrame(this.animationLoop.bind(this));
-        this.lightsInstance.updateHelpers();
-        this.sidersInstance.updateKnots();
-        this.lightsInstance.changeLightColours();
-        this.monkeyInstance.animateMonkey();
-        this.sidersInstance.animateKnots();
-        this.renderer.render(this.scene, this.camera);
-        this.stats.update();
+        this.now = Date.now();
+        this.elapsed = this.now - this.then;
+    
+        // if enough time has elapsed, draw the next frame
+        if (this.elapsed > this.fpsInterval) {
+            // Get ready for next frame by setting then=now, but...
+            // Also, adjust for fpsInterval not being multiple of 16.67
+            this.then = this.now - (this.elapsed % this.fpsInterval);
+    
+            // draw stuff here
+            this.lightsInstance.updateHelpers();
+            this.sidersInstance.updateKnots();
+            this.lightsInstance.changeLightColours();
+            this.monkeyInstance.animateMonkey();
+            this.sidersInstance.animateKnots();
+            this.renderer.render(this.scene, this.camera);
+            this.stats.update();
+        }
     }
 
     public init(): void {
@@ -94,6 +120,7 @@ class Main {
         this.createWallInstance();
 
         window.addEventListener('resize', this.onWindowResize.bind(this), false);
+        this.initTimeDelta();
         this.animationLoop();
     }
 
