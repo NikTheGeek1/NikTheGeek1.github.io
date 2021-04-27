@@ -2,12 +2,11 @@
 
 class ScreenDimensionUtils {
 
-    public static cameraPositionZ(screenWidth: number, screenHeight: number): 
-    number {
+    public static cameraPositionZ(screenWidth: number, screenHeight: number): { z: number, y: number } {
         if (this.isPhone(screenWidth, screenHeight)) {
-            return 8;
+            return { z: 7, y: -2 };
         }
-        return 5;
+        return { z: 5, y: 0 };
     }
 
     private static isPhone(screenWidth: number, screenHeight: number): boolean {

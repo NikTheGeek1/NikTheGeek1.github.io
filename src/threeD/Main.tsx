@@ -37,9 +37,9 @@ class Main {
 
     private createCamera(): void {
         this.camera = new THREE.PerspectiveCamera(75, document.documentElement.clientWidth / window.innerHeight, .1, 1000);
-        const cameraZ = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
-        this.camera.position.z = cameraZ;
-    }
+        const cameraPosition = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
+        this.camera.position.z = cameraPosition.z;
+        this.camera.position.y = cameraPosition.y;    }
 
     private createRenderer(): void {
         this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
@@ -74,8 +74,9 @@ class Main {
     private onWindowResize(): void {
         const windowMaxHeight = window.innerHeight;
         this.camera.aspect = document.documentElement.clientWidth / windowMaxHeight;
-        const cameraZ = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
-        this.camera.position.z = cameraZ;
+        const cameraPosition = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
+        this.camera.position.z = cameraPosition.z;
+        this.camera.position.y = cameraPosition.y;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(document.documentElement.clientWidth, windowMaxHeight);
         this.render();
