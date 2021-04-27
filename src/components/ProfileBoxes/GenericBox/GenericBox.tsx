@@ -7,9 +7,9 @@ const GenericBox = ({ children, title, rowSpan, columnSpan }:
     const scrDims = useStore()[0].scrDims;
     
     if (scrDims && scrDims.width < 500) {
-        columnSpan = 4
+        columnSpan = 4;
     }
-    
+
     return (
         <div className="profile-generic-box"
             style={{
