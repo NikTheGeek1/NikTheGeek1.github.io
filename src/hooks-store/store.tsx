@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-export interface State { visitorToken: string }
+export interface State { visitorToken?: string, scrDims?: {width: number, height: number} }
 
-let globalState: State = {visitorToken: ''};
+let globalState: State = {};
 let listeners: React.Dispatch<React.SetStateAction<State>>[] = [];
 let actions: any = {};
 

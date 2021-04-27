@@ -3,14 +3,17 @@ import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom";
 import LandingPage from './containers/LandingPage/LandingPage';
 import {storeVisitorDemographics, storeVisitorLocation} from './utils/visitor-tracker';
 
-import visitorMap from './hooks-store/stores/visitor-map';
+import visitorMapStore from './hooks-store/stores/visitor-map';
+import screenDimensionsStore from './hooks-store/stores/screen-dimensions';
 import { fetchVisitorCookie, storeVisitorCookie } from './visitor-cookies/visitor-cookies';
 import { useEffect } from 'react';
 import randomTokenGenerator from './utils/random-token-generator';
 import { STORE_VISITOR_TOKEN } from './hooks-store/stores/visitor-map';
+import { SET_SCREEN_DIMENSIONS } from './hooks-store/stores/screen-dimensions';
 import { useStore } from './hooks-store/store';
 
-visitorMap();
+visitorMapStore();
+screenDimensionsStore();
 
 function App() {
   const dispatch = useStore(false)[1];
@@ -28,6 +31,18 @@ function App() {
     dispatch(STORE_VISITOR_TOKEN, visitorToken);
 
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", screenResizeHandler);
+
+    return () => {
+      window.removeEventListener("resize", screenResizeHandler);
+    }
+  }, []);
+
+  const screenResizeHandler = () => {
+    dispatch(SET_SCREEN_DIMENSIONS, {width: document.documentElement.clientWidth, height: window.innerHeight});
+  };
 
   return (
     <Router>

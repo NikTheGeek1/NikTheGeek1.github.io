@@ -44,7 +44,8 @@
     background-color: var(--colour-primary);
     display: grid;
     border-bottom-left-radius: var(--bigger-radius);
-    border-bottom-right-radius: var(--bigger-radius);    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+    border-bottom-right-radius: var(--bigger-radius);    
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
     align-items: center;
     font-size: var(--large-font-size);
     font-family: 'Hack';
@@ -56,6 +57,7 @@
     cursor: pointer;
     transition: all .2s;
     border-radius: 2px;
+    position: relative;
 }
 
 .profile-header-item-inactive:hover {
@@ -66,4 +68,14 @@
 .profile-header-item-active {
     border-bottom: 1px solid var(--colour-quaternary);
     color: var(--colour-quaternary);
+}
+
+.profile-inner-header-more-container {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    position: absolute;
+    top: 6rem;
+    right: .7rem;
+    list-style: none;
 }

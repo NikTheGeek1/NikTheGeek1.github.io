@@ -11,7 +11,7 @@ const Publications = () => {
     const visitorToken = useStore(false)[0].visitorToken;
 
     useEffect(() => {
-        storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PUBLICATIONS);
+        visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PUBLICATIONS);
     }, []);
 
     return (

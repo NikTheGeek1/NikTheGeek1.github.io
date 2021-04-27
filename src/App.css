@@ -137,28 +137,28 @@ body {
 @media only screen and (max-width: 42em){ 
   html {
     /* This defines what 1rem is: 1rem = 10px; 10/16 = 62.5 */
-    font-size: 45%; 
+    /* font-size: 45%;  */
   }
 }
 
 @media only screen and (max-width: 37.5em){ 
   html {
     /* This defines what 1rem is: 1rem = 10px; 10/16 = 62.5 */
-    font-size: 40%; 
+    /* font-size: 40%;  */
   }
 }
 
 @media only screen and (max-width: 31.3em){ 
   html {
     /* This defines what 1rem is: 1rem = 10px; 10/16 = 62.5 */
-    font-size: 35%; 
+    /* font-size: 35%;  */
   }
 }
 
 @media only screen and (max-width: 26em){ 
   html {
     /* This defines what 1rem is: 1rem = 10px; 10/16 = 62.5 */
-    font-size: 30%; 
+    /* font-size: 30%;  */
   }
 }
 

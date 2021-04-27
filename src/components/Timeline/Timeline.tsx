@@ -16,7 +16,7 @@ const Timeline = () => {
     const visitorToken = useStore(false)[0].visitorToken;
 
     useEffect(() => {
-        storeVisitorLocation(visitorToken, LOCATIONS_ENUM.TIMELINE);
+        visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.TIMELINE);
     }, []);
 
     return (
