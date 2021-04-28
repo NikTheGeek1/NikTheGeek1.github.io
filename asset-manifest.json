@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ac4bfa2.chunk.css",
-    "main.js": "/static/js/main.c8569bcf.chunk.js",
-    "main.js.map": "/static/js/main.c8569bcf.chunk.js.map",
+    "main.css": "/static/css/main.331240ee.chunk.css",
+    "main.js": "/static/js/main.017bfe79.chunk.js",
+    "main.js.map": "/static/js/main.017bfe79.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
-    "static/js/2.7dcdf7d6.chunk.js": "/static/js/2.7dcdf7d6.chunk.js",
-    "static/js/2.7dcdf7d6.chunk.js.map": "/static/js/2.7dcdf7d6.chunk.js.map",
+    "static/js/2.bbd19b89.chunk.js": "/static/js/2.bbd19b89.chunk.js",
+    "static/js/2.bbd19b89.chunk.js.map": "/static/js/2.bbd19b89.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3ac4bfa2.chunk.css.map": "/static/css/main.3ac4bfa2.chunk.css.map",
-    "static/js/2.7dcdf7d6.chunk.js.LICENSE.txt": "/static/js/2.7dcdf7d6.chunk.js.LICENSE.txt",
+    "static/css/main.331240ee.chunk.css.map": "/static/css/main.331240ee.chunk.css.map",
+    "static/js/2.bbd19b89.chunk.js.LICENSE.txt": "/static/js/2.bbd19b89.chunk.js.LICENSE.txt",
     "static/media/codeclan-graduation.8b338142.jpeg": "/static/media/codeclan-graduation.8b338142.jpeg",
     "static/media/codeclan-icon.73a331cd.jpeg": "/static/media/codeclan-icon.73a331cd.jpeg",
+    "static/media/education.a8918267.svg": "/static/media/education.a8918267.svg",
     "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
-    "static/js/2.7dcdf7d6.chunk.js",
-    "static/css/main.3ac4bfa2.chunk.css",
-    "static/js/main.c8569bcf.chunk.js"
+    "static/js/2.bbd19b89.chunk.js",
+    "static/css/main.331240ee.chunk.css",
+    "static/js/main.017bfe79.chunk.js"
   ]
 }
