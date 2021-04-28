@@ -1,0 +1,12 @@
+.experience-section {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-column: span 4;
+    row-gap: 2rem;
+
+}
+
+.experience-section-items-container {
+    display: grid;
+    row-gap: 2rem;
+}

@@ -1,0 +1,38 @@
+.experience-section-item {
+    display: grid;
+    grid-template-areas: "title subtitle" "subsubtitle year" "details details";
+    color: white;
+    font-size: var(--large-font-size);
+    font-family: 'Hack';
+    width: 90%;
+    margin: auto;
+}
+
+
+.experience-section-item-year {
+    grid-area: year;
+    justify-self: end;
+    font-size: var(--large-font-size);
+    font-family: 'Quicksand';
+}
+
+.experience-section-item-title {
+    grid-area: title;
+    font-size: var(--large-font-size);
+    font-weight: 800;
+}
+
+.experience-section-item-subtitle {
+    grid-area: subtitle;
+    justify-self: end;
+}
+
+.experience-section-item-subsubtitle {
+    grid-area: subsubtitle;
+    font-size: var(--large-font-size);
+    font-family: 'Dancing Script';
+}
+
+.experience-section-item-details {
+    grid-area: details;
+}

@@ -90,6 +90,7 @@
     
     /* SHADOWS */
     --primary-shadow: 0px 1px 5px black;
+    --section-title-shadow: 0px 0px 2px 1rem var(--colour-tertiary);
 
     /* LATEST NEWS ICON SIZES */
     --latest-news-icon-width: 5rem;

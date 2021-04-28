@@ -73,7 +73,7 @@
 .profile-inner-header-more-container {
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    background-color: var(--colour-primary);
     position: absolute;
     top: 6rem;
     right: .7rem;
