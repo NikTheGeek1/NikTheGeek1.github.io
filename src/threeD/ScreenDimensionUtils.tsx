@@ -3,7 +3,6 @@
 class ScreenDimensionUtils {
 
     public static cameraPositionZ(screenWidth: number, screenHeight: number): { z: number, y: number } {
-        debugger
         if (this.isPhoneX(screenWidth, screenHeight)) {
             return { z: 14, y: -4};
         }
