@@ -10,7 +10,7 @@ class ScreenDimensionUtils {
     }
 
     private static isPhone(screenWidth: number, screenHeight: number): boolean {
-        return screenWidth < 400 && screenHeight > 600
+        return screenWidth < 500 && screenHeight > 600
     }
 }
 
