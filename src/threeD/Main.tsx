@@ -37,9 +37,11 @@ class Main {
 
     private createCamera(): void {
         this.camera = new THREE.PerspectiveCamera(75, document.documentElement.clientWidth / window.innerHeight, .1, 1000);
-        const cameraPosition = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight)
+        const cameraPosition = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight);
         this.camera.position.z = cameraPosition.z;
-        this.camera.position.y = cameraPosition.y;    }
+        this.camera.position.y = cameraPosition.y;    
+        console.log(this.camera.position, 'Main.tsx', 'line: ', '43');
+    }
 
     private createRenderer(): void {
         this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
