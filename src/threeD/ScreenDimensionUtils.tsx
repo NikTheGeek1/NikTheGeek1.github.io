@@ -4,7 +4,7 @@ class ScreenDimensionUtils {
 
     public static cameraPositionZ(screenWidth: number, screenHeight: number): { z: number, y: number } {
         if (this.isPhone(screenWidth, screenHeight)) {
-            return { z: 7, y: -1};
+            return { z: 10, y: -1};
         }
         return { z: 5, y: 0 };
     }
