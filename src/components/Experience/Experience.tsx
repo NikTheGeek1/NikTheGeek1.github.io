@@ -99,7 +99,7 @@ const Experience = () => {
                                     <li>International Multisensory Research Forum (IMRF), Toronto, June 14-17</li>
                                 </ol>
                             </DetailsItem>
-                            <DetailsItem><TagBubble title="Article"/></DetailsItem>
+                            <DetailsItem><TagBubble title="Article" link="https://doi.org/10.1016/j.actpsy.2019.102874"/></DetailsItem>
                         </>
                     ]}
                 />
