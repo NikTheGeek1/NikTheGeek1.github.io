@@ -3,6 +3,7 @@ import { BrowserRouter as _, Redirect, Route, Switch } from 'react-router-dom/cj
 import { pathsEnum } from '../../enums/paths';
 import Publications from '../Publications/Publications';
 import Experience from '../Experience/Experience';
+import ExperienceSection from '../Experience/ExperienceSection/ExperienceSection';
 
 import './ProfileBody.css';
 
@@ -30,10 +31,16 @@ const ProfileBody = () => {
             </Route>
             <Route path={pathsEnum.PROJECTS}>
                 <section className="profile-projects-container">
+                    <ExperienceSection
+                        title="Under Construction"
+                    />
                 </section>
             </Route>
             <Route path={pathsEnum.CONTACT}>
                 <section className="profile-contact-container">
+                    <ExperienceSection
+                        title="Under Construction"
+                    />
                 </section>
             </Route>
         </Switch>
