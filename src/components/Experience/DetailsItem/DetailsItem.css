@@ -1,0 +1,7 @@
+.experience-details-item {
+    font-size: var(--smaller-font-size);
+}
+
+.experience-details-item::before {
+    content: "-";
+}

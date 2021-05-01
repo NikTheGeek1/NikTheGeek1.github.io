@@ -14,7 +14,7 @@ const ExperienceSectionItem = ({year, title, subtitle, subsubtitle, children}: {
             <div className="experience-section-item-title">{title}</div>
             <div className="experience-section-item-subtitle">{subtitle}</div>
             <div className="experience-section-item-subsubtitle">{subsubtitle}</div>
-            <div className="experience-section-item-details">{children}</div>
+            <ul className="experience-section-item-details">{children}</ul>
         </div>
     );
 };

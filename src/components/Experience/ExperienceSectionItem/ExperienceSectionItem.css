@@ -6,14 +6,15 @@
     font-family: 'Hack';
     width: 90%;
     margin: auto;
+    /* border-bottom: 1px solid whitesmoke; */
 }
-
 
 .experience-section-item-year {
     grid-area: year;
     justify-self: end;
     font-size: var(--large-font-size);
     font-family: 'Quicksand';
+    text-align: right;
 }
 
 .experience-section-item-title {
@@ -25,6 +26,7 @@
 .experience-section-item-subtitle {
     grid-area: subtitle;
     justify-self: end;
+    text-align: right;
 }
 
 .experience-section-item-subsubtitle {
@@ -35,4 +37,6 @@
 
 .experience-section-item-details {
     grid-area: details;
+    list-style: none;
+    margin-left: 1rem;
 }
