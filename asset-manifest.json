@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.21e50647.chunk.css",
-    "main.js": "/static/js/main.6199cff3.chunk.js",
-    "main.js.map": "/static/js/main.6199cff3.chunk.js.map",
+    "main.js": "/static/js/main.82ef37f0.chunk.js",
+    "main.js.map": "/static/js/main.82ef37f0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/js/2.ca3f9a4f.chunk.js": "/static/js/2.ca3f9a4f.chunk.js",
@@ -14,12 +14,14 @@
     "static/media/codeclan-icon.73a331cd.jpeg": "/static/media/codeclan-icon.73a331cd.jpeg",
     "static/media/education.a8918267.svg": "/static/media/education.a8918267.svg",
     "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg",
+    "static/media/seminars.6c9c2e70.svg": "/static/media/seminars.6c9c2e70.svg",
+    "static/media/skills.ec5d85ab.svg": "/static/media/skills.ec5d85ab.svg",
     "static/media/work-gear.c9f5b139.svg": "/static/media/work-gear.c9f5b139.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
     "static/js/2.ca3f9a4f.chunk.js",
     "static/css/main.21e50647.chunk.css",
-    "static/js/main.6199cff3.chunk.js"
+    "static/js/main.82ef37f0.chunk.js"
   ]
 }
