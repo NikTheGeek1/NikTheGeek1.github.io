@@ -9,7 +9,8 @@
 
 .profile-timeline-container,
 .profile-publications-container,
-.profile-experience-container {
+.profile-experience-container,
+.profile-projects-container {
     opacity: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

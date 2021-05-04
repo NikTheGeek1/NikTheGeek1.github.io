@@ -1,0 +1,20 @@
+.project-container {
+    grid-column: span 4;
+    display: grid;
+    grid-template-rows: 2rem 20rem 20rem;
+    grid-template-areas: "title" "photos" "details";
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.project-title-container {
+    grid-area: title;
+}
+
+.project-photos-container {
+    grid-area: photos;
+}
+
+.project-details-container {
+    grid-area: details;
+}

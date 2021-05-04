@@ -4,6 +4,7 @@ import { pathsEnum } from '../../enums/paths';
 import Publications from '../Publications/Publications';
 import Experience from '../Experience/Experience';
 import ExperienceSection from '../Experience/ExperienceSection/ExperienceSection';
+import Projects from '../Projects/Projects';
 
 import './ProfileBody.css';
 
@@ -31,9 +32,7 @@ const ProfileBody = () => {
             </Route>
             <Route path={pathsEnum.PROJECTS}>
                 <section className="profile-projects-container">
-                    <ExperienceSection
-                        title="Under Construction"
-                    />
+                    <Projects />
                 </section>
             </Route>
             <Route path={pathsEnum.CONTACT}>
