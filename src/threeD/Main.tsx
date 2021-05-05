@@ -107,7 +107,7 @@ class Main {
             this.monkeyInstance.animateMonkey();
             this.sidersInstance.animateKnots();
             this.renderer.render(this.scene, this.camera);
-            this.stats.update();
+            // this.stats.update();
         }
     }
 
@@ -115,7 +115,7 @@ class Main {
         this.createRenderer();
         this.createCamera();
         this.createScene();
-        this.createStats();
+        // this.createStats();
 
         this.createMonkeyInstance();
         this.createLightsInstance();

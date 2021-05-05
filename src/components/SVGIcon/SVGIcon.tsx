@@ -13,6 +13,7 @@ const SVGIcon = ({ onClick, extraClasses, icon }:
             className={"svg-icon " + extraClasses}
             src={icon}
             alt="icon"
+            style={{cursor: onClick ? "pointer" : "auto"}}
         />
     );
 };

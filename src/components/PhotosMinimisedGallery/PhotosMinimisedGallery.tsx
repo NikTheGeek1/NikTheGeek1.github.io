@@ -1,24 +1,41 @@
 import './PhotosMinimisedGallery.css';
+import PhotoGalleryStyle from '../../utils/PhotoGalleryStyle';
 
-const PhotosMinimisedGallery = ({ photos }:
+const PhotosMinimisedGallery = ({ photos, toggleMaximisedGallery }:
     {
-        photos: string[]
+        photos: string[],
+        toggleMaximisedGallery: (showMaximisedFlag: false | number) => void
     }) => {
 
-    const numOfPhotosClass = `photos-${photos.length}`;
 
-    const photosJSX = photos.map(photo => {
-        // let imgHeight;
-        // let img = new Image();
-        // img.src = photo;
-        // img.onload = () => {
-        //     imgHeight = img.height;
-        // }
-        return <img key={photo} src={photo} className="photos-photo"/>;
+    const openMaximisedGalleryHanlder = (photoIdx: number) => {
+        toggleMaximisedGallery(photoIdx);
+    };
+
+    
+
+    const dynamicStyles = new PhotoGalleryStyle(photos);
+    const photosJSX = photos.map((photo, photoIdx) => {
+        if (photoIdx === 5) {
+            return (
+                <div className="photos-more-than-5-container" key={photo+photoIdx}>
+                    <div className="photos-more-than-5-text">
+                        +{(photos.length) - 5} Photos
+                    </div>
+                </div>
+            );
+        } else if (photoIdx < 5) {
+            return (
+                <div key={photo+photoIdx} style={dynamicStyles.photosStyles[photoIdx]} className="photos-photo-container" onClick={openMaximisedGalleryHanlder.bind(this, photoIdx)}>
+                    <div className="photos-photo-overlay"></div>
+                    <img src={photo} className="photos-photo" />
+                </div>
+            );
+        }
     });
 
     return (
-        <div className={`photos-minimised-gallery-container ${numOfPhotosClass}`}>
+        <div className="photos-minimised-gallery-container" style={dynamicStyles.containerStyle}>
             {photosJSX}
         </div>
     );
