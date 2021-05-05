@@ -1,27 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.21e50647.chunk.css",
-    "main.js": "/static/js/main.82ef37f0.chunk.js",
-    "main.js.map": "/static/js/main.82ef37f0.chunk.js.map",
+    "main.css": "/static/css/main.1a6473ce.chunk.css",
+    "main.js": "/static/js/main.77f49900.chunk.js",
+    "main.js.map": "/static/js/main.77f49900.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
-    "static/js/2.ca3f9a4f.chunk.js": "/static/js/2.ca3f9a4f.chunk.js",
-    "static/js/2.ca3f9a4f.chunk.js.map": "/static/js/2.ca3f9a4f.chunk.js.map",
+    "static/js/2.1fefd7cb.chunk.js": "/static/js/2.1fefd7cb.chunk.js",
+    "static/js/2.1fefd7cb.chunk.js.map": "/static/js/2.1fefd7cb.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.21e50647.chunk.css.map": "/static/css/main.21e50647.chunk.css.map",
-    "static/js/2.ca3f9a4f.chunk.js.LICENSE.txt": "/static/js/2.ca3f9a4f.chunk.js.LICENSE.txt",
+    "static/css/main.1a6473ce.chunk.css.map": "/static/css/main.1a6473ce.chunk.css.map",
+    "static/js/2.1fefd7cb.chunk.js.LICENSE.txt": "/static/js/2.1fefd7cb.chunk.js.LICENSE.txt",
     "static/media/codeclan-graduation.8b338142.jpeg": "/static/media/codeclan-graduation.8b338142.jpeg",
     "static/media/codeclan-icon.73a331cd.jpeg": "/static/media/codeclan-icon.73a331cd.jpeg",
     "static/media/education.a8918267.svg": "/static/media/education.a8918267.svg",
+    "static/media/github.37078ccf.svg": "/static/media/github.37078ccf.svg",
     "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg",
+    "static/media/restaurant-1.83c1f2c6.png": "/static/media/restaurant-1.83c1f2c6.png",
+    "static/media/restaurant-2.7379bcc0.png": "/static/media/restaurant-2.7379bcc0.png",
+    "static/media/restaurant-3.42da306d.png": "/static/media/restaurant-3.42da306d.png",
     "static/media/seminars.6c9c2e70.svg": "/static/media/seminars.6c9c2e70.svg",
     "static/media/skills.ec5d85ab.svg": "/static/media/skills.ec5d85ab.svg",
-    "static/media/work-gear.c9f5b139.svg": "/static/media/work-gear.c9f5b139.svg"
+    "static/media/website.f0fd00b2.svg": "/static/media/website.f0fd00b2.svg",
+    "static/media/work-gear.c9f5b139.svg": "/static/media/work-gear.c9f5b139.svg",
+    "static/media/world-atlas-1.05f1af19.png": "/static/media/world-atlas-1.05f1af19.png"
   },
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
-    "static/js/2.ca3f9a4f.chunk.js",
-    "static/css/main.21e50647.chunk.css",
-    "static/js/main.82ef37f0.chunk.js"
+    "static/js/2.1fefd7cb.chunk.js",
+    "static/css/main.1a6473ce.chunk.css",
+    "static/js/main.77f49900.chunk.js"
   ]
 }
