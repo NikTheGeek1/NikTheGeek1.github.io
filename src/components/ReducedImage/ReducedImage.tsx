@@ -6,11 +6,19 @@ const ReducedImage = ({reducedImage, normalImage}: {
     normalImage: string
 }) => {
     const [normalImageLoaded, setNormalImageLoaded] = useState(false);
+    const [reducedImageLoaded, setReducedImageLoaded] = useState(false);
+    const reducedImageLoadedHandler = () => {
+        setReducedImageLoaded(true);
+    };
+    
+    const normalImageLoadedHandler = () => {
+        setNormalImageLoaded(true);
+    };
 
     return (
         <>
-            <img src={normalImage} className="photos-photo" onLoad={setNormalImageLoaded.bind(this, true)}/>
-            { !normalImageLoaded && <img src={reducedImage} className="photos-photo-reduced" /> }
+            { !reducedImageLoaded && <img src={normalImage} className="photos-photo" onLoad={normalImageLoadedHandler}/> }
+            { !normalImageLoaded && <img src={reducedImage} className="photos-photo-reduced" onLoad={reducedImageLoadedHandler} /> }
         </>
     );
 };
