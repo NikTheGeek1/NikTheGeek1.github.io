@@ -1,9 +1,11 @@
 import './PhotosMinimisedGallery.css';
 import PhotoGalleryStyle from '../../utils/PhotoGalleryStyle';
+import ReducedImage from '../ReducedImage/ReducedImage';
 
-const PhotosMinimisedGallery = ({ photos, toggleMaximisedGallery }:
+const PhotosMinimisedGallery = ({ photos, reducedPhotos, toggleMaximisedGallery }:
     {
         photos: string[],
+        reducedPhotos: string[],
         toggleMaximisedGallery: (showMaximisedFlag: false | number) => void
     }) => {
 
@@ -11,8 +13,6 @@ const PhotosMinimisedGallery = ({ photos, toggleMaximisedGallery }:
     const openMaximisedGalleryHanlder = (photoIdx: number) => {
         toggleMaximisedGallery(photoIdx);
     };
-
-    
 
     const dynamicStyles = new PhotoGalleryStyle(photos);
     const photosJSX = photos.map((photo, photoIdx) => {
@@ -28,7 +28,7 @@ const PhotosMinimisedGallery = ({ photos, toggleMaximisedGallery }:
             return (
                 <div key={photo+photoIdx} style={dynamicStyles.photosStyles[photoIdx]} className="photos-photo-container" onClick={openMaximisedGalleryHanlder.bind(this, photoIdx)}>
                     <div className="photos-photo-overlay"></div>
-                    <img src={photo} className="photos-photo" />
+                    <ReducedImage reducedImage={reducedPhotos[photoIdx]} normalImage={photo} />
                 </div>
             );
         }

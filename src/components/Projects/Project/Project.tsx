@@ -8,9 +8,10 @@ import gitHubIcon from '../../../assets/svgs/github.svg';
 import websiteIcon from '../../../assets/svgs/website.svg';
 import TagBubble from '../../../components/TagBubble/TagBubble';
 
-const Project = ({ title, photos, gitHubRepoLink, website, details, technologies }: {
+const Project = ({ title, photos, reducedPhotos, gitHubRepoLink, website, details, technologies }: {
     title: string,
     photos: string[],
+    reducedPhotos: string[],
     gitHubRepoLink?: string,
     website?: string,
     details: string,
@@ -33,7 +34,7 @@ const Project = ({ title, photos, gitHubRepoLink, website, details, technologies
         <div className="project-container">
             <div className="project-title-container">{title}</div>
             <div className="project-photos-container">
-                <PhotosMinimisedGallery photos={photos} toggleMaximisedGallery={toggleMaximisedGallery} />
+                <PhotosMinimisedGallery photos={photos} reducedPhotos={reducedPhotos} toggleMaximisedGallery={toggleMaximisedGallery} />
                 {selectedPhoto !== false && <PhotosMaximisedGallery
                     toggleMaximisedGallery={toggleMaximisedGallery}
                     photos={photos}
