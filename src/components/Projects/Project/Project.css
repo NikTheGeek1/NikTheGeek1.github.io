@@ -1,4 +1,6 @@
 .project-container {
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 1rem;
     grid-column: span 4;
     display: grid;
     grid-template-rows: min-content min-content min-content;

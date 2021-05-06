@@ -49,12 +49,19 @@ import xcoversPhotoR1 from '../../assets/images/projects/xcovers/xcovers-1-r.png
 import xcoversPhotoR2 from '../../assets/images/projects/xcovers/xcovers-2-r.png';
 import xcoversPhotoR3 from '../../assets/images/projects/xcovers/xcovers-3-r.png';
 import xcoversPhotoR4 from '../../assets/images/projects/xcovers/xcovers-4-r.png';
+import oe1Photo2 from '../../assets/images/projects/online-experiment-1/oe-2.png';
+import oe1Photo3 from '../../assets/images/projects/online-experiment-1/oe-3.png';
+import oe1Photo4 from '../../assets/images/projects/online-experiment-1/oe-4.png';
+import oe1Photo5 from '../../assets/images/projects/online-experiment-1/oe-5.png';
+import oe1PhotoR2 from '../../assets/images/projects/online-experiment-1/oe-2-r.png';
+import oe1PhotoR3 from '../../assets/images/projects/online-experiment-1/oe-3-r.png';
+import oe1PhotoR4 from '../../assets/images/projects/online-experiment-1/oe-4-r.png';
+import oe1PhotoR5 from '../../assets/images/projects/online-experiment-1/oe-5-r.png';
 
 const Projects = () => {
 
     return (
         <>
-            <h1 style={{ color: "white", fontFamily: "monospace", gridColumn: "2/span 2" }}>STILL UNDER CONSTRUCTION</h1>
             <Project
                 title="World Atlas 3D"
                 details={ProjectsTexts.worldAtlas}
@@ -84,8 +91,8 @@ const Projects = () => {
             />
             <Project
                 title="Reinforcement Learning task"
-                photos={[rlPhoto1, rlPhoto2, rlPhoto3, rlPhoto4 ]}
-                reducedPhotos={[rlPhotoR1, rlPhotoR2, rlPhotoR3, rlPhotoR4 ]}
+                photos={[rlPhoto1, rlPhoto2, rlPhoto3, rlPhoto4]}
+                reducedPhotos={[rlPhotoR1, rlPhotoR2, rlPhotoR3, rlPhotoR4]}
                 details={ProjectsTexts.reinforcementLearning}
                 gitHubRepoLink="https://github.com/NikTheGeek1/reinforcement_learning_task"
                 website="https://learning-task.herokuapp.com"
@@ -97,6 +104,15 @@ const Projects = () => {
                 reducedPhotos={[xcoversPhotoR1, xcoversPhotoR2, xcoversPhotoR3, xcoversPhotoR4]}
                 details={ProjectsTexts.xcovers}
                 website="http://www.xcovers.gr/"
+                technologies={["Node.js", "React.js", "SASS", "Responsive design"]}
+            />
+            <Project
+                title="Online experiment"
+                photos={[oe1Photo2, oe1Photo3, oe1Photo4, oe1Photo5]}
+                reducedPhotos={[oe1PhotoR2, oe1PhotoR3, oe1PhotoR4, oe1PhotoR5]}
+                details={ProjectsTexts.onlineExperiment1}
+                gitHubRepoLink="https://github.com/NikTheGeek1/zendo-cond-3"
+                website="http://zendo-cond-3.herokuapp.com"
                 technologies={["Node.js", "React.js", "SASS", "Responsive design"]}
             />
 
