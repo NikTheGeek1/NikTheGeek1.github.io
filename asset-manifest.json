@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.76f2067e.chunk.css",
-    "main.js": "/static/js/main.56505f06.chunk.js",
-    "main.js.map": "/static/js/main.56505f06.chunk.js.map",
+    "main.css": "/static/css/main.1ed8933d.chunk.css",
+    "main.js": "/static/js/main.8cc575c3.chunk.js",
+    "main.js.map": "/static/js/main.8cc575c3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
-    "static/js/2.d70fb361.chunk.js": "/static/js/2.d70fb361.chunk.js",
-    "static/js/2.d70fb361.chunk.js.map": "/static/js/2.d70fb361.chunk.js.map",
+    "static/js/2.b3aefbd6.chunk.js": "/static/js/2.b3aefbd6.chunk.js",
+    "static/js/2.b3aefbd6.chunk.js.map": "/static/js/2.b3aefbd6.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.76f2067e.chunk.css.map": "/static/css/main.76f2067e.chunk.css.map",
-    "static/js/2.d70fb361.chunk.js.LICENSE.txt": "/static/js/2.d70fb361.chunk.js.LICENSE.txt",
+    "static/css/main.1ed8933d.chunk.css.map": "/static/css/main.1ed8933d.chunk.css.map",
+    "static/js/2.b3aefbd6.chunk.js.LICENSE.txt": "/static/js/2.b3aefbd6.chunk.js.LICENSE.txt",
     "static/media/checkers-1-r.7a51e3f3.png": "/static/media/checkers-1-r.7a51e3f3.png",
     "static/media/checkers-1.59681f84.png": "/static/media/checkers-1.59681f84.png",
     "static/media/checkers-2-r.9bfdfa4c.png": "/static/media/checkers-2-r.9bfdfa4c.png",
@@ -27,6 +27,7 @@
     "static/media/checkers-8.dee82a85.png": "/static/media/checkers-8.dee82a85.png",
     "static/media/checkers-9-r.61fe6fbf.png": "/static/media/checkers-9-r.61fe6fbf.png",
     "static/media/checkers-9.6a709ef0.png": "/static/media/checkers-9.6a709ef0.png",
+    "static/media/codeclan-graduation-r.57ef5bbe.jpeg": "/static/media/codeclan-graduation-r.57ef5bbe.jpeg",
     "static/media/codeclan-graduation.8b338142.jpeg": "/static/media/codeclan-graduation.8b338142.jpeg",
     "static/media/codeclan-icon.73a331cd.jpeg": "/static/media/codeclan-icon.73a331cd.jpeg",
     "static/media/education.a8918267.svg": "/static/media/education.a8918267.svg",
@@ -39,6 +40,7 @@
     "static/media/oe-5-r.87cb1ac6.png": "/static/media/oe-5-r.87cb1ac6.png",
     "static/media/oe-5.45b8f3d8.png": "/static/media/oe-5.45b8f3d8.png",
     "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg",
+    "static/media/regular-timeline-post.6ecc9b02.svg": "/static/media/regular-timeline-post.6ecc9b02.svg",
     "static/media/restaurant-1-r.f21d783c.png": "/static/media/restaurant-1-r.f21d783c.png",
     "static/media/restaurant-1.83c1f2c6.png": "/static/media/restaurant-1.83c1f2c6.png",
     "static/media/restaurant-2-r.647777cb.png": "/static/media/restaurant-2-r.647777cb.png",
@@ -76,8 +78,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
-    "static/js/2.d70fb361.chunk.js",
-    "static/css/main.76f2067e.chunk.css",
-    "static/js/main.56505f06.chunk.js"
+    "static/js/2.b3aefbd6.chunk.js",
+    "static/css/main.1ed8933d.chunk.css",
+    "static/js/main.8cc575c3.chunk.js"
   ]
 }
