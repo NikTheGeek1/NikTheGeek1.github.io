@@ -1,12 +1,10 @@
 import './Project.css';
-import { useState } from 'react';
-import PhotosMinimisedGallery from '../../../components/PhotosMinimisedGallery/PhotosMinimisedGallery';
-import PhotosMaximisedGallery from '../../../components/PhotosMaximisedGallery/MaximisedGallery';
 import BoxText from '../../../components/Texts/BoxText';
 import SVGIcon from '../../../components/SVGIcon/SVGIcon';
 import gitHubIcon from '../../../assets/svgs/github.svg';
 import websiteIcon from '../../../assets/svgs/website.svg';
 import TagBubble from '../../../components/TagBubble/TagBubble';
+import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
 
 const Project = ({ title, photos, reducedPhotos, gitHubRepoLink, website, details, technologies }: {
     title: string,
@@ -18,14 +16,7 @@ const Project = ({ title, photos, reducedPhotos, gitHubRepoLink, website, detail
     technologies: string[]
 }) => {
 
-    const [selectedPhoto, setSelectedPhoto] = useState<false | number>(false);
-    const toggleMaximisedGallery = (showMaximisedFlag: false | number) => {
-        if (showMaximisedFlag === false) {
-            document.getElementsByTagName("body")[0].setAttribute("style", "overflow: auto");
-        }
-        setSelectedPhoto(showMaximisedFlag);
-    };
-
+   
     const technologiesJSX = technologies.map(tech => {
         return <TagBubble key={tech} title={tech}/>;
     }); 
@@ -34,12 +25,7 @@ const Project = ({ title, photos, reducedPhotos, gitHubRepoLink, website, detail
         <div className="project-container">
             <div className="project-title-container">{title}</div>
             <div className="project-photos-container">
-                <PhotosMinimisedGallery photos={photos} reducedPhotos={reducedPhotos} toggleMaximisedGallery={toggleMaximisedGallery} />
-                {selectedPhoto !== false && <PhotosMaximisedGallery
-                    toggleMaximisedGallery={toggleMaximisedGallery}
-                    photos={photos}
-                    startingPhotoIdx={selectedPhoto}
-                />}
+                <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} />
             </div>
             <div className="project-details-container">
                 <div className="project-details">

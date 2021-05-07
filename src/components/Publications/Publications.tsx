@@ -15,7 +15,7 @@ const Publications = () => {
     }, []);
 
     return (
-        <GenericBox title="Publications" rowSpan={1} columnSpan={4}>
+        <GenericBox title="Publications" rowSpan={1} columnSpan={4} titleType="subtitle">
             <Publication 
                 title="Algorithms of adaptation in inductive inference."
                 authorString="JP. Franken, N. C. Theodoropoulos, N. R. Bramley"

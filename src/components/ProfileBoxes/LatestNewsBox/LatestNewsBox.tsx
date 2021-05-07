@@ -3,14 +3,23 @@ import FourSubHeading from '../../Headings/FourSubHeading/FourSubHeading';
 import './LatestNewsBox.css';
 import BoxPlainText from '../../Texts/BoxText';
 import DateUtils from '../../../utils/DateUtils';
+import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
 
-const LatestNewsBox = ({ title, date, children, icon }:
-    { title: string, date: Date, children: string, icon?: string }) => {
+const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos }:
+    {
+        title: string,
+        date: Date,
+        children: string,
+        icon?: string,
+        photos?: string[],
+        reducedPhotos?: string[]
+    }) => {
+    console.log(photos, 'LatestNewsBox.tsx', 'line: ', '17');
 
     return (
-        <div className="profile-latest-news-box">
+        <div className={`profile-latest-news-box${photos ? "-with-photos" : ""}`}>
             <div className="profile-latest-news-box-icon-container">
-                <img src={icon} alt="latest-news-icon" className="profile-latest-news-box-icon"/>
+                <img src={icon} alt="latest-news-icon" className="profile-latest-news-box-icon" />
             </div>
             <div className="profile-latest-news-box-title-container">
                 <FourHeading content={title} />
@@ -22,6 +31,9 @@ const LatestNewsBox = ({ title, date, children, icon }:
                 <BoxPlainText>
                     {children}
                 </BoxPlainText>
+            </div>
+            <div className="profile-latest-news-box-photos-container">
+                {photos && reducedPhotos && <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} />}
             </div>
         </div>
     );

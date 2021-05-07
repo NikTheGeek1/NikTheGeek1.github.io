@@ -9,8 +9,12 @@ import BoxPlainText from '../Texts/BoxText';
 import LatestNewsBox from '../ProfileBoxes/LatestNewsBox/LatestNewsBox';
 import codeclanIcon from '../../assets/images/codeclan-icon.jpeg';
 import codeclanGraduation from '../../assets/images/codeclan-graduation.jpeg';
+import codeclanGraduationR from '../../assets/images/codeclan-graduation-r.jpeg';
 import SocialNetworks from '../SocialNetworks/SocialNetworks';
 import showcase from '../../assets/images/showcase-white.png';
+import regularTimelinePostIcon from '../../assets/svgs/regular-timeline-post.svg';
+import BlogPostBox from '../BlogPost/BlogPostBox/BlogPostBox';
+import PhotoGalleryBlog from '../BlogPost/Posts/PhotoGalleryBlog/PhotoGalleryBlog';
 
 const Timeline = () => {
     const visitorToken = useStore(false)[0].visitorToken;
@@ -18,26 +22,31 @@ const Timeline = () => {
     useEffect(() => {
         visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.TIMELINE);
     }, []);
-
+    
     return (
         <>
-            <GenericBox title="Intro" rowSpan={1} columnSpan={3}>
+            <GenericBox title="Intro" rowSpan={1} columnSpan={3} titleType="title">
                 <BoxPlainText>{TimelineTexts.intro}</BoxPlainText>
             </GenericBox>
-            <GenericBox title="Other networks" rowSpan={1} columnSpan={1}>
+            <GenericBox title="Other networks" rowSpan={1} columnSpan={1} titleType="subtitle">
                 <SocialNetworks />
             </GenericBox>
-            <GenericBox title="Latest news" rowSpan={2} columnSpan={2}>
-                <LatestNewsBox title="CodeClan graduation" date={new Date("3/6/2021")} icon={codeclanIcon} >
-                    {TimelineTexts.codeClanGraduation}
+            <GenericBox title="Latest news" rowSpan={3} columnSpan={3} titleType="title">
+                <LatestNewsBox title="Notice of Intention To Submit" date={new Date("4/28/2021")} icon={regularTimelinePostIcon} >
+                    {TimelineTexts.NITS}
                 </LatestNewsBox>
-                <LatestNewsBox title="Showcase presentation" date={new Date("3/25/2021")} icon={showcase} >
+                <LatestNewsBox title="Showcase presentation" date={new Date("3/24/2021")} icon={showcase} >
                     {TimelineTexts.showcasePresentation}
                 </LatestNewsBox>
+                <LatestNewsBox title="CodeClan graduation" date={new Date("3/5/2021")} icon={codeclanIcon} photos={[codeclanGraduation]} reducedPhotos={[codeclanGraduationR]} >
+                    {TimelineTexts.codeClanGraduation}
+                </LatestNewsBox>
             </GenericBox>
-            <GenericBox title="." rowSpan={1} columnSpan={2}>
-                <img src={codeclanGraduation} alt="graduation-pic" className="timeline-cc-graduation-pic"/>
-            </GenericBox>
+            <BlogPostBox title="Gallery" rowSpan={1} columnSpan={1} subtitle="Creating the gallery component used in this site. (working on it)">
+                <PhotoGalleryBlog />
+            </BlogPostBox>
+            <BlogPostBox title="Meet Suzanne" rowSpan={1} columnSpan={1} subtitle="Creating the gallery component used in this site. (working on it)">
+            </BlogPostBox>
         </>
     );
 };

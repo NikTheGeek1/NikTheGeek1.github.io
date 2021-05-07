@@ -10,6 +10,31 @@
 }
 
 
+.profile-latest-news-box-with-photos {
+    display: grid;
+    grid-template-areas: 
+    "icon title ."
+    "icon date ."
+    "description description photos";
+    grid-template-columns: var(--latest-news-icon-width) 1.5fr 1fr;
+    column-gap: var(--smallest-gap);
+    margin-bottom: var(--big-margin);
+}
+/* photos underneath the description */
+/* 
+.profile-latest-news-box-with-photos {
+    display: grid;
+    grid-template-areas: 
+    "icon title"
+    "icon date"
+    "description description"
+    "photos photos";
+    grid-template-columns: var(--latest-news-icon-width) 1fr;
+    column-gap: var(--smallest-gap);
+    margin-bottom: var(--big-margin);
+} */
+
+
 .profile-latest-news-box-icon-container {
     grid-area: icon;
 }
@@ -32,4 +57,8 @@
 .profile-latest-news-box-description-container {
     margin-top: var(--small-margin);
     grid-area: description;
+}
+
+.profile-latest-news-box-photos-container {
+    grid-area: photos;
 }

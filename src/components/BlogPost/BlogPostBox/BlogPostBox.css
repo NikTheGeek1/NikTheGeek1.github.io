@@ -1,0 +1,8 @@
+.blog-post-box {
+    color: var(--colour-white);
+    cursor: pointer;
+}
+
+.blog-post-box:hover {
+    text-decoration: underline;
+}
