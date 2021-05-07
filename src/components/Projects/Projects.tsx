@@ -113,7 +113,7 @@ const Projects = () => {
                 details={ProjectsTexts.onlineExperiment1}
                 gitHubRepoLink="https://github.com/NikTheGeek1/zendo-cond-3"
                 website="http://zendo-cond-3.herokuapp.com"
-                technologies={["Node.js", "React.js", "SASS", "Responsive design"]}
+                technologies={["Node.js", "React.js", "SASS", "IvanK.js"]}
             />
 
         </>

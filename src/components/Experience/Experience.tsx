@@ -124,7 +124,7 @@ const Experience = () => {
                 <ExperienceSectionItem
                     title="Probabilistic Graphical Models specialisation"
                     subtitle="Stanford Online"
-                    subsubtitle="Graduated with hours in 2 out of 3 courses"
+                    subsubtitle="Graduated with honours in 2 out of 3 courses"
                     year="6 months in 2018"
                 />
                 <ExperienceSectionItem
