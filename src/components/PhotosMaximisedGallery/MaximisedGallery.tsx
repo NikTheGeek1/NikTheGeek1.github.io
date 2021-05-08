@@ -13,14 +13,14 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
         startingPhotoIdx: number | false
     }) => {
     const [lowerQualityLoaded, setLowerQualityPhotoLoaded] = useState(false);
+    const [normalPhotoLoaded, setNormalPhotoLoaded] = useState(false);
+
     const [currentPhotoIdx, setCurrentPhotoIdx] = useState(startingPhotoIdx);
     useEffect(() => {
         setCurrentPhotoIdx(startingPhotoIdx);
     }, [startingPhotoIdx]);
 
-    const lowerQualityLoadedHandler = () => {
-        setLowerQualityPhotoLoaded(true);
-    };
+
 
     useEffect(() => {
         document.addEventListener("keydown", keyDownHandler);
@@ -45,6 +45,7 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
         let nextPhotoIdx;
         if (currentPhotoIdx !== false) {
             setLowerQualityPhotoLoaded(false);
+            setNormalPhotoLoaded(false);
             if (type === "right") nextPhotoIdx = (currentPhotoIdx + 1) % (normalPhotos.length);
             if (type === "left") nextPhotoIdx = Math.abs((-currentPhotoIdx - (normalPhotos.length - 1)) % (normalPhotos.length));
             nextPhotoIdx !== undefined && setCurrentPhotoIdx(nextPhotoIdx);
@@ -61,12 +62,12 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
                 <div className="maximised-gallery-photo-container">
                     {currentPhotoIdx !== false &&
                         <>
-                           <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" />
-                            {/* <img
+                            {lowerQualityLoaded && <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" onLoad={setNormalPhotoLoaded.bind(this, true)} />}
+                            {!normalPhotoLoaded && <img
                                 src={lowerQualityPhotos[currentPhotoIdx]}
                                 className={`photos-photo-maximised-reduced`}
-                                onLoad={lowerQualityLoadedHandler}
-                            /> */}
+                                onLoad={setLowerQualityPhotoLoaded.bind(this, true)}
+                            />}
                         </>
                     }
                 </div>
