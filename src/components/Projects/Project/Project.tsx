@@ -6,10 +6,11 @@ import websiteIcon from '../../../assets/svgs/website.svg';
 import TagBubble from '../../../components/TagBubble/TagBubble';
 import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
 
-const Project = ({ title, photos, reducedPhotos, gitHubRepoLink, website, details, technologies }: {
+const Project = ({ title, photos, reducedPhotos, thumbnailPhotos, gitHubRepoLink, website, details, technologies }: {
     title: string,
     photos: string[],
     reducedPhotos: string[],
+    thumbnailPhotos: string[],
     gitHubRepoLink?: string,
     website?: string,
     details: string,
@@ -25,7 +26,7 @@ const Project = ({ title, photos, reducedPhotos, gitHubRepoLink, website, detail
         <div className="project-container">
             <div className="project-title-container">{title}</div>
             <div className="project-photos-container">
-                <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} />
+                <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} thumbnailPhotos={thumbnailPhotos} />
             </div>
             <div className="project-details-container">
                 <div className="project-details">

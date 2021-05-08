@@ -4,8 +4,6 @@ import PrimaryHeading from '../../components/Headings/PrimaryHeading/PrimaryHead
 import SecondaryHeading from '../../components/Headings/SecondaryHeading/SecondaryHeading';
 import { useEffect, useState } from 'react';
 import Profile from '../../containers/Profile/Profile';
-import { useHistory } from 'react-router';
-import { pathsEnum } from '../../enums/paths';
 
 interface ExitingClasses { primaryHeading: string, secondaryHeading: string };
 const LandingPage = () => {
@@ -13,7 +11,6 @@ const LandingPage = () => {
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
     const [exitingAnimationFinished, setExitingAnimationFinished] = useState<boolean>(false);
     const [landingPageClass, setLandingPageClass] = useState<string>("landing-page-main-before-animation");
-    const history = useHistory();
     
     useEffect(() => {
         if (monkeyClicked) {

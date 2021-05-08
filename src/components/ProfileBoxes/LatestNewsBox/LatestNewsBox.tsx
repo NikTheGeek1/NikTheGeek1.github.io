@@ -5,7 +5,7 @@ import BoxPlainText from '../../Texts/BoxText';
 import DateUtils from '../../../utils/DateUtils';
 import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
 
-const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos }:
+const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos, thumbnailPhotos }:
     {
         title: string,
         date: Date,
@@ -13,6 +13,7 @@ const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos }:
         icon?: string,
         photos?: string[],
         reducedPhotos?: string[]
+        thumbnailPhotos?: string[]
     }) => {
     console.log(photos, 'LatestNewsBox.tsx', 'line: ', '17');
 
@@ -33,7 +34,7 @@ const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos }:
                 </BoxPlainText>
             </div>
             <div className="profile-latest-news-box-photos-container">
-                {photos && reducedPhotos && <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} />}
+                {photos && reducedPhotos && thumbnailPhotos && <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} thumbnailPhotos={thumbnailPhotos} />}
             </div>
         </div>
     );

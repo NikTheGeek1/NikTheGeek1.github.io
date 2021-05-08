@@ -8,8 +8,9 @@ import TimelineTexts from '../../html-texts/Timeline';
 import BoxPlainText from '../Texts/BoxText';
 import LatestNewsBox from '../ProfileBoxes/LatestNewsBox/LatestNewsBox';
 import codeclanIcon from '../../assets/images/codeclan-icon.jpeg';
-import codeclanGraduation from '../../assets/images/codeclan-graduation.jpeg';
+import codeclanGraduation from '../../assets/images/codeclan-graduation-q.jpeg';
 import codeclanGraduationR from '../../assets/images/codeclan-graduation-r.jpeg';
+import codeclanGraduationT from '../../assets/images/codeclan-graduation-t.jpeg';
 import SocialNetworks from '../SocialNetworks/SocialNetworks';
 import showcase from '../../assets/images/showcase-white.png';
 import regularTimelinePostIcon from '../../assets/svgs/regular-timeline-post.svg';
@@ -38,7 +39,7 @@ const Timeline = () => {
                 <LatestNewsBox title="Showcase presentation" date={new Date("3/24/2021")} icon={showcase} >
                     {TimelineTexts.showcasePresentation}
                 </LatestNewsBox>
-                <LatestNewsBox title="CodeClan graduation" date={new Date("3/5/2021")} icon={codeclanIcon} photos={[codeclanGraduation]} reducedPhotos={[codeclanGraduationR]} >
+                <LatestNewsBox title="CodeClan graduation" date={new Date("3/5/2021")} icon={codeclanIcon} photos={[codeclanGraduation]} reducedPhotos={[codeclanGraduationR]} thumbnailPhotos={[codeclanGraduationT]} >
                     {TimelineTexts.codeClanGraduation}
                 </LatestNewsBox>
             </GenericBox>

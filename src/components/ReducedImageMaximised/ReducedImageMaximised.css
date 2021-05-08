@@ -1,0 +1,25 @@
+/* .reduced-image-maximised-container {
+    display: block;
+    max-width: 90%;
+    max-height: 70vh;
+    position: relative;
+} */
+
+.photos-photo-maximised,
+.photos-photo-maximised-reduced {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    max-width: 90%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    user-select: none;
+}
+
+.photos-photo-maximised-reduced {
+    filter: blur(1rem);
+    width: 90%;
+    z-index: 0;
+}
