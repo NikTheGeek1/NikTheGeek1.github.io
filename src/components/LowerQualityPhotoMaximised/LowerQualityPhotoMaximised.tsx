@@ -8,18 +8,16 @@ const LowerQualityPhotoMaximised = ({ lowerQualityPhoto, normalPhoto }: {
     const [lowerQualityLoaded, setLowerQualityPhotoLoaded] = useState(false);
 
     const lowerQualityLoadedHandler = () => {
-        console.log(lowerQualityLoaded, 'LowerQualityPhotoMaximised.tsx', 'line: ', '16');
         setLowerQualityPhotoLoaded(true);
     };
 
-
     return (
         <>
-            { lowerQualityLoaded && <img src={normalPhoto} className="photos-photo-maximised" />}
+            <img src={normalPhoto} className="photos-photo-maximised" />
             <img
                 src={lowerQualityPhoto}
-                className={`photos-photo-maximised-reduced-z${lowerQualityLoaded ? "0" : "1"}`}
-                onLoad={lowerQualityLoadedHandler} 
+                className={`photos-photo-maximised-reduced`}
+                // onLoad={lowerQualityLoadedHandler} 
             />
         </>
     );

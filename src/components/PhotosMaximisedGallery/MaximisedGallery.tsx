@@ -45,7 +45,7 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
             nextPhotoIdx !== undefined && setCurrentPhotoIdx(nextPhotoIdx);
         }
     };
-
+    console.log( "rendering", 'MaximisedGallery.tsx', 'line: ', '48');
 
     document.getElementsByTagName("body")[0].setAttribute("style", "overflow: hidden");
     const targetElement = document.getElementById('photo-gallery-modal') as HTMLElement;
