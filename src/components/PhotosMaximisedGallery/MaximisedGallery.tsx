@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Backdrop from '../Backdrop/Backdrop';
 import { useEffect, useState } from 'react';
 import Carousel from './Carousel/Carousel';
-import LowerQualityPhotoMaximised from '../LowerQualityPhotoMaximised/LowerQualityPhotoMaximised';
 
 const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPhotos, startingPhotoIdx, thumbnailPhotos }:
     {
@@ -62,15 +61,13 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
                 <div className="maximised-gallery-photo-container">
                     {currentPhotoIdx !== false &&
                         <>
-                            {lowerQualityLoaded && <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" />}
-                            <img
+                           <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" />
+                            {/* <img
                                 src={lowerQualityPhotos[currentPhotoIdx]}
                                 className={`photos-photo-maximised-reduced`}
                                 onLoad={lowerQualityLoadedHandler}
-                            />
+                            /> */}
                         </>
-                        // <LowerQualityPhotoMaximised normalPhoto={normalPhotos[currentPhotoIdx]} lowerQualityPhoto={lowerQualityPhotos[currentPhotoIdx]} />
-
                     }
                 </div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-right-container" onClick={switchPhotoHandler.bind(this, "right")}><div className="maximised-gallery-right"></div></div>}
