@@ -55,7 +55,6 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
                 <div className="maximised-gallery-x-container" onClick={toggleMaximisedGallery.bind(this, false)}><div className="maximised-gallery-x"></div></div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-left-container" onClick={switchPhotoHandler.bind(this, "left")}><div className="maximised-gallery-left"></div></div>}
                 <div className="maximised-gallery-photo-container">
-                    {/* {currentPhotoIdx !== false && <img src={photos[currentPhotoIdx]} alt="project-photo" className="maximised-gallery-photo" />} */}
                     {currentPhotoIdx !== false && <LowerQualityPhotoMaximised normalPhoto={normalPhotos[currentPhotoIdx]} lowerQualityPhoto={lowerQualityPhotos[currentPhotoIdx]} />}
                 </div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-right-container" onClick={switchPhotoHandler.bind(this, "right")}><div className="maximised-gallery-right"></div></div>}
