@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './LowerQualityPhotoMaximised.css';
 
 const LowerQualityPhotoMaximised = ({ lowerQualityPhoto, normalPhoto }: {
@@ -8,9 +8,11 @@ const LowerQualityPhotoMaximised = ({ lowerQualityPhoto, normalPhoto }: {
     const [lowerQualityLoaded, setLowerQualityPhotoLoaded] = useState(false);
 
     const lowerQualityLoadedHandler = () => {
+        console.log(lowerQualityLoaded, 'LowerQualityPhotoMaximised.tsx', 'line: ', '16');
         setLowerQualityPhotoLoaded(true);
     };
-    
+
+
     return (
         <>
             { lowerQualityLoaded && <img src={normalPhoto} className="photos-photo-maximised" />}
