@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfb04153.chunk.css",
-    "main.js": "/static/js/main.c4a7b412.chunk.js",
-    "main.js.map": "/static/js/main.c4a7b412.chunk.js.map",
+    "main.css": "/static/css/main.b7a6b956.chunk.css",
+    "main.js": "/static/js/main.6403fa70.chunk.js",
+    "main.js.map": "/static/js/main.6403fa70.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/js/2.990d8451.chunk.js": "/static/js/2.990d8451.chunk.js",
     "static/js/2.990d8451.chunk.js.map": "/static/js/2.990d8451.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.cfb04153.chunk.css.map": "/static/css/main.cfb04153.chunk.css.map",
+    "static/css/main.b7a6b956.chunk.css.map": "/static/css/main.b7a6b956.chunk.css.map",
     "static/js/2.990d8451.chunk.js.LICENSE.txt": "/static/js/2.990d8451.chunk.js.LICENSE.txt",
     "static/media/checkers-1-lqMAX.f406cd27.jpg": "/static/media/checkers-1-lqMAX.f406cd27.jpg",
     "static/media/checkers-1-rMAX.da7a8ccd.jpg": "/static/media/checkers-1-rMAX.da7a8ccd.jpg",
@@ -103,7 +103,7 @@
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
     "static/js/2.990d8451.chunk.js",
-    "static/css/main.cfb04153.chunk.css",
-    "static/js/main.c4a7b412.chunk.js"
+    "static/css/main.b7a6b956.chunk.css",
+    "static/js/main.6403fa70.chunk.js"
   ]
 }
