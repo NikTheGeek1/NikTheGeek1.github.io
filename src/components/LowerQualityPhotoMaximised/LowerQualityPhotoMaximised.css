@@ -6,7 +6,8 @@
 } */
 
 .photos-photo-maximised,
-.photos-photo-maximised-reduced {
+.photos-photo-maximised-reduced-z0,
+.photos-photo-maximised-reduced-z1 {
     grid-row: 1/1;
     grid-column: 1/1;
     max-width: 90%;
@@ -18,7 +19,12 @@
     user-select: none;
 }
 
-.photos-photo-maximised-reduced {
+.photos-photo-maximised-reduced-z0 {
     filter: blur(1rem);
     z-index: 0;
+}
+
+.photos-photo-maximised-reduced-z1 {
+    filter: blur(1rem);
+    z-index: 1;
 }

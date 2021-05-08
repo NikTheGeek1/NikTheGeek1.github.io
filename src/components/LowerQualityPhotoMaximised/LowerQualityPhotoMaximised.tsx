@@ -16,9 +16,8 @@ const LowerQualityPhotoMaximised = ({ lowerQualityPhoto, normalPhoto }: {
             { lowerQualityLoaded && <img src={normalPhoto} className="photos-photo-maximised" />}
             <img
                 src={lowerQualityPhoto}
-                className="photos-photo-maximised-reduced"
+                className={`photos-photo-maximised-reduced-z${lowerQualityLoaded ? "0" : "1"}`}
                 onLoad={lowerQualityLoadedHandler} 
-                style={{zIndex: lowerQualityLoaded ? 0 : 1}}
             />
         </>
     );
