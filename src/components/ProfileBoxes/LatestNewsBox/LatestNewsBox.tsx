@@ -5,13 +5,13 @@ import BoxPlainText from '../../Texts/BoxText';
 import DateUtils from '../../../utils/DateUtils';
 import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
 
-const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos, thumbnailPhotos }:
+const LatestNewsBox = ({ title, date, children, icon, photos }:
     {
         title: string,
         date: Date,
         children: string,
         icon?: string,
-        photos?: string[],
+        photos?: ImagesVersionsInterface,
         reducedPhotos?: string[]
         thumbnailPhotos?: string[]
     }) => {
@@ -34,7 +34,7 @@ const LatestNewsBox = ({ title, date, children, icon, photos, reducedPhotos, thu
                 </BoxPlainText>
             </div>
             <div className="profile-latest-news-box-photos-container">
-                {photos && reducedPhotos && thumbnailPhotos && <PhotosGallery photos={photos} reducedPhotos={reducedPhotos} thumbnailPhotos={thumbnailPhotos} />}
+                {photos && <PhotosGallery photos={photos} />}
             </div>
         </div>
     );

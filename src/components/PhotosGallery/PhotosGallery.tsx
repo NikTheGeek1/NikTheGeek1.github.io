@@ -3,10 +3,8 @@ import PhotosMaximisedGallery from '../PhotosMaximisedGallery/MaximisedGallery';
 import PhotosMinimisedGallery from '../PhotosMinimisedGallery/PhotosMinimisedGallery';
 import './PhotosGallery.css';
 
-const PhotosGallery = ({ photos, reducedPhotos, thumbnailPhotos }: {
-    photos: string[],
-    reducedPhotos: string[],
-    thumbnailPhotos: string[]
+const PhotosGallery = ({ photos }: {
+    photos: ImagesVersionsInterface,
 }) => {
     const [selectedPhoto, setSelectedPhoto] = useState<false | number>(false);
 
@@ -19,13 +17,14 @@ const PhotosGallery = ({ photos, reducedPhotos, thumbnailPhotos }: {
 
     return (
         <>
-            <PhotosMinimisedGallery reducedPhotos={reducedPhotos} thumbnailPhotos={thumbnailPhotos} toggleMaximisedGallery={toggleMaximisedGallery} />
+            <PhotosMinimisedGallery normalPhotos={photos.reducedMin} lowerQualityPhotos={photos.lowerQualityMin} toggleMaximisedGallery={toggleMaximisedGallery} />
             {selectedPhoto !== false &&
                 <PhotosMaximisedGallery
                     toggleMaximisedGallery={toggleMaximisedGallery}
-                    photos={photos}
+                    normalPhotos={photos.reducedMax}
+                    lowerQualityPhotos={photos.lowerQualityMax}
                     startingPhotoIdx={selectedPhoto}
-                    thumbnailPhotos={thumbnailPhotos}
+                    thumbnailPhotos={photos.thumbnail}
                 />
             }
         </>

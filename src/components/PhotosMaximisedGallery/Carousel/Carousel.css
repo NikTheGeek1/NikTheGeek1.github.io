@@ -33,6 +33,7 @@
 .carousel-photo {
     width: 20rem;
     height: 10rem;
+    user-select: none;
 }
 
 .carousel-photo-overlay {

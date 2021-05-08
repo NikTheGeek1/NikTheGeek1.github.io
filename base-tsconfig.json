@@ -3,6 +3,7 @@
         "baseUrl": ".",
         "paths": {
             "generic-box-title": ["node_modules/@types/generic-box-title"],
+            "images-versions": ["node_modules/@types/images-versions"],
             "three/build/three.module": ["node_modules/@types/three"],
             "react-router-dom/cjs/react-router-dom": ["node_modules/@types/react-router-dom"]
         }

@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import Backdrop from '../Backdrop/Backdrop';
 import { useEffect, useState } from 'react';
 import Carousel from './Carousel/Carousel';
-import ReducedImageMaximised from '../ReducedImageMaximised/ReducedImageMaximised';
+import LowerQualityPhotoMaximised from '../LowerQualityPhotoMaximised/LowerQualityPhotoMaximised';
 
-const MaximisedGallery = ({toggleMaximisedGallery, photos, startingPhotoIdx, thumbnailPhotos }: {
-    toggleMaximisedGallery: (showMaximisedFlag: false | number) => void,
-    photos: string[],
-    thumbnailPhotos: string[],
-    startingPhotoIdx: number | false
-}) => {
+const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPhotos, startingPhotoIdx, thumbnailPhotos }:
+    {
+        toggleMaximisedGallery: (showMaximisedFlag: false | number) => void,
+        normalPhotos: string[],
+        lowerQualityPhotos: string[],
+        thumbnailPhotos: string[],
+        startingPhotoIdx: number | false
+    }) => {
     const [currentPhotoIdx, setCurrentPhotoIdx] = useState(startingPhotoIdx);
     useEffect(() => {
         setCurrentPhotoIdx(startingPhotoIdx);
@@ -38,11 +40,12 @@ const MaximisedGallery = ({toggleMaximisedGallery, photos, startingPhotoIdx, thu
     const switchPhotoHandler = (type: string) => {
         let nextPhotoIdx;
         if (currentPhotoIdx !== false) {
-            if (type === "right") nextPhotoIdx = (currentPhotoIdx + 1) % (photos.length);
-            if (type === "left") nextPhotoIdx = Math.abs((-currentPhotoIdx - (photos.length-1)) % (photos.length));
+            if (type === "right") nextPhotoIdx = (currentPhotoIdx + 1) % (normalPhotos.length);
+            if (type === "left") nextPhotoIdx = Math.abs((-currentPhotoIdx - (normalPhotos.length - 1)) % (normalPhotos.length));
             nextPhotoIdx !== undefined && setCurrentPhotoIdx(nextPhotoIdx);
         }
     };
+
 
     document.getElementsByTagName("body")[0].setAttribute("style", "overflow: hidden");
     const targetElement = document.getElementById('photo-gallery-modal') as HTMLElement;
@@ -50,14 +53,14 @@ const MaximisedGallery = ({toggleMaximisedGallery, photos, startingPhotoIdx, thu
         <Backdrop closeModalHandler={toggleMaximisedGallery} >
             <div className="maximised-gallery-container" onClick={e => e.stopPropagation()}>
                 <div className="maximised-gallery-x-container" onClick={toggleMaximisedGallery.bind(this, false)}><div className="maximised-gallery-x"></div></div>
-                { photos.length > 1 && <div className="maximised-gallery-left-container" onClick={switchPhotoHandler.bind(this, "left")}><div className="maximised-gallery-left"></div></div>}
+                {normalPhotos.length > 1 && <div className="maximised-gallery-left-container" onClick={switchPhotoHandler.bind(this, "left")}><div className="maximised-gallery-left"></div></div>}
                 <div className="maximised-gallery-photo-container">
                     {/* {currentPhotoIdx !== false && <img src={photos[currentPhotoIdx]} alt="project-photo" className="maximised-gallery-photo" />} */}
-                    {currentPhotoIdx !== false && <ReducedImageMaximised normalImage={photos[currentPhotoIdx]} reducedImage={thumbnailPhotos[currentPhotoIdx]}/>}
+                    {currentPhotoIdx !== false && <LowerQualityPhotoMaximised normalPhoto={normalPhotos[currentPhotoIdx]} lowerQualityPhoto={lowerQualityPhotos[currentPhotoIdx]} />}
                 </div>
-                { photos.length > 1 && <div className="maximised-gallery-right-container" onClick={switchPhotoHandler.bind(this, "right")}><div className="maximised-gallery-right"></div></div>}
+                {normalPhotos.length > 1 && <div className="maximised-gallery-right-container" onClick={switchPhotoHandler.bind(this, "right")}><div className="maximised-gallery-right"></div></div>}
                 <div className="maximised-gallery-carousel-container">
-                {currentPhotoIdx !== false && <Carousel currentPhotoIdx={currentPhotoIdx} photos={thumbnailPhotos} onClickPhoto={clickThubnailPhotoHandler}/> }
+                    {currentPhotoIdx !== false && <Carousel currentPhotoIdx={currentPhotoIdx} photos={thumbnailPhotos} onClickPhoto={clickThubnailPhotoHandler} />}
                 </div>
             </div>
         </Backdrop>

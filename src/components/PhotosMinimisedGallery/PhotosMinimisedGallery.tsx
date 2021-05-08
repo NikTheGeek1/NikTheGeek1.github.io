@@ -1,11 +1,11 @@
 import './PhotosMinimisedGallery.css';
 import PhotoGalleryStyle from '../../utils/PhotoGalleryStyle';
-import ReducedImage from '../ReducedImage/ReducedImage';
+import LowerQualityPhotoMinimised from '../LowerQualityPhotoMinimised/LowerQualityPhotoMinimised';
 
-const PhotosMinimisedGallery = ({reducedPhotos,thumbnailPhotos, toggleMaximisedGallery }:
+const PhotosMinimisedGallery = ({normalPhotos, lowerQualityPhotos, toggleMaximisedGallery }:
     {
-        reducedPhotos: string[],
-        thumbnailPhotos: string[],
+        normalPhotos: string[],
+        lowerQualityPhotos: string[],
         toggleMaximisedGallery: (showMaximisedFlag: false | number) => void
     }) => {
 
@@ -14,13 +14,13 @@ const PhotosMinimisedGallery = ({reducedPhotos,thumbnailPhotos, toggleMaximisedG
         toggleMaximisedGallery(photoIdx);
     };
 
-    const dynamicStyles = new PhotoGalleryStyle(reducedPhotos);
-    const photosJSX = reducedPhotos.map((photo, photoIdx) => {
+    const dynamicStyles = new PhotoGalleryStyle(normalPhotos);
+    const photosJSX = normalPhotos.map((photo, photoIdx) => {
         if (photoIdx === 5) {
             return (
                 <div className="photos-more-than-5-container" key={photo+photoIdx}>
                     <div className="photos-more-than-5-text">
-                        +{(reducedPhotos.length) - 5} Photos
+                        +{(normalPhotos.length) - 5} Photos
                     </div>
                 </div>
             );
@@ -28,7 +28,7 @@ const PhotosMinimisedGallery = ({reducedPhotos,thumbnailPhotos, toggleMaximisedG
             return (
                 <div key={photo+photoIdx} style={dynamicStyles.photosStyles[photoIdx]} className="photos-photo-container" onClick={openMaximisedGalleryHanlder.bind(this, photoIdx)}>
                     <div className="photos-photo-overlay"></div>
-                    <ReducedImage reducedImage={thumbnailPhotos[photoIdx]} normalImage={reducedPhotos[photoIdx]} />
+                    <LowerQualityPhotoMinimised lowerQualityPhoto={lowerQualityPhotos[photoIdx]} normalPhoto={normalPhotos[photoIdx]} />
                 </div>
             );
         }
