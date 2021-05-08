@@ -13,10 +13,15 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
         thumbnailPhotos: string[],
         startingPhotoIdx: number | false
     }) => {
+    const [lowerQualityLoaded, setLowerQualityPhotoLoaded] = useState(false);
     const [currentPhotoIdx, setCurrentPhotoIdx] = useState(startingPhotoIdx);
     useEffect(() => {
         setCurrentPhotoIdx(startingPhotoIdx);
     }, [startingPhotoIdx]);
+
+    const lowerQualityLoadedHandler = () => {
+        setLowerQualityPhotoLoaded(true);
+    };
 
     useEffect(() => {
         document.addEventListener("keydown", keyDownHandler);
@@ -40,12 +45,12 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
     const switchPhotoHandler = (type: string) => {
         let nextPhotoIdx;
         if (currentPhotoIdx !== false) {
+            setLowerQualityPhotoLoaded(false);
             if (type === "right") nextPhotoIdx = (currentPhotoIdx + 1) % (normalPhotos.length);
             if (type === "left") nextPhotoIdx = Math.abs((-currentPhotoIdx - (normalPhotos.length - 1)) % (normalPhotos.length));
             nextPhotoIdx !== undefined && setCurrentPhotoIdx(nextPhotoIdx);
         }
     };
-    console.log( "rendering", 'MaximisedGallery.tsx', 'line: ', '48');
 
     document.getElementsByTagName("body")[0].setAttribute("style", "overflow: hidden");
     const targetElement = document.getElementById('photo-gallery-modal') as HTMLElement;
@@ -55,7 +60,18 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
                 <div className="maximised-gallery-x-container" onClick={toggleMaximisedGallery.bind(this, false)}><div className="maximised-gallery-x"></div></div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-left-container" onClick={switchPhotoHandler.bind(this, "left")}><div className="maximised-gallery-left"></div></div>}
                 <div className="maximised-gallery-photo-container">
-                    {currentPhotoIdx !== false && <LowerQualityPhotoMaximised normalPhoto={normalPhotos[currentPhotoIdx]} lowerQualityPhoto={lowerQualityPhotos[currentPhotoIdx]} />}
+                    {currentPhotoIdx !== false &&
+                        <>
+                            {lowerQualityLoaded && <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" />}
+                            <img
+                                src={lowerQualityPhotos[currentPhotoIdx]}
+                                className={`photos-photo-maximised-reduced`}
+                                onLoad={lowerQualityLoadedHandler}
+                            />
+                        </>
+                        // <LowerQualityPhotoMaximised normalPhoto={normalPhotos[currentPhotoIdx]} lowerQualityPhoto={lowerQualityPhotos[currentPhotoIdx]} />
+
+                    }
                 </div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-right-container" onClick={switchPhotoHandler.bind(this, "right")}><div className="maximised-gallery-right"></div></div>}
                 <div className="maximised-gallery-carousel-container">

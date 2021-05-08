@@ -53,14 +53,6 @@
     position: relative;
 }
 
-/* .maximised-gallery-photo {
-    display: block;
-    max-width: 90%;
-    max-height: 70vh;
-    width: auto;
-    height: auto;
-    user-select: none;
-} */
 
 .maximised-gallery-right-container {
     grid-area: right;
@@ -85,3 +77,21 @@
     grid-area: carousel;
 }
 
+
+.photos-photo-maximised,
+.photos-photo-maximised-reduced {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    max-width: 90%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    user-select: none;
+}
+
+.photos-photo-maximised-reduced {
+    filter: blur(1rem);
+    z-index: 0;
+}
