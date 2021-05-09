@@ -41,10 +41,10 @@ const Timeline = () => {
                     {TimelineTexts.codeClanGraduation}
                 </LatestNewsBox>
             </GenericBox>
-            <BlogPostBox title="Gallery" rowSpan={1} columnSpan={1} subtitle="Creating the gallery component used in this site. (working on it)">
+            <BlogPostBox title="Gallery" rowSpan={1} columnSpan={1} subtitle="Creating the gallery component used in this site (working on it).">
                 <PhotoGalleryBlog />
             </BlogPostBox>
-            <BlogPostBox title="Meet Suzanne" rowSpan={1} columnSpan={1} subtitle="Creating the gallery component used in this site. (working on it)">
+            <BlogPostBox title="Meet Suzanne" rowSpan={1} columnSpan={1} subtitle="Creating the 3D monkey used in this site (working on it).">
             </BlogPostBox>
         </>
     );

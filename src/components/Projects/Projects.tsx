@@ -22,7 +22,7 @@ const Projects = () => {
                 photos={allPhotos.worldAtlas}
                 gitHubRepoLink="https://github.com/NikTheGeek1/worldAtlas"
                 website="https://world-atlas-webgl.web.app/"
-                technologies={["WebGL", "Three.js", "React.js"]}
+                technologies={["WebGL", "Three.js", "React.js", "Typescript"]}
             />
             <Project
                 title="Restaurant Booking App"

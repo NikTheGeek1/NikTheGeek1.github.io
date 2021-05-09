@@ -165,9 +165,9 @@ const Experience = () => {
                     children={[
                         <>
                             <DetailsItem>Confident with:
-                                <TagBubble title="JavaScript" />
-                                <TagBubble title="Python" />
+                                <TagBubble title="JavaScript/Typescript" />
                                 <TagBubble title="Java" />
+                                <TagBubble title="Python" />
                                 <TagBubble title="R" />
                                 <TagBubble title="MATLAB" />
                                 <TagBubble title="HTML/CSS/SASS" />
