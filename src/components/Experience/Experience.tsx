@@ -8,9 +8,9 @@ import TagBubble from '../TagBubble/TagBubble';
 import seminarIcon from '../../assets/svgs/seminars.svg';
 import skillsIcon from '../../assets/svgs/skills.svg';
 import { useEffect } from 'react';
-import { useStore } from 'src/hooks-store/store';
+import { useStore } from '../../hooks-store/store';
 import { storeVisitorLocation } from 'src/utils/visitor-tracker';
-import { LOCATIONS_ENUM } from 'src/hooks-store/stores/visitor-map';
+import { LOCATIONS_ENUM } from '../../hooks-store/stores/visitor-map';
 
 const Experience = () => {
     const visitorToken = useStore(false)[0].visitorToken;

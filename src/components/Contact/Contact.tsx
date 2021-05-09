@@ -4,9 +4,9 @@ import SocialNetworks from '../SocialNetworks/SocialNetworks';
 import mobilePhoneIcon from '../../assets/svgs/mobile-phone.svg';
 import email1 from '../../assets/svgs/email-1.svg';
 import { useEffect } from 'react';
-import { useStore } from 'src/hooks-store/store';
-import { storeVisitorLocation } from 'src/utils/visitor-tracker';
-import { LOCATIONS_ENUM } from 'src/hooks-store/stores/visitor-map';
+import { useStore } from '../../hooks-store/store';
+import { storeVisitorLocation } from '../../utils/visitor-tracker';
+import { LOCATIONS_ENUM } from '../../hooks-store/stores/visitor-map';
 import './Contact.css';
 
 const Contact = () => {

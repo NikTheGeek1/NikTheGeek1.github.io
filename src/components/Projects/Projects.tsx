@@ -2,8 +2,17 @@ import Project from './Project/Project';
 import './Projects.css';
 import ProjectsTexts from '../../html-texts/Projects';
 import allPhotos from '../../imports/import-project-photos';
+import { useEffect } from 'react';
+import { useStore } from '../../hooks-store/store';
+import { storeVisitorLocation } from '../../utils/visitor-tracker';
+import { LOCATIONS_ENUM } from '../../hooks-store/stores/visitor-map';
 
 const Projects = () => {
+    const visitorToken = useStore(false)[0].visitorToken;
+    
+    useEffect(() => {
+        visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PROJECTS);
+    }, []);
 
     return (
         <>

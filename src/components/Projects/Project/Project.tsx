@@ -5,10 +5,6 @@ import gitHubIcon from '../../../assets/svgs/github.svg';
 import websiteIcon from '../../../assets/svgs/website.svg';
 import TagBubble from '../../../components/TagBubble/TagBubble';
 import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
-import { useEffect } from 'react';
-import { useStore } from 'src/hooks-store/store';
-import { storeVisitorLocation } from 'src/utils/visitor-tracker';
-import { LOCATIONS_ENUM } from 'src/hooks-store/stores/visitor-map';
 
 
 const Project = ({ title, photos, gitHubRepoLink, website, details, technologies }: {
@@ -19,11 +15,7 @@ const Project = ({ title, photos, gitHubRepoLink, website, details, technologies
     details: string,
     technologies: string[]
 }) => {
-    const visitorToken = useStore(false)[0].visitorToken;
-
-    useEffect(() => {
-        visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PROJECTS);
-    }, []);
+   
     const technologiesJSX = technologies.map(tech => {
         return <TagBubble key={tech} title={tech}/>;
     }); 
