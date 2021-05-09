@@ -9,7 +9,7 @@ import seminarIcon from '../../assets/svgs/seminars.svg';
 import skillsIcon from '../../assets/svgs/skills.svg';
 import { useEffect } from 'react';
 import { useStore } from '../../hooks-store/store';
-import { storeVisitorLocation } from 'src/utils/visitor-tracker';
+import { storeVisitorLocation } from '../../utils/visitor-tracker';
 import { LOCATIONS_ENUM } from '../../hooks-store/stores/visitor-map';
 
 const Experience = () => {
