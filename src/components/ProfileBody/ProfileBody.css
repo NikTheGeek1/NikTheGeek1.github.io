@@ -10,10 +10,12 @@
 .profile-timeline-container,
 .profile-publications-container,
 .profile-experience-container,
-.profile-projects-container {
+.profile-projects-container,
+.profile-contact-container {
     opacity: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
     column-gap: var(--bigest-gap);
     row-gap: var(--bigest-gap);
     animation: display 1s forwards;

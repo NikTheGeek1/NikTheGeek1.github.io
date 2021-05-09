@@ -3,8 +3,8 @@ import { BrowserRouter as _, Redirect, Route, Switch } from 'react-router-dom/cj
 import { pathsEnum } from '../../enums/paths';
 import Publications from '../Publications/Publications';
 import Experience from '../Experience/Experience';
-import ExperienceSection from '../Experience/ExperienceSection/ExperienceSection';
 import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
 
 import './ProfileBody.css';
 
@@ -37,9 +37,7 @@ const ProfileBody = () => {
             </Route>
             <Route path={pathsEnum.CONTACT}>
                 <section className="profile-contact-container">
-                    <ExperienceSection
-                        title="Under Construction"
-                    />
+                    <Contact />
                 </section>
             </Route>
         </Switch>

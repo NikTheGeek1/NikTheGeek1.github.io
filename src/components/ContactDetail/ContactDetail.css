@@ -1,0 +1,24 @@
+.contact-detail-container,
+.contact-detail-link {
+    display: flex;
+    margin-bottom: 1rem;
+    column-gap: 1rem;
+}
+
+.contact-detail-type {
+    font-family: "Hack";
+    font-size: var(--big-font-size);
+    align-self: flex-end;
+
+}
+
+.contact-detail-value {
+    font-family: "Josefin Slab";
+    font-size: var(--larger-font-size);
+    align-self: flex-end;
+}
+
+.contact-detail-link {
+    text-decoration: none;
+    color: inherit;
+}
