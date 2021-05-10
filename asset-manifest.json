@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.aec1d13c.chunk.css",
-    "main.js": "/static/js/main.ba140182.chunk.js",
-    "main.js.map": "/static/js/main.ba140182.chunk.js.map",
+    "main.css": "/static/css/main.a8339b34.chunk.css",
+    "main.js": "/static/js/main.bd17e653.chunk.js",
+    "main.js.map": "/static/js/main.bd17e653.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/js/2.5c171fbc.chunk.js": "/static/js/2.5c171fbc.chunk.js",
     "static/js/2.5c171fbc.chunk.js.map": "/static/js/2.5c171fbc.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.aec1d13c.chunk.css.map": "/static/css/main.aec1d13c.chunk.css.map",
+    "static/css/main.a8339b34.chunk.css.map": "/static/css/main.a8339b34.chunk.css.map",
     "static/js/2.5c171fbc.chunk.js.LICENSE.txt": "/static/js/2.5c171fbc.chunk.js.LICENSE.txt",
     "static/media/checkers-1-lqMAX.f406cd27.jpg": "/static/media/checkers-1-lqMAX.f406cd27.jpg",
     "static/media/checkers-1-rMAX.da7a8ccd.jpg": "/static/media/checkers-1-rMAX.da7a8ccd.jpg",
@@ -64,6 +64,14 @@
     "static/media/restaurant-3-rMAX.213bb81b.jpg": "/static/media/restaurant-3-rMAX.213bb81b.jpg",
     "static/media/restaurant-3-rMIN.72c6ad93.jpg": "/static/media/restaurant-3-rMIN.72c6ad93.jpg",
     "static/media/restaurant-4-rMAX.fedfc3c1.jpg": "/static/media/restaurant-4-rMAX.fedfc3c1.jpg",
+    "static/media/restaurant-5-rMAX.df56af13.jpg": "/static/media/restaurant-5-rMAX.df56af13.jpg",
+    "static/media/restaurant-5-rMIN.a7af289c.jpg": "/static/media/restaurant-5-rMIN.a7af289c.jpg",
+    "static/media/restaurant-6-rMAX.662ff9d8.jpg": "/static/media/restaurant-6-rMAX.662ff9d8.jpg",
+    "static/media/restaurant-6-rMIN.e99c5616.jpg": "/static/media/restaurant-6-rMIN.e99c5616.jpg",
+    "static/media/restaurant-7-rMAX.d1be8cb3.jpg": "/static/media/restaurant-7-rMAX.d1be8cb3.jpg",
+    "static/media/restaurant-7-rMIN.4a44ee31.jpg": "/static/media/restaurant-7-rMIN.4a44ee31.jpg",
+    "static/media/restaurant-8-rMAX.3e645fa7.jpg": "/static/media/restaurant-8-rMAX.3e645fa7.jpg",
+    "static/media/restaurant-8-rMIN.de14ec09.jpg": "/static/media/restaurant-8-rMIN.de14ec09.jpg",
     "static/media/rl-1-lqMAX.f7bbad5c.jpg": "/static/media/rl-1-lqMAX.f7bbad5c.jpg",
     "static/media/rl-1-rMAX.9461e623.jpg": "/static/media/rl-1-rMAX.9461e623.jpg",
     "static/media/rl-1-rMIN.2d6fca44.jpg": "/static/media/rl-1-rMIN.2d6fca44.jpg",
@@ -105,7 +113,7 @@
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
     "static/js/2.5c171fbc.chunk.js",
-    "static/css/main.aec1d13c.chunk.css",
-    "static/js/main.ba140182.chunk.js"
+    "static/css/main.a8339b34.chunk.css",
+    "static/js/main.bd17e653.chunk.js"
   ]
 }
