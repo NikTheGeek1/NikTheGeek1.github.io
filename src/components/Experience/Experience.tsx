@@ -187,6 +187,8 @@ const Experience = () => {
                             <DetailsItem>Worked with:
                                 <TagBubble title="Node.js" />
                                 <TagBubble title="React" />
+                                <TagBubble title="Redux" />
+                                <TagBubble title="Redux-Thunk" />
                                 <TagBubble title="Reac Native" />
                                 <TagBubble title="Node.js" />
                                 <TagBubble title="Flask" />
