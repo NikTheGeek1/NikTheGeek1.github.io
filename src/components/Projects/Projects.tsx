@@ -13,7 +13,7 @@ const Projects = () => {
     useEffect(() => {
         visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PROJECTS);
     }, []);
-
+    console.log(allPhotos, 'Projects.tsx', 'line: ', '16');
     return (
         <>
             <Project
@@ -30,7 +30,7 @@ const Projects = () => {
                 details={ProjectsTexts.restaurant}
                 gitHubRepoLink="https://github.com/NikTheGeek1/restaurant_app_java"
                 website="https://restaurant-c.web.app/"
-                technologies={["JAVA", "React.js", "React-native", "Hibernate", "Spring", "STOMP", "WebSockets"]}
+                technologies={["JAVA", "React.js", "Redux", "React-native", "Hibernate", "Spring", "STOMP", "WebSockets"]}
             />
             <Project
                 title="!Checkers"
@@ -53,7 +53,7 @@ const Projects = () => {
                 photos={allPhotos.xcovers}
                 details={ProjectsTexts.xcovers}
                 website="http://www.xcovers.gr/"
-                technologies={["Node.js", "React.js", "SASS", "Responsive design"]}
+                technologies={["Node.js", "Redux", "Redux-thunk", "React.js", "SASS", "Responsive design"]}
             />
             <Project
                 title="Online experiment"
@@ -61,7 +61,7 @@ const Projects = () => {
                 details={ProjectsTexts.onlineExperiment1}
                 gitHubRepoLink="https://github.com/NikTheGeek1/zendo-cond-3"
                 website="http://zendo-cond-3.herokuapp.com"
-                technologies={["Node.js", "React.js", "SASS", "IvanK.js"]}
+                technologies={["Node.js", "React.js", "Redux", "SASS", "IvanK.js"]}
             />
 
         </>

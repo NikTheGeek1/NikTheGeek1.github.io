@@ -24,26 +24,46 @@ import restaurantThumb1 from '../assets/images/projects/restaurant-app/restauran
 import restaurantThumb2 from '../assets/images/projects/restaurant-app/restaurant-2-thumbnail.jpg';
 import restaurantThumb3 from '../assets/images/projects/restaurant-app/restaurant-3-thumbnail.jpg';
 import restaurantThumb4 from '../assets/images/projects/restaurant-app/restaurant-4-thumbnail.jpg';
+import restaurantThumb5 from '../assets/images/projects/restaurant-app/restaurant-5-thumbnail.jpg';
+import restaurantThumb6 from '../assets/images/projects/restaurant-app/restaurant-6-thumbnail.jpg';
+import restaurantThumb7 from '../assets/images/projects/restaurant-app/restaurant-7-thumbnail.jpg';
+import restaurantThumb8 from '../assets/images/projects/restaurant-app/restaurant-8-thumbnail.jpg';
 
 import restaurantlqMIN1 from '../assets/images/projects/restaurant-app/restaurant-1-lqMIN.jpg';
 import restaurantlqMIN2 from '../assets/images/projects/restaurant-app/restaurant-2-lqMIN.jpg';
 import restaurantlqMIN3 from '../assets/images/projects/restaurant-app/restaurant-3-lqMIN.jpg';
 import restaurantlqMIN4 from '../assets/images/projects/restaurant-app/restaurant-4-lqMIN.jpg';
+import restaurantlqMIN5 from '../assets/images/projects/restaurant-app/restaurant-5-lqMIN.jpg';
+import restaurantlqMIN6 from '../assets/images/projects/restaurant-app/restaurant-6-lqMIN.jpg';
+import restaurantlqMIN7 from '../assets/images/projects/restaurant-app/restaurant-7-lqMIN.jpg';
+import restaurantlqMIN8 from '../assets/images/projects/restaurant-app/restaurant-8-lqMIN.jpg';
 
 import restaurantlqMAX1 from '../assets/images/projects/restaurant-app/restaurant-1-lqMAX.jpg';
 import restaurantlqMAX2 from '../assets/images/projects/restaurant-app/restaurant-2-lqMAX.jpg';
 import restaurantlqMAX3 from '../assets/images/projects/restaurant-app/restaurant-3-lqMAX.jpg';
 import restaurantlqMAX4 from '../assets/images/projects/restaurant-app/restaurant-4-lqMAX.jpg';
+import restaurantlqMAX5 from '../assets/images/projects/restaurant-app/restaurant-5-lqMAX.jpg';
+import restaurantlqMAX6 from '../assets/images/projects/restaurant-app/restaurant-6-lqMAX.jpg';
+import restaurantlqMAX7 from '../assets/images/projects/restaurant-app/restaurant-7-lqMAX.jpg';
+import restaurantlqMAX8 from '../assets/images/projects/restaurant-app/restaurant-8-lqMAX.jpg';
 
 import restaurantrMIN1 from '../assets/images/projects/restaurant-app/restaurant-1-rMIN.jpg';
 import restaurantrMIN2 from '../assets/images/projects/restaurant-app/restaurant-2-rMIN.jpg';
 import restaurantrMIN3 from '../assets/images/projects/restaurant-app/restaurant-3-rMIN.jpg';
 import restaurantrMIN4 from '../assets/images/projects/restaurant-app/restaurant-4-rMIN.jpg';
+import restaurantrMIN5 from '../assets/images/projects/restaurant-app/restaurant-5-rMIN.jpg';
+import restaurantrMIN6 from '../assets/images/projects/restaurant-app/restaurant-6-rMIN.jpg';
+import restaurantrMIN7 from '../assets/images/projects/restaurant-app/restaurant-7-rMIN.jpg';
+import restaurantrMIN8 from '../assets/images/projects/restaurant-app/restaurant-8-rMIN.jpg';
 
 import restaurantrMAX1 from '../assets/images/projects/restaurant-app/restaurant-1-rMAX.jpg';
 import restaurantrMAX2 from '../assets/images/projects/restaurant-app/restaurant-2-rMAX.jpg';
 import restaurantrMAX3 from '../assets/images/projects/restaurant-app/restaurant-3-rMAX.jpg';
 import restaurantrMAX4 from '../assets/images/projects/restaurant-app/restaurant-4-rMAX.jpg';
+import restaurantrMAX5 from '../assets/images/projects/restaurant-app/restaurant-5-rMAX.jpg';
+import restaurantrMAX6 from '../assets/images/projects/restaurant-app/restaurant-6-rMAX.jpg';
+import restaurantrMAX7 from '../assets/images/projects/restaurant-app/restaurant-7-rMAX.jpg';
+import restaurantrMAX8 from '../assets/images/projects/restaurant-app/restaurant-8-rMAX.jpg';
 
 // checkers
 import checkersThumb1 from '../assets/images/projects/checkers/checkers-1-thumbnail.jpg';
@@ -210,30 +230,50 @@ const allPhotos: allPhotosStructure = {
             restaurantThumb2,
             restaurantThumb3,
             restaurantThumb4,
+            restaurantThumb5,
+            restaurantThumb6,
+            restaurantThumb7,
+            restaurantThumb8,
         ],
         lowerQualityMin: [
             restaurantlqMIN1,
             restaurantlqMIN2,
             restaurantlqMIN3,
             restaurantlqMIN4,
+            restaurantlqMIN5,
+            restaurantlqMIN6,
+            restaurantlqMIN7,
+            restaurantlqMIN8,
         ],
         lowerQualityMax: [
             restaurantlqMAX1,
             restaurantlqMAX2,
             restaurantlqMAX3,
             restaurantlqMAX4,
+            restaurantlqMAX5,
+            restaurantlqMAX6,
+            restaurantlqMAX7,
+            restaurantlqMAX8,
         ],
         reducedMin: [
             restaurantrMIN1,
             restaurantrMIN2,
             restaurantrMIN3,
             restaurantrMIN4,
+            restaurantrMIN5,
+            restaurantrMIN6,
+            restaurantrMIN7,
+            restaurantrMIN8,
         ],
         reducedMax: [
             restaurantrMAX1,
             restaurantrMAX2,
             restaurantrMAX3,
             restaurantrMAX4,
+            restaurantrMAX5,
+            restaurantrMAX6,
+            restaurantrMAX7,
+            restaurantrMAX8,
         ]
     },
 
