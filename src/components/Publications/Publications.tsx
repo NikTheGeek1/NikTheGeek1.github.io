@@ -19,8 +19,8 @@ const Publications = () => {
             <Publication 
                 title="Algorithms of adaptation in inductive inference."
                 authorString="JP. Franken, N. C. Theodoropoulos, N. R. Bramley"
-                year="submitted in May 2021"
-                journal="Cognitive Psychology"
+                year="2021"
+                journal="Cognitive Psychology -- submitted in May 2021"
                 tags={[<TagBubble title="Experiment 1" link="https://zendo-cond-3.herokuapp.com/signup"/>, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/zendo-cond-3"/>]}
             />
             <Publication 
