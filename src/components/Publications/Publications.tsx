@@ -18,14 +18,14 @@ const Publications = () => {
         <GenericBox title="Publications" rowSpan={1} columnSpan={4} titleType="subtitle">
             <Publication 
                 title="Algorithms of adaptation in inductive inference."
-                authorString="JP. Franken, N. C. Theodoropoulos, N. R. Bramley"
+                authorString="JP. Fränken, N. C. Theodoropoulos, N. R. Bramley"
                 year="2021"
                 journal="Cognitive Psychology -- submitted in May 2021"
                 tags={[<TagBubble title="Experiment 1" link="https://zendo-cond-3.herokuapp.com/signup"/>, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/zendo-cond-3"/>]}
             />
             <Publication 
                 title="Belief revision in a micro-social network: Modelling sensitivity to statistical dependencies in social learning."
-                authorString="JP. Franken, N. C. Theodoropoulos, A. B. Moore, N. R. Bramley"
+                authorString="JP. Fränken, N. C. Theodoropoulos, A. B. Moore, N. R. Bramley"
                 year="2020"
                 journal="Proceedings of the 42nd Annual Meeting of the Cognitive Science Society 2020"
                 tags={[<TagBubble title="Project" link="https://cogsci.mindmodeling.org/2020/papers/0240/0240.pdf"/>, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/belief-revision-experiment-2"/>]}

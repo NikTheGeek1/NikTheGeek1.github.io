@@ -197,6 +197,7 @@ const Experience = () => {
                                 <TagBubble title="STOMP" />
                                 <TagBubble title="Spring" />
                                 <TagBubble title="Hibernate" />
+                                <TagBubble title="GitHub" />
                                 <TagBubble title="Relational databases (PostgreSQL, SQLite...)" />
                                 <TagBubble title="Non-relational databases (Firebase, MongoDB)" />
                                 <TagBubble title="Visualisation (matplotlib, plotly...)" />
