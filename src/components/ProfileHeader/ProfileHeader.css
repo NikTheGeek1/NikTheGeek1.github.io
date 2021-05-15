@@ -78,4 +78,5 @@
     top: 6rem;
     right: .7rem;
     list-style: none;
+    z-index: 100;
 }

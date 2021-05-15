@@ -32,8 +32,6 @@ const ProfileHeader = () => {
             setShowMoreBox(false);
     };
 
-
-
     let headerItems: string[] = ["Timeline", "Publications", "Experience", "Projects", "Contact"];
     let moreItems: string[] = [];
     if (scrDims && scrDims.width < 500) {
