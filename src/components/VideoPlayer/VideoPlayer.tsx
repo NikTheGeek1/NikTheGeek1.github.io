@@ -12,7 +12,7 @@ const VideoPlayer = ({ video, type }: { video: string, type: videoPlayerType }) 
         );
     } else if (type === "maximised") {
         videoJSX = (
-            <video controls className="video-maximised">
+            <video controls loop autoPlay className="video-maximised">
                 <source src={video} type="video/mp4" />
             </video>
         );

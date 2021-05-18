@@ -20,9 +20,9 @@ const Projects = () => {
                 title="Multiplayer BlackJack"
                 photos={allPhotos.blackJack}
                 details={ProjectsTexts.blackJack}
-                gitHubRepoLink=""
+                gitHubRepoLink="https://github.com/NikTheGeek1/blackJack"
                 website=""
-                technologies={[""]}
+                technologies={["JAVA", "React.js", "Custom hooks", "React-native", "Hibernate", "Spring Security", "STOMP", "WebSockets", "Testing"]}
             />
             <Project
                 title="World Atlas 3D"

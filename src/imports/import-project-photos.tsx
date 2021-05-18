@@ -194,7 +194,28 @@ import oerMAX3 from '../assets/images/projects/online-experiment-1/oe-3-rMAX.jpg
 import oerMAX4 from '../assets/images/projects/online-experiment-1/oe-4-rMAX.jpg';
 import oerMAX5 from '../assets/images/projects/online-experiment-1/oe-5-rMAX.jpg';
 
-import blackJack1 from '../assets/images/projects/blackJack/vids/new_vid1.avi.mp4';
+import blackJackVid1 from '../assets/images/projects/blackJack/vids/vid1.mp4';
+import blackJackVid2 from '../assets/images/projects/blackJack/vids/vid2.mp4';
+
+import blackJackThumb1 from '../assets/images/projects/blackJack/photo1-thumbnail.jpg';
+import blackJackThumb2 from '../assets/images/projects/blackJack/photo2-thumbnail.jpg';
+import blackJackThumb3 from '../assets/images/projects/blackJack/photo3-thumbnail.jpg';
+
+import blackJacklqMAX1 from '../assets/images/projects/blackJack/photo1-lqMAX.jpg';
+import blackJacklqMAX2 from '../assets/images/projects/blackJack/photo2-lqMAX.jpg';
+import blackJacklqMAX3 from '../assets/images/projects/blackJack/photo3-lqMAX.jpg';
+
+import blackJacklqMIN1 from '../assets/images/projects/blackJack/photo1-lqMIN.jpg';
+import blackJacklqMIN2 from '../assets/images/projects/blackJack/photo2-lqMIN.jpg';
+import blackJacklqMIN3 from '../assets/images/projects/blackJack/photo3-lqMIN.jpg';
+
+import blackJackrMAX1 from '../assets/images/projects/blackJack/photo1-rMAX.jpg';
+import blackJackrMAX2 from '../assets/images/projects/blackJack/photo2-rMAX.jpg';
+import blackJackrMAX3 from '../assets/images/projects/blackJack/photo3-rMAX.jpg';
+
+import blackJackrMIN1 from '../assets/images/projects/blackJack/photo1-rMIN.jpg';
+import blackJackrMIN2 from '../assets/images/projects/blackJack/photo2-rMIN.jpg';
+import blackJackrMIN3 from '../assets/images/projects/blackJack/photo3-rMIN.jpg';
 
 type allPhotosStructure = {[key: string]: ImagesVersionsInterface}
 
@@ -438,29 +459,39 @@ const allPhotos: allPhotosStructure = {
     },
     blackJack: {
         thumbnail: [
-            blackJack1,
-            blackJack1,
-            blackJack1,
+            blackJackThumb3,
+            blackJackThumb2,
+            blackJackThumb1,
+            blackJackVid1,
+            blackJackVid2,
         ],
         lowerQualityMin: [
-            blackJack1,
-            blackJack1,
-            blackJack1,
+            blackJacklqMIN3,
+            blackJacklqMIN2,
+            blackJacklqMIN1,
+            blackJackVid1,
+            blackJackVid2,
         ],
         lowerQualityMax: [
-            blackJack1,
-            blackJack1,
-            blackJack1,
+            blackJacklqMAX3,
+            blackJacklqMAX2,
+            blackJacklqMAX1,
+            blackJackVid1,
+            blackJackVid2,
         ],
         reducedMin: [
-            blackJack1,
-            blackJack1,
-            blackJack1,
+            blackJackrMIN3,
+            blackJackrMIN2,
+            blackJackrMIN1,
+            blackJackVid1,
+            blackJackVid2,
         ],
         reducedMax: [
-            blackJack1,
-            blackJack1,
-            blackJack1,
+            blackJackrMAX3,
+            blackJackrMAX2,
+            blackJackrMAX1,
+            blackJackVid1,
+            blackJackVid2,
         ]
     },
 
