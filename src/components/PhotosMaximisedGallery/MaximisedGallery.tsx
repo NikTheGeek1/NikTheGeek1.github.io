@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Backdrop from '../Backdrop/Backdrop';
 import { useEffect, useState } from 'react';
 import Carousel from './Carousel/Carousel';
+import VideoPlayer from '../VideoPlayer/VideoPlayer';
 
 const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPhotos, startingPhotoIdx, thumbnailPhotos }:
     {
@@ -60,15 +61,18 @@ const MaximisedGallery = ({ toggleMaximisedGallery, normalPhotos, lowerQualityPh
                 <div className="maximised-gallery-x-container" onClick={toggleMaximisedGallery.bind(this, false)}><div className="maximised-gallery-x"></div></div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-left-container" onClick={switchPhotoHandler.bind(this, "left")}><div className="maximised-gallery-left"></div></div>}
                 <div className="maximised-gallery-photo-container">
-                    {currentPhotoIdx !== false &&
-                        <>
-                            {lowerQualityLoaded && <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" onLoad={setNormalPhotoLoaded.bind(this, true)} />}
-                            {!normalPhotoLoaded && <img
-                                src={lowerQualityPhotos[currentPhotoIdx]}
-                                className={`photos-photo-maximised-reduced`}
-                                onLoad={setLowerQualityPhotoLoaded.bind(this, true)}
-                            />}
-                        </>
+                    {(currentPhotoIdx !== false) &&
+                        (normalPhotos[currentPhotoIdx].slice(-3) === "mp4" ?
+                            <VideoPlayer key={normalPhotos[currentPhotoIdx] + new Date().getTime()} video={normalPhotos[currentPhotoIdx]} type="maximised"/>
+                            :
+                            <>
+                                {lowerQualityLoaded && <img src={normalPhotos[currentPhotoIdx]} className="photos-photo-maximised" onLoad={setNormalPhotoLoaded.bind(this, true)} />}
+                                {!normalPhotoLoaded && <img
+                                    src={lowerQualityPhotos[currentPhotoIdx]}
+                                    className={`photos-photo-maximised-reduced`}
+                                    onLoad={setLowerQualityPhotoLoaded.bind(this, true)}
+                                />}
+                            </>)
                     }
                 </div>
                 {normalPhotos.length > 1 && <div className="maximised-gallery-right-container" onClick={switchPhotoHandler.bind(this, "right")}><div className="maximised-gallery-right"></div></div>}

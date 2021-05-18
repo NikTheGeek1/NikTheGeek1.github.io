@@ -9,13 +9,21 @@ import { LOCATIONS_ENUM } from '../../hooks-store/stores/visitor-map';
 
 const Projects = () => {
     const visitorToken = useStore(false)[0].visitorToken;
-    
+
     useEffect(() => {
         visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PROJECTS);
     }, []);
     console.log(allPhotos, 'Projects.tsx', 'line: ', '16');
     return (
         <>
+        <Project
+                title="Multiplayer BlackJack"
+                photos={allPhotos.blackJack}
+                details={ProjectsTexts.blackJack}
+                gitHubRepoLink=""
+                website=""
+                technologies={[""]}
+            />
             <Project
                 title="World Atlas 3D"
                 details={ProjectsTexts.worldAtlas}
@@ -63,7 +71,7 @@ const Projects = () => {
                 website="http://zendo-cond-3.herokuapp.com"
                 technologies={["Node.js", "React.js", "Redux", "SASS", "IvanK.js"]}
             />
-
+            
         </>
 
     );

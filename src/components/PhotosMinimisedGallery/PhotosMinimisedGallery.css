@@ -24,7 +24,11 @@
     transition: all .1s;
 }
 
-.photos-photo-container:hover .photos-photo{
+.photos-photo-container:hover .photos-photo {
+    transform: scale(1.1);
+}
+
+.photos-photo-container:hover .video-minimised {
     transform: scale(1.1);
 }
 

@@ -1,7 +1,8 @@
 import { createRef, useEffect, useState } from 'react';
+import VideoPlayer from '../../../components/VideoPlayer/VideoPlayer';
 import './Carousel.css';
 
-const Carousel = ({currentPhotoIdx, photos, onClickPhoto}: {
+const Carousel = ({ currentPhotoIdx, photos, onClickPhoto }: {
     currentPhotoIdx: number,
     photos: string[],
     onClickPhoto: (photoIdx: number) => void
@@ -12,23 +13,25 @@ const Carousel = ({currentPhotoIdx, photos, onClickPhoto}: {
 
     useEffect(() => {
         setPhotoRefs(photoRefs => (
-          Array(photos.length).fill(null).map((_, i) => photoRefs[i] || createRef())
+            Array(photos.length).fill(null).map((_, i) => photoRefs[i] || createRef())
         ));
-      }, [photos]);
+    }, [photos]);
 
-      useEffect(() => {
-          const middleOfScreen = window.innerWidth / 2;
-          carouselContainerRef?.current?.scroll({
-              top: 0,
-              left: (photoRefs[currentPhotoIdx]?.current?.offsetLeft as number - middleOfScreen) + 200 / 2, // 200/2 is the photo width / 2 specified in css 
-              behavior: 'smooth'
-          });
-      }, [currentPhotoIdx]);
+    useEffect(() => {
+        const middleOfScreen = window.innerWidth / 2;
+        carouselContainerRef?.current?.scroll({
+            top: 0,
+            left: (photoRefs[currentPhotoIdx]?.current?.offsetLeft as number - middleOfScreen) + 200 / 2, // 200/2 is the photo width / 2 specified in css 
+            behavior: 'smooth'
+        });
+    }, [currentPhotoIdx]);
 
     const photosJSX = photos.map((photo, idx) => {
         return (
             <div key={photo + idx} ref={photoRefs[idx]} className="carousel-photo-container" onClick={onClickPhoto.bind(this, idx)}>
-                <img src={photo} alt={"carousel-photo"+idx} className="carousel-photo"/>
+                {photo.slice(-3) === "mp4" ?
+                    <VideoPlayer video={photo} type="carousel" />
+                    : <img src={photo} alt={"carousel-photo" + idx} className="carousel-photo" />}
                 {currentPhotoIdx !== idx && <div className="carousel-photo-overlay"></div>}
             </div>
         );

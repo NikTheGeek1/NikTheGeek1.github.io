@@ -6,6 +6,7 @@ class ProjectsText {
     public static reinforcementLearning = "A 2D grid-world game. The participant can either play and let their behaviour be analysed by one of the available reinforcement learning algorithms, or they can watch the algorithms playing on their own. Available reinforcement learning algorithms: Value iteration, Q-Learning, and Monte-Carlo."
     public static xcovers = "This is a fully functioning website I built for my brother's company. The github repository is private, if you want to take a look, please ask for permission."
     public static onlineExperiment1 = "Experimental condition on hypothesis updating. This experiment is part of a broader project."
+    public static blackJack = "";
 }   
 
 export default ProjectsText;

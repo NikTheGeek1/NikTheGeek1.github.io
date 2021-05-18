@@ -193,6 +193,9 @@ import oerMAX2 from '../assets/images/projects/online-experiment-1/oe-2-rMAX.jpg
 import oerMAX3 from '../assets/images/projects/online-experiment-1/oe-3-rMAX.jpg';
 import oerMAX4 from '../assets/images/projects/online-experiment-1/oe-4-rMAX.jpg';
 import oerMAX5 from '../assets/images/projects/online-experiment-1/oe-5-rMAX.jpg';
+
+import blackJack1 from '../assets/images/projects/blackJack/vids/new_vid1.avi.mp4';
+
 type allPhotosStructure = {[key: string]: ImagesVersionsInterface}
 
 const allPhotos: allPhotosStructure = {
@@ -433,6 +436,34 @@ const allPhotos: allPhotosStructure = {
             oerMAX5,
         ]
     },
+    blackJack: {
+        thumbnail: [
+            blackJack1,
+            blackJack1,
+            blackJack1,
+        ],
+        lowerQualityMin: [
+            blackJack1,
+            blackJack1,
+            blackJack1,
+        ],
+        lowerQualityMax: [
+            blackJack1,
+            blackJack1,
+            blackJack1,
+        ],
+        reducedMin: [
+            blackJack1,
+            blackJack1,
+            blackJack1,
+        ],
+        reducedMax: [
+            blackJack1,
+            blackJack1,
+            blackJack1,
+        ]
+    },
+
     
 };
 

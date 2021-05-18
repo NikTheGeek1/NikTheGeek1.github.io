@@ -2,6 +2,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "video-player-type": ["node_modules/@types/video-player-type"],
             "generic-box-title": ["node_modules/@types/generic-box-title"],
             "images-versions": ["node_modules/@types/images-versions"],
             "three/build/three.module": ["node_modules/@types/three"],
