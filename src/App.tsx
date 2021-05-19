@@ -1,15 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom/cjs/react-router-dom";
 import LandingPage from './containers/LandingPage/LandingPage';
-import {storeVisitorDemographics, storeVisitorLocation} from './utils/visitor-tracker';
+import {storeVisitorDemographics, storeVisitorLocation } from './utils/visitor-tracker';
 
-import visitorMapStore from './hooks-store/stores/visitor-map';
-import screenDimensionsStore from './hooks-store/stores/screen-dimensions';
-import { fetchVisitorCookie, storeVisitorCookie } from './visitor-cookies/visitor-cookies';
+import visitorMapStore, { STORE_VISITOR_TOKEN }  from './hooks-store/stores/visitor-map';
+import screenDimensionsStore, { SET_SCREEN_DIMENSIONS } from './hooks-store/stores/screen-dimensions';
+import { fetchVisitorCookie, storeVisitorCookie, storeVisitTime } from './visitor-cookies/visitor-cookies';
 import { useEffect } from 'react';
 import randomTokenGenerator from './utils/random-token-generator';
-import { STORE_VISITOR_TOKEN } from './hooks-store/stores/visitor-map';
-import { SET_SCREEN_DIMENSIONS } from './hooks-store/stores/screen-dimensions';
 import { useStore } from './hooks-store/store';
 
 visitorMapStore();
@@ -28,8 +26,8 @@ function App() {
     } else {
       storeVisitorLocation(visitorToken as string, "Came back/refreshed");
     }
+    storeVisitTime();
     dispatch(STORE_VISITOR_TOKEN, visitorToken);
-
   }, []);
 
   useEffect(() => {

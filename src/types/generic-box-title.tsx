@@ -1,0 +1,1 @@
+export type genericBoxTitle = "title" | "subtitle";

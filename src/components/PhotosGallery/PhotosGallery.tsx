@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PhotosMaximisedGallery from '../PhotosMaximisedGallery/MaximisedGallery';
 import PhotosMinimisedGallery from '../PhotosMinimisedGallery/PhotosMinimisedGallery';
 import './PhotosGallery.css';
+import { ImagesVersionsInterface } from '../../types/images-versions-interface';
 
 const PhotosGallery = ({ photos }: {
     photos: ImagesVersionsInterface,

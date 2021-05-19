@@ -5,7 +5,7 @@ import gitHubIcon from '../../../assets/svgs/github.svg';
 import websiteIcon from '../../../assets/svgs/website.svg';
 import TagBubble from '../../../components/TagBubble/TagBubble';
 import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
-
+import { ImagesVersionsInterface } from '../../../types/images-versions-interface';
 
 const Project = ({ title, photos, gitHubRepoLink, website, details, technologies }: {
     title: string,

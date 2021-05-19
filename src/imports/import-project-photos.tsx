@@ -216,8 +216,9 @@ import blackJackrMAX3 from '../assets/images/projects/blackJack/photo3-rMAX.jpg'
 import blackJackrMIN1 from '../assets/images/projects/blackJack/photo1-rMIN.jpg';
 import blackJackrMIN2 from '../assets/images/projects/blackJack/photo2-rMIN.jpg';
 import blackJackrMIN3 from '../assets/images/projects/blackJack/photo3-rMIN.jpg';
+import { ImagesVersionsInterface } from '../types/images-versions-interface';
 
-type allPhotosStructure = {[key: string]: ImagesVersionsInterface}
+type allPhotosStructure = { [key: string]: ImagesVersionsInterface }
 
 const allPhotos: allPhotosStructure = {
     worldAtlas: {
@@ -495,7 +496,7 @@ const allPhotos: allPhotosStructure = {
         ]
     },
 
-    
+
 };
 
 

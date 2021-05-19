@@ -2,7 +2,7 @@ import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import { useStore } from '../../../hooks-store/store';
 import BoxTitle from '../../BoxTitle/BoxTitle';
 import './GenericBox.css';
-import { genericBoxTitle } from 'generic-box-title';
+import { genericBoxTitle } from '../../../types/generic-box-title';
 
 const GenericBox = ({ children, title, rowSpan, columnSpan, titleType }:
     {

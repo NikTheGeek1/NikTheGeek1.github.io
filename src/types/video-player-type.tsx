@@ -1,0 +1,1 @@
+export type videoPlayerType = "minimised" | "maximised" | "carousel";

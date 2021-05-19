@@ -4,7 +4,7 @@ import './LatestNewsBox.css';
 import BoxPlainText from '../../Texts/BoxText';
 import DateUtils from '../../../utils/DateUtils';
 import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
-
+import { ImagesVersionsInterface } from '../../../types/images-versions-interface';
 const LatestNewsBox = ({ title, date, children, icon, photos }:
     {
         title: string,

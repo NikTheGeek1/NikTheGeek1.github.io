@@ -3,7 +3,8 @@ import codeclanGraduationlqMIN from '../assets/images/codeclan-graduation-lqMIN.
 import codeclanGraduationlqMAX from '../assets/images/codeclan-graduation-lqMAX.jpg';
 import codeclanGraduationrMIN from '../assets/images/codeclan-graduation-rMIN.jpg';
 import codeclanGraduationrMAX from '../assets/images/codeclan-graduation-rMAX.jpg';
-
+import { ImagesVersionsInterface } from '../types/images-versions-interface';
+ 
 type allPhotosStructure = {[key: string]: ImagesVersionsInterface}
 
 const allPhotos: allPhotosStructure = {

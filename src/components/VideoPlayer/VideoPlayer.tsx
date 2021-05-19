@@ -1,5 +1,5 @@
 import './VideoPlayer.css';
-import { videoPlayerType } from 'video-player-type';
+import { videoPlayerType } from '../../types/video-player-type';
 
 const VideoPlayer = ({ video, type }: { video: string, type: videoPlayerType }) => {
 
