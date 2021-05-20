@@ -1,0 +1,12 @@
+.blog-layout-section {
+    display: grid;
+    grid-template-areas: ". . ." ". blog ." ". . .";
+    grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
+    grid-template-rows: 5rem 1fr 5rem;
+}
+
+.blog-layout-blog-container {
+    grid-area: blog;
+    justify-self: center;
+    text-align: center;
+}

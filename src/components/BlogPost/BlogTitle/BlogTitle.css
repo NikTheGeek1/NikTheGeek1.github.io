@@ -1,0 +1,21 @@
+.blog-title-container {
+    display: grid;
+    grid-template-areas: "title" "author_date";
+    text-transform: capitalize;
+    font-family: 'Hack';
+    row-gap: 2rem;
+}
+
+.blog-title {
+    font-size: var(--huge-font-size);
+}
+
+.blog-author-and-date-container {
+    grid-area: author_date;
+    font-size: var(--big-font-size);
+}
+
+.blog-date {
+    font-size: var(--large-font-size);
+    font-family: 'Dancing Script';
+}
