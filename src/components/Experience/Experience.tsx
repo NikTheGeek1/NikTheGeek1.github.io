@@ -57,7 +57,7 @@ const Experience = () => {
                     children={[
                         <>
                             <DetailsItem>Main duties: Build multiple webscrapping algorithms using Selenium and Python</DetailsItem>
-                            <DetailsItem>Scrapped more than 1.2 millions data instances of unemployment in Argentina</DetailsItem>
+                            <DetailsItem>Scrapped more than 1.7 millions (~2.5GB) data instances of unemployment in Argentina</DetailsItem>
                             <DetailsItem>Github repository private: ask for permission</DetailsItem>
                         </>
                     ]}
