@@ -14,7 +14,7 @@ const PhotoGalleryBlog = () => {
                     date="20/05/2021"
                 />
                 {/* <iframe src="https://photo-gallery-react-component.web.app/" /> */}
-                <iframe className="photo-gallery-iframe" src="http://localhost:3001/" />
+                {/* <iframe className="photo-gallery-iframe" src="http://localhost:3001/" /> */}
             </div>
         </BlogLayout>
     );

@@ -20,16 +20,17 @@ class Mailer {
     }
 
     private shouldSendEmail(): boolean {
-        // if (this.oldTime === null) {
-        //     return true; // that's the first time the visitor visits
-        // }
-        // if (+this.oldTime > new Date(+this.oldTime + this.timeOffset).getTime()) {
-        //     return true; // the visitor wasn't here before timeOffset minutes
-        // }
+        if (this.oldTime === null) {
+            return true; // that's the first time the visitor visits
+        }
+        if ((new Date().getTime() - +this.oldTime ) > this.timeOffset) {
+            return true; // the visitor wasn't here before timeOffset minutes
+        }
         return false; // the visitor was here in the past timeOffset 
     }
 
     public sendEmail(): void {
+        debugger
         if (this.shouldSendEmail()) {
             emailjs.send(
                 this.mailerServiceID,
