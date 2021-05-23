@@ -1,5 +1,5 @@
 import './ProfileHeader.css';
-import profileImg from '../../assets/images/profile.jpeg';
+import profileImg from '../../assets/images/profile-rMAX.jpeg';
 import { useHistory } from 'react-router';
 import { pathsEnum } from '../../enums/paths';
 import { useEffect, useState } from 'react';
