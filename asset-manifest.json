@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.d64787fa.chunk.css",
-    "main.js": "/static/js/main.4b6372f0.chunk.js",
-    "main.js.map": "/static/js/main.4b6372f0.chunk.js.map",
+    "main.js": "/static/js/main.1ff0a542.chunk.js",
+    "main.js.map": "/static/js/main.1ff0a542.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/js/2.689517a9.chunk.js": "/static/js/2.689517a9.chunk.js",
@@ -60,7 +60,7 @@
     "static/media/photo3-lqMAX.55a972ca.jpg": "/static/media/photo3-lqMAX.55a972ca.jpg",
     "static/media/photo3-rMAX.9b5d3fd5.jpg": "/static/media/photo3-rMAX.9b5d3fd5.jpg",
     "static/media/photo3-rMIN.f1dcee94.jpg": "/static/media/photo3-rMIN.f1dcee94.jpg",
-    "static/media/profile.f3dd0666.jpeg": "/static/media/profile.f3dd0666.jpeg",
+    "static/media/profile-rMAX.f1d11bae.jpg": "/static/media/profile-rMAX.f1d11bae.jpg",
     "static/media/regular-timeline-post.6ecc9b02.svg": "/static/media/regular-timeline-post.6ecc9b02.svg",
     "static/media/restaurant-1-lqMAX.072388ac.jpg": "/static/media/restaurant-1-lqMAX.072388ac.jpg",
     "static/media/restaurant-1-rMAX.99e5b76f.jpg": "/static/media/restaurant-1-rMAX.99e5b76f.jpg",
@@ -124,6 +124,6 @@
     "static/js/runtime-main.82ce76f2.js",
     "static/js/2.689517a9.chunk.js",
     "static/css/main.d64787fa.chunk.css",
-    "static/js/main.4b6372f0.chunk.js"
+    "static/js/main.1ff0a542.chunk.js"
   ]
 }
