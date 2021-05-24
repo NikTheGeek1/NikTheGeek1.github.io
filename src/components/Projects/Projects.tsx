@@ -53,7 +53,7 @@ const Projects = () => {
                 photos={allPhotos.reinforcementLearning}
                 details={ProjectsTexts.reinforcementLearning}
                 gitHubRepoLink="https://github.com/NikTheGeek1/reinforcement_learning_task"
-                website="https://learning-task.herokuapp.com"
+                website="https://reinforcement-learning-task.web.app/"
                 technologies={["Node.js", "React.js", "Machine Learning", "MongoDB"]}
             />
             <Project
