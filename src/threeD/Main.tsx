@@ -8,6 +8,15 @@ import ScreenDimensionUtils from './ScreenDimensionUtils';
 
 class Main {
 
+    private static singleton: Main;
+    public static createOrGetInstance(canvas?: HTMLCanvasElement, monkeyClickedSetter?: (clicked: boolean) => void): Main {
+        if (!this.singleton && canvas && monkeyClickedSetter) {
+            Main.singleton = new Main(canvas, monkeyClickedSetter);
+        }
+        return this.singleton;
+    }
+
+
     public canvas: HTMLCanvasElement;
     public renderer!: THREE.WebGLRenderer;
     public camera!: THREE.PerspectiveCamera;
@@ -17,19 +26,21 @@ class Main {
     public wallInstance!: Wall;
     public lightsInstance!: Lights;
     public sidersInstance!: Siders;
-    public monkeyClickedSetter: (clicked:boolean) => void;
+    public monkeyClickedSetter: (clicked: boolean) => void;
     private fps: number;
     private fpsInterval!: number;
     private now!: number;
     private then!: number;
     private elapsed!: number;
+    public shouldRender: boolean;
 
-    constructor(canvas: HTMLCanvasElement, monkeyClickedSetter: (clicked:boolean) => void) {
+    constructor(canvas: HTMLCanvasElement, monkeyClickedSetter: (clicked: boolean) => void) {
         this.canvas = canvas;
         this.monkeyClickedSetter = monkeyClickedSetter;
         this.fps = 60;
+        this.shouldRender = true;
     }
-    
+
     private createScene(): void {
         this.scene = new THREE.Scene();
         this.scene.background = new THREE.Color("black");
@@ -39,8 +50,7 @@ class Main {
         this.camera = new THREE.PerspectiveCamera(75, document.documentElement.clientWidth / window.innerHeight, .1, 1000);
         const cameraPosition = ScreenDimensionUtils.cameraPositionZ(document.documentElement.clientWidth, window.innerHeight);
         this.camera.position.z = cameraPosition.z;
-        this.camera.position.y = cameraPosition.y;    
-        console.log(this.camera.position, 'Main.tsx', 'line: ', '43');
+        this.camera.position.y = cameraPosition.y;
     }
 
     private createRenderer(): void {
@@ -91,23 +101,25 @@ class Main {
 
     private animationLoop() {
         requestAnimationFrame(this.animationLoop.bind(this));
-        this.now = Date.now();
-        this.elapsed = this.now - this.then;
-    
-        // if enough time has elapsed, draw the next frame
-        if (this.elapsed > this.fpsInterval) {
-            // Get ready for next frame by setting then=now, but...
-            // Also, adjust for fpsInterval not being multiple of 16.67
-            this.then = this.now - (this.elapsed % this.fpsInterval);
-    
-            // draw stuff here
-            this.lightsInstance.updateHelpers();
-            this.sidersInstance.updateKnots();
-            this.lightsInstance.changeLightColours();
-            this.monkeyInstance.animateMonkey();
-            this.sidersInstance.animateKnots();
-            this.renderer.render(this.scene, this.camera);
-            // this.stats.update();
+        if (this.shouldRender) {
+            this.now = Date.now();
+            this.elapsed = this.now - this.then;
+
+            // if enough time has elapsed, draw the next frame
+            if (this.elapsed > this.fpsInterval) {
+                // Get ready for next frame by setting then=now, but...
+                // Also, adjust for fpsInterval not being multiple of 16.67
+                this.then = this.now - (this.elapsed % this.fpsInterval);
+
+                // draw stuff here
+                // this.lightsInstance.updateHelpers();
+                this.sidersInstance.updateKnots();
+                this.lightsInstance.changeLightColours();
+                this.monkeyInstance.animateMonkey();
+                this.sidersInstance.animateKnots();
+                this.renderer.render(this.scene, this.camera);
+                // this.stats.update();
+            }
         }
     }
 

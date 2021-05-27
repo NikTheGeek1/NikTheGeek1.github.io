@@ -1,10 +1,15 @@
 import './PhotoGalleryBlog.css';
 import BlogTitle from '../../BlogTitle/BlogTitle';
 import BlogLayout from '../../BlogLayout/BlogLayout';
-import PhotosGallery from '../../../PhotosGallery/PhotosGallery';
-import photos from '../../../../imports/import-project-photos';
+import Section from '../../../../blog-classes/Section';
+import Introduction from './Introduction/Introduction';
 
 const PhotoGalleryBlog = () => {
+
+    const sections = new Section("Photo Gallery Component", <section></section>, [
+            new Section("Introduction", <Introduction />, []),
+            new Section("Coming soon...", <div></div>, [])
+        ]).build("0");
 
     return (
         <BlogLayout>
@@ -13,8 +18,16 @@ const PhotoGalleryBlog = () => {
                     author="Nikos Theodoropoulos"
                     date="20/05/2021"
                 />
-                {/* <iframe src="https://photo-gallery-react-component.web.app/" /> */}
-                {/* <iframe className="photo-gallery-iframe" src="http://localhost:3001/" /> */}
+                <iframe title="gallery-iframe" className="photo-gallery-iframe" src="https://photo-gallery-react-component.web.app/" />
+                {/* <iframe title="gallery-iframe" className="photo-gallery-iframe" src="http://localhost:3001/" /> */}
+            </div>
+            <div className="contents-table-container">
+                <ul className="contents-table-list">
+                    {sections.titleContents}
+                </ul>
+            </div>
+            <div className="blog-body">
+                {sections.contents}
             </div>
         </BlogLayout>
     );

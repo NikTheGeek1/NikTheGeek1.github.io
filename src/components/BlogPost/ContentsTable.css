@@ -1,0 +1,56 @@
+.contents-table-container {
+    display: grid;
+    justify-items: center;
+}
+
+.contents-table-list {
+    font-size: var(--larger-font-size);
+    text-align: left;
+    display: grid;
+    border: 1px solid var(--colour-gray-1);
+    padding: 1rem 3rem;
+    list-style: none;
+}
+
+.contents-table-list li {
+    text-decoration: none;
+}
+
+.contents-table-list li a,
+.contents-table-list li a:active,
+.contents-table-list li a:visited {
+    border-bottom: 1px solid var(--colour-gray-2);
+    color: white;
+    text-decoration: none;
+}
+
+.contents-table-list li a:hover {
+    color: var(--colour-tertiary);
+}
+
+.contents-table-list li::before {
+content: "\2022";  
+color: white; 
+font-weight: bold; 
+display: inline-block; 
+width: 1em; 
+margin-left: -1em; 
+}
+
+.blog-section {
+    font-size: var(--huger-font-size);
+    justify-self: start;
+}
+
+.blog-section-title-01 {
+}
+.blog-section-title-11 {
+    padding-left: 1rem;
+}
+.blog-section-title-12 {
+    padding-left: 1rem;
+}
+
+.blog-section-title-02 {
+}
+

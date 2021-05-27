@@ -1,0 +1,8 @@
+.section-container {
+    font-size: var(--large-font-size);
+    text-align: left;
+
+}
+.section-container p {
+    display: inline;
+}

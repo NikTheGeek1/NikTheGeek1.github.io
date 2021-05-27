@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Backdrop from '../Backdrop/Backdrop';
 import './FullScreenModal.css';
 import ReactDOM from 'react-dom';
+import ThreeDMain from '../../threeD/Main';
 
 const FullScreenModal = ({ children, toggleModal}: {
     toggleModal: () => void,
@@ -9,8 +10,13 @@ const FullScreenModal = ({ children, toggleModal}: {
 }) => {
 
     useEffect(() => {
+        const three = ThreeDMain.createOrGetInstance();
+        three.shouldRender = false;
         document.addEventListener("keydown", keyDownHandler);
-        return () => document.removeEventListener("keydown", keyDownHandler);
+        return () => {
+            three.shouldRender = true;
+            document.removeEventListener("keydown", keyDownHandler)
+        };
     }, []);
 
     const keyDownHandler = (e: KeyboardEvent) => {

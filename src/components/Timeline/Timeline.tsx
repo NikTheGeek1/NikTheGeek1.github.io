@@ -14,6 +14,8 @@ import regularTimelinePostIcon from '../../assets/svgs/regular-timeline-post.svg
 import BlogPostBox from '../BlogPost/BlogPostBox/BlogPostBox';
 import PhotoGalleryBlog from '../BlogPost/Posts/PhotoGalleryBlog/PhotoGalleryBlog';
 import timelinePhotos from '../../imports/import-timeline-photos';
+import '../BlogPost/ContentsTable.css';
+import '../BlogPost/Section.css';
 
 const Timeline = () => {
     const visitorToken = useStore(false)[0].visitorToken;

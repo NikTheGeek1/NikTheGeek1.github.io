@@ -8,6 +8,8 @@
     color: whitesmoke;
     font-size: 10rem;
     font-family: "Hack";
+    overflow: scroll;
+    scroll-behavior: smooth;
 }
 
 .full-screen-modal-x-container {

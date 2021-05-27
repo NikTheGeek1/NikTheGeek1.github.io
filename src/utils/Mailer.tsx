@@ -30,7 +30,6 @@ class Mailer {
     }
 
     public sendEmail(): void {
-        debugger
         if (this.shouldSendEmail()) {
             emailjs.send(
                 this.mailerServiceID,

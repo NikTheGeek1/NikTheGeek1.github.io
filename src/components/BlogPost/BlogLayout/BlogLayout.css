@@ -1,5 +1,6 @@
 .blog-layout-section {
     display: grid;
+    grid-area: content;
     grid-template-areas: ". . ." ". blog ." ". . .";
     grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
     grid-template-rows: 5rem 1fr 5rem;
@@ -9,4 +10,5 @@
     grid-area: blog;
     justify-self: center;
     text-align: center;
+
 }
