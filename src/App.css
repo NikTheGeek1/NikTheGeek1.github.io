@@ -123,6 +123,11 @@ body {
     font-size: var(--primary-font-size);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 

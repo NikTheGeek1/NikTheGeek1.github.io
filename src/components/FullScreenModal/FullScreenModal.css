@@ -12,6 +12,10 @@
     scroll-behavior: smooth;
 }
 
+.full-screen-modal-container::-webkit-scrollbar {
+    display: none;
+  }
+
 .full-screen-modal-x-container {
     grid-area: x;
     cursor: pointer;
