@@ -28,29 +28,30 @@
     color: var(--colour-tertiary);
 }
 
-.contents-table-list li::before {
-content: "\2022";  
-color: white; 
-font-weight: bold; 
-display: inline-block; 
-width: 1em; 
-margin-left: -1em; 
-}
+
 
 .blog-section {
     font-size: var(--huger-font-size);
     justify-self: start;
 }
 
-.blog-section-title-01 {
-}
-.blog-section-title-11 {
-    padding-left: 1rem;
-}
-.blog-section-title-12 {
-    padding-left: 1rem;
+
+.blog-section-content-title-depth2 {
+    padding-left: 2rem;
 }
 
-.blog-section-title-02 {
+.blog-section-content-title-depth-3 {
+    padding-left: 3rem;
 }
 
+.blog-section-title-depth-1 {
+    font-size: var(--huger-font-size);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.blog-section-title-depth-2 {
+    font-size: var(--big-font-size);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}

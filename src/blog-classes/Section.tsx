@@ -4,7 +4,7 @@ class Section {
     protected title: string;
     protected content: React.ReactNode;
     protected subsections: Section[];
-    private depth!: string;
+    private depth!: number[];
 
     constructor(title: string, content: React.ReactNode, subsections: Section[]) {
         this.title = title;
@@ -12,25 +12,37 @@ class Section {
         this.subsections = subsections;
     }
 
+    private depthToString(): string{
+        console.log(this.depth + this.title, 'Section.tsx', 'line: ', '37');
+        return this.depth.slice(1).join('.');
+    }
 
-    private buildTitle(factory: SectionFactory): void {
-        factory.addTitle(<li className={"blog-section-title-" + this.depth}><a href={"#"+"blog-section-title-" + this.depth}>{this.title}</a></li>);
+    private buildContentTitle(factory: SectionFactory): void {
+        factory.addTitle(<li className={"blog-section-content-title-depth" + this.depth.slice(1).length}><a href={"#"+"blog-section-title-" + this.title}>{this.depthToString() +") " + this.title}</a></li>);
     }
 
     private buildContent(factory: SectionFactory): void {
-        factory.addContent(<span className="blog-section" id={"blog-section-title-" + this.depth}>{this.title}</span>)
+        factory.addContent(<span className={"blog-section blog-section-title-depth-" + this.depth.slice(1).length} id={"blog-section-title-" + this.title}>{this.depthToString() +") " + this.title}</span>)
         factory.addContent(this.content);
     }
 
-    public build(depth: string, factory: SectionFactory = new SectionFactory()): {
+    public build(depth?: number[], factory: SectionFactory = new SectionFactory()): {
         titleContents: React.ReactNode[]
         contents: React.ReactNode[]
     } {
-        this.depth = depth;
-        this.buildTitle(factory);
+        if (!depth) {
+            this.depth = [0];
+        } else {
+            this.depth = depth;
+        }
+        console.log(this.depth + this.title, 'Section.tsx', 'line: ', '37');
+        this.buildContentTitle(factory);
         this.buildContent(factory);
         for (let s = 0; s < this.subsections.length; s++) {
-            this.subsections[s].build(+this.depth + (s + 1).toString(), factory);
+            const depthOfSubsection = [...this.depth];
+            depthOfSubsection.push(s);
+            depthOfSubsection[depthOfSubsection.length-1] = depthOfSubsection[depthOfSubsection.length-1] + 1;
+            this.subsections[s].build(depthOfSubsection, factory);
         }
         return { titleContents: factory.titlesJSX.slice(1), contents: factory.contentsJSX.slice(1) };
     }

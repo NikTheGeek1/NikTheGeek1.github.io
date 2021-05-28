@@ -3,13 +3,18 @@ import BlogTitle from '../../BlogTitle/BlogTitle';
 import BlogLayout from '../../BlogLayout/BlogLayout';
 import Section from '../../../../blog-classes/Section';
 import Introduction from './Introduction/Introduction';
+import Setup from './Setup/Setup';
+import Installation from './Installation/Installation';
 
 const PhotoGalleryBlog = () => {
 
     const sections = new Section("Photo Gallery Component", <section></section>, [
             new Section("Introduction", <Introduction />, []),
+            new Section("Setting up the ground", <Setup />, [
+                new Section("Installing React/Typescript", <Installation />, [])
+            ]),
             new Section("Coming soon...", <div></div>, [])
-        ]).build("0");
+        ]).build();
 
     return (
         <BlogLayout>

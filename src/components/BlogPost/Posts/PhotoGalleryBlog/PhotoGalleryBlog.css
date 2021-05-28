@@ -6,4 +6,6 @@
 .blog-body {
     display: grid;
     justify-items: start;
+    font-size: var(--large-font-size);
+    text-align: left;
 }
