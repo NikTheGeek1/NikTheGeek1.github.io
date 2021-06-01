@@ -6,8 +6,17 @@ import Introduction from './Introduction/Introduction';
 import Setup from './Setup/Setup';
 import Installation from './Installation/Installation';
 import FolderStructure from './FolderStructure/FolderStructure';
+import { useEffect } from 'react';
+import { useStore } from '../../../../hooks-store/store';
+import { storeVisitorLocation } from '../../../../utils/visitor-tracker';
+import { LOCATIONS_ENUM } from '../../../../hooks-store/stores/visitor-map';
 
 const PhotoGalleryBlog = () => {
+    const visitorToken = useStore(false)[0].visitorToken;
+    
+        useEffect(() => {
+            visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PHOTO_GALLERY_BLOG_POST);
+        }, []);
 
     const sections = new Section("Photo Gallery Component", <section key="firstSection"></section>, [
             new Section("Introduction", <Introduction key="intro"/>, []),
