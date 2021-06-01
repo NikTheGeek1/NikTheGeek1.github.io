@@ -1,6 +1,6 @@
 import './PhotosMinimisedGallery.css';
 import PhotoGalleryStyle from '../../utils/PhotoGalleryStyle';
-import LowerQualityPhotoMinimised from '../LowerQualityPhotoMinimised/LowerQualityPhotoMinimised';
+import LowerQualityPhotoMinimised from '../LowerQualityPhotoMinimised/LowerQualityPhotoMinimised.tsx.txt';
 
 const PhotosMinimisedGallery = ({ normalPhotos, lowerQualityPhotos, toggleMaximisedGallery }:
     {

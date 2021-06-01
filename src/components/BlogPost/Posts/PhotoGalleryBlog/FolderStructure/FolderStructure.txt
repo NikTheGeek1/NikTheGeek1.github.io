@@ -1,0 +1,7 @@
+
+const FolderStructure2 = () => {
+
+    return (<></>);
+};
+
+export default FolderStructure2;

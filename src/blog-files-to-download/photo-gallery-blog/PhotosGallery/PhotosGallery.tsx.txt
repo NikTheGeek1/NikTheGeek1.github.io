@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PhotosMaximisedGallery from '../PhotosMaximisedGallery/MaximisedGallery';
+import PhotosMaximisedGallery from '../PhotosMaximisedGallery/MaximisedGallery.tsx.txt';
 import PhotosMinimisedGallery from '../PhotosMinimisedGallery/PhotosMinimisedGallery';
 import './PhotosGallery.css';
 import { ImagesVersionsInterface } from '../../types/images-versions-interface';
