@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d8e8138.chunk.css",
-    "main.js": "/static/js/main.c2ec8e8d.chunk.js",
-    "main.js.map": "/static/js/main.c2ec8e8d.chunk.js.map",
+    "main.css": "/static/css/main.23df1220.chunk.css",
+    "main.js": "/static/js/main.3ed3f335.chunk.js",
+    "main.js.map": "/static/js/main.3ed3f335.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/css/2.61d7860a.chunk.css": "/static/css/2.61d7860a.chunk.css",
@@ -10,8 +10,12 @@
     "static/js/2.2bca6d92.chunk.js.map": "/static/js/2.2bca6d92.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.61d7860a.chunk.css.map": "/static/css/2.61d7860a.chunk.css.map",
-    "static/css/main.0d8e8138.chunk.css.map": "/static/css/main.0d8e8138.chunk.css.map",
+    "static/css/main.23df1220.chunk.css.map": "/static/css/main.23df1220.chunk.css.map",
     "static/js/2.2bca6d92.chunk.js.LICENSE.txt": "/static/js/2.2bca6d92.chunk.js.LICENSE.txt",
+    "static/media/App.css.0dfa1308.txt": "/static/media/App.css.0dfa1308.txt",
+    "static/media/App.tsx.6b27cf13.txt": "/static/media/App.tsx.6b27cf13.txt",
+    "static/media/Index.css.ddd668af.txt": "/static/media/Index.css.ddd668af.txt",
+    "static/media/Index.tsx.9fc534c9.txt": "/static/media/Index.tsx.9fc534c9.txt",
     "static/media/checkers-1-lqMAX.f406cd27.jpg": "/static/media/checkers-1-lqMAX.f406cd27.jpg",
     "static/media/checkers-1-rMAX.da7a8ccd.jpg": "/static/media/checkers-1-rMAX.da7a8ccd.jpg",
     "static/media/checkers-1-rMIN.be77f994.jpg": "/static/media/checkers-1-rMIN.be77f994.jpg",
@@ -64,6 +68,7 @@
     "static/media/photo3-rMAX.9b5d3fd5.jpg": "/static/media/photo3-rMAX.9b5d3fd5.jpg",
     "static/media/photo3-rMIN.f1dcee94.jpg": "/static/media/photo3-rMIN.f1dcee94.jpg",
     "static/media/profile-rMAX.f1d11bae.jpg": "/static/media/profile-rMAX.f1d11bae.jpg",
+    "static/media/react-app-env.d.ts.1bd73092.txt": "/static/media/react-app-env.d.ts.1bd73092.txt",
     "static/media/regular-timeline-post.6ecc9b02.svg": "/static/media/regular-timeline-post.6ecc9b02.svg",
     "static/media/restaurant-1-lqMAX.072388ac.jpg": "/static/media/restaurant-1-lqMAX.072388ac.jpg",
     "static/media/restaurant-1-rMAX.99e5b76f.jpg": "/static/media/restaurant-1-rMAX.99e5b76f.jpg",
@@ -127,7 +132,7 @@
     "static/js/runtime-main.82ce76f2.js",
     "static/css/2.61d7860a.chunk.css",
     "static/js/2.2bca6d92.chunk.js",
-    "static/css/main.0d8e8138.chunk.css",
-    "static/js/main.c2ec8e8d.chunk.js"
+    "static/css/main.23df1220.chunk.css",
+    "static/js/main.3ed3f335.chunk.js"
   ]
 }
