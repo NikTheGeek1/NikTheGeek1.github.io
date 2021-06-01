@@ -79,3 +79,12 @@
     font-size: 9rem;
     padding: 0;
 }
+
+.folder-structure-element-type-downloable {
+    text-decoration: none;
+    color: inherit;
+}
+
+.folder-structure-element-type-downloable:hover {
+    color: var(--colour-primary);
+}

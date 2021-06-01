@@ -4,10 +4,10 @@ import FolderStructureBuilder from '../../../../../utils/FolderStructureBuilder'
 import HI from '../../../../HighlightInline/HighlightInline';
 import Paragraph from '../../Paragraph/Paragraph';
 import './FolderStructure.css';
+import filesToDownload from '../../../../../imports/import-photo-gallery-blog-files';
 
 const FolderStructure = () => {
     const [srcFolderType, setSrcFolderType] = useState<FolderStructureType>("oppened-folder");
-
     return (
         <div className="section-container">
             <Paragraph>
@@ -24,11 +24,11 @@ const FolderStructure = () => {
                     .addChild("images", "closed-folder")
                     .addChild("types", "closed-folder")
                     .addChild("utils", "closed-folder")
-                    .addChild("App.css", "css")
-                    .addChild("App.tsx", "tsx")
-                    .addChild("Index.css", "css")
-                    .addChild("Index.tsx", "tsx")
-                    .addChild("react-app-env.d.ts", "tsx")
+                    .addChild("App.css", "css", undefined, filesToDownload.appDotCss)
+                    .addChild("App.tsx", "tsx", undefined, filesToDownload.appDotTsx)
+                    .addChild("Index.css", "css", undefined, filesToDownload.indexDotCss)
+                    .addChild("Index.tsx", "tsx", undefined, filesToDownload.indexDotTsx)
+                    .addChild("react-app-env.d.ts", "tsx", undefined, filesToDownload.reactAppEnvDotTs)
                     .build()
             }
             <Paragraph>

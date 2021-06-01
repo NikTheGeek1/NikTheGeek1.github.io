@@ -1,5 +1,6 @@
 import React from 'react';
 import { FolderStructureType } from '../types/folder-structure-types';
+import fileNameChanger from '..//utils/downloable-file-name';
 
 class FolderStructureBuilder {
     private title: string;
@@ -11,10 +12,10 @@ class FolderStructureBuilder {
     private emDash: React.ReactNode = <>&#8212;</>;
     private breakLine: React.ReactNode = <br />;
     private isFolderOpen!: boolean;
-    private isFolder!: boolean;
     private toggleFolder: ((type: FolderStructureType | FolderStructureType[]) => void) | undefined;
+    private file: string | undefined;
 
-    constructor(title: string, type: FolderStructureType, depth?: number, parent?: FolderStructureBuilder, toggleFolder?: (type: FolderStructureType | FolderStructureType[]) => void) {
+    constructor(title: string, type: FolderStructureType, depth?: number, parent?: FolderStructureBuilder, toggleFolder?: (type: FolderStructureType | FolderStructureType[]) => void, file?: string) {
         this.title = title;
         this.type = type;
         this.depth = depth ? depth : 0;
@@ -22,9 +23,10 @@ class FolderStructureBuilder {
         this.parent = parent;
         this.toggleFolder = toggleFolder;
         this.isFolderOpenDecider();
+        this.file = file;
     }
 
-    private isFolderOpenDecider(): void{
+    private isFolderOpenDecider(): void {
         if (Array.isArray(this.type)) {
             this.type.forEach(className => {
                 if (className === "oppened-folder") this.isFolderOpen = true;
@@ -48,8 +50,8 @@ class FolderStructureBuilder {
         }
     }
 
-    public addChild(title: string, type: FolderStructureType, toggleFolder?: (type: FolderStructureType | FolderStructureType[]) => void): this {
-        this.children.push(new FolderStructureBuilder(title, type, this.depth + 1, this, toggleFolder));
+    public addChild(title: string, type: FolderStructureType, toggleFolder?: (type: FolderStructureType | FolderStructureType[]) => void, file?: string): this {
+        this.children.push(new FolderStructureBuilder(title, type, this.depth + 1, this, toggleFolder, file));
         return this;
     }
 
@@ -80,6 +82,7 @@ class FolderStructureBuilder {
             return <>{children}</>;
         }
     }
+
     private buildTitleClasses(): string {
         let classes: string = "";
         if (Array.isArray(this.type)) {
@@ -92,11 +95,19 @@ class FolderStructureBuilder {
         return classes;
     }
 
+    private downloableComponent({ file, children }: { file: string | undefined, children: React.ReactNode }): JSX.Element {
+        if (file) {
+            return <a href={file} download={fileNameChanger(file)} className="folder-structure-element-type-downloable">{children}</a>;
+        } else {
+            return <>{children}</>;
+        }
+    }
+
     public build(): React.ReactNode {
         return (
             <this.outerFragment key={this.depth + this.title + "outerFragment"} depth={this.depth}>
                 {!!!this.depth && <>|{this.breakLine}</>}
-                {Array(this.depth).fill(this.depthElement)}|{this.emDash}<span onClick={() => this.toggleFolderFunc()} className={"folder-structure-element-type " + this.buildTitleClasses()}>{this.title}</span>{this.breakLine}
+                {Array(this.depth).fill(this.depthElement)}|{this.emDash}<this.downloableComponent file={this.file}><span onClick={() => this.toggleFolderFunc()} className={"folder-structure-element-type " + this.buildTitleClasses()}>{this.title}</span></this.downloableComponent>{this.breakLine}
                 {Array(this.depth).fill(this.depthElement)}|{this.breakLine}
                 {this.isFolderOpen && this.children.map(child => child.build())}
             </this.outerFragment>
