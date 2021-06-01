@@ -15,7 +15,6 @@ const LatestNewsBox = ({ title, date, children, icon, photos }:
         reducedPhotos?: string[]
         thumbnailPhotos?: string[]
     }) => {
-    console.log(photos, 'LatestNewsBox.tsx', 'line: ', '17');
 
     return (
         <div className={`profile-latest-news-box${photos ? "-with-photos" : ""}`}>

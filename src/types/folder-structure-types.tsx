@@ -1,0 +1,1 @@
+export type FolderStructureType = "css" | "oppened-folder" | "closed-folder" | "tsx" | "other" | "this" | FolderStructureType[];

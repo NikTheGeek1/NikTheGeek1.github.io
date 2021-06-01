@@ -13,16 +13,15 @@ class Section {
     }
 
     private depthToString(): string{
-        console.log(this.depth + this.title, 'Section.tsx', 'line: ', '37');
         return this.depth.slice(1).join('.');
     }
 
     private buildContentTitle(factory: SectionFactory): void {
-        factory.addTitle(<li className={"blog-section-content-title-depth" + this.depth.slice(1).length}><a href={"#"+"blog-section-title-" + this.title}>{this.depthToString() +") " + this.title}</a></li>);
+        factory.addTitle(<li key={this.depthToString()} className={"blog-section-content-title-depth" + this.depth.slice(1).length}><a href={"#"+"blog-section-title-" + this.title}>{this.depthToString() +") " + this.title}</a></li>);
     }
 
     private buildContent(factory: SectionFactory): void {
-        factory.addContent(<span className={"blog-section blog-section-title-depth-" + this.depth.slice(1).length} id={"blog-section-title-" + this.title}>{this.depthToString() +") " + this.title}</span>)
+        factory.addContent(<span key={this.depthToString()} className={"blog-section blog-section-title-depth-" + this.depth.slice(1).length} id={"blog-section-title-" + this.title}>{this.depthToString() +") " + this.title}</span>)
         factory.addContent(this.content);
     }
 
@@ -35,7 +34,6 @@ class Section {
         } else {
             this.depth = depth;
         }
-        console.log(this.depth + this.title, 'Section.tsx', 'line: ', '37');
         this.buildContentTitle(factory);
         this.buildContent(factory);
         for (let s = 0; s < this.subsections.length; s++) {

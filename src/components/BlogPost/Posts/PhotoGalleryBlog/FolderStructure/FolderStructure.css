@@ -1,0 +1,81 @@
+.folder-structure-container {
+    background-color: var(--colour-gray-1);
+    line-height: .8;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: var(--small-font-size);
+}
+
+.folder-structure-element-type {
+    position: relative;
+    user-select: none;
+}
+.folder-structure-element-type-cursor {
+    cursor: pointer;
+}
+
+.folder-structure-element-type-oppened-folder {
+    color: var(--colour-blue-gray);
+}
+
+.folder-structure-element-type-closed-folder {
+    color: var(--colour-gray-blu);
+}
+
+
+.folder-structure-element-type-oppened-folder::before {
+    content: "";
+    background: url(../../../../../assets/svgs/opened-folder.svg);
+    position: absolute;
+    top: 0rem;
+    right: -2.2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.folder-structure-element-type-closed-folder::before {
+    content: "";
+    background: url(../../../../../assets/svgs/closed-folder.svg);
+    position: absolute;
+    top: -.1rem;
+    right: -2.2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.folder-structure-element-type-css {
+
+}
+
+.folder-structure-element-type-css::before{
+    content: "";
+    background: url(../../../../../assets/svgs/css-3.svg);
+    position: absolute;
+    top: .1rem;
+    right: -2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.folder-structure-element-type-tsx::before{
+    content: "";
+    background: url(../../../../../assets/svgs/typescript.svg);
+    position: absolute;
+    top: .1rem;
+    right: -2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.folder-structure-element-type-this::after {
+    content: "\2190";
+    position: absolute;
+    top: -3rem;
+    margin-left: 2rem;
+    width: 12rem;
+    height: 2rem;
+    color: var(--colour-quaternary);
+    font-size: 9rem;
+    padding: 0;
+}
