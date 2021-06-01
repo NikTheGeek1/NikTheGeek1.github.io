@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.8562c376.chunk.css",
-    "main.js": "/static/js/main.4182f16c.chunk.js",
-    "main.js.map": "/static/js/main.4182f16c.chunk.js.map",
+    "main.css": "/static/css/main.0d8e8138.chunk.css",
+    "main.js": "/static/js/main.4054b7f4.chunk.js",
+    "main.js.map": "/static/js/main.4054b7f4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.82ce76f2.js",
     "runtime-main.js.map": "/static/js/runtime-main.82ce76f2.js.map",
     "static/css/2.61d7860a.chunk.css": "/static/css/2.61d7860a.chunk.css",
-    "static/js/2.1309e06a.chunk.js": "/static/js/2.1309e06a.chunk.js",
-    "static/js/2.1309e06a.chunk.js.map": "/static/js/2.1309e06a.chunk.js.map",
+    "static/js/2.2bca6d92.chunk.js": "/static/js/2.2bca6d92.chunk.js",
+    "static/js/2.2bca6d92.chunk.js.map": "/static/js/2.2bca6d92.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.61d7860a.chunk.css.map": "/static/css/2.61d7860a.chunk.css.map",
-    "static/css/main.8562c376.chunk.css.map": "/static/css/main.8562c376.chunk.css.map",
-    "static/js/2.1309e06a.chunk.js.LICENSE.txt": "/static/js/2.1309e06a.chunk.js.LICENSE.txt",
+    "static/css/main.0d8e8138.chunk.css.map": "/static/css/main.0d8e8138.chunk.css.map",
+    "static/js/2.2bca6d92.chunk.js.LICENSE.txt": "/static/js/2.2bca6d92.chunk.js.LICENSE.txt",
     "static/media/checkers-1-lqMAX.f406cd27.jpg": "/static/media/checkers-1-lqMAX.f406cd27.jpg",
     "static/media/checkers-1-rMAX.da7a8ccd.jpg": "/static/media/checkers-1-rMAX.da7a8ccd.jpg",
     "static/media/checkers-1-rMIN.be77f994.jpg": "/static/media/checkers-1-rMIN.be77f994.jpg",
@@ -35,6 +35,7 @@
     "static/media/checkers-8-rMAX.2ec5e440.jpg": "/static/media/checkers-8-rMAX.2ec5e440.jpg",
     "static/media/checkers-8-rMIN.dfc4eec8.jpg": "/static/media/checkers-8-rMIN.dfc4eec8.jpg",
     "static/media/checkers-9-rMAX.31535d00.jpg": "/static/media/checkers-9-rMAX.31535d00.jpg",
+    "static/media/FolderStructure.css": "/static/media/typescript.07350de5.svg",
     "static/media/codeclan-graduation-lqMAX.978af97f.jpg": "/static/media/codeclan-graduation-lqMAX.978af97f.jpg",
     "static/media/codeclan-graduation-rMAX.6c4423b1.jpg": "/static/media/codeclan-graduation-rMAX.6c4423b1.jpg",
     "static/media/codeclan-graduation-rMIN.8a57878b.jpg": "/static/media/codeclan-graduation-rMIN.8a57878b.jpg",
@@ -125,8 +126,8 @@
   "entrypoints": [
     "static/js/runtime-main.82ce76f2.js",
     "static/css/2.61d7860a.chunk.css",
-    "static/js/2.1309e06a.chunk.js",
-    "static/css/main.8562c376.chunk.css",
-    "static/js/main.4182f16c.chunk.js"
+    "static/js/2.2bca6d92.chunk.js",
+    "static/css/main.0d8e8138.chunk.css",
+    "static/js/main.4054b7f4.chunk.js"
   ]
 }
