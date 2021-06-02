@@ -7,8 +7,8 @@ const Installation = () => {
     return (
         <section className="section-container">
             <Paragraph>
-                Assuming you have Node.js and React.js installed,
-                we just need to navigate to the working directory of interest, and type:
+                Assuming you have Node.js and React.js installed, we just need to navigate to 
+                the working directory of interest using the terminal, and type:
             </Paragraph>
             <Highlight className="python">
                 npx create-react-app <i>{'<NAME-OF-PROJECT>'}</i> --template typescript

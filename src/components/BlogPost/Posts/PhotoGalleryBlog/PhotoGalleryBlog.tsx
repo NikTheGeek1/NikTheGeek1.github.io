@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useStore } from '../../../../hooks-store/store';
 import { storeVisitorLocation } from '../../../../utils/visitor-tracker';
 import { LOCATIONS_ENUM } from '../../../../hooks-store/stores/visitor-map';
+import MainContainer from './MainContainer/MainContainer';
 
 const PhotoGalleryBlog = () => {
     const visitorToken = useStore(false)[0].visitorToken;
@@ -24,7 +25,7 @@ const PhotoGalleryBlog = () => {
                 new Section("Installing React/Typescript", <Installation key="installation" />, []),
                 new Section("Folder structure", <FolderStructure key="folderStructure" />, [])
             ]),
-            new Section("Coming soon...", <div key="comingSoon"></div>, [])
+            new Section("Main Container", <MainContainer key="mainContainer"/>, [])
         ]).build();
 
     return (

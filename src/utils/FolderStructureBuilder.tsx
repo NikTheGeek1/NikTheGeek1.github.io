@@ -1,6 +1,7 @@
 import React from 'react';
 import { FolderStructureType } from '../types/folder-structure-types';
-import fileNameChanger from '..//utils/downloable-file-name';
+import fileNameChanger from '../utils/downloable-file-name';
+import randomHashGenerator from '../utils/random-hash-generator';
 
 class FolderStructureBuilder {
     private title: string;
@@ -77,7 +78,7 @@ class FolderStructureBuilder {
 
     private outerFragment({ depth, children }: { depth: number, children: React.ReactNode }): JSX.Element {
         if (!!!depth) {
-            return <p key={depth} className="folder-structure-container">{children}</p>;
+            return <p key={randomHashGenerator(10) + depth} className="folder-structure-container">{children}</p>;
         } else {
             return <>{children}</>;
         }
@@ -105,7 +106,7 @@ class FolderStructureBuilder {
 
     public build(): React.ReactNode {
         return (
-            <this.outerFragment key={this.depth + this.title + "outerFragment"} depth={this.depth}>
+            <this.outerFragment key={randomHashGenerator(10) + this.depth + this.title + "outerFragment"} depth={this.depth}>
                 {!!!this.depth && <>|{this.breakLine}</>}
                 {Array(this.depth).fill(this.depthElement)}|{this.emDash}<this.downloableComponent file={this.file}><span onClick={() => this.toggleFolderFunc()} className={"folder-structure-element-type " + this.buildTitleClasses()}>{this.title}</span></this.downloableComponent>{this.breakLine}
                 {Array(this.depth).fill(this.depthElement)}|{this.breakLine}
