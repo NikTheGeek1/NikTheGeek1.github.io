@@ -15,4 +15,7 @@ declare module '*.ts.txt' {
   const src: string;
   export default src;
 }
-
+declare module '*.py.txt' {
+  const src: string;
+  export default src;
+}

@@ -29,6 +29,11 @@ const MainContainer = () => {
                     .switchToParent()
                 .build()
             }
+            <Paragraph>
+                The <HI>PhotosGallery</HI> component will expect --as props-- an object with images 
+                that are going to be rendered. For optimal performances, we will need multiple 
+                versions of the same image.
+            </Paragraph>
         </div>
     );
 };
