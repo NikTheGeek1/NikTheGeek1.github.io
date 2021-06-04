@@ -40,8 +40,12 @@
     padding-left: 2rem;
 }
 
-.blog-section-content-title-depth-3 {
-    padding-left: 3rem;
+.blog-section-content-title-depth3 {
+    padding-left: 4rem;
+}
+
+.blog-section-content-title-depth4 {
+    padding-left: 5.5rem;
 }
 
 .blog-section-title-depth-1 {
@@ -52,6 +56,18 @@
 
 .blog-section-title-depth-2 {
     font-size: var(--big-font-size);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.blog-section-title-depth-3 {
+    font-size: var(--largest-font-size);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.blog-section-title-depth-4 {
+    font-size: var(--larger-font-size);
     margin-top: 3rem;
     margin-bottom: 1rem;
 }

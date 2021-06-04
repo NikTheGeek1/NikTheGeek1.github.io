@@ -19,3 +19,8 @@ declare module '*.py.txt' {
   const src: string;
   export default src;
 }
+
+declare module '*.jpg.txt' {
+  const src: string;
+  export default src;
+}

@@ -104,13 +104,14 @@ class FolderStructureBuilder {
         }
     }
 
-    public build(): React.ReactNode {
+    public build(lastChild: boolean = false): React.ReactNode {
         return (
             <this.outerFragment key={randomHashGenerator(10) + this.depth + this.title + "outerFragment"} depth={this.depth}>
                 {!!!this.depth && <>|{this.breakLine}</>}
                 {Array(this.depth).fill(this.depthElement)}|{this.emDash}<this.downloableComponent file={this.file}><span onClick={() => this.toggleFolderFunc()} className={"folder-structure-element-type " + this.buildTitleClasses()}>{this.title}</span></this.downloableComponent>{this.breakLine}
-                {Array(this.depth).fill(this.depthElement)}|{this.breakLine}
-                {this.isFolderOpen && this.children.map(child => child.build())}
+                {/* {Array((lastChild && !!!this.children.length || !this.isFolderOpen) ? 1 : this.depth).fill(this.depthElement)}|{this.breakLine} */}
+                {Array((!lastChild || this.isFolderOpen) ? this.depth : 1).fill(this.depthElement)}|{this.breakLine}
+                {this.isFolderOpen && this.children.map((child, i) => child.build(i === this.children.length-1))}
             </this.outerFragment>
         );
     }

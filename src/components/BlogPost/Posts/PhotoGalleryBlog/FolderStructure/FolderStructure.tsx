@@ -13,10 +13,11 @@ const FolderStructure = () => {
             <Paragraph>
                 One last thing before the action starts is to deal with the folder structure of the application.
                 First of all we need a <HI>containers</HI> and a <HI>components</HI> folders within
-                the <HI>src</HI> folder. We will also need
+                the <HI>src</HI> folder. We will also need an <HI>imports</HI>,
                 a <HI>utils</HI>, a <HI>types</HI>, and
                 an <HI>images</HI> folders in <HI>src</HI>. 
-                In <HI>utils</HI> we will define some utility functions, while
+                We will use <HI>imports</HI> to cleanly import files,
+                in <HI>utils</HI> we will define some utility functions, while
                 in <HI>types</HI> we will have some definitions files
                 which will help us define some usefule types we will need.
                 The folder structure should look like this:
@@ -26,6 +27,7 @@ const FolderStructure = () => {
                     .addChild("components", "closed-folder")
                     .addChild("containers", "closed-folder")
                     .addChild("images", "closed-folder")
+                    .addChild("imports", "closed-folder")
                     .addChild("types", "closed-folder")
                     .addChild("utils", "closed-folder")
                     .addChild("App.css", "css", undefined, filesToDownload.appDotCss)

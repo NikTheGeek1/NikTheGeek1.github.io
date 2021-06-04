@@ -12,6 +12,7 @@ import { storeVisitorLocation } from '../../../../utils/visitor-tracker';
 import { LOCATIONS_ENUM } from '../../../../hooks-store/stores/visitor-map';
 import MainContainer from './MainContainer/MainContainer';
 import AboutPhotos from './AboutPhotos/AboutPhotos';
+import ImportingPhotos from './ImportingPhotos/ImportingPhotos';
 
 const PhotoGalleryBlog = () => {
     const visitorToken = useStore(false)[0].visitorToken;
@@ -27,7 +28,9 @@ const PhotoGalleryBlog = () => {
                 new Section("Folder structure", <FolderStructure key="folderStructure" />, [])
             ]),
             new Section("Main Container", <MainContainer key="mainContainer"/>, [
-                new Section("About photos", <AboutPhotos key="AboutPhotos"/>, []),
+                new Section("About photos", <AboutPhotos key="aboutPhotos"/>, [
+                    new Section("Importing photos", <ImportingPhotos key="importingPhotos" />, [])
+                ]),
             ])
         ]).build();
 
