@@ -13,6 +13,7 @@ import { LOCATIONS_ENUM } from '../../../../hooks-store/stores/visitor-map';
 import MainContainer from './MainContainer/MainContainer';
 import AboutPhotos from './AboutPhotos/AboutPhotos';
 import ImportingPhotos from './ImportingPhotos/ImportingPhotos';
+import PhotosGalleryFoundations from './PhotosGalleryFoundations/PhotosGalleryFoundations';
 
 const PhotoGalleryBlog = () => {
     const visitorToken = useStore(false)[0].visitorToken;
@@ -31,6 +32,7 @@ const PhotoGalleryBlog = () => {
                 new Section("About photos", <AboutPhotos key="aboutPhotos"/>, [
                     new Section("Importing photos", <ImportingPhotos key="importingPhotos" />, [])
                 ]),
+                new Section("Photos Gallery foundations", <PhotosGalleryFoundations key="photosGalleryFoundations" />, [])
             ])
         ]).build();
 

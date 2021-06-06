@@ -2,3 +2,8 @@
     background-color: var(--colour-gray-1);
     padding: .2rem .5rem;
 }
+
+
+.highlight-code {
+    font-size: var(--small-font-size);
+}

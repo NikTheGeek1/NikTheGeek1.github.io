@@ -10,7 +10,7 @@ const Installation = () => {
                 Assuming you have Node.js and React.js installed, we just need to navigate to 
                 the working directory of interest using the terminal, and type:
             </Paragraph>
-            <Highlight className="python">
+            <Highlight className="highlight-code">
                 npx create-react-app <i>{'<NAME-OF-PROJECT>'}</i> --template typescript
             </Highlight>
             <Paragraph>
