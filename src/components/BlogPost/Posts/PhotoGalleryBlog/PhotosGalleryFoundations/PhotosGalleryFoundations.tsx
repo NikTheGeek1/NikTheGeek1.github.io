@@ -1,10 +1,10 @@
 import Highlight from 'react-highlight';
+import Code from '../../../../Code/Code';
 import HI from '../../../../HighlightInline/HighlightInline';
 import Paragraph from '../../Paragraph/Paragraph';
 import './PhotosGalleryFoundations.css';
 
 const PhotosGalleryFoundations = () => {
-
     return (
         <div className="section-container">
             <Paragraph>
@@ -25,14 +25,14 @@ const PhotosGalleryFoundations = () => {
             <Paragraph>
                 We can receive the photos as a property by simply defining the component function as:
             </Paragraph>
-            <Highlight className="highlight-code typescript">
+            <Code>
                 {`//in PhotosGallery.tsx
 ...
 const PhotosGallery = ({ photos }: {
     photos: ImagesVersionsInterface,
 }) => {...
                 `}
-            </Highlight>
+            </Code>
             <Paragraph>
                 Where we are using <a className="downloable-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring" target="_blank">object destructuring</a> to
                 get <HI>photos</HI> from the <HI>properties</HI> object inherent in every React component.
