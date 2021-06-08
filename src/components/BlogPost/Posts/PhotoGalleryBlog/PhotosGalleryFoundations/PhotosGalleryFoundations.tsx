@@ -25,13 +25,12 @@ const PhotosGalleryFoundations = () => {
             <Paragraph>
                 We can receive the photos as a property by simply defining the component function as:
             </Paragraph>
-            <Code>
+            <Code height="100px">
                 {`//in PhotosGallery.tsx
 ...
 const PhotosGallery = ({ photos }: {
     photos: ImagesVersionsInterface,
-}) => {...
-                `}
+}) => {...`}
             </Code>
             <Paragraph>
                 Where we are using <a className="downloable-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring" target="_blank">object destructuring</a> to
@@ -43,13 +42,12 @@ const PhotosGallery = ({ photos }: {
             <Paragraph>
                 Then, we use the <HI>useState</HI> hook to store rendered photo's id:
             </Paragraph>
-            <Highlight className="highlight-code typescript">
+            <Code height="80px">
                 {`//in PhotosGallery.tsx
 ...
 const [selectedPhoto, setSelectedPhoto] = useState<false | number>(false);
-...
-                `}
-            </Highlight>
+...`}
+            </Code>
             <Paragraph>
                 At any point, this state should either be <HI>false</HI> or of type <HI>number</HI>: the id
                 of the expanded photo.

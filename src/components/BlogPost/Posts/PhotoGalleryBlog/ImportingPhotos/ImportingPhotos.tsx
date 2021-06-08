@@ -5,7 +5,7 @@ import Paragraph from '../../Paragraph/Paragraph';
 import './ImportingPhotos.css';
 import { FolderStructureType } from '../../../../../types/folder-structure-types';
 import filesToDownload from '../../../../../imports/import-photo-gallery-blog-files';
-import Highlight from 'react-highlight';
+import Code from '../../../../Code/Code';
 
 const ImportingPhotos = () => {
     const [srcFolderType, setSrcFolderType] = useState<FolderStructureType>("oppened-folder");
@@ -38,7 +38,7 @@ const ImportingPhotos = () => {
                 We know that we need five versions of each image, and putting that information
                 in the definitions file is straightforward:
             </Paragraph>
-            <Highlight className="highlight-code typescript">
+            <Code height="170px">
                 {`//in images-versions-interface.tsx
 export type ImagesVersionsInterface = {
     thumbnail:string[],
@@ -47,12 +47,12 @@ export type ImagesVersionsInterface = {
     reducedMin: string[],
     reducedMax: string[],
     }`}
-            </Highlight>
+            </Code>
             <Paragraph>
                 Then, in the <HI>import-timeline-photos.tsx</HI> file, we are going to import all 15 photos
                 and export them as a <HI>ImagesVersionsInterface</HI> interface, like so:
             </Paragraph>
-            <Highlight className="highlight-code typescript">
+            <Code height="700px">
                 {`// in import-timeline-photos.tsx
 ...
 //images imported above
@@ -91,28 +91,27 @@ const allPhotos: allPhotosStructure = {
 };
 
 export default allPhotos;`}
-            </Highlight>
+            </Code>
             <Paragraph>
                 Now that we have a way to cleanly import all images, let's go ahead and do it.
                 In <HI>App.tsx</HI>, we import both the <HI>PhotosGallery</HI> component and the
                 newly created file with all images in it <HI>import-timeline-photos.tsx</HI>, like so:
             </Paragraph>
-            <Highlight className="highlight-code typescript">
+            <Code height="60px">
                 {`// in App.tsx
 import PhotosGallery from './containers/PhotosGallery/PhotosGallery';
-import photos from './imports/import-timeline-photos';`
-                }
-            </Highlight>
+import photos from './imports/import-timeline-photos';`}
+            </Code>
             <Paragraph>
                 Then, in the return statement of the <HI>App</HI> component we add 
                 the <HI>PhotosGallery</HI> component wrappend in a <HI>div</HI>, like so:
             </Paragraph>
-            <Highlight className="highlight-code typescript">
+            <Code height="80px">
                 {`// in App.tsx
 <div className="container">
     <PhotosGallery photos={photos.animalPhotos} />
 </div>`}
-            </Highlight>
+            </Code>
             <Paragraph>
                 Notice that we pass the imported photos <HI>photos.animalPhotos</HI> as 
                 a property of the <HI>PhotosGallery</HI> component. 

@@ -6,17 +6,23 @@ import "ace-builds/src-noconflict/theme-monokai";
 
 
 
-const Code = ({ children, onChange, readOnly }: { readOnly: boolean, children: string, onChange?: (value: string) => void }) => {
+const Code = ({ children, onChange, height, width }: { 
+    height: string, 
+    width?: string,
+    children: string, 
+    onChange?: (value: string) => void 
+}) => {
     return (
         <div className="code-container">
             <AceEditor
+                height={height}
+                width={width || "100%"}
                 className="code-mirror"
                 value={children}
                 mode='typescript'
                 theme='monokai'
-                name="UNIQUE_ID_OF_DIV"
                 onChange={onChange}
-                readOnly={readOnly}
+                readOnly={onChange ? false : true}
             />
         </div>
     );
