@@ -5,7 +5,7 @@ import SecondaryHeading from '../../components/Headings/SecondaryHeading/Seconda
 import { useEffect, useState } from 'react';
 import Profile from '../../containers/Profile/Profile';
 
-interface ExitingClasses { primaryHeading: string, secondaryHeading: string };
+interface ExitingClasses { primaryHeading: string, secondaryHeading: string, clickOnSuzanne: string };
 const LandingPage = () => {
 
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
@@ -22,10 +22,11 @@ const LandingPage = () => {
         }
     }, [monkeyClicked]);
 
-    let exitingClasses: ExitingClasses = { primaryHeading: '', secondaryHeading: '' };
+    let exitingClasses: ExitingClasses = { primaryHeading: '', secondaryHeading: '', clickOnSuzanne: '' };
     if (monkeyClicked) {
         exitingClasses["primaryHeading"] = "primary-heading-exitting-animation";
         exitingClasses["secondaryHeading"] = "secondary-heading-exitting-animation";
+        exitingClasses["clickOnSuzanne"] = "click-on-suzanne-exiting-animation";
     }
 
     return (
@@ -40,6 +41,7 @@ const LandingPage = () => {
                     </div>
                     <div className={"landing-page-subtitle " + exitingClasses.secondaryHeading}>
                         <SecondaryHeading content="Personal space" />
+                        <p className={"click-on-suzanne " + exitingClasses.clickOnSuzanne}>(Click on Suzanne)</p>
                     </div>
                 </>
                 :

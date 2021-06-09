@@ -16,6 +16,7 @@ const Code = ({ children, onChange, height, width }: {
         <div className="code-container">
             <AceEditor
                 height={height}
+                highlightActiveLine={onChange ? true : false}
                 width={width || "100%"}
                 className="code-mirror"
                 value={children}

@@ -64,6 +64,15 @@
     }
 }
 
+@keyframes move-out-from-bottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100rem);
+    }
+}
+
 .landing-page-main {
     min-height: 100vh;
     display: grid;
@@ -122,3 +131,13 @@
 .gap2 {
     grid-area: gap2;
 }
+
+.click-on-suzanne {
+    font-family: Josefin Slab;
+    color: white;
+    animation: move-in-from-bottom 2s ease-in;
+}
+
+.click-on-suzanne-exiting-animation {
+    animation: move-out-from-bottom .5s ease-in forwards;
+} 
