@@ -33,7 +33,8 @@ const PhotoGalleryBlog = () => {
                     new Section("Importing photos", <ImportingPhotos key="importingPhotos" />, [])
                 ]),
                 new Section("Photos Gallery foundations", <PhotosGalleryFoundations key="photosGalleryFoundations" />, [])
-            ])
+            ]),
+            new Section("Coming soon...", <div></div>, [])
         ]).build();
 
     return (
