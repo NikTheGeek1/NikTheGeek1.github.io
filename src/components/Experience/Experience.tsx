@@ -50,7 +50,7 @@ const Experience = () => {
 
             <ExperienceSection icon={workIcon} title="Working Experience">
                 <ExperienceSectionItem
-                    title="Research assistant - Software developer"
+                    title="Research assistant - Software engineer"
                     subtitle="Edinburgh"
                     subsubtitle="The University of Edinburgh - Department of Economics"
                     year="2020-2021"
