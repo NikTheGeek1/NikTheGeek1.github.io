@@ -203,6 +203,21 @@ const Experience = () => {
 
       <ExperienceSection icon={seminarIcon} title="Seminars & online courses">
         <ExperienceSectionItem
+          title="Google Project Management"
+          subtitle="Coursera"
+          subsubtitle="Courses: "
+          year="6 months in 2021"
+        >
+          <DetailsItem>
+            <TagBubble title="Agile Project Management" />
+            <TagBubble title="Foundations of Project Management" />
+            <TagBubble title="Project Initiation: Starting a Successful Project" />
+            <TagBubble title="Project Execution: Running the Project" />
+            <TagBubble title="Capstone: Applying Project Management in the Real World" />
+            <TagBubble title="Project Planning: Putting It All Together" />
+          </DetailsItem>
+        </ExperienceSectionItem>
+        <ExperienceSectionItem
           title="Probabilistic Graphical Models specialisation"
           subtitle="Stanford Online"
           subsubtitle="Graduated with honours in 2 out of 3 courses"
