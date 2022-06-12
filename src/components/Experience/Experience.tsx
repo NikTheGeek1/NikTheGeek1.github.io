@@ -32,7 +32,7 @@ const Experience = () => {
         <ExperienceSectionItem
           title="The University of Edinburgh"
           subtitle="PhD in Cognitive Neuroscience"
-          subsubtitle="School of Philosophy, Psychology and Language Sciences"
+          subsubtitle="School of Informatics, PPLS"
           year="2017-2021"
         />
         <ExperienceSectionItem
