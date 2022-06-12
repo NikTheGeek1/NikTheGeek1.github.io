@@ -1,0 +1,1 @@
+To deploy on gh-pages: `npm run predeploy && npm run deploy` after the changes have been made.
