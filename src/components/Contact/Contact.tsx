@@ -23,8 +23,9 @@ const Contact = () => {
             </GenericBox>
             <GenericBox title="Contact details" rowSpan={3} columnSpan={3} titleType="subtitle">
                 <ContactDetail value="+44 7425 744062" icon={mobilePhoneIcon} />
+                <ContactDetail value="+30 6974340221" icon={mobilePhoneIcon} />
                 <ContactDetail type="1" value="ntheodoropoulos@outlook.com" icon={email1} href="mailto:ntheodoropoulos@outlook.com" />
-                <ContactDetail type="2" value="nik.theodoropoulos@ed.ac.uk" icon={email1} href="mailto:nik.theodoropoulos@ed.ac.uk" />
+                <ContactDetail type="2" value="nikos@robotical.io" icon={email1} href="mailto:nikos@robotical.io" />
             </GenericBox>
             <GenericBox title="Social networks" rowSpan={1} columnSpan={1} titleType="subtitle">
                 <SocialNetworks />

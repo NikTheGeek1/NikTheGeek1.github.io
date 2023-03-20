@@ -16,26 +16,27 @@ const Publications = () => {
 
     return (
         <GenericBox title="Publications" rowSpan={1} columnSpan={4} titleType="subtitle">
-            <Publication 
+            <Publication
                 title="Algorithms of adaptation in inductive inference."
                 authorString="JP. Fränken, N. C. Theodoropoulos, N. R. Bramley"
-                year="2021"
-                journal="Cognitive Psychology -- submitted in May 2021"
-                tags={[<TagBubble title="Experiment 1" link="https://zendo-cond-3.herokuapp.com/signup"/>, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/zendo-cond-3"/>]}
+                year="2022"
+                journal="Cognitive Psychology"
+                tags={[<TagBubble title="Project" link="https://doi.org/10.1016/j.cogpsych.2022.101506" />,
+                <TagBubble title="Experiment 1" link="https://zendo-cond-3.herokuapp.com/signup" />, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/zendo-cond-3" />]}
             />
-            <Publication 
+            <Publication
                 title="Belief revision in a micro-social network: Modelling sensitivity to statistical dependencies in social learning."
                 authorString="JP. Fränken, N. C. Theodoropoulos, A. B. Moore, N. R. Bramley"
                 year="2020"
                 journal="Proceedings of the 42nd Annual Meeting of the Cognitive Science Society 2020"
-                tags={[<TagBubble title="Project" link="https://cogsci.mindmodeling.org/2020/papers/0240/0240.pdf"/>, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/belief-revision-experiment-2"/>]}
+                tags={[<TagBubble title="Project" link="https://cogsci.mindmodeling.org/2020/papers/0240/0240.pdf" />, <TagBubble title="Repo" link="https://github.com/NikTheGeek1/belief-revision-experiment-2" />]}
             />
-            <Publication 
+            <Publication
                 title="External coding and salience in the tactile Simon Effect."
                 authorString="J. Medina, N. Theodoropoulos, Y. Liu, P.G. Reyesa, E. Gherri"
                 year="2019"
                 journal="Acta Psychologica Vol. 198"
-                tags={<TagBubble title="Project" link="https://doi.org/10.1016/j.actpsy.2019.102874"/>}
+                tags={<TagBubble title="Project" link="https://doi.org/10.1016/j.actpsy.2019.102874" />}
             />
         </GenericBox>
     );

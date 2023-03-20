@@ -51,44 +51,48 @@ const Experience = () => {
 
       <ExperienceSection icon={workIcon} title="Working Experience">
         <ExperienceSectionItem
-          title="Fullstack developer"
+          title="Lead developer"
           subtitle="Edinburgh"
           subsubtitle="Robotical"
-          year="2021-present"
+          year="2022-present"
           children={[
             <>
               <DetailsItem>
-                Main duties include the development of phone and web
-                applications using mainly react and react native with
-                Typescript.
+                Leading the development team and ensuring that projects are completed on time, within budget, and to
+                the required quality standards
               </DetailsItem>
               <DetailsItem>
-                Responsible for adopting and installing CI/CD techniques using
-                github actions and Docker.
-              </DetailsItem>
-              <DetailsItem>
-                The management framework we are using is Agile with Scrum. Daily
-                stand-ups, 2 week-period sprints, and other agile events like
-                sprint plannings and sprint retrospectives.
-              </DetailsItem>
-              <DetailsItem>
-                Technologies used so far: <TagBubble title="Docker" />
-                <TagBubble title="Firebase" />
-                <TagBubble title="Sanity" />
-                <TagBubble title="React" />
-                <TagBubble title="React Native" />
-                <TagBubble title="Typescript" />
-                <TagBubble title="NextJS" />
-                <TagBubble title="Gatsby" />
-                <TagBubble title="DokuWiki" />
-                <TagBubble title="GitHub Actions" />
-                <TagBubble title="CI/CD tools" />
+                Extra responsibilities: <TagBubble title="DevOps" />
+                <TagBubble title="CI/CD" />
+                <TagBubble title="Project Management" />
               </DetailsItem>
             </>,
           ]}
         />
         <ExperienceSectionItem
-          title="Research assistant - Software engineer"
+          title="Fullstack developer"
+          subtitle="Edinburgh"
+          subsubtitle="Robotical"
+          year="2021-2022"
+          children={[
+            <>
+              <DetailsItem>
+                Phone and web applications
+              </DetailsItem>
+              <DetailsItem>
+                Technologies used daily: <TagBubble title="REST APIs" />
+                <TagBubble title="Databases" />
+                <TagBubble title="React" />
+                <TagBubble title="Serverless functions" />
+                <TagBubble title="React Native" />
+                <TagBubble title="NextJS" />
+                <TagBubble title="Typescript" />
+              </DetailsItem>
+            </>,
+          ]}
+        />
+        <ExperienceSectionItem
+          title="Developer Research Assistant"
           subtitle="Edinburgh"
           subsubtitle="The University of Edinburgh - Department of Economics"
           year="2020-2021"
@@ -101,9 +105,6 @@ const Experience = () => {
               <DetailsItem>
                 Scrapped more than 1.7 millions (~2.5GB) data instances of
                 unemployment in Argentina
-              </DetailsItem>
-              <DetailsItem>
-                Github repository private: ask for permission
               </DetailsItem>
             </>,
           ]}
@@ -130,31 +131,7 @@ const Experience = () => {
           ]}
         />
         <ExperienceSectionItem
-          title="Teaching assistant - Statistics"
-          subtitle="Edinburgh"
-          subsubtitle="The University of Edinburgh - Univariate and Multivariate statistics using R"
-          year="2018-2021"
-        />
-        <ExperienceSectionItem
-          title="Teaching assistant - Programming"
-          subtitle="Edinburgh"
-          subsubtitle="The University of Edinburgh - Beginners and Intermediate Python programming"
-          year="2018-2021"
-        />
-        <ExperienceSectionItem
-          title="Personal tutor"
-          subtitle="Edinburgh"
-          subsubtitle="The University of Edinburgh - Writing center"
-          year="2018-2020"
-          children={[
-            <DetailsItem>
-              One-to-one sessions with undergaduate students having problems
-              with stats/assignments
-            </DetailsItem>,
-          ]}
-        />
-        <ExperienceSectionItem
-          title="Research assistant - data analyst"
+          title="Data analyst Research Assistant"
           subtitle="Edinburgh"
           subsubtitle="The University of Edinburgh"
           year="2017-2018"
@@ -186,18 +163,6 @@ const Experience = () => {
               </DetailsItem>
             </>,
           ]}
-        />
-        <ExperienceSectionItem
-          title="Intern"
-          subtitle="Greece"
-          subsubtitle="Aktios Alzheimer Unit"
-          year="4-6/2015"
-        />
-        <ExperienceSectionItem
-          title="Intern"
-          subtitle="Sismanoglio General Hospital, Greece"
-          subsubtitle="Child and Adolescent Psychiatry"
-          year="3-4/2015"
         />
       </ExperienceSection>
 
