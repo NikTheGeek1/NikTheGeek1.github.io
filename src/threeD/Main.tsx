@@ -33,17 +33,18 @@ class Main {
     private then!: number;
     private elapsed!: number;
     public shouldRender: boolean;
+    public fluidCanvas!: HTMLCanvasElement;
 
     constructor(canvas: HTMLCanvasElement, monkeyClickedSetter: (clicked: boolean) => void) {
         this.canvas = canvas;
         this.monkeyClickedSetter = monkeyClickedSetter;
         this.fps = 60;
-        this.shouldRender = true;
+        this.shouldRender = true
     }
 
     private createScene(): void {
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color("black");
+        this.scene.background = null
     }
 
     private createCamera(): void {
@@ -54,8 +55,9 @@ class Main {
     }
 
     private createRenderer(): void {
-        this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
+        this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, alpha: true });
         this.renderer.setSize(document.documentElement.clientWidth, window.innerHeight);
+        this.renderer.setClearColor( 0x000000, 0 ); // the default
     }
 
     private createStats(): void {
@@ -112,18 +114,20 @@ class Main {
                 this.then = this.now - (this.elapsed % this.fpsInterval);
 
                 // draw stuff here
-                // this.lightsInstance.updateHelpers();
+                this.lightsInstance.updateHelpers();
                 this.sidersInstance.updateKnots();
                 this.lightsInstance.changeLightColours();
                 this.monkeyInstance.animateMonkey();
                 this.sidersInstance.animateKnots();
                 this.renderer.render(this.scene, this.camera);
+
                 // this.stats.update();
             }
         }
     }
 
     public init(): void {
+        
         this.createRenderer();
         this.createCamera();
         this.createScene();
@@ -132,10 +136,25 @@ class Main {
         this.createMonkeyInstance();
         this.createLightsInstance();
         this.createSidersInstance();
-        this.createWallInstance();
+        // this.createWallInstance();
+
 
         window.addEventListener('resize', this.onWindowResize.bind(this), false);
         this.initTimeDelta();
+        const context = this.canvas.getContext('2d');
+        // Set the global composite operation to destination-out
+        if (context) {
+
+            // context.globalCompositeOperation = 'destination-out';
+
+            // // Draw a rectangle that covers the entire canvas
+            // context.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+            // // Reset the global composite operation to source-over
+            // context.globalCompositeOperation = 'source-over';
+            context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        }
         this.animationLoop();
     }
 
