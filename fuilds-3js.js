@@ -208,6 +208,25 @@ function startGUI () {
     setInterval(() => {
         splatStack.push(parseInt(Math.random() * 20) + 5);
     }, 180000);
+
+    let isDragging = false;
+
+    // Listen for mousedown event
+    document.addEventListener('mousedown', function(e) {
+    isDragging = false;
+    });
+
+    // Listen for mousemove event
+    document.addEventListener('mousemove', function(e) {
+    isDragging = true;
+    });
+
+    // Listen for mouseup event
+    document.addEventListener('mouseup', function(e) {
+    if (!isDragging) {
+        splatStack.push(parseInt(Math.random() * 2));
+    }
+    });
     
     const initialSpliat = setTimeout(() => splatStack.push(parseInt(Math.random() * 20) + 5), 3000);
     
