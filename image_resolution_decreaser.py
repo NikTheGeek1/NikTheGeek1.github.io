@@ -1,0 +1,70 @@
+import os
+from PIL import Image
+def create_thumbnail(old_img_name):
+    new_img_name = old_img_name[0:old_img_name.find('.')] + "-thumbnail" + ".jpg" # + old_img_name[old_img_name.find('.'):]
+    img = Image.open(folder_path + "/" + old_img_name)
+    rgb_im = img.convert('RGB')
+    # downsize the image with an ANTIALIAS filter (gives the highest quality)
+    # img = img.resize((160,300),Image.ANTIALIAS)
+    rgb_im.thumbnail((128, 128), Image.ANTIALIAS)
+    rgb_im.save(folder_path + "/" + new_img_name,optimize=True,quality=75)
+
+def create_reduced_minimised(old_img_name):
+    new_img_name = old_img_name[0:old_img_name.find('.')] + "-rMIN" + ".jpg" # + old_img_name[old_img_name.find('.'):]
+    img = Image.open(folder_path + "/" + old_img_name)
+    rgb_im = img.convert('RGB')
+    # downsize the image with an ANTIALIAS filter (gives the highest quality)
+    # img = img.resize((160,300),Image.ANTIALIAS)
+    rgb_im.thumbnail((600, 600), Image.ANTIALIAS)
+    rgb_im.save(folder_path + "/" + new_img_name,optimize=True, quality=75)
+
+def create_lower_quality_minimised(old_img_name):
+    new_img_name = old_img_name[0:old_img_name.find('.')] + "-lqMIN" + ".jpg" # + old_img_name[old_img_name.find('.'):]
+    img = Image.open(folder_path + "/" + old_img_name)
+    rgb_im = img.convert('RGB')
+    img_small = rgb_im.resize((16,16),resample=Image.BILINEAR)
+    img_rescaled = img_small.resize(rgb_im.size,Image.NEAREST)
+    # downsize the image with an ANTIALIAS filter (gives the highest quality)
+    # img = img.resize((160,300),Image.ANTIALIAS)
+    img_rescaled.thumbnail((600, 600), Image.ANTIALIAS)
+    img_rescaled.save(folder_path + "/" + new_img_name,optimize=True, quality=1)
+
+
+def create_reduced_maximised(old_img_name):
+    new_img_name = old_img_name[0:old_img_name.find('.')] + "-rMAX" + ".jpg"
+    img = Image.open(folder_path + "/" + old_img_name)
+    rgb_im = img.convert('RGB')
+    rgb_im.save(folder_path + "/" + new_img_name, optimize=True, quality=75)
+
+
+def create_lower_quality_maximised(old_img_name):
+    new_img_name = old_img_name[0:old_img_name.find('.')] + "-lqMAX" + ".jpg"
+    img = Image.open(folder_path + "/" + old_img_name)
+    rgb_im = img.convert('RGB')
+    img_small = rgb_im.resize((16,16),resample=Image.BILINEAR)
+    img_rescaled = img_small.resize(rgb_im.size,Image.NEAREST)
+    img_rescaled.save(folder_path + "/" + new_img_name, optimize=True, quality=1)
+
+def create_image_versions(old_img_name):
+    create_thumbnail(old_img_name)
+    create_reduced_minimised(old_img_name)
+    create_lower_quality_minimised(old_img_name)
+    create_reduced_maximised(old_img_name)
+    create_lower_quality_maximised(old_img_name)
+
+
+
+folders = ["network-graph"]
+specific_file = None# Add the name of the image here
+
+
+if specific_file is not None: 
+    folder_path = "" # Add the path to the specific_file here 
+    create_image_versions(specific_file)
+else:
+    for folder in folders: # if you want to run it on multiple folders and images at once
+        folder_path = "/Users/nikolastheodoropoulos/Documents/projects/github-page/src/assets/images/projects/" + folder
+        files_in_dir = os.listdir(folder_path)
+        for file_in_dir in files_in_dir:
+            if file_in_dir.endswith('.png') or file_in_dir.endswith('.jpg') or file_in_dir.endswith('.jpeg'):
+                create_image_versions(file_in_dir)

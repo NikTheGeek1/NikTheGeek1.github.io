@@ -1,12 +1,13 @@
 
 class ProjectsText {
-    public static worldAtlas = "This project uses Three.js (WebGL wrapper) to depict a 3D representation of the World Atlas, with some basic GUI.";
-    public static restaurant = "This a booking system for a restaurant that needs a way to book and arrange tables for customers who whant to book. This system is for the staff and the customers to use, and there is both a phone-app (for i-phones and Androids) and a web-app.";
-    public static checkers = "A checkers game with both single and mutli player functionalities. This was a group project over the course of around 6 days.";
-    public static reinforcementLearning = "A 2D grid-world game. The participant can either play and let their behaviour be analysed by one of the available reinforcement learning algorithms, or they can watch the algorithms playing on their own. Available reinforcement learning algorithms: Value iteration, Q-Learning, and Monte-Carlo."
-    public static xcovers = "This is a fully functioning website I built for my brother's company. The github repository is private, if you want to take a look, please ask for permission."
-    public static onlineExperiment1 = "Experimental condition on hypothesis updating. This experiment is part of a broader project."
-    public static blackJack = "A multiplayer black jack game. In this project there are numerous animations using basic WebGL and canvas technologies. It also has a strong back-end with multiple unit-tests, web sockets, security (using Spring), and more features.";
+    public static worldAtlas = "The WorldAtlas project is a 3D visualization of the globe using Three.js, featuring an interactive GUI for an engaging user experience.";
+    public static restaurant = "The RestaurantBooking system streamlines table reservations for both customers and staff with user-friendly phone and web apps, supporting iOS and Android devices.";
+    public static checkers = "The CheckersGame offers single and multiplayer options, developed collaboratively by a team over six days, showcasing efficient project management.";
+    public static reinforcementLearning = "The GridWorld game lets players explore reinforcement learning algorithms, such as Value Iteration, Q-Learning, and Monte-Carlo, through a 2D environment with real-time analysis."
+    public static xcovers = "A professional-amateur website developed for a family business back when I was a Psychology grad."
+    public static onlineExperiment1 = "An experiment investigating hypothesis updating as part of a larger research project, contributing to the understanding of cognitive processes."
+    public static blackJack = "The MultiplayerBlackJack game boasts immersive animations using WebGL and canvas, with a robust back-end featuring unit tests, web sockets, and Spring security.";
+    public static networkGraph = "The NetworkGraph project is an interactive visualization of Facebook connections using Three.js, and 3d-force-graph. A custom web crawler collects data from ~150,000 users, while Node.js handles back-end data processing and caching for optimized performance. Users can explore and analyze their social networks in this visually engaging and informative experience.";
 }   
 
 export default ProjectsText;

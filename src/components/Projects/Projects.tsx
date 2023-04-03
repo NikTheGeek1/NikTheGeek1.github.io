@@ -13,9 +13,16 @@ const Projects = () => {
     useEffect(() => {
         visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.PROJECTS);
     }, []);
-    console.log(allPhotos, 'Projects.tsx', 'line: ', '16');
+
     return (
         <>
+        <Project
+                title="Facebook Friends Network Graph"
+                photos={allPhotos.networkGraph}
+                details={ProjectsTexts.networkGraph}
+                website=""
+                technologies={["Three.js","3d-force-graph", "React.js", "Typescript", "Node.js", "Express.js", "Python", "Graph Theory"]}
+            />
         <Project
                 title="Multiplayer BlackJack"
                 photos={allPhotos.blackJack}

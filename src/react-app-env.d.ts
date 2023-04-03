@@ -3,6 +3,7 @@ declare module '*.mp4' {
   const src: string;
   export default src;
 }
+
 declare module '*.tsx.txt' {
   const src: string;
   export default src;

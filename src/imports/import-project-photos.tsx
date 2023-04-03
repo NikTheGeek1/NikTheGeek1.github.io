@@ -194,6 +194,7 @@ import oerMAX3 from '../assets/images/projects/online-experiment-1/oe-3-rMAX.jpg
 import oerMAX4 from '../assets/images/projects/online-experiment-1/oe-4-rMAX.jpg';
 import oerMAX5 from '../assets/images/projects/online-experiment-1/oe-5-rMAX.jpg';
 
+// black jack
 import blackJackVid1 from '../assets/images/projects/blackJack/vids/vid1.mp4';
 import blackJackVid2 from '../assets/images/projects/blackJack/vids/vid2.mp4';
 
@@ -216,6 +217,31 @@ import blackJackrMAX3 from '../assets/images/projects/blackJack/photo3-rMAX.jpg'
 import blackJackrMIN1 from '../assets/images/projects/blackJack/photo1-rMIN.jpg';
 import blackJackrMIN2 from '../assets/images/projects/blackJack/photo2-rMIN.jpg';
 import blackJackrMIN3 from '../assets/images/projects/blackJack/photo3-rMIN.jpg';
+
+// facebook friends network
+import networkGraphVid1 from '../assets/images/projects/network-graph/vids/network-graph-vid-1.mp4';
+import networkGraphVid2 from '../assets/images/projects/network-graph/vids/network-graph-vid-2.mp4';
+
+import networkGraphThumb1 from '../assets/images/projects/network-graph/network-graph-0-thumbnail.jpg';
+import networkGraphThumb2 from '../assets/images/projects/network-graph/network-graph-1-thumbnail.jpg';
+import networkGraphThumb3 from '../assets/images/projects/network-graph/network-graph-2-thumbnail.jpg';
+
+import networkGraphlqMAX1 from '../assets/images/projects/network-graph/network-graph-0-lqMAX.jpg';
+import networkGraphlqMAX2 from '../assets/images/projects/network-graph/network-graph-1-lqMAX.jpg';
+import networkGraphlqMAX3 from '../assets/images/projects/network-graph/network-graph-2-lqMAX.jpg';
+
+import networkGraphlqMIN1 from '../assets/images/projects/network-graph/network-graph-0-lqMIN.jpg';
+import networkGraphlqMIN2 from '../assets/images/projects/network-graph/network-graph-1-lqMIN.jpg';
+import networkGraphlqMIN3 from '../assets/images/projects/network-graph/network-graph-2-lqMIN.jpg';
+
+import networkGraphrMAX1 from '../assets/images/projects/network-graph/network-graph-0-rMAX.jpg';
+import networkGraphrMAX2 from '../assets/images/projects/network-graph/network-graph-1-rMAX.jpg';
+import networkGraphrMAX3 from '../assets/images/projects/network-graph/network-graph-2-rMAX.jpg';
+
+import networkGraphrMIN1 from '../assets/images/projects/network-graph/network-graph-0-rMIN.jpg';
+import networkGraphrMIN2 from '../assets/images/projects/network-graph/network-graph-1-rMIN.jpg';
+import networkGraphrMIN3 from '../assets/images/projects/network-graph/network-graph-2-rMIN.jpg';
+
 import { ImagesVersionsInterface } from '../types/images-versions-interface';
 
 type allPhotosStructure = { [key: string]: ImagesVersionsInterface }
@@ -225,7 +251,7 @@ const allPhotos: allPhotosStructure = {
         thumbnail: [
             worldAtlasThumb1,
             worldAtlasThumb2,
-            worldAtlasThumb3
+            worldAtlasThumb3,
         ],
         lowerQualityMin: [
             worldAtlaslqMIN1,
@@ -495,7 +521,43 @@ const allPhotos: allPhotosStructure = {
             blackJackVid2,
         ]
     },
-
+    networkGraph: {
+        thumbnail: [
+            networkGraphThumb1,
+            networkGraphThumb2,
+            networkGraphThumb3,
+            networkGraphVid1,
+            networkGraphVid2,
+        ],  
+        lowerQualityMin: [
+            networkGraphlqMIN1,
+            networkGraphlqMIN2,
+            networkGraphlqMIN3,
+            networkGraphVid1,
+            networkGraphVid2,
+        ],
+        lowerQualityMax: [
+            networkGraphlqMAX1,
+            networkGraphlqMAX2,
+            networkGraphlqMAX3,
+            networkGraphVid1,
+            networkGraphVid2,
+        ],
+        reducedMin: [
+            networkGraphrMIN1,
+            networkGraphrMIN2,
+            networkGraphrMIN3,
+            networkGraphVid1,
+            networkGraphVid2,
+        ],
+        reducedMax: [
+            networkGraphrMAX1,
+            networkGraphrMAX2,
+            networkGraphrMAX3,
+            networkGraphVid1,
+            networkGraphVid2,
+        ]
+    },
 
 };
 
