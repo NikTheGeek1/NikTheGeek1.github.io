@@ -10,7 +10,7 @@ const BlogPostBox = ({ children, title, rowSpan, columnSpan, subtitle }:
         title: string,
         rowSpan: number,
         columnSpan: number,
-        children: React.ReactNode | React.ReactNode[],
+        children?: React.ReactNode | React.ReactNode[],
         subtitle: string
     }) => {
     const [showModal, setShowModal] = useState<boolean>();

@@ -12,9 +12,9 @@ const ProfileBody = () => {
 
     return (
         <Switch>
-            <Route exact path="/">
+            {/* <Route exact path="/">
                 <Redirect to={pathsEnum.TIMELINE} />
-            </Route>
+            </Route> */}
             <Route path={pathsEnum.TIMELINE}>
                 <section className="profile-timeline-container" key="timeline">
                     <Timeline />

@@ -1,4 +1,5 @@
 .section-title-container {
+    column-span: all;
     display: grid;
     grid-auto-flow: column;
     font-family: 'Quicksand';
@@ -13,4 +14,5 @@
     grid-template-columns: 3rem 1fr;
     margin-bottom: 2rem;
     white-space: nowrap;
+    grid-column: span 4;
 }

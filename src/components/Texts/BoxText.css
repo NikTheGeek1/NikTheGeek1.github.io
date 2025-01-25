@@ -3,3 +3,7 @@
     font-size: var(--small-font-size);
     line-height: 1.6;
 }
+
+.inline-text-box {
+    display: inline;
+}

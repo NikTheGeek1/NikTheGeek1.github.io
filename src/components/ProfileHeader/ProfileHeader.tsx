@@ -5,11 +5,27 @@ import { pathsEnum } from '../../enums/paths';
 import { useEffect, useState } from 'react';
 import { useStore } from '../../hooks-store/store';
 
+type Tab = "Timeline" | "Publications" | "Experience" | "Projects" | "Contact" | "More";
+
 const ProfileHeader = () => {
+    const [currentTab, setCurrentTab] = useState<Tab | undefined>(undefined);
     const history = useHistory();
     const [, setRefreshTab] = useState('');
     const scrDims = useStore()[0].scrDims;
     const [showMoreBox, setShowMoreBox] = useState(false);
+
+    useEffect(() => {
+        // get path parameter from the URL
+        const url = new URL(window.location.href);
+        const path = url.searchParams.get("path");
+        // if there is a path parameter, click on the monkey
+        if (path && (path === "Timeline" || path === "Publications" || path === "Experience" || path === "Projects" || path === "Contact")) {
+            itemClickHandler(path);
+        } else {
+            // if there is no path parameter, click on the monkey
+            itemClickHandler("Timeline");
+        }
+    }, []);
 
     useEffect(() => {
         window.addEventListener("click", closeMoreBoxHandler);
@@ -18,12 +34,13 @@ const ProfileHeader = () => {
 
     const itemClickHandler = (item: string) => {
         if (item === "More") {
-            console.log(showMoreBox, 'ProfileHeader.tsx', 'line: ', '21');
             setShowMoreBox(oldState => !oldState);
         } else {
             const path = pathsEnum[item.toUpperCase()];
-            history.push(path);
+            const url = new URL(window.location.href);
+            history.push(`${path}?${url.searchParams.toString()}`);
             setRefreshTab(item);
+            setCurrentTab(item as Tab);
         }
     };
 
@@ -32,8 +49,8 @@ const ProfileHeader = () => {
             setShowMoreBox(false);
     };
 
-    let headerItems: string[] = ["Timeline", "Publications", "Experience", "Projects", "Contact"];
-    let moreItems: string[] = [];
+    let headerItems: Tab[] = ["Timeline", "Publications", "Experience", "Projects", "Contact"];
+    let moreItems: Tab[] = [];
     if (scrDims && scrDims.width < 500) {
         headerItems = ["Timeline", "Publications", "Experience", "Projects", "More"];
         moreItems = ["Contact"];
@@ -65,8 +82,8 @@ const ProfileHeader = () => {
 
     const headerItemsJSX = headerItems
         .map(item => {
-            const activeItem = history.location.pathname.slice(1);
-            const activeItemClass = activeItem === item.toLowerCase() ? "profile-header-item-active" : "profile-header-item-inactive";
+            const activeItem = currentTab;
+            const activeItemClass = activeItem?.toLowerCase() === item.toLowerCase() ? "profile-header-item-active" : "profile-header-item-inactive";
             let moreItem;
             if (item === "More") {
                 moreItem = (

@@ -5,9 +5,9 @@ import codeclanGraduationrMIN from '../assets/images/codeclan-graduation-rMIN.jp
 import codeclanGraduationrMAX from '../assets/images/codeclan-graduation-rMAX.jpg';
 import { ImagesVersionsInterface } from '../types/images-versions-interface';
  
-type allPhotosStructure = {[key: string]: ImagesVersionsInterface}
+type AllPhotosStructure = {[key: string]: ImagesVersionsInterface}
 
-const allPhotos: allPhotosStructure = {
+const allPhotos: AllPhotosStructure = {
     codeclanGraduation: {
         thumbnail: [
             codeclanGraduationThumb,

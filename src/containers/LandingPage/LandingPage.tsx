@@ -11,7 +11,7 @@ const LandingPage = () => {
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
     const [exitingAnimationFinished, setExitingAnimationFinished] = useState<boolean>(false);
     const [landingPageClass, setLandingPageClass] = useState<string>("landing-page-main-before-animation");
-    
+
     useEffect(() => {
         if (monkeyClicked) {
             const animationTimer = setTimeout(() => {
@@ -34,7 +34,7 @@ const LandingPage = () => {
             <div className="canvas-container-landing-page">
                 <ThreeD setMonkeyClicked={setMonkeyClicked} />
             </div>
-            { !exitingAnimationFinished ?
+            {!exitingAnimationFinished ?
                 <>
                     <div className={"landing-page-title " + exitingClasses.primaryHeading}>
                         <PrimaryHeading content="Welcome to my" />

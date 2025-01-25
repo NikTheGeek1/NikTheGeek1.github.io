@@ -9,27 +9,31 @@ export const storeVisitorDemographics = (visitorToken: string) => {
     fetch(trackerURL)
         .then(res => res.text())
         .then((visitorData: string) => {
+            const currentURL = window.location.href;
             const dataParsed = visitorDemographicParser(visitorData);
-            const dataToSend = JSON.stringify({ ...dataParsed, date: new Date().toTimeString().slice(0, 17) + " " + new Date().toDateString().slice(0, 17) });
+            const dataToSend = JSON.stringify({ ...dataParsed, visitorToken, currentURL,date: new Date().toTimeString().slice(0, 17) + " " + new Date().toDateString().slice(0, 17) });
             emailSenderHelper(oldTime, dataToSend, visitorToken);
-            fetch(dbURL + `${visitorToken}.json`, {
-                method: "POST",
+            const newTime = new Date().toISOString().slice(0, 10).replace(/:/g, '-').replace(/\./g, '-');
+            fetch(dbURL + `${newTime}/${visitorToken}.json`, {
+                method: "PUT",
                 headers: {
                     "Application": "application/json",
                     'Content-Type': 'application/json',
                 },
                 body: dataToSend
             })
-                .then(res => res);
+                .then(res => res).catch(err => console.log(err));
         });
 };
 
 
 export const storeVisitorLocation = (visitorToken: string, location: string) => {
-    const dataToSend = JSON.stringify({ location, date: new Date().toTimeString().slice(0, 17) + " " + new Date().toDateString().slice(0, 17) });
+    const currentURL = window.location.href;
+    const dataToSend = JSON.stringify({ location, currentURL, date: new Date().toTimeString().slice(0, 17) + " " + new Date().toDateString().slice(0, 17) });
     const oldTime = getVisitTime();
     emailSenderHelper(oldTime, dataToSend, visitorToken);
-    fetch(dbURL + `${visitorToken}.json`, {
+    const newTime = new Date().toISOString().slice(0, 10).replace(/:/g, '-').replace(/\./g, '-');
+    fetch(dbURL + `${newTime}/${visitorToken}.json`, {
         method: "POST",
         headers: {
             "Application": "application/json",
@@ -37,7 +41,7 @@ export const storeVisitorLocation = (visitorToken: string, location: string) => 
         },
         body: dataToSend
     })
-        .then(res => res);
+        .then(res => res).catch(err => console.log(err));
 };
 
 const visitorDemographicParser = (dems: string) => {

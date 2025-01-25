@@ -15,7 +15,7 @@ class Monkey {
     private raycaster!: THREE.Raycaster;
     private intersects: THREE.Intersection[];
     private pickableObjects!: THREE.Mesh[];
-    private onClickEventListenerRef!: (e: MouseEvent) => void;
+    private onClickEventListenerRef!: () => void;
     private shouldRaycast: boolean;
 
     constructor(main: Main) {
@@ -97,8 +97,8 @@ class Monkey {
         }
     }
 
-    private onClick(e: MouseEvent) {
-        if (this.intersects.length > 0 && !Animations.currentAnimation) {
+    public onClick(force = false): void {
+        if ((this.intersects.length > 0 && !Animations.currentAnimation) || force) {
             Animations.instantiateMonkeyTopRightAnimation(0, this.monkeyAnimation.finalY, this.monkeyAnimation.finalZ);
             this.main.sidersInstance.sidersAnimation.shouldAnimate = true;
             this.main.monkeyClickedSetter(true);

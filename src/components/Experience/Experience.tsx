@@ -7,7 +7,7 @@ import DetailsItem from "./DetailsItem/DetailsItem";
 import TagBubble from "../TagBubble/TagBubble";
 import seminarIcon from "../../assets/svgs/seminars.svg";
 import skillsIcon from "../../assets/svgs/skills.svg";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useStore } from "../../hooks-store/store";
 import { storeVisitorLocation } from "../../utils/visitor-tracker";
 import { LOCATIONS_ENUM } from "../../hooks-store/stores/visitor-map";
@@ -21,33 +21,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <>
-      <ExperienceSection icon={educationIcon} title="Education">
-        <ExperienceSectionItem
-          title="CodeClan"
-          subtitle="Software Development"
-          subsubtitle="Edinburgh"
-          year="2020-2021"
-        />
-        <ExperienceSectionItem
-          title="The University of Edinburgh"
-          subtitle="PhD in Cognitive Neuroscience"
-          subsubtitle="School of Informatics, PPLS"
-          year="2017-2021"
-        />
-        <ExperienceSectionItem
-          title="The University of Edinburgh"
-          subtitle="MSc Human Cognitive Neuropsychology"
-          subsubtitle="School of Philosophy, Psychology and Language Sciences"
-          year="2016-2017"
-        />
-        <ExperienceSectionItem
-          title="Athens Metropolitan University"
-          subtitle="BSc Psychology"
-          subsubtitle="Department of psychology, in collaboration with University of East London"
-          year="2013-2016"
-        />
-      </ExperienceSection>
+    <React.Fragment key={1}>
 
       <ExperienceSection icon={workIcon} title="Working Experience">
         <ExperienceSectionItem
@@ -56,7 +30,7 @@ const Experience = () => {
           subsubtitle="Robotical"
           year="2022-present"
           children={[
-            <>
+            <React.Fragment key={1}>
               <DetailsItem>
                 Leading the development team and ensuring that projects are completed on time, within budget, and to
                 the required quality standards
@@ -66,7 +40,7 @@ const Experience = () => {
                 <TagBubble title="CI/CD" />
                 <TagBubble title="Project Management" />
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
         <ExperienceSectionItem
@@ -75,7 +49,7 @@ const Experience = () => {
           subsubtitle="Robotical"
           year="2021-2022"
           children={[
-            <>
+            <React.Fragment key={1}>
               <DetailsItem>
                 Phone and web applications
               </DetailsItem>
@@ -88,7 +62,7 @@ const Experience = () => {
                 <TagBubble title="NextJS" />
                 <TagBubble title="Typescript" />
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
         <ExperienceSectionItem
@@ -97,7 +71,7 @@ const Experience = () => {
           subsubtitle="The University of Edinburgh - Department of Economics"
           year="2020-2021"
           children={[
-            <>
+            <React.Fragment key={1}>
               <DetailsItem>
                 Main duties: Build multiple webscrapping algorithms using
                 Selenium and Python
@@ -106,7 +80,7 @@ const Experience = () => {
                 Scrapped more than 1.7 millions (~2.5GB) data instances of
                 unemployment in Argentina
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
         <ExperienceSectionItem
@@ -115,7 +89,8 @@ const Experience = () => {
           subsubtitle="The Scottish Government - Justice Analytical Services Division"
           year="2019"
           children={[
-            <>
+            <React.Fragment key={1}>
+
               <DetailsItem>
                 Main duties: Analysis of Scottish cybercrime data and
                 identification of commonalities between offenders
@@ -127,7 +102,7 @@ const Experience = () => {
                   link="https://www.ed.ac.uk/ppls/news/phd-student-awarded-cybercrime-internship"
                 />{" "}
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
         <ExperienceSectionItem
@@ -136,7 +111,8 @@ const Experience = () => {
           subsubtitle="The University of Edinburgh"
           year="2017-2018"
           children={[
-            <>
+            <React.Fragment key={1}>
+
               <DetailsItem>
                 Main duties: Analysis and writing up the results of 4
                 experiments on exploring which reference frames are being used
@@ -161,12 +137,53 @@ const Experience = () => {
                   link="https://doi.org/10.1016/j.actpsy.2019.102874"
                 />
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
       </ExperienceSection>
 
-      <ExperienceSection icon={seminarIcon} title="Seminars & online courses">
+      <ExperienceSection icon={educationIcon} title="Education">
+        <ExperienceSectionItem
+          title="The University of Edinburgh"
+          subtitle="PhD in Cognitive Neuroscience"
+          subsubtitle="School of Informatics, PPLS"
+          year="2017-2021"
+        />
+        <ExperienceSectionItem
+          title="The University of Edinburgh"
+          subtitle="MSc Human Cognitive Neuropsychology"
+          subsubtitle="School of Philosophy, Psychology and Language Sciences"
+          year="2016-2017"
+        />
+        <ExperienceSectionItem
+          title="Athens Metropolitan University"
+          subtitle="BSc Psychology"
+          subsubtitle="Department of psychology, in collaboration with University of East London"
+          year="2013-2016"
+        />
+      </ExperienceSection>
+
+      <ExperienceSection icon={seminarIcon} title="Seminars, Courses & Extra-curricular">
+        <ExperienceSectionItem
+          title="Dreams for Littles"
+          subtitle="Freelance"
+          subsubtitle="Tech stack: "
+          year="2024"
+        >
+          <DetailsItem>
+            <TagBubble title="React Native" />
+            <TagBubble title="Firebase" />
+            <TagBubble title="Firestore" />
+            <TagBubble title="Data visualisation" />
+            <TagBubble title="Data analysis" />
+          </DetailsItem>
+        </ExperienceSectionItem>
+        <ExperienceSectionItem
+          title="CodeClan"
+          subtitle="Software Development"
+          subsubtitle="Edinburgh"
+          year="2020-2021"
+        />
         <ExperienceSectionItem
           title="Google Project Management"
           subtitle="Coursera"
@@ -215,7 +232,8 @@ const Experience = () => {
           subsubtitle=""
           year=""
           children={[
-            <>
+            <React.Fragment key={1}>
+
               <DetailsItem>
                 Confident with:
                 <TagBubble title="JavaScript/Typescript" />
@@ -227,7 +245,7 @@ const Experience = () => {
                 <TagBubble title="Latex" />
                 <TagBubble title="C++" />
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
         <ExperienceSectionItem
@@ -236,7 +254,8 @@ const Experience = () => {
           subsubtitle=""
           year=""
           children={[
-            <>
+            <React.Fragment key={1}>
+
               <DetailsItem>
                 Worked with:
                 <TagBubble title="Node.js" />
@@ -257,7 +276,7 @@ const Experience = () => {
                 <TagBubble title="Visualisation (matplotlib, plotly...)" />
                 <TagBubble title="Data handling/analysis (numpy, scipy, pandas, tensorflow...)" />
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
         <ExperienceSectionItem
@@ -266,16 +285,17 @@ const Experience = () => {
           subsubtitle=""
           year=""
           children={[
-            <>
+            <React.Fragment key={1}>
+
               <DetailsItem>
                 <TagBubble title="Greek" />
                 <TagBubble title="English" />
               </DetailsItem>
-            </>,
+            </React.Fragment>,
           ]}
         />
       </ExperienceSection>
-    </>
+    </React.Fragment>
   );
 };
 

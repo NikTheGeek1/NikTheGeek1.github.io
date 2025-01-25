@@ -1,0 +1,12 @@
+.projects-container {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-column: span 4;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content;
+  column-gap: var(--bigest-gap);
+  row-gap: var(--bigest-gap);
+  animation: display 1s forwards;
+}

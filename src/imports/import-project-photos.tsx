@@ -242,11 +242,543 @@ import networkGraphrMIN1 from '../assets/images/projects/network-graph/network-g
 import networkGraphrMIN2 from '../assets/images/projects/network-graph/network-graph-1-rMIN.jpg';
 import networkGraphrMIN3 from '../assets/images/projects/network-graph/network-graph-2-rMIN.jpg';
 
+// machine learning robotical
+import machineLearningRoboticalThumb1 from '../assets/images/projects/machine-learning-robotical/mlr-1-thumbnail.avif';
+import machineLearningRoboticalThumb2 from '../assets/images/projects/machine-learning-robotical/mlr-2-thumbnail.avif';
+import machineLearningRoboticalThumb3 from '../assets/images/projects/machine-learning-robotical/mlr-3-thumbnail.avif';
+
+import machineLearningRoboticallqMIN1 from '../assets/images/projects/machine-learning-robotical/mlr-1-lqMIN.avif';
+import machineLearningRoboticallqMIN2 from '../assets/images/projects/machine-learning-robotical/mlr-2-lqMIN.avif';
+import machineLearningRoboticallqMIN3 from '../assets/images/projects/machine-learning-robotical/mlr-3-lqMIN.avif';
+
+import machineLearningRoboticallqMAX1 from '../assets/images/projects/machine-learning-robotical/mlr-1-lqMAX.avif';
+import machineLearningRoboticallqMAX2 from '../assets/images/projects/machine-learning-robotical/mlr-2-lqMAX.avif';
+import machineLearningRoboticallqMAX3 from '../assets/images/projects/machine-learning-robotical/mlr-3-lqMAX.avif';
+
+import machineLearningRoboticallrMIN1 from '../assets/images/projects/machine-learning-robotical/mlr-1-rMIN.avif';
+import machineLearningRoboticallrMIN2 from '../assets/images/projects/machine-learning-robotical/mlr-2-rMIN.avif';
+import machineLearningRoboticallrMIN3 from '../assets/images/projects/machine-learning-robotical/mlr-3-rMIN.avif';
+
+import machineLearningRoboticallrMAX1 from '../assets/images/projects/machine-learning-robotical/mlr-1-rMAX.avif';
+import machineLearningRoboticallrMAX2 from '../assets/images/projects/machine-learning-robotical/mlr-2-rMAX.avif';
+import machineLearningRoboticallrMAX3 from '../assets/images/projects/machine-learning-robotical/mlr-3-rMAX.avif';
+
+import machineLearningRoboticallVideo1 from '../assets/images/projects/machine-learning-robotical/vids/mlr-vid-1.mp4';
+
+// marty controller
+import martyControllerVideo1 from '../assets/images/projects/marty-controller/vids/marty-controller.mp4';
+
+import martyControllerThumb1 from '../assets/images/projects/marty-controller/mc-1-thumbnail.avif';
+import martyControllerThumb2 from '../assets/images/projects/marty-controller/mc-2-thumbnail.avif';
+import martyControllerThumb3 from '../assets/images/projects/marty-controller/mc-3-thumbnail.avif';
+import martyControllerThumb4 from '../assets/images/projects/marty-controller/mc-4-thumbnail.avif';
+
+import martyControllerlqMIN1 from '../assets/images/projects/marty-controller/mc-1-lqMIN.avif';
+import martyControllerlqMIN2 from '../assets/images/projects/marty-controller/mc-2-lqMIN.avif';
+import martyControllerlqMIN3 from '../assets/images/projects/marty-controller/mc-3-lqMIN.avif';
+import martyControllerlqMIN4 from '../assets/images/projects/marty-controller/mc-4-lqMIN.avif';
+
+import martyControllerlqMAX1 from '../assets/images/projects/marty-controller/mc-1-lqMAX.avif';
+import martyControllerlqMAX2 from '../assets/images/projects/marty-controller/mc-2-lqMAX.avif';
+import martyControllerlqMAX3 from '../assets/images/projects/marty-controller/mc-3-lqMAX.avif';
+import martyControllerlqMAX4 from '../assets/images/projects/marty-controller/mc-4-lqMAX.avif';
+
+import martyControllerrMIN1 from '../assets/images/projects/marty-controller/mc-1-rMIN.avif';
+import martyControllerrMIN2 from '../assets/images/projects/marty-controller/mc-2-rMIN.avif';
+import martyControllerrMIN3 from '../assets/images/projects/marty-controller/mc-3-rMIN.avif';
+import martyControllerrMIN4 from '../assets/images/projects/marty-controller/mc-4-rMIN.avif';
+
+import martyControllerrMAX1 from '../assets/images/projects/marty-controller/mc-1-rMAX.avif';
+import martyControllerrMAX2 from '../assets/images/projects/marty-controller/mc-2-rMAX.avif';
+import martyControllerrMAX3 from '../assets/images/projects/marty-controller/mc-3-rMAX.avif';
+import martyControllerrMAX4 from '../assets/images/projects/marty-controller/mc-4-rMAX.avif';
+
+// learning portal
+import learningPortalVideo1 from '../assets/images/projects/learning-portal/vids/lp-video-1.mp4';
+
+import learningPortalThumb1 from '../assets/images/projects/learning-portal/lp-1-thumbnail.avif';
+import learningPortalThumb2 from '../assets/images/projects/learning-portal/lp-2-thumbnail.avif';
+
+import learningPortallqMIN1 from '../assets/images/projects/learning-portal/lp-1-lqMIN.avif';
+import learningPortallqMIN2 from '../assets/images/projects/learning-portal/lp-2-lqMIN.avif';
+
+import learningPortallqMAX1 from '../assets/images/projects/learning-portal/lp-1-lqMAX.avif';
+import learningPortallqMAX2 from '../assets/images/projects/learning-portal/lp-2-lqMAX.avif';
+
+import learningPortallrMIN1 from '../assets/images/projects/learning-portal/lp-1-rMIN.avif';
+import learningPortallrMIN2 from '../assets/images/projects/learning-portal/lp-2-rMIN.avif';
+
+import learningPortallrMAX1 from '../assets/images/projects/learning-portal/lp-1-rMAX.avif';
+import learningPortallrMAX2 from '../assets/images/projects/learning-portal/lp-2-rMAX.avif';
+
+// code assess
+import codeAssessVideo1 from '../assets/images/projects/code-assess/vids/ca-vid-1.mp4';
+import codeAssessVideo2 from '../assets/images/projects/code-assess/vids/ca-vid-2.mp4';
+import codeAssessVideo3 from '../assets/images/projects/code-assess/vids/ca-vid-3.mp4';
+import codeAssessVideo4 from '../assets/images/projects/code-assess/vids/ca-vid-4.mp4';
+
+import codeAssessThumb1 from '../assets/images/projects/code-assess/ca-1-thumbnail.avif';
+import codeAssessThumb2 from '../assets/images/projects/code-assess/ca-2-thumbnail.avif';
+import codeAssessThumb3 from '../assets/images/projects/code-assess/ca-3-thumbnail.avif';
+import codeAssessThumb4 from '../assets/images/projects/code-assess/ca-4-thumbnail.avif';
+import codeAssessThumb5 from '../assets/images/projects/code-assess/ca-5-thumbnail.avif';
+import codeAssessThumb6 from '../assets/images/projects/code-assess/ca-6-thumbnail.avif';
+
+import codeAssesslqMIN1 from '../assets/images/projects/code-assess/ca-1-lqMIN.avif';
+import codeAssesslqMIN2 from '../assets/images/projects/code-assess/ca-2-lqMIN.avif';
+import codeAssesslqMIN3 from '../assets/images/projects/code-assess/ca-3-lqMIN.avif';
+import codeAssesslqMIN4 from '../assets/images/projects/code-assess/ca-4-lqMIN.avif';
+import codeAssesslqMIN5 from '../assets/images/projects/code-assess/ca-5-lqMIN.avif';
+import codeAssesslqMIN6 from '../assets/images/projects/code-assess/ca-6-lqMIN.avif';
+
+import codeAssesslqMAX1 from '../assets/images/projects/code-assess/ca-1-lqMAX.avif';
+import codeAssesslqMAX2 from '../assets/images/projects/code-assess/ca-2-lqMAX.avif';
+import codeAssesslqMAX3 from '../assets/images/projects/code-assess/ca-3-lqMAX.avif';
+import codeAssesslqMAX4 from '../assets/images/projects/code-assess/ca-4-lqMAX.avif';
+import codeAssesslqMAX5 from '../assets/images/projects/code-assess/ca-5-lqMAX.avif';
+import codeAssesslqMAX6 from '../assets/images/projects/code-assess/ca-6-lqMAX.avif';
+
+import codeAssessrMIN1 from '../assets/images/projects/code-assess/ca-1-rMIN.avif';
+import codeAssessrMIN2 from '../assets/images/projects/code-assess/ca-2-rMIN.avif';
+import codeAssessrMIN3 from '../assets/images/projects/code-assess/ca-3-rMIN.avif';
+import codeAssessrMIN4 from '../assets/images/projects/code-assess/ca-4-rMIN.avif';
+import codeAssessrMIN5 from '../assets/images/projects/code-assess/ca-5-rMIN.avif';
+import codeAssessrMIN6 from '../assets/images/projects/code-assess/ca-6-rMIN.avif';
+
+import codeAssessrMAX1 from '../assets/images/projects/code-assess/ca-1-rMAX.avif';
+import codeAssessrMAX2 from '../assets/images/projects/code-assess/ca-2-rMAX.avif';
+import codeAssessrMAX3 from '../assets/images/projects/code-assess/ca-3-rMAX.avif';
+import codeAssessrMAX4 from '../assets/images/projects/code-assess/ca-4-rMAX.avif';
+import codeAssessrMAX5 from '../assets/images/projects/code-assess/ca-5-rMAX.avif';
+import codeAssessrMAX6 from '../assets/images/projects/code-assess/ca-6-rMAX.avif';
+
+// mini games
+import miniGamesVid1 from '../assets/images/projects/mini-games/vids/mg-vid-1.mp4';
+import miniGamesVid2 from '../assets/images/projects/mini-games/vids/mg-vid-2.mp4';
+import miniGamesVid3 from '../assets/images/projects/mini-games/vids/mg-vid-3.mp4';
+
+import miniGamesThumb1 from '../assets/images/projects/mini-games/mg-1-thumbnail.avif';
+import miniGamesThumb2 from '../assets/images/projects/mini-games/mg-2-thumbnail.avif';
+import miniGamesThumb3 from '../assets/images/projects/mini-games/mg-3-thumbnail.avif';
+
+import miniGameslqMIN1 from '../assets/images/projects/mini-games/mg-1-lqMIN.avif';
+import miniGameslqMIN2 from '../assets/images/projects/mini-games/mg-2-lqMIN.avif';
+import miniGameslqMIN3 from '../assets/images/projects/mini-games/mg-3-lqMIN.avif';
+
+import miniGameslqMAX1 from '../assets/images/projects/mini-games/mg-1-lqMAX.avif';
+import miniGameslqMAX2 from '../assets/images/projects/mini-games/mg-2-lqMAX.avif';
+import miniGameslqMAX3 from '../assets/images/projects/mini-games/mg-3-lqMAX.avif';
+
+import miniGamesrMIN1 from '../assets/images/projects/mini-games/mg-1-rMIN.avif';
+import miniGamesrMIN2 from '../assets/images/projects/mini-games/mg-2-rMIN.avif';
+import miniGamesrMIN3 from '../assets/images/projects/mini-games/mg-3-rMIN.avif';
+
+import miniGamesrMAX1 from '../assets/images/projects/mini-games/mg-1-rMAX.avif';
+import miniGamesrMAX2 from '../assets/images/projects/mini-games/mg-2-rMAX.avif';
+import miniGamesrMAX3 from '../assets/images/projects/mini-games/mg-3-rMAX.avif';
+
+// Blocks to python transpiler
+import blocksToPythonVid1 from '../assets/images/projects/blocks-to-python-transpiler/vids/btp-vid-1.mp4';
+
+import blocksToPythonThumb1 from '../assets/images/projects/blocks-to-python-transpiler/btp-1-thumbnail.avif';
+import blocksToPythonThumb2 from '../assets/images/projects/blocks-to-python-transpiler/btp-2-thumbnail.avif';
+
+import blocksToPythonlqMIN1 from '../assets/images/projects/blocks-to-python-transpiler/btp-1-lqMIN.avif';
+import blocksToPythonlqMIN2 from '../assets/images/projects/blocks-to-python-transpiler/btp-2-lqMIN.avif';
+
+import blocksToPythonlqMAX1 from '../assets/images/projects/blocks-to-python-transpiler/btp-1-lqMAX.avif';
+import blocksToPythonlqMAX2 from '../assets/images/projects/blocks-to-python-transpiler/btp-2-lqMAX.avif';
+
+import blocksToPythonrMIN1 from '../assets/images/projects/blocks-to-python-transpiler/btp-1-rMIN.avif';
+import blocksToPythonrMIN2 from '../assets/images/projects/blocks-to-python-transpiler/btp-2-rMIN.avif';
+
+import blocksToPythonrMAX1 from '../assets/images/projects/blocks-to-python-transpiler/btp-1-rMAX.avif';
+import blocksToPythonrMAX2 from '../assets/images/projects/blocks-to-python-transpiler/btp-2-rMAX.avif';
+
+// sensors dashboard
+import sensorsDashboardVid1 from '../assets/images/projects/sensors-dashboard/vids/sd-vid-1.mp4';
+import sensorsDashboardVid2 from '../assets/images/projects/sensors-dashboard/vids/sd-vid-2.mp4';
+
+import sensorsDashboardThumb1 from '../assets/images/projects/sensors-dashboard/sd-1-thumbnail.avif';
+
+import sensorsDashboardlqMIN1 from '../assets/images/projects/sensors-dashboard/sd-1-lqMIN.avif';
+
+import sensorsDashboardlqMAX1 from '../assets/images/projects/sensors-dashboard/sd-1-lqMAX.avif';
+
+import sensorsDashboardrMIN1 from '../assets/images/projects/sensors-dashboard/sd-1-rMIN.avif';
+
+import sensorsDashboardrMAX1 from '../assets/images/projects/sensors-dashboard/sd-1-rMAX.avif';
+
 import { ImagesVersionsInterface } from '../types/images-versions-interface';
 
-type allPhotosStructure = { [key: string]: ImagesVersionsInterface }
+// scratch jr web
+import scratchJrWebThumb1 from '../assets/images/projects/scratch-jr-web/sj-1-thumbnail.avif';
+import scratchJrWebThumb2 from '../assets/images/projects/scratch-jr-web/sj-2-thumbnail.avif';
+import scratchJrWebThumb3 from '../assets/images/projects/scratch-jr-web/sj-3-thumbnail.avif';
 
-const allPhotos: allPhotosStructure = {
+import scratchJrWeblqMIN1 from '../assets/images/projects/scratch-jr-web/sj-1-lqMIN.avif';
+import scratchJrWeblqMIN2 from '../assets/images/projects/scratch-jr-web/sj-2-lqMIN.avif';
+import scratchJrWeblqMIN3 from '../assets/images/projects/scratch-jr-web/sj-3-lqMIN.avif';
+
+import scratchJrWeblqMAX1 from '../assets/images/projects/scratch-jr-web/sj-1-lqMAX.avif';
+import scratchJrWeblqMAX2 from '../assets/images/projects/scratch-jr-web/sj-2-lqMAX.avif';
+import scratchJrWeblqMAX3 from '../assets/images/projects/scratch-jr-web/sj-3-lqMAX.avif';
+
+import scratchJrWebrMIN1 from '../assets/images/projects/scratch-jr-web/sj-1-rMIN.avif';
+import scratchJrWebrMIN2 from '../assets/images/projects/scratch-jr-web/sj-2-rMIN.avif';
+import scratchJrWebrMIN3 from '../assets/images/projects/scratch-jr-web/sj-3-rMIN.avif';
+
+import scratchJrWebrMAX1 from '../assets/images/projects/scratch-jr-web/sj-1-rMAX.avif';
+import scratchJrWebrMAX2 from '../assets/images/projects/scratch-jr-web/sj-2-rMAX.avif';
+import scratchJrWebrMAX3 from '../assets/images/projects/scratch-jr-web/sj-3-rMAX.avif';
+
+// news hub
+import newsHubVid1 from '../assets/images/projects/news-hub-robotical/vids/nh-vid-1.mp4';
+
+// dreams for littles 
+import dreamsForLittlesVid1 from '../assets/images/projects/dreams-for-littles/vids/dfl-vid-1.mp4';
+
+import dreamsForLittlesThumb1 from '../assets/images/projects/dreams-for-littles/dfl-1-thumbnail.avif';
+import dreamsForLittlesThumb2 from '../assets/images/projects/dreams-for-littles/dfl-2-thumbnail.avif';
+import dreamsForLittlesThumb3 from '../assets/images/projects/dreams-for-littles/dfl-3-thumbnail.avif';
+import dreamsForLittlesThumb4 from '../assets/images/projects/dreams-for-littles/dfl-4-thumbnail.avif';
+import dreamsForLittlesThumb5 from '../assets/images/projects/dreams-for-littles/dfl-5-thumbnail.avif';
+
+import dreamsForLittleslqMIN1 from '../assets/images/projects/dreams-for-littles/dfl-1-lqMIN.avif';
+import dreamsForLittleslqMIN2 from '../assets/images/projects/dreams-for-littles/dfl-2-lqMIN.avif';
+import dreamsForLittleslqMIN3 from '../assets/images/projects/dreams-for-littles/dfl-3-lqMIN.avif';
+import dreamsForLittleslqMIN4 from '../assets/images/projects/dreams-for-littles/dfl-4-lqMIN.avif';
+import dreamsForLittleslqMIN5 from '../assets/images/projects/dreams-for-littles/dfl-5-lqMIN.avif';
+
+import dreamsForLittleslqMAX1 from '../assets/images/projects/dreams-for-littles/dfl-1-lqMAX.avif';
+import dreamsForLittleslqMAX2 from '../assets/images/projects/dreams-for-littles/dfl-2-lqMAX.avif';
+import dreamsForLittleslqMAX3 from '../assets/images/projects/dreams-for-littles/dfl-3-lqMAX.avif';
+import dreamsForLittleslqMAX4 from '../assets/images/projects/dreams-for-littles/dfl-4-lqMAX.avif';
+import dreamsForLittleslqMAX5 from '../assets/images/projects/dreams-for-littles/dfl-5-lqMAX.avif';
+
+import dreamsForLittlesrMIN1 from '../assets/images/projects/dreams-for-littles/dfl-1-rMIN.avif';
+import dreamsForLittlesrMIN2 from '../assets/images/projects/dreams-for-littles/dfl-2-rMIN.avif';
+import dreamsForLittlesrMIN3 from '../assets/images/projects/dreams-for-littles/dfl-3-rMIN.avif';
+import dreamsForLittlesrMIN4 from '../assets/images/projects/dreams-for-littles/dfl-4-rMIN.avif';
+import dreamsForLittlesrMIN5 from '../assets/images/projects/dreams-for-littles/dfl-5-rMIN.avif';
+
+import dreamsForLittlesrMAX1 from '../assets/images/projects/dreams-for-littles/dfl-1-rMAX.avif';
+import dreamsForLittlesrMAX2 from '../assets/images/projects/dreams-for-littles/dfl-2-rMAX.avif';
+import dreamsForLittlesrMAX3 from '../assets/images/projects/dreams-for-littles/dfl-3-rMAX.avif';
+import dreamsForLittlesrMAX4 from '../assets/images/projects/dreams-for-littles/dfl-4-rMAX.avif';
+import dreamsForLittlesrMAX5 from '../assets/images/projects/dreams-for-littles/dfl-5-rMAX.avif';
+
+type AllPhotosStructure = { [key: string]: ImagesVersionsInterface }
+
+const allPhotos: AllPhotosStructure = {
+    dreamsForLittles: {
+        thumbnail: [
+            dreamsForLittlesThumb1,
+            dreamsForLittlesThumb2,
+            dreamsForLittlesThumb3,
+            dreamsForLittlesThumb4,
+            dreamsForLittlesThumb5,
+            dreamsForLittlesVid1,
+        ],
+        lowerQualityMin: [
+            dreamsForLittleslqMIN1,
+            dreamsForLittleslqMIN2,
+            dreamsForLittleslqMIN3,
+            dreamsForLittleslqMIN4,
+            dreamsForLittleslqMIN5,
+            dreamsForLittlesVid1,
+        ],
+        lowerQualityMax: [
+            dreamsForLittleslqMAX1,
+            dreamsForLittleslqMAX2,
+            dreamsForLittleslqMAX3,
+            dreamsForLittleslqMAX4,
+            dreamsForLittleslqMAX5,
+            dreamsForLittlesVid1,
+        ],
+        reducedMin: [
+            dreamsForLittlesrMIN1,
+            dreamsForLittlesrMIN2,
+            dreamsForLittlesrMIN3,
+            dreamsForLittlesrMIN4,
+            dreamsForLittlesrMIN5,
+            dreamsForLittlesVid1,
+        ],
+        reducedMax: [
+            dreamsForLittlesrMAX1,
+            dreamsForLittlesrMAX2,
+            dreamsForLittlesrMAX3,
+            dreamsForLittlesrMAX4,
+            dreamsForLittlesrMAX5,
+            dreamsForLittlesVid1,
+        ]
+    },
+    newsHub: {
+        thumbnail: [
+            newsHubVid1,
+        ],
+        lowerQualityMin: [
+            newsHubVid1,
+        ],
+        lowerQualityMax: [
+            newsHubVid1,
+        ],
+        reducedMin: [
+            newsHubVid1,
+        ],
+        reducedMax: [
+            newsHubVid1,
+        ]
+    },
+    scratchJrWeb: {
+        thumbnail: [
+            scratchJrWebThumb1,
+            scratchJrWebThumb2,
+            scratchJrWebThumb3,
+        ],
+        lowerQualityMin: [
+            scratchJrWeblqMIN1,
+            scratchJrWeblqMIN2,
+            scratchJrWeblqMIN3,
+        ],
+        lowerQualityMax: [
+            scratchJrWeblqMAX1,
+            scratchJrWeblqMAX2,
+            scratchJrWeblqMAX3,
+        ],
+        reducedMin: [
+            scratchJrWebrMIN1,
+            scratchJrWebrMIN2,
+            scratchJrWebrMIN3,
+        ],
+        reducedMax: [
+            scratchJrWebrMAX1,
+            scratchJrWebrMAX2,
+            scratchJrWebrMAX3,
+        ]
+    },
+    sensorsDashboard: {
+        thumbnail: [
+            sensorsDashboardThumb1,
+            sensorsDashboardVid1,
+            sensorsDashboardVid2,
+        ],
+        lowerQualityMin: [
+            sensorsDashboardlqMIN1,
+            sensorsDashboardVid1,
+            sensorsDashboardVid2,
+        ],
+        lowerQualityMax: [
+            sensorsDashboardlqMAX1,
+            sensorsDashboardVid1,
+            sensorsDashboardVid2,
+        ],
+        reducedMin: [
+            sensorsDashboardrMIN1,
+            sensorsDashboardVid1,
+            sensorsDashboardVid2,
+        ],
+        reducedMax: [
+            sensorsDashboardrMAX1,
+            sensorsDashboardVid1,
+            sensorsDashboardVid2,
+        ]
+    },
+    blocksToPythonTranspiler: {
+        thumbnail: [
+            blocksToPythonThumb1,
+            blocksToPythonThumb2,
+            blocksToPythonVid1,
+        ],
+        lowerQualityMin: [
+            blocksToPythonlqMIN1,
+            blocksToPythonlqMIN2,
+            blocksToPythonVid1,
+        ],
+        lowerQualityMax: [
+            blocksToPythonlqMAX1,
+            blocksToPythonlqMAX2,
+            blocksToPythonVid1,
+        ],
+        reducedMin: [
+            blocksToPythonrMIN1,
+            blocksToPythonrMIN2,
+            blocksToPythonVid1,
+        ],
+        reducedMax: [
+            blocksToPythonrMAX1,
+            blocksToPythonrMAX2,
+            blocksToPythonVid1,
+        ]
+    },
+    cogMiniGames: {
+        thumbnail: [
+            miniGamesThumb1,
+            miniGamesThumb2,
+            miniGamesThumb3,
+            miniGamesVid1,
+            miniGamesVid2,
+            miniGamesVid3,
+        ],
+        lowerQualityMin: [
+            miniGameslqMIN1,
+            miniGameslqMIN2,
+            miniGameslqMIN3,
+            miniGamesVid1,
+            miniGamesVid2,
+            miniGamesVid3,
+        ],
+        lowerQualityMax: [
+            miniGameslqMAX1,
+            miniGameslqMAX2,
+            miniGameslqMAX3,
+            miniGamesVid1,
+            miniGamesVid2,
+            miniGamesVid3,
+        ],
+        reducedMin: [
+            miniGamesrMIN1,
+            miniGamesrMIN2,
+            miniGamesrMIN3,
+            miniGamesVid1,
+            miniGamesVid2,
+            miniGamesVid3,
+        ],
+        reducedMax: [
+            miniGamesrMAX1,
+            miniGamesrMAX2,
+            miniGamesrMAX3,
+            miniGamesVid1,
+            miniGamesVid2,
+            miniGamesVid3,
+        ]
+    },
+    codeAssess: {
+        thumbnail: [
+            codeAssessThumb1,
+            codeAssessThumb2,
+            codeAssessThumb3,
+            codeAssessThumb4,
+            codeAssessThumb5,
+            codeAssessThumb6,
+            codeAssessVideo1,
+            codeAssessVideo2,
+            codeAssessVideo3,
+            codeAssessVideo4,
+        ],
+        lowerQualityMin: [
+            codeAssesslqMIN1,
+            codeAssesslqMIN2,
+            codeAssesslqMIN3,
+            codeAssesslqMIN4,
+            codeAssesslqMIN5,
+            codeAssesslqMIN6,
+            codeAssessVideo1,
+            codeAssessVideo2,
+            codeAssessVideo3,
+            codeAssessVideo4,
+        ],
+        lowerQualityMax: [
+            codeAssesslqMAX1,
+            codeAssesslqMAX2,
+            codeAssesslqMAX3,
+            codeAssesslqMAX4,
+            codeAssesslqMAX5,
+            codeAssesslqMAX6,
+            codeAssessVideo1,
+            codeAssessVideo2,
+            codeAssessVideo3,
+            codeAssessVideo4,
+        ],
+        reducedMin: [
+            codeAssessrMIN1,
+            codeAssessrMIN2,
+            codeAssessrMIN3,
+            codeAssessrMIN4,
+            codeAssessrMIN5,
+            codeAssessrMIN6,
+            codeAssessVideo1,
+            codeAssessVideo2,
+            codeAssessVideo3,
+            codeAssessVideo4,
+        ],
+        reducedMax: [
+            codeAssessrMAX1,
+            codeAssessrMAX2,
+            codeAssessrMAX3,
+            codeAssessrMAX4,
+            codeAssessrMAX5,
+            codeAssessrMAX6,
+            codeAssessVideo1,
+            codeAssessVideo2,
+            codeAssessVideo3,
+            codeAssessVideo4,
+        ]
+    },
+    learningPortal: {
+        thumbnail: [
+            learningPortalThumb1,
+            learningPortalThumb2,
+            learningPortalVideo1,
+        ],
+        lowerQualityMin: [
+            learningPortallqMIN1,
+            learningPortallqMIN2,
+            learningPortalVideo1,
+        ],
+        lowerQualityMax: [
+            learningPortallqMAX1,
+            learningPortallqMAX2,
+            learningPortalVideo1,
+        ],
+        reducedMin: [
+            learningPortallrMIN1,
+            learningPortallrMIN2,
+            learningPortalVideo1,
+        ],
+        reducedMax: [
+            learningPortallrMAX1,
+            learningPortallrMAX2,
+            learningPortalVideo1,
+        ]
+    },
+    martyController: {
+        thumbnail: [
+            martyControllerThumb1,
+            martyControllerThumb2,
+            martyControllerThumb3,
+            martyControllerThumb4,
+            martyControllerVideo1,
+        ],
+        lowerQualityMin: [
+            martyControllerlqMIN1,
+            martyControllerlqMIN2,
+            martyControllerlqMIN3,
+            martyControllerlqMIN4,
+            martyControllerVideo1,
+        ],
+        lowerQualityMax: [
+            martyControllerlqMAX1,
+            martyControllerlqMAX2,
+            martyControllerlqMAX3,
+            martyControllerlqMAX4,
+            martyControllerVideo1,
+        ],
+        reducedMin: [
+            martyControllerrMIN1,
+            martyControllerrMIN2,
+            martyControllerrMIN3,
+            martyControllerrMIN4,
+            martyControllerVideo1,
+        ],
+        reducedMax: [
+            martyControllerrMAX1,
+            martyControllerrMAX2,
+            martyControllerrMAX3,
+            martyControllerrMAX4,
+            martyControllerVideo1,
+        ]
+    },
     worldAtlas: {
         thumbnail: [
             worldAtlasThumb1,
@@ -528,7 +1060,7 @@ const allPhotos: allPhotosStructure = {
             networkGraphThumb3,
             networkGraphVid1,
             networkGraphVid2,
-        ],  
+        ],
         lowerQualityMin: [
             networkGraphlqMIN1,
             networkGraphlqMIN2,
@@ -558,7 +1090,38 @@ const allPhotos: allPhotosStructure = {
             networkGraphVid2,
         ]
     },
-
+    machineLearningRobotical: {
+        thumbnail: [
+            machineLearningRoboticalThumb1,
+            machineLearningRoboticalThumb2,
+            machineLearningRoboticalThumb3,
+            machineLearningRoboticallVideo1,
+        ],
+        lowerQualityMin: [
+            machineLearningRoboticallqMIN1,
+            machineLearningRoboticallqMIN2,
+            machineLearningRoboticallqMIN3,
+            machineLearningRoboticallVideo1,
+        ],
+        lowerQualityMax: [
+            machineLearningRoboticallqMAX1,
+            machineLearningRoboticallqMAX2,
+            machineLearningRoboticallqMAX3,
+            machineLearningRoboticallVideo1,
+        ],
+        reducedMin: [
+            machineLearningRoboticallrMIN1,
+            machineLearningRoboticallrMIN2,
+            machineLearningRoboticallrMIN3,
+            machineLearningRoboticallVideo1,
+        ],
+        reducedMax: [
+            machineLearningRoboticallrMAX1,
+            machineLearningRoboticallrMAX2,
+            machineLearningRoboticallrMAX3,
+            machineLearningRoboticallVideo1,
+        ]
+    }
 };
 
 
