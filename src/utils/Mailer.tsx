@@ -10,7 +10,7 @@ class Mailer {
     private visitorToken: string;
     private mailerUserID: string = mailerUserID;
     private mailerAccessToken: string = "fe82af662cae294ec7f2a6e552ba451a";
-    private mailerServiceID: string = "service_5qy5wpa";
+    private mailerServiceID: string = "service_eouzf4y";
     private mailerTemplateID: string = "template_hznu29r";
 
     constructor(oldTime: string | null, dataToSend: string, visitorToken: string) {

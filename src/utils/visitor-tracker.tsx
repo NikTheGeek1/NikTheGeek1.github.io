@@ -57,6 +57,16 @@ const visitorDemographicParser = (dems: string) => {
 };
 
 const emailSenderHelper = (oldTime: string | null, dataToSend: string, visitorToken: string) => {
-    const mailer = new Mailer(oldTime, dataToSend, visitorToken);
+    const mailer = new Mailer(oldTime, beautifyJSON(dataToSend), visitorToken);
     mailer.sendEmail();
+};
+
+const beautifyJSON = (jsonString: string) => {
+    try {
+        const jsonObj = JSON.parse(jsonString);
+        return JSON.stringify(jsonObj, null, 2);
+    } catch (error) {
+        console.error("Invalid JSON string:", error);
+        return jsonString; // Return the original string if parsing fails
+    }
 };
