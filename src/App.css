@@ -2,16 +2,16 @@
 :root {
   /* COLOURS */
     /* --colour-primary: #74f9ff; */
-    --colour-primary: #9297c4;
-    --colour-secondary: black;
-    --colour-tertiary: #9368b7;
-    --colour-quaternary: #aa3e98;
-    --colour-gray-blu: #99C3D4;
-    --colour-blue-gray: #a8d8ea;
-    --colour-gray-1: #333;
-    --colour-gray-2: #6e7376;
-    --colour-gray-3: #eee;
-    --colour-white: #fff;
+    --colour-primary: #1f2937;
+    --colour-secondary: #0f172a;
+    --colour-tertiary: #6366f1;
+    --colour-quaternary: #f472b6;
+    --colour-gray-blu: #94a3b8;
+    --colour-blue-gray: #cbd5f5;
+    --colour-gray-1: #e2e8f0;
+    --colour-gray-2: #94a3b8;
+    --colour-gray-3: #cbd5f5;
+    --colour-white: #f8fafc;
 
     /* FONT SIZES */
     --hugest-font-size: 6.5rem;
@@ -113,14 +113,15 @@
 
 
   html {
-    /* This defines what 1rem is: 1rem = 10px; 10/16 = 62.5 */
     font-size: 62.5%; 
-    background-color: black;
+    background-color: #020617;
 }
 
 body {
     box-sizing: border-box;
     font-size: var(--primary-font-size);
+    color: var(--colour-white);
+    background: radial-gradient(circle at top, rgba(15, 23, 42, 0.6), transparent 50%), #020817;
 }
 
 body::-webkit-scrollbar {
@@ -168,8 +169,6 @@ body::-webkit-scrollbar {
     /* font-size: 30%;  */
   }
 }
-
-
 
 
 

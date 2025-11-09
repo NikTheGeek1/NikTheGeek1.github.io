@@ -1,11 +1,11 @@
 import './LandingPage.css';
 import ThreeD from '../../components/ThreeD/ThreeD';
-import PrimaryHeading from '../../components/Headings/PrimaryHeading/PrimaryHeading';
-import SecondaryHeading from '../../components/Headings/SecondaryHeading/SecondaryHeading';
 import { useEffect, useState } from 'react';
 import Profile from '../../containers/Profile/Profile';
+import PrimaryHeading from '../../components/Headings/PrimaryHeading/PrimaryHeading';
+import SecondaryHeading from '../../components/Headings/SecondaryHeading/SecondaryHeading';
 
-interface ExitingClasses { primaryHeading: string, secondaryHeading: string, clickOnSuzanne: string };
+interface ExitingClasses { primaryHeading: string, clickOnSuzanne: string };
 const LandingPage = () => {
 
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
@@ -22,12 +22,29 @@ const LandingPage = () => {
         }
     }, [monkeyClicked]);
 
-    let exitingClasses: ExitingClasses = { primaryHeading: '', secondaryHeading: '', clickOnSuzanne: '' };
+    let exitingClasses: ExitingClasses = { primaryHeading: '', clickOnSuzanne: '' };
     if (monkeyClicked) {
         exitingClasses["primaryHeading"] = "primary-heading-exitting-animation";
-        exitingClasses["secondaryHeading"] = "secondary-heading-exitting-animation";
         exitingClasses["clickOnSuzanne"] = "click-on-suzanne-exiting-animation";
     }
+
+    const focusAreas = [
+        {
+            icon: "🧭",
+            title: "Leadership",
+            copy: "Lead cross-functional squads, coach engineers, and keep delivery rituals lightweight but predictable."
+        },
+        {
+            icon: "🧱",
+            title: "Architecture",
+            copy: "Own the technical strategy for learning platforms that blend robotics, ML, and content systems."
+        },
+        {
+            icon: "🚀",
+            title: "Product Delivery",
+            copy: "Translate research insights into shipped features, balancing experimentation with measurable outcomes."
+        }
+    ];
 
     return (
         <main className={"landing-page-main " + landingPageClass}>
@@ -36,13 +53,25 @@ const LandingPage = () => {
             </div>
             {!exitingAnimationFinished ?
                 <>
-                    <div className={"landing-page-title " + exitingClasses.primaryHeading}>
-                        <PrimaryHeading content="Welcome to my" />
-                    </div>
-                    <div className={"landing-page-subtitle " + exitingClasses.secondaryHeading}>
-                        <SecondaryHeading content="Personal space" />
-                        <p className={"click-on-suzanne " + exitingClasses.clickOnSuzanne}>(Click on Suzanne)</p>
-                    </div>
+                    <section className={"landing-hero " + exitingClasses.primaryHeading}>
+                        <PrimaryHeading content="Nikos Theodoropoulos" />
+                        <SecondaryHeading content="Lead Developer & Product Engineer" />
+                        <p className="landing-hero-summary">
+                            I partner with educators, researchers, and product teams to ship resilient platforms that make robotics and learning more accessible.
+                        </p>
+                        <div className="landing-hero-focus">
+                            {focusAreas.map(area => (
+                                <article className="landing-hero-focus-card" key={area.title}>
+                                    <div className="landing-hero-focus-icon">{area.icon}</div>
+                                    <h3>{area.title}</h3>
+                                    <p>{area.copy}</p>
+                                </article>
+                            ))}
+                        </div>
+                        <div className="landing-hero-ctas">
+                            <button type="button" className="landing-hero-cta" onClick={() => setMonkeyClicked(true)}>View profile</button>
+                        </div>
+                    </section>
                 </>
                 :
                 <>

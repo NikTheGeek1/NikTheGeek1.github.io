@@ -1,12 +1,56 @@
 .projects-container {
   display: grid;
-  grid-template-rows: min-content min-content;
-  grid-column: span 4;
-
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: min-content;
+  grid-column: span 4;
   column-gap: var(--bigest-gap);
   row-gap: var(--bigest-gap);
   animation: display 1s forwards;
+}
+
+.projects-intro {
+  grid-column: span 4;
+  background: rgba(7, 10, 19, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.6rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  color: var(--colour-white);
+  display: grid;
+  gap: 1.2rem;
+}
+
+.projects-intro h2 {
+  margin: 0;
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+}
+
+.projects-intro p {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--colour-gray-3);
+}
+
+.projects-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.2rem;
+}
+
+.projects-stats li {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.projects-stats strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--colour-white);
+  margin-bottom: 0.4rem;
 }

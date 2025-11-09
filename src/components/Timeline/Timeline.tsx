@@ -7,15 +7,9 @@ import GenericBox from '../ProfileBoxes/GenericBox/GenericBox';
 import TimelineTexts from '../../html-texts/Timeline';
 import BoxPlainText from '../Texts/BoxText';
 import LatestNewsBox from '../ProfileBoxes/LatestNewsBox/LatestNewsBox';
-import codeclanIcon from '../../assets/images/codeclan-icon.jpeg';
 import SocialNetworks from '../SocialNetworks/SocialNetworks';
-import showcase from '../../assets/images/showcase-white.png';
 import regularTimelinePostIcon from '../../assets/svgs/regular-timeline-post.svg';
-import BlogPostBox from '../BlogPost/BlogPostBox/BlogPostBox';
-import PhotoGalleryBlog from '../BlogPost/Posts/PhotoGalleryBlog/PhotoGalleryBlog';
-import timelinePhotos from '../../imports/import-timeline-photos';
-import '../BlogPost/ContentsTable.css';
-import '../BlogPost/Section.css';
+import showcaseIcon from '../../assets/images/showcase-white.png';
 
 const Timeline = () => {
     const visitorToken = useStore(false)[0].visitorToken;
@@ -23,31 +17,48 @@ const Timeline = () => {
     useEffect(() => {
         visitorToken && storeVisitorLocation(visitorToken, LOCATIONS_ENUM.TIMELINE);
     }, []);
+
+    const highlightEntries = [
+        {
+            title: "Platform modernisation",
+            date: new Date("2024-05-01"),
+            icon: showcaseIcon,
+            copy: TimelineTexts.platformModernisation
+        },
+        {
+            title: "Engineering leadership rituals",
+            date: new Date("2023-11-01"),
+            icon: regularTimelinePostIcon,
+            copy: TimelineTexts.leadershipRituals
+        },
+        {
+            title: "Telemetry & ML enablement",
+            date: new Date("2023-04-01"),
+            icon: regularTimelinePostIcon,
+            copy: TimelineTexts.telemetryAndML
+        }
+    ];
     
     return (
         <>
-            <GenericBox title="Intro" rowSpan={1} columnSpan={3} titleType="title">
+            <GenericBox title="About" rowSpan={2} columnSpan={2} titleType="title">
                 <BoxPlainText>{TimelineTexts.intro}</BoxPlainText>
             </GenericBox>
-            <GenericBox title="Other networks" rowSpan={1} columnSpan={1} titleType="subtitle">
+            <GenericBox title="Recent highlights" rowSpan={2} columnSpan={2} titleType="title">
+                {highlightEntries.map(entry => (
+                    <LatestNewsBox
+                        key={entry.title}
+                        title={entry.title}
+                        date={entry.date}
+                        icon={entry.icon}
+                    >
+                        {entry.copy}
+                    </LatestNewsBox>
+                ))}
+            </GenericBox>
+            <GenericBox title="Other networks" rowSpan={1} columnSpan={4} titleType="subtitle">
                 <SocialNetworks />
             </GenericBox>
-            <GenericBox title="Latest news" rowSpan={3} columnSpan={3} titleType="title">
-                <LatestNewsBox title="Notice of Intention To Submit" date={new Date("4/28/2021")} icon={regularTimelinePostIcon} >
-                    {TimelineTexts.NITS}
-                </LatestNewsBox>
-                <LatestNewsBox title="Showcase presentation" date={new Date("3/24/2021")} icon={showcase} >
-                    {TimelineTexts.showcasePresentation}
-                </LatestNewsBox>
-                <LatestNewsBox title="CodeClan graduation" date={new Date("3/5/2021")} icon={codeclanIcon} photos={timelinePhotos.codeclanGraduation} >
-                    {TimelineTexts.codeClanGraduation}
-                </LatestNewsBox>
-            </GenericBox>
-            <BlogPostBox title="Gallery" rowSpan={1} columnSpan={1} subtitle="Creating the gallery component used in this site (working on it).">
-                <PhotoGalleryBlog />
-            </BlogPostBox>
-            <BlogPostBox title="Meet Suzanne" rowSpan={1} columnSpan={1} subtitle="Creating the 3D monkey used in this site (working on it).">
-            </BlogPostBox>
         </>
     );
 };

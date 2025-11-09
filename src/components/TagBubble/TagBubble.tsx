@@ -1,10 +1,30 @@
 import './TagBubble.css';
 
-const TagBubble = ({title, link}: {title:string, link?: string}) => {
+type TagBubbleProps = {
+    title: string;
+    link?: string;
+    tone?: 'light' | 'dark';
+}
+
+const TagBubble = ({ title, link, tone = 'dark' }: TagBubbleProps) => {
+    const classes = `tag-bubble-container tag-bubble-${tone}`;
 
     return (
-        <div className="tag-bubble-container">
-            <a className="tag-bubble" target="_blank" href={link}>{title}</a>
+        <div className={classes}>
+            {link ? (
+                <a
+                    className="tag-bubble"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={link}
+                >
+                    {title}
+                </a>
+            ) : (
+                <span className="tag-bubble">
+                    {title}
+                </span>
+            )}
         </div>
     );
 };

@@ -2,6 +2,14 @@ import os
 from PIL import Image
 import pillow_avif
 
+try:
+    from pillow_heif import register_heif_opener
+
+    register_heif_opener()
+    HEIF_SUPPORTED = True
+except ImportError:
+    HEIF_SUPPORTED = False
+
 def create_thumbnail(old_img_name):
     new_img_name = old_img_name[0:old_img_name.find('.')] + "-thumbnail.avif"
     img = Image.open(folder_path + "/" + old_img_name)
@@ -46,7 +54,7 @@ def create_image_versions(old_img_name):
     create_reduced_maximised(old_img_name)
     create_lower_quality_maximised(old_img_name)
 
-folders = ["dreams-for-littles"]
+folders = ["xcovers"]
 specific_file = None  # Add the name of the image here
 
 if specific_file is not None: 
@@ -57,5 +65,12 @@ else:
         folder_path = "/Users/ntheodoropoulos/Projects/NikTheGeek1.github.io/src/assets/images/projects/" + folder
         files_in_dir = os.listdir(folder_path)
         for file_in_dir in files_in_dir:
-            if file_in_dir.lower().endswith(('.png', '.jpg', '.jpeg')):
+            file_lower = file_in_dir.lower()
+            if file_lower.endswith('.heic') and not HEIF_SUPPORTED:
+                print(
+                    f"Skipping {file_in_dir}: install pillow-heif to enable HEIC support."
+                )
+                continue
+
+            if file_lower.endswith(('.png', '.jpg', '.jpeg', '.heic')):
                 create_image_versions(file_in_dir)

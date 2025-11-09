@@ -16,3 +16,20 @@
     white-space: nowrap;
     grid-column: span 4;
 }
+
+.section-title-collapsible {
+    grid-template-columns: 3rem 1fr auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.section-title-collapsible:focus-visible {
+    outline: 2px solid var(--colour-white);
+    outline-offset: 2px;
+}
+
+.section-title-indicator {
+    justify-self: end;
+    font-size: 2rem;
+    line-height: 1;
+}

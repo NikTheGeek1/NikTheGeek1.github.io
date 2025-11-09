@@ -55,6 +55,14 @@ class ProjectsText {
         <p className={styles.paragraph}>A custom web crawler gathers data from around 150,000 users, with Node.js handling back-end processing and caching for optimized performance. Users can explore and analyze their social networks in an intuitive and visually appealing way.</p>
     </>;
 
+    public static diyAlarmSystemExpanded = <>
+        <p className={styles.paragraph}>Smart Home Demo is a DIY alarm system built around an ESP32 paired with an ESP32-CAM module, bringing up NVS, logging, configuration, Wi-Fi provisioning, the control loop, and the UI services in sequence so every dependency is stable before motion events are evaluated.</p>
+        <p className={styles.paragraph}>The FreeRTOS loop owns magnetic reed switches on doors and windows, a PIR motion sensor, a BH1750 light sensor, current-limited LED indicators, a relay-driven siren, and inline resistors that tame the mixed-voltage runs, while the camera captures snapshots whenever those inputs cross the configured lux and hold thresholds.</p>
+        <p className={styles.paragraph}>Runtime tunables live in NVS-backed JSON patches, but the highlight is the communications stack: NimBLE exposes the provisioning service over classic GATT characteristics for SSID, passphrase, scan results, and state notifications, and ESP-NETIF rides Wi-Fi with a lightweight HTTP/JSON channel that dashboards poll for sensor telemetry and overrides.</p>
+        <p className={styles.paragraph}>On the frontend, a TypeScript Web Bluetooth helper exports a `SmartHomeBleClient` EventTarget with filters, fallback UUIDs, and helpers to read, write, provision, and subscribe, while the playground app rebuilds the bundle, drives overrides, streams motion/light/log data, and mirrors the siren controls.</p>
+        <p className={styles.paragraph}>Tooling ties it together with an HTTP flash bridge that proxies to `idf.py`, an ESP-IDF sourcing CLI, markdown walkthroughs for hardware bring-up, and a Bleak-based GATT explorer—the workflow is flash, pair over BLE, verify Wi-Fi telemetry, and close with the Puppeteer end-to-end run.</p>
+    </>;
+
     public static machineLearningRoboticalExpanded = <>
         <p className={styles.paragraph}>A tool for creating machine learning models in Scratch without requiring coding or prior expertise. These models can be integrated with Sprites or Robots to respond to predictions.</p>
         <p className={styles.paragraph}>Users can build models in three steps: data collection, model training, and prediction.</p>
@@ -137,6 +145,7 @@ class ProjectsText {
     public static onlineExperiment1 = getTxtFromJsx(ProjectsText.onlineExperiment1Expanded);
     public static blackJack = getTxtFromJsx(ProjectsText.blackJackExpanded);
     public static networkGraph = getTxtFromJsx(ProjectsText.networkGraphExpanded);
+    public static diyAlarmSystem = getTxtFromJsx(ProjectsText.diyAlarmSystemExpanded);
     public static machineLearningRobotical = getTxtFromJsx(ProjectsText.machineLearningRoboticalExpanded);
     public static martyController = getTxtFromJsx(ProjectsText.martyControllerExpanded);
     public static learningPortal = getTxtFromJsx(ProjectsText.learningPortalExpanded);

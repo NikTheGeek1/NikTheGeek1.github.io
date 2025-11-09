@@ -32,8 +32,11 @@ const Experience = () => {
           children={[
             <React.Fragment key={1}>
               <DetailsItem>
-                Leading the development team and ensuring that projects are completed on time, within budget, and to
-                the required quality standards
+                Own the engineering roadmap across web, mobile, and data squads—partnering with product leadership on OKRs,
+                sequencing initiatives, and unblocking delivery when priorities shift.
+              </DetailsItem>
+              <DetailsItem>
+                Coach and mentor engineers through pairing, architecture reviews, and lightweight rituals that emphasise outcomes over ceremony.
               </DetailsItem>
               <DetailsItem>
                 Extra responsibilities: <TagBubble title="DevOps" />
@@ -51,7 +54,10 @@ const Experience = () => {
           children={[
             <React.Fragment key={1}>
               <DetailsItem>
-                Phone and web applications
+                Led the delivery of phone and web applications that connected classroom robots, content, and teacher tooling.
+              </DetailsItem>
+              <DetailsItem>
+                Introduced engineering playbooks (deployment pipelines, shared component library, observability starter kits) that are still used today.
               </DetailsItem>
               <DetailsItem>
                 Technologies used daily: <TagBubble title="REST APIs" />

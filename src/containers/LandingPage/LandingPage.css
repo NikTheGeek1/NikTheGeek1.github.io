@@ -1,18 +1,4 @@
 
-@keyframes move-out-to-left {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    20% {
-        transform: translateX(2rem) skewX(-10deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-40rem) skewX(10deg);
-    }
-}
-
 @keyframes move-out-to-right {
     0% {
         opacity: 1;
@@ -79,8 +65,11 @@
 }
 
 .landing-page-main-before-animation {
-    grid-template-areas: "title" "subtitle";
-    grid-template-rows: 65% 35%;
+    grid-template-areas: ". hero .";
+    grid-template-columns: minmax(2rem, 1fr) minmax(auto, 120rem) minmax(2rem, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: clamp(2rem, 4vw, 6rem);
 }
 
 .landing-page-main-after-animation {
@@ -90,28 +79,95 @@
 
 .canvas-container-landing-page {
     position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 }
 
 .primary-heading-exitting-animation {
     animation: move-out-to-right 1.8s ease-out forwards !important;
 }
 
-.secondary-heading-exitting-animation {
-    animation: move-out-to-left 1.8s ease-out forwards !important;
+.landing-hero {
+    grid-area: hero;
+    background: rgba(7, 10, 19, 0.85);
+    border-radius: 1.6rem;
+    padding: clamp(2rem, 5vw, 6rem);
+    max-width: 96rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    color: var(--colour-white);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    animation: move-in-from-left 1.5s ease-in;
 }
 
-.landing-page-title {
-    grid-area: title;
-    text-align: center;
-    align-self: end;
-    animation: move-in-from-left 2s ease-in;
+.landing-hero-summary {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--colour-gray-1);
 }
 
-.landing-page-subtitle {
-    grid-area: subtitle;
-    text-align: center;
-    animation: move-in-from-right 2s ease-in;
+.landing-hero-focus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.6rem;
+}
+
+.landing-hero-focus-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.2rem;
+    padding: 1.6rem;
+    min-height: 13rem;
+}
+
+.landing-hero-focus-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+}
+
+.landing-hero-focus-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--colour-gray-3);
+}
+
+.landing-hero-focus-card p {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--colour-white);
+}
+
+.landing-hero-ctas {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.landing-hero-cta {
+    background: linear-gradient(120deg, var(--colour-tertiary), var(--colour-quaternary));
+    color: var(--colour-white);
+    border: none;
+    border-radius: 999px;
+    font-size: 1.6rem;
+    padding: 1.2rem 2.8rem;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.landing-hero-cta:hover {
+    opacity: 0.9;
 }
 
 .profile-section {
@@ -133,9 +189,11 @@
 }
 
 .click-on-suzanne {
-    font-family: Josefin Slab;
-    color: white;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: var(--colour-gray-2);
     animation: move-in-from-bottom 2s ease-in;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
 }
 
 .click-on-suzanne-exiting-animation {

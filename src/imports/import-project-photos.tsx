@@ -143,30 +143,30 @@ import rlrMAX3 from '../assets/images/projects/reinforcement-learning/rl-3-rMAX.
 import rlrMAX4 from '../assets/images/projects/reinforcement-learning/rl-4-rMAX.jpg';
 
 // xcovers
-import xcoversThumb1 from '../assets/images/projects/xcovers/xcovers-1-thumbnail.jpg';
-import xcoversThumb2 from '../assets/images/projects/xcovers/xcovers-2-thumbnail.jpg';
-import xcoversThumb3 from '../assets/images/projects/xcovers/xcovers-3-thumbnail.jpg';
-import xcoversThumb4 from '../assets/images/projects/xcovers/xcovers-4-thumbnail.jpg';
+import xcoversThumb1 from '../assets/images/projects/xcovers/xcovers1-thumbnail.avif';
+import xcoversThumb2 from '../assets/images/projects/xcovers/xcovers2-thumbnail.avif';
+import xcoversThumb3 from '../assets/images/projects/xcovers/xcovers3-thumbnail.avif';
+import xcoversThumb4 from '../assets/images/projects/xcovers/xcovers4-thumbnail.avif';
 
-import xcoverslqMIN1 from '../assets/images/projects/xcovers/xcovers-1-lqMIN.jpg';
-import xcoverslqMIN2 from '../assets/images/projects/xcovers/xcovers-2-lqMIN.jpg';
-import xcoverslqMIN3 from '../assets/images/projects/xcovers/xcovers-3-lqMIN.jpg';
-import xcoverslqMIN4 from '../assets/images/projects/xcovers/xcovers-4-lqMIN.jpg';
+import xcoverslqMIN1 from '../assets/images/projects/xcovers/xcovers1-lqMIN.avif';
+import xcoverslqMIN2 from '../assets/images/projects/xcovers/xcovers2-lqMIN.avif';
+import xcoverslqMIN3 from '../assets/images/projects/xcovers/xcovers3-lqMIN.avif';
+import xcoverslqMIN4 from '../assets/images/projects/xcovers/xcovers4-lqMIN.avif';
 
-import xcoverslqMAX1 from '../assets/images/projects/xcovers/xcovers-1-lqMAX.jpg';
-import xcoverslqMAX2 from '../assets/images/projects/xcovers/xcovers-2-lqMAX.jpg';
-import xcoverslqMAX3 from '../assets/images/projects/xcovers/xcovers-3-lqMAX.jpg';
-import xcoverslqMAX4 from '../assets/images/projects/xcovers/xcovers-4-lqMAX.jpg';
+import xcoverslqMAX1 from '../assets/images/projects/xcovers/xcovers1-lqMAX.avif';
+import xcoverslqMAX2 from '../assets/images/projects/xcovers/xcovers2-lqMAX.avif';
+import xcoverslqMAX3 from '../assets/images/projects/xcovers/xcovers3-lqMAX.avif';
+import xcoverslqMAX4 from '../assets/images/projects/xcovers/xcovers4-lqMAX.avif';
 
-import xcoversrMIN1 from '../assets/images/projects/xcovers/xcovers-1-rMIN.jpg';
-import xcoversrMIN2 from '../assets/images/projects/xcovers/xcovers-2-rMIN.jpg';
-import xcoversrMIN3 from '../assets/images/projects/xcovers/xcovers-3-rMIN.jpg';
-import xcoversrMIN4 from '../assets/images/projects/xcovers/xcovers-4-rMIN.jpg';
+import xcoversrMIN1 from '../assets/images/projects/xcovers/xcovers1-rMIN.avif';
+import xcoversrMIN2 from '../assets/images/projects/xcovers/xcovers2-rMIN.avif';
+import xcoversrMIN3 from '../assets/images/projects/xcovers/xcovers3-rMIN.avif';
+import xcoversrMIN4 from '../assets/images/projects/xcovers/xcovers4-rMIN.avif';
 
-import xcoversrMAX1 from '../assets/images/projects/xcovers/xcovers-1-rMAX.jpg';
-import xcoversrMAX2 from '../assets/images/projects/xcovers/xcovers-2-rMAX.jpg';
-import xcoversrMAX3 from '../assets/images/projects/xcovers/xcovers-3-rMAX.jpg';
-import xcoversrMAX4 from '../assets/images/projects/xcovers/xcovers-4-rMAX.jpg';
+import xcoversrMAX1 from '../assets/images/projects/xcovers/xcovers1-rMAX.avif';
+import xcoversrMAX2 from '../assets/images/projects/xcovers/xcovers2-rMAX.avif';
+import xcoversrMAX3 from '../assets/images/projects/xcovers/xcovers3-rMAX.avif';
+import xcoversrMAX4 from '../assets/images/projects/xcovers/xcovers4-rMAX.avif';
 
 // online experiment
 import oeThumb2 from '../assets/images/projects/online-experiment-1/oe-2-thumbnail.jpg';
@@ -468,6 +468,24 @@ import dreamsForLittlesrMAX3 from '../assets/images/projects/dreams-for-littles/
 import dreamsForLittlesrMAX4 from '../assets/images/projects/dreams-for-littles/dfl-4-rMAX.avif';
 import dreamsForLittlesrMAX5 from '../assets/images/projects/dreams-for-littles/dfl-5-rMAX.avif';
 
+// diy alarm system
+import diyAlarmSystemVideo1 from '../assets/images/projects/diy-alarm-system/vids/diy-alarm-system.mp4';
+
+import diyAlarmSystemThumb1 from '../assets/images/projects/diy-alarm-system/IMG_4645-thumbnail.avif';
+import diyAlarmSystemThumb2 from '../assets/images/projects/diy-alarm-system/IMG_4646-thumbnail.avif';
+
+import diyAlarmSystemlqMIN1 from '../assets/images/projects/diy-alarm-system/IMG_4645-lqMIN.avif';
+import diyAlarmSystemlqMIN2 from '../assets/images/projects/diy-alarm-system/IMG_4646-lqMIN.avif';
+
+import diyAlarmSystemlqMAX1 from '../assets/images/projects/diy-alarm-system/IMG_4645-lqMAX.avif';
+import diyAlarmSystemlqMAX2 from '../assets/images/projects/diy-alarm-system/IMG_4646-lqMAX.avif';
+
+import diyAlarmSystemrMIN1 from '../assets/images/projects/diy-alarm-system/IMG_4645-rMIN.avif';
+import diyAlarmSystemrMIN2 from '../assets/images/projects/diy-alarm-system/IMG_4646-rMIN.avif';
+
+import diyAlarmSystemrMAX1 from '../assets/images/projects/diy-alarm-system/IMG_4645-rMAX.avif';
+import diyAlarmSystemrMAX2 from '../assets/images/projects/diy-alarm-system/IMG_4646-rMAX.avif';
+
 type AllPhotosStructure = { [key: string]: ImagesVersionsInterface }
 
 const allPhotos: AllPhotosStructure = {
@@ -511,6 +529,33 @@ const allPhotos: AllPhotosStructure = {
             dreamsForLittlesrMAX4,
             dreamsForLittlesrMAX5,
             dreamsForLittlesVid1,
+        ]
+    },
+    diyAlarmSystem: {
+        thumbnail: [
+            diyAlarmSystemThumb1,
+            diyAlarmSystemThumb2,
+            diyAlarmSystemVideo1,
+        ],
+        lowerQualityMin: [
+            diyAlarmSystemlqMIN1,
+            diyAlarmSystemlqMIN2,
+            diyAlarmSystemVideo1,
+        ],
+        lowerQualityMax: [
+            diyAlarmSystemlqMAX1,
+            diyAlarmSystemlqMAX2,
+            diyAlarmSystemVideo1,
+        ],
+        reducedMin: [
+            diyAlarmSystemrMIN1,
+            diyAlarmSystemrMIN2,
+            diyAlarmSystemVideo1,
+        ],
+        reducedMax: [
+            diyAlarmSystemrMAX1,
+            diyAlarmSystemrMAX2,
+            diyAlarmSystemVideo1,
         ]
     },
     newsHub: {

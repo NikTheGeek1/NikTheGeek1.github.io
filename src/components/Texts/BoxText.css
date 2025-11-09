@@ -1,5 +1,5 @@
 .box-plain-text {
-    font-family: Hack;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     font-size: var(--small-font-size);
     line-height: 1.6;
 }

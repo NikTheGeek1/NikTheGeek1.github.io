@@ -8,7 +8,7 @@ import PhotosGallery from '../../../components/PhotosGallery/PhotosGallery';
 import { ImagesVersionsInterface } from '../../../types/images-versions-interface';
 import { useState } from 'react';
 
-const Project = ({ title, photos, gitHubRepoLink, website, details, expandedDetails, technologies, id, expanded = false }: {
+const Project = ({ title, photos, gitHubRepoLink, website, details, expandedDetails, technologies, id, expanded = false, headline }: {
     title: string,
     photos: ImagesVersionsInterface,
     gitHubRepoLink?: string,
@@ -17,26 +17,38 @@ const Project = ({ title, photos, gitHubRepoLink, website, details, expandedDeta
     expandedDetails: JSX.Element,
     technologies: string[],
     id: string,
-    expanded?: boolean
+    expanded?: boolean,
+    headline?: string
 }) => {
    const [isExpanded, setIsExpanded] = useState(expanded);
 
     const technologiesJSX = technologies.map(tech => {
-        return <TagBubble key={tech} title={tech}/>;
+        return <TagBubble key={tech} title={tech} tone="light" />;
     }); 
 
     return (
         <div className={isExpanded ? "project-container project-container-expanded" : "project-container"} id={id}>
-            <div className="project-title-container">{title}</div>
+            <header className="project-title-container">
+                <div>
+                    <p className="project-eyebrow">Case Study</p>
+                    <h3>{title}</h3>
+                </div>
+                {headline && (
+                    <div className="project-headline">
+                        <span>Impact</span>
+                        <p>{headline}</p>
+                    </div>
+                )}
+            </header>
             <div className="project-photos-container">
                 <PhotosGallery photos={photos} />
             </div>
             <div className="project-details-container">
                 <div className="project-details">
                     {isExpanded ? expandedDetails : <BoxText extraClasses='inline-text-box'>{truncateText(details, 300)} </BoxText>}
-                    <p style={{display: "inline", textDecoration: "underline", cursor: "pointer"}} onClick={() => setIsExpanded(!isExpanded)}>
-                        {isExpanded ? "Read less" : "Read more"}
-                    </p>
+                    <button className="project-toggle" onClick={() => setIsExpanded(!isExpanded)}>
+                        {isExpanded ? "Show less" : "Read case study"}
+                    </button>
                 </div>
                 <div className="project-technologies-container">
                     {technologiesJSX}
