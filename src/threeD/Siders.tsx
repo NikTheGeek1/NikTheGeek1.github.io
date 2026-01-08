@@ -1,4 +1,4 @@
-import * as THREE from 'three/build/three.module';
+import * as THREE from 'three';
 import Main from './Main';
 import SidersAnimation from './animations/siders/MovingBackAnimation';
 class Siders {

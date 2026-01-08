@@ -1,7 +1,7 @@
 import Main from './Main';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import * as THREE from 'three/build/three.module';
+import * as THREE from 'three';
 import Animations from './animations/monkey/AnimationFunctions';
 import MonkeyAnimation from './animations/monkey/MonkeyInitialAnimation';
 import MonkeyTopRightAnimation from './animations/monkey/MonkeyTopRightAnimation';

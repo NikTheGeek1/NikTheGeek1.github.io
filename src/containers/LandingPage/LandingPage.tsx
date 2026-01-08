@@ -1,6 +1,7 @@
 import './LandingPage.css';
 import ThreeD from '../../components/ThreeD/ThreeD';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Profile from '../../containers/Profile/Profile';
 import PrimaryHeading from '../../components/Headings/PrimaryHeading/PrimaryHeading';
 import SecondaryHeading from '../../components/Headings/SecondaryHeading/SecondaryHeading';
@@ -11,6 +12,7 @@ const LandingPage = () => {
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
     const [exitingAnimationFinished, setExitingAnimationFinished] = useState<boolean>(false);
     const [landingPageClass, setLandingPageClass] = useState<string>("landing-page-main-before-animation");
+    const location = useLocation();
 
     useEffect(() => {
         if (monkeyClicked) {
@@ -21,6 +23,14 @@ const LandingPage = () => {
             }, 1500);
         }
     }, [monkeyClicked]);
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const isDeepLink = location.pathname !== "/" || params.get("path") || params.get("project");
+        if (isDeepLink && !monkeyClicked) {
+            setMonkeyClicked(true);
+        }
+    }, [location.pathname, location.search, monkeyClicked]);
 
     let exitingClasses: ExitingClasses = { primaryHeading: '', clickOnSuzanne: '' };
     if (monkeyClicked) {

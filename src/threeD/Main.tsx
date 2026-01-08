@@ -1,4 +1,4 @@
-import * as THREE from 'three/build/three.module';
+import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module'
 import Lights from './Lights';
 import Monkey from './Monkey';

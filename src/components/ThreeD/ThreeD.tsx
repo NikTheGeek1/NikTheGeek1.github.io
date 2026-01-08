@@ -1,4 +1,5 @@
 import { createRef, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './ThreeD.css';
 import Main from '../../threeD/Main';
 import Monkey from 'src/threeD/Monkey';
@@ -6,6 +7,7 @@ import Monkey from 'src/threeD/Monkey';
 const ThreeD = ({ setMonkeyClicked }: { setMonkeyClicked: (clicked: boolean) => void }) => {
   const [monkeyInstance, setMonkeyInstance] = useState<Monkey | null>(null);
   const canvasRef = createRef<HTMLCanvasElement>();
+  const location = useLocation();
 
   useEffect(() => {
     if (canvasRef && canvasRef.current) {
@@ -17,15 +19,16 @@ const ThreeD = ({ setMonkeyClicked }: { setMonkeyClicked: (clicked: boolean) => 
 
   useEffect(() => {
     // get path parameter from the URL
-    const url = new URL(window.location.href);
-    const path = url.searchParams.get("path");
+    const params = new URLSearchParams(location.search);
+    const path = params.get("path");
+    const isDeepLink = location.pathname !== "/" || path || params.get("project");
     // if there is a path parameter, click on the monkey
-    if (path && monkeyInstance) {
+    if (isDeepLink && monkeyInstance) {
       setTimeout(() => {
         monkeyInstance.onClick(true);
       }, 2000);
     }
-  }, [monkeyInstance]);
+  }, [location.pathname, location.search, monkeyInstance]);
 
   return (
     <canvas ref={canvasRef} className="canvas"></canvas>

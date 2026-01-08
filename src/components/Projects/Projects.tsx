@@ -3,6 +3,7 @@ import './Projects.css';
 import ProjectsTexts from '../../html-texts/Projects';
 import allPhotos from '../../imports/import-project-photos';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useStore } from '../../hooks-store/store';
 import { storeVisitorLocation } from '../../utils/visitor-tracker';
 import { LOCATIONS_ENUM } from '../../hooks-store/stores/visitor-map';
@@ -90,6 +91,7 @@ const Projects = () => {
     const [expandedProject, setExpandedProject] = useState<string | null>(null);
     const [collapsedSections, setCollapsedSections] = useState<Record<SectionKey, boolean>>(defaultCollapsedState);
     const visitorToken = useStore(false)[0].visitorToken;
+    const location = useLocation();
 
     const toggleSection = (sectionKey: SectionKey) => {
         setCollapsedSections(prev => ({
@@ -103,8 +105,8 @@ const Projects = () => {
     }, []);
 
     useEffect(() => {
-        const url = new URL(window.location.href);
-        const projectParam = url.searchParams.get("project");
+        const params = new URLSearchParams(location.search);
+        const projectParam = params.get("project");
         setExpandedProject(projectParam);
         if (projectParam && isProjectKey(projectParam)) {
             const sectionKey = projectSectionMap[projectParam];

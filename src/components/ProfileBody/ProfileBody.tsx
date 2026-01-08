@@ -1,5 +1,5 @@
 import Timeline from '../Timeline/Timeline';
-import { BrowserRouter as _, Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom';
+import { BrowserRouter as _, Redirect, Route, Switch } from 'react-router-dom';
 import { pathsEnum } from '../../enums/paths';
 import Publications from '../Publications/Publications';
 import Experience from '../Experience/Experience';

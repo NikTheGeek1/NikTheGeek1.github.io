@@ -1,6 +1,6 @@
 import './ProfileHeader.css';
 import profileImg from '../../assets/images/profile-rMAX.jpg';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import { pathsEnum } from '../../enums/paths';
 import { useEffect, useState } from 'react';
 import { useStore } from '../../hooks-store/store';
@@ -10,21 +10,36 @@ type Tab = "Timeline" | "Publications" | "Experience" | "Projects" | "Contact" |
 const ProfileHeader = () => {
     const [currentTab, setCurrentTab] = useState<Tab | undefined>(undefined);
     const history = useHistory();
+    const location = useLocation();
     const [, setRefreshTab] = useState('');
     const scrDims = useStore()[0].scrDims;
     const [showMoreBox, setShowMoreBox] = useState(false);
+    const validTabs: Tab[] = ["Timeline", "Publications", "Experience", "Projects", "Contact"];
+    const pathToTab: Record<string, Tab> = {
+        [pathsEnum.TIMELINE]: "Timeline",
+        [pathsEnum.PUBLICATIONS]: "Publications",
+        [pathsEnum.EXPERIENCE]: "Experience",
+        [pathsEnum.PROJECTS]: "Projects",
+        [pathsEnum.CONTACT]: "Contact",
+    };
 
     useEffect(() => {
         // get path parameter from the URL
-        const url = new URL(window.location.href);
-        const path = url.searchParams.get("path");
-        // if there is a path parameter, click on the monkey
-        if (path && (path === "Timeline" || path === "Publications" || path === "Experience" || path === "Projects" || path === "Contact")) {
-            itemClickHandler(path);
-        } else {
-            // if there is no path parameter, click on the monkey
-            itemClickHandler("Timeline");
+        const params = new URLSearchParams(location.search);
+        const path = params.get("path");
+        const tabFromParam = path && validTabs.includes(path as Tab) ? (path as Tab) : undefined;
+        const tabFromPath = pathToTab[location.pathname];
+        if (tabFromParam) {
+            setCurrentTab(tabFromParam);
+            setRefreshTab(tabFromParam);
+            return;
         }
+        if (tabFromPath) {
+            setCurrentTab(tabFromPath);
+            setRefreshTab(tabFromPath);
+            return;
+        }
+        itemClickHandler("Timeline");
     }, []);
 
     useEffect(() => {
@@ -37,8 +52,9 @@ const ProfileHeader = () => {
             setShowMoreBox(oldState => !oldState);
         } else {
             const path = pathsEnum[item.toUpperCase()];
-            const url = new URL(window.location.href);
-            history.push(`${path}?${url.searchParams.toString()}`);
+            const params = new URLSearchParams(location.search);
+            params.set("path", item);
+            history.push(`${path}?${params.toString()}`);
             setRefreshTab(item);
             setCurrentTab(item as Tab);
         }
