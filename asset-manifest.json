@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.555a0719.css",
-    "main.js": "/static/js/main.da7582f0.js",
+    "main.js": "/static/js/main.4d943d76.js",
     "static/media/network-graph-vid-1.mp4": "/static/media/network-graph-vid-1.9b2b08c48c479503df35.mp4",
     "static/media/diy-alarm-system.mp4": "/static/media/diy-alarm-system.4251bddf5cef5e791bf9.mp4",
     "static/media/lp-video-1.mp4": "/static/media/lp-video-1.ce4edabb3a2dc49a1cf1.mp4",
@@ -278,8 +278,8 @@
     "static/media/ca-1-thumbnail.avif": "/static/media/ca-1-thumbnail.8218787dd708612eb3d1.avif",
     "static/media/xcovers4-lqMAX.avif": "/static/media/xcovers4-lqMAX.0245f294e14503709e19.avif",
     "static/media/xcovers2-lqMIN.avif": "/static/media/xcovers2-lqMIN.9d0e4677830b201b76fb.avif",
-    "static/media/xcovers3-lqMIN.avif": "/static/media/xcovers3-lqMIN.64935f876638f77adf49.avif",
     "index.html": "/index.html",
+    "static/media/xcovers3-lqMIN.avif": "/static/media/xcovers3-lqMIN.64935f876638f77adf49.avif",
     "static/media/xcovers4-lqMIN.avif": "/static/media/xcovers4-lqMIN.2805a1f5d60137f78736.avif",
     "static/media/xcovers1-lqMIN.avif": "/static/media/xcovers1-lqMIN.02e7139a8b1e3f0678c6.avif",
     "static/media/work-gear.svg": "/static/media/work-gear.c9f5b139bbff29dce1397e13d9852e34.svg",
@@ -298,10 +298,10 @@
     "static/media/education.svg": "/static/media/education.a891826727a1cc981679c499267432f7.svg",
     "static/media/mobile-phone.svg": "/static/media/mobile-phone.3678e7fe1902a716721aeda4f1dca81a.svg",
     "main.555a0719.css.map": "/static/css/main.555a0719.css.map",
-    "main.da7582f0.js.map": "/static/js/main.da7582f0.js.map"
+    "main.4d943d76.js.map": "/static/js/main.4d943d76.js.map"
   },
   "entrypoints": [
     "static/css/main.555a0719.css",
-    "static/js/main.da7582f0.js"
+    "static/js/main.4d943d76.js"
   ]
 }
