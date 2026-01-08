@@ -1,5 +1,5 @@
 import './App.css';
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import LandingPage from './containers/LandingPage/LandingPage';
 import {storeVisitorDemographics, storeVisitorLocation } from './utils/visitor-tracker';
 
