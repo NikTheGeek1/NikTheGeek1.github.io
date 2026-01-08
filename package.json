@@ -52,8 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.2",
     "@types/highlight.js": "^10.1.0",
     "@types/react-highlight": "^0.12.2",
-    "@playwright/test": "^1.48.2"
+    "gh-pages": "^6.3.0"
   }
 }
