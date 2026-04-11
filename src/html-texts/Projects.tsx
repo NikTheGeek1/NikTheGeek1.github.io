@@ -55,6 +55,14 @@ class ProjectsText {
         <p className={styles.paragraph}>A custom web crawler gathers data from around 150,000 users, with Node.js handling back-end processing and caching for optimized performance. Users can explore and analyze their social networks in an intuitive and visually appealing way.</p>
     </>;
 
+    public static smartMirrorExpanded = <>
+        <p className={styles.paragraph}>Smart Mirror is a Raspberry Pi 4 dashboard mounted behind a framed mirror front and built on MagicMirror v2.34.0, launched through Electron on a local-only `localhost:8080` surface so the UI stays private while still driving a full-screen household display.</p>
+        <p className={styles.paragraph}>The deployed layout is tuned for Greek day-to-day information: Greek locale and time formatting, an ICS-backed holiday calendar, a bottom-bar RSS newsfeed, a stock watchlist, and layered Open-Meteo widgets for Porto Rafti, Loutsa, and Anavyssos. I also patched the core weather module so the mirror can show 3-hour forecasts for today only, wind direction arrows, and knot-based wind speeds that are easier to read from across the room.</p>
+        <p className={styles.paragraph}>The control plane is custom. A Node-based Telegram bot manages stock symbols, playback state for a custom `MMM-TelegramVideo` module, brightness for a custom `MMM-DisplayDimmer` module, PIR alert settings, and display sleep timing by editing JSON state files or the live config and safely restarting MagicMirror when needed.</p>
+        <p className={styles.paragraph}>On the hardware side, the mirror runs with a PIR motion sensor on GPIO17 and an IMX708 Raspberry Pi camera mounted above the frame. A Python daemon built with `gpiozero` wakes or sleeps the display after inactivity, relaunches MagicMirror if the UI drops, captures snapshots through `rpicam-jpeg` or `libcamera-still`, and can forward motion alerts to Telegram.</p>
+        <p className={styles.paragraph}>The repo also includes a local `MMM-CameraFeed` module that exposes an MJPEG stream and writes fresh frames to disk for fallback alert images, so the system can still send a useful snapshot even when the camera is busy. In practice, the project blends frontend layout work, Linux service orchestration, GPIO hardware, camera tooling, and small-but-important product details into one coherent household device.</p>
+    </>;
+
     public static diyAlarmSystemExpanded = <>
         <p className={styles.paragraph}>Smart Home Demo is a DIY alarm system built around an ESP32 paired with an ESP32-CAM module, bringing up NVS, logging, configuration, Wi-Fi provisioning, the control loop, and the UI services in sequence so every dependency is stable before motion events are evaluated.</p>
         <p className={styles.paragraph}>The FreeRTOS loop owns magnetic reed switches on doors and windows, a PIR motion sensor, a BH1750 light sensor, current-limited LED indicators, a relay-driven siren, and inline resistors that tame the mixed-voltage runs, while the camera captures snapshots whenever those inputs cross the configured lux and hold thresholds.</p>
@@ -145,6 +153,7 @@ class ProjectsText {
     public static onlineExperiment1 = getTxtFromJsx(ProjectsText.onlineExperiment1Expanded);
     public static blackJack = getTxtFromJsx(ProjectsText.blackJackExpanded);
     public static networkGraph = getTxtFromJsx(ProjectsText.networkGraphExpanded);
+    public static smartMirror = getTxtFromJsx(ProjectsText.smartMirrorExpanded);
     public static diyAlarmSystem = getTxtFromJsx(ProjectsText.diyAlarmSystemExpanded);
     public static machineLearningRobotical = getTxtFromJsx(ProjectsText.machineLearningRoboticalExpanded);
     public static martyController = getTxtFromJsx(ProjectsText.martyControllerExpanded);

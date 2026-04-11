@@ -29,6 +29,7 @@ enum PROJECTS_ENUM {
     NEWS_HUB_ROBOTICAL = "news-hub-robotical",
     DREAMS_FOR_LITTLES = "dreams-for-littles",
     DIY_ALARM_SYSTEM = "diy-alarm-system",
+    SMART_MIRROR = "smart-mirror",
 }
 
 const SECTION_KEYS = {
@@ -42,6 +43,7 @@ type SectionKey = typeof SECTION_KEYS[keyof typeof SECTION_KEYS];
 
 const projectSectionMap: Partial<Record<PROJECTS_ENUM, SectionKey>> = {
     [PROJECTS_ENUM.DIY_ALARM_SYSTEM]: SECTION_KEYS.CONNECTED_HARDWARE,
+    [PROJECTS_ENUM.SMART_MIRROR]: SECTION_KEYS.CONNECTED_HARDWARE,
     [PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.CODE_ASSESS]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.SENSORS_DASHBOARD]: SECTION_KEYS.ROBOTICAL,
@@ -135,6 +137,7 @@ const Projects = () => {
 
     const projectHeadlines: Record<string, string> = {
         [PROJECTS_ENUM.DIY_ALARM_SYSTEM]: "Prototyped an ESP32 alarm that marries firmware, BLE provisioning, and a Web Bluetooth control surface.",
+        [PROJECTS_ENUM.SMART_MIRROR]: "Turned a Raspberry Pi into a motion-aware household dashboard with Telegram control, live weather/news, and custom MagicMirror extensions.",
         [PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL]: "Led launch of Robotical's first ML-powered learning feature for classrooms.",
         [PROJECTS_ENUM.CODE_ASSESS]: "Created the live coding assessment workflow used by instructors and sales demos.",
         [PROJECTS_ENUM.SENSORS_DASHBOARD]: "Productised telemetry dashboards aligning firmware, data, and education teams.",
@@ -179,17 +182,30 @@ const Projects = () => {
                 onToggle={() => toggleSection(SECTION_KEYS.CONNECTED_HARDWARE)}
             />
             {!collapsedSections[SECTION_KEYS.CONNECTED_HARDWARE] && (
-                <Project
-                    key={PROJECTS_ENUM.DIY_ALARM_SYSTEM + (expandedProject === PROJECTS_ENUM.DIY_ALARM_SYSTEM).toString()}
-                    id={PROJECTS_ENUM.DIY_ALARM_SYSTEM}
-                    title="Smart Home Demo"
-                    photos={allPhotos.diyAlarmSystem}
-                    details={ProjectsTexts.diyAlarmSystem}
-                    expandedDetails={ProjectsTexts.diyAlarmSystemExpanded}
-                    technologies={["ESP32", "FreeRTOS", "NimBLE", "Web Bluetooth", "TypeScript", "ESP-IDF", "Puppeteer"]}
-                    headline={projectHeadlines[PROJECTS_ENUM.DIY_ALARM_SYSTEM]}
-                    expanded={expandedProject === PROJECTS_ENUM.DIY_ALARM_SYSTEM}
-                />
+                <>
+                    <Project
+                        key={PROJECTS_ENUM.SMART_MIRROR + (expandedProject === PROJECTS_ENUM.SMART_MIRROR).toString()}
+                        id={PROJECTS_ENUM.SMART_MIRROR}
+                        title="Smart Mirror"
+                        photos={allPhotos.smartMirror}
+                        details={ProjectsTexts.smartMirror}
+                        expandedDetails={ProjectsTexts.smartMirrorExpanded}
+                        technologies={["Raspberry Pi 4", "MagicMirror", "Electron", "Node.js", "Python", "systemd", "GPIO", "Telegram Bot API", "Open-Meteo", "Pi Camera"]}
+                        headline={projectHeadlines[PROJECTS_ENUM.SMART_MIRROR]}
+                        expanded={expandedProject === PROJECTS_ENUM.SMART_MIRROR}
+                    />
+                    <Project
+                        key={PROJECTS_ENUM.DIY_ALARM_SYSTEM + (expandedProject === PROJECTS_ENUM.DIY_ALARM_SYSTEM).toString()}
+                        id={PROJECTS_ENUM.DIY_ALARM_SYSTEM}
+                        title="Smart Home Demo"
+                        photos={allPhotos.diyAlarmSystem}
+                        details={ProjectsTexts.diyAlarmSystem}
+                        expandedDetails={ProjectsTexts.diyAlarmSystemExpanded}
+                        technologies={["ESP32", "FreeRTOS", "NimBLE", "Web Bluetooth", "TypeScript", "ESP-IDF", "Puppeteer"]}
+                        headline={projectHeadlines[PROJECTS_ENUM.DIY_ALARM_SYSTEM]}
+                        expanded={expandedProject === PROJECTS_ENUM.DIY_ALARM_SYSTEM}
+                    />
+                </>
             )}
             <SectionTitle
                 title={`Robotical (${sectionProjectCounts[SECTION_KEYS.ROBOTICAL]})`}

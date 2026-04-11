@@ -486,6 +486,40 @@ import diyAlarmSystemrMIN2 from '../assets/images/projects/diy-alarm-system/IMG_
 import diyAlarmSystemrMAX1 from '../assets/images/projects/diy-alarm-system/IMG_4645-rMAX.avif';
 import diyAlarmSystemrMAX2 from '../assets/images/projects/diy-alarm-system/IMG_4646-rMAX.avif';
 
+// smart mirror
+import smartMirrorFinishedThumb from '../assets/images/projects/smart-mirror/smart-mirror-finished-thumbnail.jpg';
+import smartMirrorUiThumb from '../assets/images/projects/smart-mirror/smart-mirror-ui-thumbnail.jpg';
+import smartMirrorBackThumb from '../assets/images/projects/smart-mirror/smart-mirror-back-thumbnail.jpg';
+import smartMirrorSensorThumb from '../assets/images/projects/smart-mirror/smart-mirror-sensor-thumbnail.jpg';
+import smartMirrorPiThumb from '../assets/images/projects/smart-mirror/smart-mirror-pi-thumbnail.jpg';
+
+import smartMirrorFinishedlqMIN from '../assets/images/projects/smart-mirror/smart-mirror-finished-lqMIN.jpg';
+import smartMirrorUilqMIN from '../assets/images/projects/smart-mirror/smart-mirror-ui-lqMIN.jpg';
+import smartMirrorBacklqMIN from '../assets/images/projects/smart-mirror/smart-mirror-back-lqMIN.jpg';
+import smartMirrorSensorlqMIN from '../assets/images/projects/smart-mirror/smart-mirror-sensor-lqMIN.jpg';
+import smartMirrorPilqMIN from '../assets/images/projects/smart-mirror/smart-mirror-pi-lqMIN.jpg';
+
+import smartMirrorFinishedlqMAX from '../assets/images/projects/smart-mirror/smart-mirror-finished-lqMAX.jpg';
+import smartMirrorUilqMAX from '../assets/images/projects/smart-mirror/smart-mirror-ui-lqMAX.jpg';
+import smartMirrorBacklqMAX from '../assets/images/projects/smart-mirror/smart-mirror-back-lqMAX.jpg';
+import smartMirrorSensorlqMAX from '../assets/images/projects/smart-mirror/smart-mirror-sensor-lqMAX.jpg';
+import smartMirrorPilqMAX from '../assets/images/projects/smart-mirror/smart-mirror-pi-lqMAX.jpg';
+
+import smartMirrorFinishedrMIN from '../assets/images/projects/smart-mirror/smart-mirror-finished-rMIN.jpg';
+import smartMirrorUirMIN from '../assets/images/projects/smart-mirror/smart-mirror-ui-rMIN.jpg';
+import smartMirrorBackrMIN from '../assets/images/projects/smart-mirror/smart-mirror-back-rMIN.jpg';
+import smartMirrorSensorrMIN from '../assets/images/projects/smart-mirror/smart-mirror-sensor-rMIN.jpg';
+import smartMirrorPirMIN from '../assets/images/projects/smart-mirror/smart-mirror-pi-rMIN.jpg';
+
+import smartMirrorFinishedrMAX from '../assets/images/projects/smart-mirror/smart-mirror-finished-rMAX.jpg';
+import smartMirrorUirMAX from '../assets/images/projects/smart-mirror/smart-mirror-ui-rMAX.jpg';
+import smartMirrorBackrMAX from '../assets/images/projects/smart-mirror/smart-mirror-back-rMAX.jpg';
+import smartMirrorSensorrMAX from '../assets/images/projects/smart-mirror/smart-mirror-sensor-rMAX.jpg';
+import smartMirrorPirMAX from '../assets/images/projects/smart-mirror/smart-mirror-pi-rMAX.jpg';
+
+import smartMirrorMountedVideo from '../assets/images/projects/smart-mirror/smart-mirror-mounted.mp4';
+import smartMirrorPrototypeVideo from '../assets/images/projects/smart-mirror/smart-mirror-prototype.mp4';
+
 type AllPhotosStructure = { [key: string]: ImagesVersionsInterface }
 
 const allPhotos: AllPhotosStructure = {
@@ -556,6 +590,53 @@ const allPhotos: AllPhotosStructure = {
             diyAlarmSystemrMAX1,
             diyAlarmSystemrMAX2,
             diyAlarmSystemVideo1,
+        ]
+    },
+    smartMirror: {
+        thumbnail: [
+            smartMirrorFinishedThumb,
+            smartMirrorUiThumb,
+            smartMirrorMountedVideo,
+            smartMirrorBackThumb,
+            smartMirrorSensorThumb,
+            smartMirrorPiThumb,
+            smartMirrorPrototypeVideo,
+        ],
+        lowerQualityMin: [
+            smartMirrorFinishedlqMIN,
+            smartMirrorUilqMIN,
+            smartMirrorMountedVideo,
+            smartMirrorBacklqMIN,
+            smartMirrorSensorlqMIN,
+            smartMirrorPilqMIN,
+            smartMirrorPrototypeVideo,
+        ],
+        lowerQualityMax: [
+            smartMirrorFinishedlqMAX,
+            smartMirrorUilqMAX,
+            smartMirrorMountedVideo,
+            smartMirrorBacklqMAX,
+            smartMirrorSensorlqMAX,
+            smartMirrorPilqMAX,
+            smartMirrorPrototypeVideo,
+        ],
+        reducedMin: [
+            smartMirrorFinishedrMIN,
+            smartMirrorUirMIN,
+            smartMirrorMountedVideo,
+            smartMirrorBackrMIN,
+            smartMirrorSensorrMIN,
+            smartMirrorPirMIN,
+            smartMirrorPrototypeVideo,
+        ],
+        reducedMax: [
+            smartMirrorFinishedrMAX,
+            smartMirrorUirMAX,
+            smartMirrorMountedVideo,
+            smartMirrorBackrMAX,
+            smartMirrorSensorrMAX,
+            smartMirrorPirMAX,
+            smartMirrorPrototypeVideo,
         ]
     },
     newsHub: {
