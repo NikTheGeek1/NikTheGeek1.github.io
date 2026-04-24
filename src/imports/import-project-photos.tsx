@@ -486,6 +486,34 @@ import diyAlarmSystemrMIN2 from '../assets/images/projects/diy-alarm-system/IMG_
 import diyAlarmSystemrMAX1 from '../assets/images/projects/diy-alarm-system/IMG_4645-rMAX.avif';
 import diyAlarmSystemrMAX2 from '../assets/images/projects/diy-alarm-system/IMG_4646-rMAX.avif';
 
+// smart pot
+import smartPotVideo from '../assets/images/projects/smart-pot/vids/smart-pot-watering.mp4';
+
+import smartPotDeviceThumb from '../assets/images/projects/smart-pot/smart-pot-device-thumbnail.avif';
+import smartPotDashboardThumb from '../assets/images/projects/smart-pot/smart-pot-dashboard-thumbnail.avif';
+import smartPotElectronicsThumb from '../assets/images/projects/smart-pot/smart-pot-electronics-thumbnail.avif';
+import smartPotPumpThumb from '../assets/images/projects/smart-pot/smart-pot-pump-thumbnail.avif';
+
+import smartPotDeviceLqMIN from '../assets/images/projects/smart-pot/smart-pot-device-lqMIN.avif';
+import smartPotDashboardLqMIN from '../assets/images/projects/smart-pot/smart-pot-dashboard-lqMIN.avif';
+import smartPotElectronicsLqMIN from '../assets/images/projects/smart-pot/smart-pot-electronics-lqMIN.avif';
+import smartPotPumpLqMIN from '../assets/images/projects/smart-pot/smart-pot-pump-lqMIN.avif';
+
+import smartPotDeviceLqMAX from '../assets/images/projects/smart-pot/smart-pot-device-lqMAX.avif';
+import smartPotDashboardLqMAX from '../assets/images/projects/smart-pot/smart-pot-dashboard-lqMAX.avif';
+import smartPotElectronicsLqMAX from '../assets/images/projects/smart-pot/smart-pot-electronics-lqMAX.avif';
+import smartPotPumpLqMAX from '../assets/images/projects/smart-pot/smart-pot-pump-lqMAX.avif';
+
+import smartPotDeviceRMIN from '../assets/images/projects/smart-pot/smart-pot-device-rMIN.avif';
+import smartPotDashboardRMIN from '../assets/images/projects/smart-pot/smart-pot-dashboard-rMIN.avif';
+import smartPotElectronicsRMIN from '../assets/images/projects/smart-pot/smart-pot-electronics-rMIN.avif';
+import smartPotPumpRMIN from '../assets/images/projects/smart-pot/smart-pot-pump-rMIN.avif';
+
+import smartPotDeviceRMAX from '../assets/images/projects/smart-pot/smart-pot-device-rMAX.avif';
+import smartPotDashboardRMAX from '../assets/images/projects/smart-pot/smart-pot-dashboard-rMAX.avif';
+import smartPotElectronicsRMAX from '../assets/images/projects/smart-pot/smart-pot-electronics-rMAX.avif';
+import smartPotPumpRMAX from '../assets/images/projects/smart-pot/smart-pot-pump-rMAX.avif';
+
 // smart mirror
 import smartMirrorFinishedThumb from '../assets/images/projects/smart-mirror/smart-mirror-finished-thumbnail.jpg';
 import smartMirrorUiThumb from '../assets/images/projects/smart-mirror/smart-mirror-ui-thumbnail.jpg';
@@ -590,6 +618,43 @@ const allPhotos: AllPhotosStructure = {
             diyAlarmSystemrMAX1,
             diyAlarmSystemrMAX2,
             diyAlarmSystemVideo1,
+        ]
+    },
+    smartPot: {
+        thumbnail: [
+            smartPotDeviceThumb,
+            smartPotDashboardThumb,
+            smartPotElectronicsThumb,
+            smartPotPumpThumb,
+            smartPotVideo,
+        ],
+        lowerQualityMin: [
+            smartPotDeviceLqMIN,
+            smartPotDashboardLqMIN,
+            smartPotElectronicsLqMIN,
+            smartPotPumpLqMIN,
+            smartPotVideo,
+        ],
+        lowerQualityMax: [
+            smartPotDeviceLqMAX,
+            smartPotDashboardLqMAX,
+            smartPotElectronicsLqMAX,
+            smartPotPumpLqMAX,
+            smartPotVideo,
+        ],
+        reducedMin: [
+            smartPotDeviceRMIN,
+            smartPotDashboardRMIN,
+            smartPotElectronicsRMIN,
+            smartPotPumpRMIN,
+            smartPotVideo,
+        ],
+        reducedMax: [
+            smartPotDeviceRMAX,
+            smartPotDashboardRMAX,
+            smartPotElectronicsRMAX,
+            smartPotPumpRMAX,
+            smartPotVideo,
         ]
     },
     smartMirror: {

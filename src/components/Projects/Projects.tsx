@@ -29,6 +29,7 @@ enum PROJECTS_ENUM {
     NEWS_HUB_ROBOTICAL = "news-hub-robotical",
     DREAMS_FOR_LITTLES = "dreams-for-littles",
     DIY_ALARM_SYSTEM = "diy-alarm-system",
+    SMART_POT = "smart-pot",
     SMART_MIRROR = "smart-mirror",
 }
 
@@ -42,6 +43,7 @@ const SECTION_KEYS = {
 type SectionKey = typeof SECTION_KEYS[keyof typeof SECTION_KEYS];
 
 const projectSectionMap: Partial<Record<PROJECTS_ENUM, SectionKey>> = {
+    [PROJECTS_ENUM.SMART_POT]: SECTION_KEYS.CONNECTED_HARDWARE,
     [PROJECTS_ENUM.DIY_ALARM_SYSTEM]: SECTION_KEYS.CONNECTED_HARDWARE,
     [PROJECTS_ENUM.SMART_MIRROR]: SECTION_KEYS.CONNECTED_HARDWARE,
     [PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL]: SECTION_KEYS.ROBOTICAL,
@@ -136,6 +138,7 @@ const Projects = () => {
     ];
 
     const projectHeadlines: Record<string, string> = {
+        [PROJECTS_ENUM.SMART_POT]: "Built a calibrated ESP32 watering controller with safe pump bounds, Wi-Fi setup, OTA updates, and a local dashboard.",
         [PROJECTS_ENUM.DIY_ALARM_SYSTEM]: "Prototyped an ESP32 alarm that marries firmware, BLE provisioning, and a Web Bluetooth control surface.",
         [PROJECTS_ENUM.SMART_MIRROR]: "Turned a Raspberry Pi into a motion-aware household dashboard with Telegram control, live weather/news, and custom MagicMirror extensions.",
         [PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL]: "Led launch of Robotical's first ML-powered learning feature for classrooms.",
@@ -183,6 +186,17 @@ const Projects = () => {
             />
             {!collapsedSections[SECTION_KEYS.CONNECTED_HARDWARE] && (
                 <>
+                    <Project
+                        key={PROJECTS_ENUM.SMART_POT + (expandedProject === PROJECTS_ENUM.SMART_POT).toString()}
+                        id={PROJECTS_ENUM.SMART_POT}
+                        title="Smart Pot"
+                        photos={allPhotos.smartPot}
+                        details={ProjectsTexts.smartPot}
+                        expandedDetails={ProjectsTexts.smartPotExpanded}
+                        technologies={["ESP32", "PlatformIO", "Arduino C++", "Capacitive Soil Sensor", "MOSFET Pump Control", "Wi-Fi SoftAP", "mDNS", "ArduinoOTA", "NVS Preferences", "Playwright", "GoogleTest"]}
+                        headline={projectHeadlines[PROJECTS_ENUM.SMART_POT]}
+                        expanded={expandedProject === PROJECTS_ENUM.SMART_POT}
+                    />
                     <Project
                         key={PROJECTS_ENUM.SMART_MIRROR + (expandedProject === PROJECTS_ENUM.SMART_MIRROR).toString()}
                         id={PROJECTS_ENUM.SMART_MIRROR}
