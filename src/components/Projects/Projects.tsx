@@ -31,6 +31,7 @@ enum PROJECTS_ENUM {
     DIY_ALARM_SYSTEM = "diy-alarm-system",
     SMART_POT = "smart-pot",
     SMART_MIRROR = "smart-mirror",
+    LITTLES_BABY_TRACKER = "littles-baby-tracker",
 }
 
 const SECTION_KEYS = {
@@ -55,6 +56,7 @@ const projectSectionMap: Partial<Record<PROJECTS_ENUM, SectionKey>> = {
     [PROJECTS_ENUM.MINI_GAMES_ROBOTICAL]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.BLOCKS_TO_PYTHON_TRANSPILER]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.NEWS_HUB_ROBOTICAL]: SECTION_KEYS.ROBOTICAL,
+    [PROJECTS_ENUM.LITTLES_BABY_TRACKER]: SECTION_KEYS.FREELANCE,
     [PROJECTS_ENUM.DREAMS_FOR_LITTLES]: SECTION_KEYS.FREELANCE,
     [PROJECTS_ENUM.XCOVERS]: SECTION_KEYS.FREELANCE,
     [PROJECTS_ENUM.REINFORCEMENT_LEARNING]: SECTION_KEYS.OLDER,
@@ -158,7 +160,8 @@ const Projects = () => {
         [PROJECTS_ENUM.CHECKERS]: "Mentored a small team to ship a multiplayer game and present it publicly.",
         [PROJECTS_ENUM.NETWORK_GRAPH]: "Visualised 150k Facebook nodes with custom crawling and 3D graph layouts.",
         [PROJECTS_ENUM.WORLD_ATLAS]: "Crafted immersive 3D data visualisation for geography storytelling.",
-        [PROJECTS_ENUM.ONLINE_EXPERIMENT]: "Automated cognitive science experiments to collect clean data remotely."
+        [PROJECTS_ENUM.ONLINE_EXPERIMENT]: "Automated cognitive science experiments to collect clean data remotely.",
+        [PROJECTS_ENUM.LITTLES_BABY_TRACKER]: "Rebuilt a baby tracker into a multi-tenant SaaS with coach, owner, and phone/web surfaces behind one API boundary."
     };
 
     return (
@@ -348,6 +351,17 @@ const Projects = () => {
             />
             {!collapsedSections[SECTION_KEYS.FREELANCE] && (
                 <>
+                    <Project
+                        key={PROJECTS_ENUM.LITTLES_BABY_TRACKER + (expandedProject === PROJECTS_ENUM.LITTLES_BABY_TRACKER).toString()}
+                        id={PROJECTS_ENUM.LITTLES_BABY_TRACKER}
+                        title="LittlesBabyTracker"
+                        photos={allPhotos.littlesBabyTracker}
+                        details={ProjectsTexts.littlesBabyTracker}
+                        expandedDetails={ProjectsTexts.littlesBabyTrackerExpanded}
+                        technologies={["React Native", "React", "Vite", "TypeScript", "Supabase Auth", "Supabase Postgres", "Prisma", "Fastify", "Stripe", "RevenueCat", "Multi-tenancy", "WebView Releases"]}
+                        headline={projectHeadlines[PROJECTS_ENUM.LITTLES_BABY_TRACKER]}
+                        expanded={expandedProject === PROJECTS_ENUM.LITTLES_BABY_TRACKER}
+                    />
                     <Project
                         key={PROJECTS_ENUM.DREAMS_FOR_LITTLES + (expandedProject === PROJECTS_ENUM.DREAMS_FOR_LITTLES).toString()}
                         id={PROJECTS_ENUM.DREAMS_FOR_LITTLES}

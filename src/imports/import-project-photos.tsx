@@ -551,6 +551,13 @@ import smartMirrorPrototypeVideo from '../assets/images/projects/smart-mirror/sm
 type AllPhotosStructure = { [key: string]: ImagesVersionsInterface }
 
 const allPhotos: AllPhotosStructure = {
+    littlesBabyTracker: {
+        thumbnail: [],
+        lowerQualityMin: [],
+        lowerQualityMax: [],
+        reducedMin: [],
+        reducedMax: [],
+    },
     dreamsForLittles: {
         thumbnail: [
             dreamsForLittlesThumb1,

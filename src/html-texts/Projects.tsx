@@ -149,6 +149,14 @@ class ProjectsText {
         <p className={styles.paragraph}>Additional features include reminders and notifications to help parents stay organized.</p>
     </>;
 
+    public static littlesBabyTrackerExpanded = <>
+        <p className={styles.paragraph}>LittlesBabyTracker is the multi-tenant evolution of the Dreams for Littles product: a sleep-coaching SaaS where families track baby sleep and care activity while sleep coaches manage the families assigned to their practice.</p>
+        <p className={styles.paragraph}>The system is split across a coach admin dashboard, a separate owner portal for global super-admin operations, a mobile-first web application for families and coaches, and a thin React Native phone shell. Product logic and tenant decisions live in the web app and platform API rather than the native wrapper.</p>
+        <p className={styles.paragraph}>The platform API verifies Supabase Auth JWTs, maps identities to application users, and enforces organization, coach, family, assignment, and entitlement boundaries. Supabase Postgres stores tenants, memberships, invite codes, family assignments, babies, activity logs, billing state, release records, audit events, and access entitlements through Prisma-backed services.</p>
+        <p className={styles.paragraph}>The coach workflow includes Stripe-backed subscriptions, invite-code creation, family assignment and revocation, scoped activity visibility, dashboard analytics, support FAQs, and operational notifications. The owner portal stays separate for platform-wide coaches, families, billing, analytics, release operations, feedback, and notification banners.</p>
+        <p className={styles.paragraph}>The phone app combines a React Native store binary with versioned mobile-web releases. The wrapper asks the backend for the newest compatible web release, verifies the zip checksum, caches it locally, serves it through a local static server, and rolls forward or back without putting tenant authorization into native code.</p>
+    </>;
+
 
 
 
@@ -174,6 +182,7 @@ class ProjectsText {
     public static scratchJrWeb = getTxtFromJsx(ProjectsText.scratchJrWebExpanded);
     public static newsHub = getTxtFromJsx(ProjectsText.newsHubExpanded);
     public static dreamsForLittles = getTxtFromJsx(ProjectsText.dreamsForLittlesExpanded);
+    public static littlesBabyTracker = getTxtFromJsx(ProjectsText.littlesBabyTrackerExpanded);
 
 }
 

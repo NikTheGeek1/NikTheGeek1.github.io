@@ -20,7 +20,8 @@ const Project = ({ title, photos, gitHubRepoLink, website, details, expandedDeta
     expanded?: boolean,
     headline?: string
 }) => {
-   const [isExpanded, setIsExpanded] = useState(expanded);
+    const [isExpanded, setIsExpanded] = useState(expanded);
+    const hasPhotos = photos.reducedMin.length > 0;
 
     const technologiesJSX = technologies.map(tech => {
         return <TagBubble key={tech} title={tech} tone="light" />;
@@ -41,7 +42,21 @@ const Project = ({ title, photos, gitHubRepoLink, website, details, expandedDeta
                 )}
             </header>
             <div className="project-photos-container">
-                <PhotosGallery photos={photos} />
+                {hasPhotos ? (
+                    <PhotosGallery photos={photos} />
+                ) : (
+                    <div className="project-media-placeholder" aria-label="Project media placeholder">
+                        <div className="project-media-placeholder__grid">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div>
+                            <strong>Media pending</strong>
+                            <p>Screenshots and launch video will be added after capture.</p>
+                        </div>
+                    </div>
+                )}
             </div>
             <div className="project-details-container">
                 <div className="project-details">
