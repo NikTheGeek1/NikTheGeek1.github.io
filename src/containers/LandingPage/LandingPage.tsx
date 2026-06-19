@@ -3,10 +3,7 @@ import ThreeD from '../../components/ThreeD/ThreeD';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Profile from '../../containers/Profile/Profile';
-import PrimaryHeading from '../../components/Headings/PrimaryHeading/PrimaryHeading';
-import SecondaryHeading from '../../components/Headings/SecondaryHeading/SecondaryHeading';
 
-interface ExitingClasses { primaryHeading: string, clickOnSuzanne: string };
 const LandingPage = () => {
 
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
@@ -32,29 +29,7 @@ const LandingPage = () => {
         }
     }, [location.pathname, location.search, monkeyClicked]);
 
-    let exitingClasses: ExitingClasses = { primaryHeading: '', clickOnSuzanne: '' };
-    if (monkeyClicked) {
-        exitingClasses["primaryHeading"] = "primary-heading-exitting-animation";
-        exitingClasses["clickOnSuzanne"] = "click-on-suzanne-exiting-animation";
-    }
-
-    const focusAreas = [
-        {
-            icon: "🧭",
-            title: "Leadership",
-            copy: "Lead cross-functional squads, coach engineers, and keep delivery rituals lightweight but predictable."
-        },
-        {
-            icon: "🧱",
-            title: "Architecture",
-            copy: "Own the technical strategy for learning platforms that blend robotics, ML, and content systems."
-        },
-        {
-            icon: "🚀",
-            title: "Product Delivery",
-            copy: "Translate research insights into shipped features, balancing experimentation with measurable outcomes."
-        }
-    ];
+    const heroExitingClass = monkeyClicked ? "landing-hero-exiting-animation" : "";
 
     return (
         <main className={"landing-page-main " + landingPageClass}>
@@ -63,24 +38,17 @@ const LandingPage = () => {
             </div>
             {!exitingAnimationFinished ?
                 <>
-                    <section className={"landing-hero " + exitingClasses.primaryHeading}>
-                        <PrimaryHeading content="Nikos Theodoropoulos" />
-                        <SecondaryHeading content="Lead Developer & Product Engineer" />
+                    <section className={"landing-hero " + heroExitingClass}>
+                        <div className="landing-hero-accent" />
+                        <h1 className="landing-hero-name">Nikos<br />Theodoropoulos</h1>
+                        <p className="landing-hero-role">Lead Developer &amp; Product Engineer</p>
                         <p className="landing-hero-summary">
-                            I partner with educators, researchers, and product teams to ship resilient platforms that make robotics and learning more accessible.
+                            I build practical software where robotics, education, and analysis meet.
                         </p>
-                        <div className="landing-hero-focus">
-                            {focusAreas.map(area => (
-                                <article className="landing-hero-focus-card" key={area.title}>
-                                    <div className="landing-hero-focus-icon">{area.icon}</div>
-                                    <h3>{area.title}</h3>
-                                    <p>{area.copy}</p>
-                                </article>
-                            ))}
-                        </div>
                         <div className="landing-hero-ctas">
                             <button type="button" className="landing-hero-cta" onClick={() => setMonkeyClicked(true)}>View profile</button>
                         </div>
+                        <p className="landing-hero-context">Robotics / education / analysis</p>
                     </section>
                 </>
                 :
