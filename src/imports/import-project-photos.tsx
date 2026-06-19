@@ -548,9 +548,114 @@ import smartMirrorPirMAX from '../assets/images/projects/smart-mirror/smart-mirr
 import smartMirrorMountedVideo from '../assets/images/projects/smart-mirror/smart-mirror-mounted.mp4';
 import smartMirrorPrototypeVideo from '../assets/images/projects/smart-mirror/smart-mirror-prototype.mp4';
 
+// marty quest
+import martyQuestVideo1 from '../assets/images/projects/marty-quest/vids/mq-video-1.mp4';
+
+import martyQuestThumb1 from '../assets/images/projects/marty-quest/mq-1-thumbnail.avif';
+import martyQuestThumb2 from '../assets/images/projects/marty-quest/mq-2-thumbnail.avif';
+import martyQuestThumb3 from '../assets/images/projects/marty-quest/mq-3-thumbnail.avif';
+import martyQuestThumb4 from '../assets/images/projects/marty-quest/mq-4-thumbnail.avif';
+import martyQuestThumb5 from '../assets/images/projects/marty-quest/mq-5-thumbnail.avif';
+import martyQuestThumb6 from '../assets/images/projects/marty-quest/mq-6-thumbnail.avif';
+import martyQuestThumb7 from '../assets/images/projects/marty-quest/mq-7-thumbnail.avif';
+import martyQuestThumb8 from '../assets/images/projects/marty-quest/mq-8-thumbnail.avif';
+
+import martyQuestlqMIN1 from '../assets/images/projects/marty-quest/mq-1-lqMIN.avif';
+import martyQuestlqMIN2 from '../assets/images/projects/marty-quest/mq-2-lqMIN.avif';
+import martyQuestlqMIN3 from '../assets/images/projects/marty-quest/mq-3-lqMIN.avif';
+import martyQuestlqMIN4 from '../assets/images/projects/marty-quest/mq-4-lqMIN.avif';
+import martyQuestlqMIN5 from '../assets/images/projects/marty-quest/mq-5-lqMIN.avif';
+import martyQuestlqMIN6 from '../assets/images/projects/marty-quest/mq-6-lqMIN.avif';
+import martyQuestlqMIN7 from '../assets/images/projects/marty-quest/mq-7-lqMIN.avif';
+import martyQuestlqMIN8 from '../assets/images/projects/marty-quest/mq-8-lqMIN.avif';
+
+import martyQuestlqMAX1 from '../assets/images/projects/marty-quest/mq-1-lqMAX.avif';
+import martyQuestlqMAX2 from '../assets/images/projects/marty-quest/mq-2-lqMAX.avif';
+import martyQuestlqMAX3 from '../assets/images/projects/marty-quest/mq-3-lqMAX.avif';
+import martyQuestlqMAX4 from '../assets/images/projects/marty-quest/mq-4-lqMAX.avif';
+import martyQuestlqMAX5 from '../assets/images/projects/marty-quest/mq-5-lqMAX.avif';
+import martyQuestlqMAX6 from '../assets/images/projects/marty-quest/mq-6-lqMAX.avif';
+import martyQuestlqMAX7 from '../assets/images/projects/marty-quest/mq-7-lqMAX.avif';
+import martyQuestlqMAX8 from '../assets/images/projects/marty-quest/mq-8-lqMAX.avif';
+
+import martyQuestrMIN1 from '../assets/images/projects/marty-quest/mq-1-rMIN.avif';
+import martyQuestrMIN2 from '../assets/images/projects/marty-quest/mq-2-rMIN.avif';
+import martyQuestrMIN3 from '../assets/images/projects/marty-quest/mq-3-rMIN.avif';
+import martyQuestrMIN4 from '../assets/images/projects/marty-quest/mq-4-rMIN.avif';
+import martyQuestrMIN5 from '../assets/images/projects/marty-quest/mq-5-rMIN.avif';
+import martyQuestrMIN6 from '../assets/images/projects/marty-quest/mq-6-rMIN.avif';
+import martyQuestrMIN7 from '../assets/images/projects/marty-quest/mq-7-rMIN.avif';
+import martyQuestrMIN8 from '../assets/images/projects/marty-quest/mq-8-rMIN.avif';
+
+import martyQuestrMAX1 from '../assets/images/projects/marty-quest/mq-1-rMAX.avif';
+import martyQuestrMAX2 from '../assets/images/projects/marty-quest/mq-2-rMAX.avif';
+import martyQuestrMAX3 from '../assets/images/projects/marty-quest/mq-3-rMAX.avif';
+import martyQuestrMAX4 from '../assets/images/projects/marty-quest/mq-4-rMAX.avif';
+import martyQuestrMAX5 from '../assets/images/projects/marty-quest/mq-5-rMAX.avif';
+import martyQuestrMAX6 from '../assets/images/projects/marty-quest/mq-6-rMAX.avif';
+import martyQuestrMAX7 from '../assets/images/projects/marty-quest/mq-7-rMAX.avif';
+import martyQuestrMAX8 from '../assets/images/projects/marty-quest/mq-8-rMAX.avif';
+
 type AllPhotosStructure = { [key: string]: ImagesVersionsInterface }
 
 const allPhotos: AllPhotosStructure = {
+    martyQuest: {
+        thumbnail: [
+            martyQuestThumb1,
+            martyQuestThumb2,
+            martyQuestThumb3,
+            martyQuestThumb4,
+            martyQuestThumb5,
+            martyQuestThumb6,
+            martyQuestThumb7,
+            martyQuestThumb8,
+            martyQuestVideo1,
+        ],
+        lowerQualityMin: [
+            martyQuestlqMIN1,
+            martyQuestlqMIN2,
+            martyQuestlqMIN3,
+            martyQuestlqMIN4,
+            martyQuestlqMIN5,
+            martyQuestlqMIN6,
+            martyQuestlqMIN7,
+            martyQuestlqMIN8,
+            martyQuestVideo1,
+        ],
+        lowerQualityMax: [
+            martyQuestlqMAX1,
+            martyQuestlqMAX2,
+            martyQuestlqMAX3,
+            martyQuestlqMAX4,
+            martyQuestlqMAX5,
+            martyQuestlqMAX6,
+            martyQuestlqMAX7,
+            martyQuestlqMAX8,
+            martyQuestVideo1,
+        ],
+        reducedMin: [
+            martyQuestrMIN1,
+            martyQuestrMIN2,
+            martyQuestrMIN3,
+            martyQuestrMIN4,
+            martyQuestrMIN5,
+            martyQuestrMIN6,
+            martyQuestrMIN7,
+            martyQuestrMIN8,
+            martyQuestVideo1,
+        ],
+        reducedMax: [
+            martyQuestrMAX1,
+            martyQuestrMAX2,
+            martyQuestrMAX3,
+            martyQuestrMAX4,
+            martyQuestrMAX5,
+            martyQuestrMAX6,
+            martyQuestrMAX7,
+            martyQuestrMAX8,
+            martyQuestVideo1,
+        ]
+    },
     littlesBabyTracker: {
         thumbnail: [],
         lowerQualityMin: [],

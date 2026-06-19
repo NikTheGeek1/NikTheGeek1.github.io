@@ -27,6 +27,7 @@ enum PROJECTS_ENUM {
     SENSORS_DASHBOARD = "sensors-dashboard",
     SCRATCHJR_WEB = "scratchjr-web",
     NEWS_HUB_ROBOTICAL = "news-hub-robotical",
+    MARTY_QUEST = "marty-quest",
     DREAMS_FOR_LITTLES = "dreams-for-littles",
     DIY_ALARM_SYSTEM = "diy-alarm-system",
     SMART_POT = "smart-pot",
@@ -56,6 +57,7 @@ const projectSectionMap: Partial<Record<PROJECTS_ENUM, SectionKey>> = {
     [PROJECTS_ENUM.MINI_GAMES_ROBOTICAL]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.BLOCKS_TO_PYTHON_TRANSPILER]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.NEWS_HUB_ROBOTICAL]: SECTION_KEYS.ROBOTICAL,
+    [PROJECTS_ENUM.MARTY_QUEST]: SECTION_KEYS.ROBOTICAL,
     [PROJECTS_ENUM.LITTLES_BABY_TRACKER]: SECTION_KEYS.FREELANCE,
     [PROJECTS_ENUM.DREAMS_FOR_LITTLES]: SECTION_KEYS.FREELANCE,
     [PROJECTS_ENUM.XCOVERS]: SECTION_KEYS.FREELANCE,
@@ -150,6 +152,7 @@ const Projects = () => {
         [PROJECTS_ENUM.SCRATCHJR_WEB]: "Ported ScratchJR to the browser to widen access for schools without tablets.",
         [PROJECTS_ENUM.MARTY_CONTROLLER_ROBOTICAL]: "Productised joystick and sequenced control flows for Marty robots.",
         [PROJECTS_ENUM.MINI_GAMES_ROBOTICAL]: "Designed mini-games that teach coding concepts via Marty the Robot.",
+        [PROJECTS_ENUM.MARTY_QUEST]: "Built a playable Blockly + Phaser coding adventure where learners solve town missions by programming Marty.",
         [PROJECTS_ENUM.BLOCKS_TO_PYTHON_TRANSPILER]: "Bridged block-based lessons to production Python code for advanced learners.",
         [PROJECTS_ENUM.NEWS_HUB_ROBOTICAL]: "Centralised product storytelling so marketing can publish without engineers.",
         [PROJECTS_ENUM.DREAMS_FOR_LITTLES]: "Shipped a subscription RN app with activity analytics for childcare coaches.",
@@ -232,6 +235,18 @@ const Projects = () => {
             />
             {!collapsedSections[SECTION_KEYS.ROBOTICAL] && (
                 <>
+                    <Project
+                        key={PROJECTS_ENUM.MARTY_QUEST + (expandedProject === PROJECTS_ENUM.MARTY_QUEST).toString()}
+                        id={PROJECTS_ENUM.MARTY_QUEST}
+                        title="Marty Quest: Code The Town"
+                        photos={allPhotos.martyQuest}
+                        details={ProjectsTexts.martyQuest}
+                        expandedDetails={ProjectsTexts.martyQuestExpanded}
+                        website=""
+                        technologies={["Phaser", "Blockly", "TypeScript", "Vite", "Tiled", "Aseprite", "Game Design", "Mission Runtime", "Educational Games", "Robotics"]}
+                        headline={projectHeadlines[PROJECTS_ENUM.MARTY_QUEST]}
+                        expanded={expandedProject === PROJECTS_ENUM.MARTY_QUEST}
+                    />
                     <Project
                         key={PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL + (expandedProject === PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL).toString()}
                         id={PROJECTS_ENUM.MACHINE_LEARNING_ROBOTICAL}

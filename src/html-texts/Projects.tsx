@@ -87,6 +87,14 @@ class ProjectsText {
         <p className={styles.paragraph}>This project introduced the first machine learning feature in Robotical's product lineup.</p>
     </>;
 
+    public static martyQuestExpanded = <>
+        <p className={styles.paragraph}>Marty Quest: Code The Town is a tile-based programming adventure for young learners. Players guide Marty through a town, meet short mission goals, and open a Blockly workspace when the world needs a robot solution.</p>
+        <p className={styles.paragraph}>The first playable slice is built with Phaser, TypeScript, Vite, Blockly, and Tiled maps. It includes a tutorial plus a Home Street chapter covering sequencing, loops, conditionals, item actions, sorting, and procedure-style repair routines across missions such as First Steps, Bakery, Bridge, Crossing, Cellar Door, Sort Flowers, and Signal Field.</p>
+        <p className={styles.paragraph}>I designed the mission model around deterministic tile-space state: Marty has a tile and facing direction, each mission defines allowed blocks, command limits, map bindings, win/fail rules, hints, rewards, and badge thresholds, and the runtime compiles Blockly into a normalized command queue that the simulator executes step by step.</p>
+        <p className={styles.paragraph}>The prototype focuses on classroom clarity. It highlights blocks while Marty runs, shows informative failure states for blocked or unsafe moves, saves local progress and draft workspaces, unlocks missions progressively, awards bronze/silver/gold badges by block count, and includes child-friendly Info, Hint, Watch, Reset, and Show Solution flows.</p>
+        <p className={styles.paragraph}>The architecture deliberately keeps the command model separate from rendering so the same Blocks to command queue to runtime path can later target a real Marty adapter. That makes the game useful as a simulation-first learning product without closing the door on physical robot transfer.</p>
+    </>;
+
     public static martyControllerExpanded = <>
         <p className={styles.paragraph}>Marty Controller was one of my first projects at Robotical. It is a platform for controlling Marty the Robot, offering two modes: a real-time joystick and a sequencer.</p>
         <p className={styles.paragraph}>In joystick mode, Marty responds instantly to commands, providing real-time control. In sequencer mode, users can create a sequence of commands that Marty will execute in order.</p>
@@ -173,6 +181,7 @@ class ProjectsText {
     public static smartMirror = getTxtFromJsx(ProjectsText.smartMirrorExpanded);
     public static diyAlarmSystem = getTxtFromJsx(ProjectsText.diyAlarmSystemExpanded);
     public static machineLearningRobotical = getTxtFromJsx(ProjectsText.machineLearningRoboticalExpanded);
+    public static martyQuest = getTxtFromJsx(ProjectsText.martyQuestExpanded);
     public static martyController = getTxtFromJsx(ProjectsText.martyControllerExpanded);
     public static learningPortal = getTxtFromJsx(ProjectsText.learningPortalExpanded);
     public static codeAssess = getTxtFromJsx(ProjectsText.codeAssessExpanded);
