@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e87166c4.css",
-    "main.js": "/static/js/main.930a2117.js",
+    "main.css": "/static/css/main.7af93ab1.css",
+    "main.js": "/static/js/main.ab579582.js",
     "static/media/network-graph-vid-1.mp4": "/static/media/network-graph-vid-1.9b2b08c48c479503df35.mp4",
     "static/media/diy-alarm-system.mp4": "/static/media/diy-alarm-system.4251bddf5cef5e791bf9.mp4",
     "static/media/lp-video-1.mp4": "/static/media/lp-video-1.ce4edabb3a2dc49a1cf1.mp4",
@@ -347,9 +347,9 @@
     "static/media/smart-pot-pump-thumbnail.avif": "/static/media/smart-pot-pump-thumbnail.0c8ebfdcded85da594c6.avif",
     "static/media/smart-pot-electronics-thumbnail.avif": "/static/media/smart-pot-electronics-thumbnail.5c78ff0d72b59ce55c43.avif",
     "static/media/xcovers4-lqMAX.avif": "/static/media/xcovers4-lqMAX.0245f294e14503709e19.avif",
+    "index.html": "/index.html",
     "static/media/xcovers2-lqMIN.avif": "/static/media/xcovers2-lqMIN.9d0e4677830b201b76fb.avif",
     "static/media/smart-pot-device-thumbnail.avif": "/static/media/smart-pot-device-thumbnail.abfa74461330050145e4.avif",
-    "index.html": "/index.html",
     "static/media/xcovers3-lqMIN.avif": "/static/media/xcovers3-lqMIN.64935f876638f77adf49.avif",
     "static/media/xcovers4-lqMIN.avif": "/static/media/xcovers4-lqMIN.2805a1f5d60137f78736.avif",
     "static/media/xcovers1-lqMIN.avif": "/static/media/xcovers1-lqMIN.02e7139a8b1e3f0678c6.avif",
@@ -377,11 +377,11 @@
     "static/media/smart-pot-electronics-lqMAX.avif": "/static/media/smart-pot-electronics-lqMAX.377d7a11497bd7dfdc1b.avif",
     "static/media/smart-pot-pump-lqMAX.avif": "/static/media/smart-pot-pump-lqMAX.09ed451174dda515ddbe.avif",
     "static/media/smart-pot-device-lqMAX.avif": "/static/media/smart-pot-device-lqMAX.c306eb9f6bef910237d5.avif",
-    "main.e87166c4.css.map": "/static/css/main.e87166c4.css.map",
-    "main.930a2117.js.map": "/static/js/main.930a2117.js.map"
+    "main.7af93ab1.css.map": "/static/css/main.7af93ab1.css.map",
+    "main.ab579582.js.map": "/static/js/main.ab579582.js.map"
   },
   "entrypoints": [
-    "static/css/main.e87166c4.css",
-    "static/js/main.930a2117.js"
+    "static/css/main.7af93ab1.css",
+    "static/js/main.ab579582.js"
   ]
 }

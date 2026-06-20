@@ -2,7 +2,7 @@
 'use strict';
 
 const body = document.body;
-const canvas = document.getElementsByTagName('canvas')[0];
+const canvas = document.getElementById('fluid-canvas') || document.getElementsByTagName('canvas')[0];
 
 // when clicking on the body, propagate the click to the canvas
 // also when dragging, when mouseup on body, propagate to canvas
