@@ -180,7 +180,7 @@
     grid-template-areas: "header" "body";
     animation: fade-in 0.35s ease-out both;
     grid-template-rows: min-content 1fr;
-    padding-top: clamp(2.4rem, 7vh, 6rem);
+    padding-top: clamp(28rem, 34vh, 32rem);
     row-gap: var(--bigest-gap);
 }
 
@@ -235,5 +235,9 @@
 
     .landing-hero-context {
         margin-top: clamp(7rem, 22vh, 16rem);
+    }
+
+    .profile-section {
+        padding-top: clamp(16rem, 24vh, 22rem);
     }
 }
