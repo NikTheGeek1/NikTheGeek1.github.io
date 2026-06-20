@@ -7,6 +7,7 @@ import Profile from '../../containers/Profile/Profile';
 const LandingPage = () => {
 
     const [monkeyClicked, setMonkeyClicked] = useState<boolean>(false);
+    const [monkeyTransitionRequested, setMonkeyTransitionRequested] = useState<boolean>(false);
     const [exitingAnimationFinished, setExitingAnimationFinished] = useState<boolean>(false);
     const [landingPageClass, setLandingPageClass] = useState<string>("landing-page-main-before-animation");
     const location = useLocation();
@@ -30,11 +31,16 @@ const LandingPage = () => {
     }, [location.pathname, location.search, monkeyClicked]);
 
     const heroExitingClass = monkeyClicked ? "landing-hero-exiting-animation" : "";
+    const suzanneVisibleClass = monkeyClicked || monkeyTransitionRequested ? "canvas-container-landing-page-visible" : "";
+
+    const viewProfileHandler = () => {
+        setMonkeyTransitionRequested(true);
+    };
 
     return (
         <main className={"landing-page-main " + landingPageClass}>
-            <div className="canvas-container-landing-page">
-                <ThreeD setMonkeyClicked={setMonkeyClicked} />
+            <div className={"canvas-container-landing-page " + suzanneVisibleClass}>
+                <ThreeD setMonkeyClicked={setMonkeyClicked} playExitAnimation={monkeyTransitionRequested} />
             </div>
             {!exitingAnimationFinished ?
                 <>
@@ -46,7 +52,7 @@ const LandingPage = () => {
                             I build practical software where robotics, education, and analysis meet.
                         </p>
                         <div className="landing-hero-ctas">
-                            <button type="button" className="landing-hero-cta" onClick={() => setMonkeyClicked(true)}>View profile</button>
+                            <button type="button" className="landing-hero-cta" onClick={viewProfileHandler} disabled={monkeyTransitionRequested || monkeyClicked}>View profile</button>
                         </div>
                         <p className="landing-hero-context">Robotics / education / analysis</p>
                     </section>

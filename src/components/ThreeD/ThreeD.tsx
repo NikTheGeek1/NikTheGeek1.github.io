@@ -1,11 +1,12 @@
-import { createRef, useEffect, useState } from 'react';
+import { createRef, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './ThreeD.css';
 import Main from '../../threeD/Main';
 import Monkey from 'src/threeD/Monkey';
 
-const ThreeD = ({ setMonkeyClicked }: { setMonkeyClicked: (clicked: boolean) => void }) => {
+const ThreeD = ({ setMonkeyClicked, playExitAnimation = false }: { setMonkeyClicked: (clicked: boolean) => void, playExitAnimation?: boolean }) => {
   const [monkeyInstance, setMonkeyInstance] = useState<Monkey | null>(null);
+  const exitAnimationStarted = useRef<boolean>(false);
   const canvasRef = createRef<HTMLCanvasElement>();
   const location = useLocation();
 
@@ -16,6 +17,32 @@ const ThreeD = ({ setMonkeyClicked }: { setMonkeyClicked: (clicked: boolean) => 
       setMonkeyInstance(webGLMainInstance.monkeyInstance);
     }
   }, []);
+
+  useEffect(() => {
+    if (!playExitAnimation || !monkeyInstance || exitAnimationStarted.current) {
+      return;
+    }
+
+    const startExitAnimation = () => {
+      const started = monkeyInstance.onClick(true);
+      if (started) {
+        exitAnimationStarted.current = true;
+      }
+      return started;
+    };
+
+    if (startExitAnimation()) {
+      return;
+    }
+
+    const retryTimer = window.setInterval(() => {
+      if (startExitAnimation()) {
+        window.clearInterval(retryTimer);
+      }
+    }, 100);
+
+    return () => window.clearInterval(retryTimer);
+  }, [playExitAnimation, monkeyInstance]);
 
   useEffect(() => {
     // get path parameter from the URL

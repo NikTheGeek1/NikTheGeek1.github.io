@@ -23,6 +23,8 @@ class MonkeyTopRightAnimation {
 
     public setCoords(coords: { y:number[], z: number[]}) : void{
         this.coordsArray = coords;
+        this.currentFrame = 0;
+        this.animationFinished = false;
     }
 
     public getNextFrame(onEndCb: () => void): { y: number, z: number } {

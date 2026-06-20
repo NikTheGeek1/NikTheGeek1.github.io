@@ -97,12 +97,17 @@ class Monkey {
         }
     }
 
-    public onClick(force = false): void {
+    public onClick(force = false): boolean {
+        if (!this.monkeyLoaded || !this.monkeyAnimation) {
+            return false;
+        }
         if ((this.intersects.length > 0 && !Animations.currentAnimation) || force) {
             Animations.instantiateMonkeyTopRightAnimation(0, this.monkeyAnimation.finalY, this.monkeyAnimation.finalZ);
             this.main.sidersInstance.sidersAnimation.shouldAnimate = true;
             this.main.monkeyClickedSetter(true);
+            return true;
         }
+        return false;
     }
 
     private monkeyConfig(): void {
