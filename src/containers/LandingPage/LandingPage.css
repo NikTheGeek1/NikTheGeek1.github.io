@@ -50,7 +50,7 @@
     background:
         radial-gradient(circle at 72% 34%, rgba(15, 159, 149, 0.16), transparent 26rem),
         radial-gradient(circle at 54% 58%, rgba(37, 99, 235, 0.10), transparent 34rem),
-        #02040a;
+        rgba(2, 4, 10, 0.88);
 }
 
 .landing-page-main-before-animation {
@@ -177,9 +177,10 @@
     grid-area: profile;
     display: grid;
     min-height: 50rem;
-    grid-template-areas: "transparent-background" "header" "body";
-    animation: move-in-from-bottom 1s forwards;
-    grid-template-rows: 30rem min-content 1fr;
+    grid-template-areas: "header" "body";
+    animation: fade-in 0.35s ease-out both;
+    grid-template-rows: min-content 1fr;
+    padding-top: clamp(2.4rem, 7vh, 6rem);
     row-gap: var(--bigest-gap);
 }
 

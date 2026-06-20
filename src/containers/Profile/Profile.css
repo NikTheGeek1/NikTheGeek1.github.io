@@ -1,7 +1,7 @@
 
 .profile-transparent-background-container {
     grid-area: transparent-background;
-
+    display: none;
 }
 
 .profile-header-container {

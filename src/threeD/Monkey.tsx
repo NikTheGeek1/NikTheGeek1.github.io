@@ -22,7 +22,7 @@ class Monkey {
         this.main = main;
         this.monkeyLoaded = false;
         this.intersects = new Array();
-        this.shouldRaycast = true;
+        this.shouldRaycast = false;
     }
 
     private createRaycaster(): void {
@@ -145,7 +145,6 @@ class Monkey {
         this.createRaycaster();
         this.onClickEventListenerRef = this.onClick.bind(this);
         document.addEventListener("mousemove", this.onMouseMove.bind(this));
-        document.addEventListener("click", this.onClickEventListenerRef);
     }
 
 }
