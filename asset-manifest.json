@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7af93ab1.css",
-    "main.js": "/static/js/main.ab579582.js",
+    "main.css": "/static/css/main.e63919a5.css",
+    "main.js": "/static/js/main.50559a3c.js",
     "static/media/network-graph-vid-1.mp4": "/static/media/network-graph-vid-1.9b2b08c48c479503df35.mp4",
     "static/media/diy-alarm-system.mp4": "/static/media/diy-alarm-system.4251bddf5cef5e791bf9.mp4",
     "static/media/lp-video-1.mp4": "/static/media/lp-video-1.ce4edabb3a2dc49a1cf1.mp4",
@@ -377,11 +377,11 @@
     "static/media/smart-pot-electronics-lqMAX.avif": "/static/media/smart-pot-electronics-lqMAX.377d7a11497bd7dfdc1b.avif",
     "static/media/smart-pot-pump-lqMAX.avif": "/static/media/smart-pot-pump-lqMAX.09ed451174dda515ddbe.avif",
     "static/media/smart-pot-device-lqMAX.avif": "/static/media/smart-pot-device-lqMAX.c306eb9f6bef910237d5.avif",
-    "main.7af93ab1.css.map": "/static/css/main.7af93ab1.css.map",
-    "main.ab579582.js.map": "/static/js/main.ab579582.js.map"
+    "main.e63919a5.css.map": "/static/css/main.e63919a5.css.map",
+    "main.50559a3c.js.map": "/static/js/main.50559a3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.7af93ab1.css",
-    "static/js/main.ab579582.js"
+    "static/css/main.e63919a5.css",
+    "static/js/main.50559a3c.js"
   ]
 }
